@@ -4,7 +4,8 @@ pipeline {
         stage('build') {
             steps {
                 bat '''
-                dir
+                cd Exporter-QA
+                pytest test_exporter_jitx.py
                 '''
             }
         }
