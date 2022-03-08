@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                bat '''
+                sh '''
                 cd Exporter-QA
                 pytest test_exporter_jitx.py
                 '''
