@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROJECT NAME="A" VERSION="2.0">  
+  <BOARD>    
+    <BOARD-BOUNDARY>      
+      <LINE WIDTH="0.0">        
+        <POINT X="-5.0" Y="-5.0" />
+        <POINT X="5.0" Y="-5.0" />
+      </LINE>
+    </BOARD-BOUNDARY>
+    <BOARD-BOUNDARY>      
+      <LINE WIDTH="0.0">        
+        <POINT X="5.0" Y="-5.0" />
+        <POINT X="5.0" Y="5.0" />
+      </LINE>
+    </BOARD-BOUNDARY>
+    <BOARD-BOUNDARY>      
+      <LINE WIDTH="0.0">        
+        <POINT X="5.0" Y="5.0" />
+        <POINT X="-5.0" Y="5.0" />
+      </LINE>
+    </BOARD-BOUNDARY>
+    <BOARD-BOUNDARY>      
+      <LINE WIDTH="0.0">        
+        <POINT X="-5.0" Y="5.0" />
+        <POINT X="-5.0" Y="-5.0" />
+      </LINE>
+    </BOARD-BOUNDARY>
+    <STACKUP>      
+      <STACKUP-LAYER NAME="L0" THICKNESS="0.0203" MATERIAL-TYPE="DIELECTRIC" ROUGHNESS="false" DIELECTRIC-CONSTANT="3.9" LOSS-TANGENT="false"></STACKUP-LAYER>
+      <STACKUP-LAYER NAME="L1" THICKNESS="0.1498" MATERIAL-TYPE="DIELECTRIC" ROUGHNESS="false" DIELECTRIC-CONSTANT="4.26" LOSS-TANGENT="false"></STACKUP-LAYER>
+      <STACKUP-LAYER NAME="L2" THICKNESS="0.0508" MATERIAL-TYPE="CONDUCTOR" ROUGHNESS="false" DIELECTRIC-CONSTANT="false" LOSS-TANGENT="false"></STACKUP-LAYER>
+      <STACKUP-LAYER NAME="L3" THICKNESS="0.1498" MATERIAL-TYPE="DIELECTRIC" ROUGHNESS="false" DIELECTRIC-CONSTANT="4.26" LOSS-TANGENT="false"></STACKUP-LAYER>
+      <STACKUP-LAYER NAME="L4" THICKNESS="0.0508" MATERIAL-TYPE="CONDUCTOR" ROUGHNESS="false" DIELECTRIC-CONSTANT="false" LOSS-TANGENT="false"></STACKUP-LAYER>
+      <STACKUP-LAYER NAME="L5" THICKNESS="0.0203" MATERIAL-TYPE="DIELECTRIC" ROUGHNESS="false" DIELECTRIC-CONSTANT="3.9" LOSS-TANGENT="false"></STACKUP-LAYER>
+    </STACKUP>
+    <MANUFACTURING-RULES MIN-TRACE-WIDTH="0.13" MIN-CLEARANCE="0.2" MIN-ANNULAR-RING="0.152"></MANUFACTURING-RULES>
+    <LAYER-INDEX INDEX="0" SIDE="Top" />
+    <LAYER-INDEX INDEX="1" SIDE="Top" />
+    <ANETCLASS><NETCLASS NAME="Default"></NETCLASS></ANETCLASS>
+    <PACKAGE NAME="basic_landpattern">      
+      <PAD NAME="1" TYPE="SMD" SIDE="Top">        
+        <LAYER-INDEX INDEX="0" SIDE="Top" />
+        <RECTANGLE WIDTH="1.0" HEIGHT="1.0"><POSE X="0.0" Y="0.0" ANGLE="0.0" FLIPX="false" /></RECTANGLE>
+        <POSE X="-0.75" Y="0.0" ANGLE="0.0" FLIPX="false" />
+      </PAD>
+      <PAD NAME="2" TYPE="SMD" SIDE="Top">        
+        <LAYER-INDEX INDEX="0" SIDE="Top" />
+        <RECTANGLE WIDTH="1.0" HEIGHT="1.0"><POSE X="0.0" Y="0.0" ANGLE="0.0" FLIPX="false" /></RECTANGLE>
+        <POSE X="0.75" Y="0.0" ANGLE="0.0" FLIPX="false" />
+      </PAD>
+      <SHAPE>        
+        <LAYER-SPECIFIER NAME="COURTYARD" SIDE="Top"></LAYER-SPECIFIER>
+        <LINE WIDTH="0.0">          
+          <POINT X="-1.5" Y="-1.5" />
+          <POINT X="1.5" Y="-1.5" />
+        </LINE>
+      </SHAPE>
+      <SHAPE>        
+        <LAYER-SPECIFIER NAME="COURTYARD" SIDE="Top"></LAYER-SPECIFIER>
+        <LINE WIDTH="0.0">          
+          <POINT X="1.5" Y="-1.5" />
+          <POINT X="1.5" Y="1.5" />
+        </LINE>
+      </SHAPE>
+      <SHAPE>        
+        <LAYER-SPECIFIER NAME="COURTYARD" SIDE="Top"></LAYER-SPECIFIER>
+        <LINE WIDTH="0.0">          
+          <POINT X="1.5" Y="1.5" />
+          <POINT X="-1.5" Y="1.5" />
+        </LINE>
+      </SHAPE>
+      <SHAPE>        
+        <LAYER-SPECIFIER NAME="COURTYARD" SIDE="Top"></LAYER-SPECIFIER>
+        <LINE WIDTH="0.0">          
+          <POINT X="-1.5" Y="1.5" />
+          <POINT X="-1.5" Y="-1.5" />
+        </LINE>
+      </SHAPE>
+    </PACKAGE>
+    <INST DESIGNATOR="U1" PACKAGE="basic_landpattern" SIDE="Top">      
+      <LAYER-INDEX INDEX="0" SIDE="Top" />
+      <POSE X="0.0" Y="0.0" ANGLE="0.0" FLIPX="false" />
+    </INST>
+  </BOARD>
+  <SCHEMATIC>    
+    <DEF-SYMBOL NAME="basic_symbol">      
+      <SYMBOL-UNIT>        
+        <PIN NAME="1" PAD-NAME="" LENGTH="393701.0" DIR="Left" NUMBER-SIZE="0.0" NAME-SIZE="300000.0">          
+          <POINT X="-1181102.0" Y="0.0" />
+        </PIN>
+        <PIN NAME="2" PAD-NAME="" LENGTH="393701.0" DIR="Right" NUMBER-SIZE="0.0" NAME-SIZE="300000.0">          
+          <POINT X="1181102.0" Y="0.0" />
+        </PIN>
+        <SYM-LAYER NAME="foreground">          
+          <AABOX>            
+            <SW><POINT X="-1181102.5" Y="-393701.0" /></SW>
+            <NE><POINT X="1181102.5" Y="393701.0" /></NE>
+          </AABOX>
+        </SYM-LAYER>
+        <SYM-LAYER NAME="background">          
+          <AABOX>            
+            <SW><POINT X="-1181102.5" Y="-393701.0" /></SW>
+            <NE><POINT X="1181102.5" Y="393701.0" /></NE>
+          </AABOX>
+        </SYM-LAYER>
+        <FIELD KEY="ReferenceType" VALUE="false" SIZE="300000.0" ANCHOR="C" IS-HIDE="false">          
+          <POSE X="0.0" Y="590551.0" ANGLE="0.0" FLIPX="false" />
+        </FIELD>
+        <FIELD KEY="ValueType" VALUE="false" SIZE="300000.0" ANCHOR="C" IS-HIDE="false">          
+          <POSE X="0.0" Y="-590551.0" ANGLE="0.0" FLIPX="false" />
+        </FIELD>
+      </SYMBOL-UNIT>
+    </DEF-SYMBOL>
+    <DEF-SYMBOL NAME="component" PACKAGE-NAME="basic_landpattern">      
+      <SYMBOL-UNIT>        
+        <PIN NAME="1" PAD-NAME="1" LENGTH="393701.0" DIR="Left" NUMBER-SIZE="300000.0" NAME-SIZE="300000.0">          
+          <POINT X="-1181102.0" Y="0.0" />
+        </PIN>
+        <PIN NAME="2" PAD-NAME="2" LENGTH="393701.0" DIR="Right" NUMBER-SIZE="300000.0" NAME-SIZE="300000.0">          
+          <POINT X="1181102.0" Y="0.0" />
+        </PIN>
+        <SYM-LAYER NAME="foreground">          
+          <AABOX>            
+            <SW><POINT X="-1181102.5" Y="-393701.0" /></SW>
+            <NE><POINT X="1181102.5" Y="393701.0" /></NE>
+          </AABOX>
+        </SYM-LAYER>
+        <SYM-LAYER NAME="background">          
+          <AABOX>            
+            <SW><POINT X="-1181102.5" Y="-393701.0" /></SW>
+            <NE><POINT X="1181102.5" Y="393701.0" /></NE>
+          </AABOX>
+        </SYM-LAYER>
+        <FIELD KEY="ReferenceType" VALUE="false" SIZE="300000.0" ANCHOR="C" IS-HIDE="false">          
+          <POSE X="0.0" Y="590551.0" ANGLE="0.0" FLIPX="false" />
+        </FIELD>
+        <FIELD KEY="ValueType" VALUE="false" SIZE="300000.0" ANCHOR="C" IS-HIDE="false">          
+          <POSE X="0.0" Y="-590551.0" ANGLE="0.0" FLIPX="false" />
+        </FIELD>
+        <FIELD KEY="FootprintType" VALUE="jitx-design:basic_landpattern" IS-HIDE="true"></FIELD>
+      </SYMBOL-UNIT>
+    </DEF-SYMBOL>
+    <SHEET>      
+      <SCH-INST UNIT="0" SYMBOL="component" PACKAGE="basic_landpattern">        
+        <POSE X="10000000.0" Y="9000000.0" ANGLE="0.0" FLIPX="false" />
+        <PROPS DESIGNATOR="U1"></PROPS>
+        <FIELD KEY="ReferenceType" VALUE="U1" SIZE="300000.0" ANCHOR="C" IS-HIDE="false">          
+          <POSE X="10000000.0" Y="9590551.0" ANGLE="0.0" FLIPX="false" />
+        </FIELD>
+        <FIELD KEY="FootprintType" VALUE="jitx-design:basic_landpattern" IS-HIDE="true"></FIELD>
+      </SCH-INST>
+      <WIRE TYPE="wire">        
+        <A><POINT X="8500000.0" Y="9000000.0" /></A>
+        <B><POINT X="8000000.0" Y="9000000.0" /></B>
+      </WIRE>
+      <WIRE TYPE="wire">        
+        <A><POINT X="11500000.0" Y="9000000.0" /></A>
+        <B><POINT X="12000000.0" Y="9000000.0" /></B>
+      </WIRE>
+    </SHEET>
+    <PAPER NAME="A4">      
+      <POINT X="297.0" Y="210.0" />
+      <BOX>        
+        <LO><POINT X="20.32" Y="20.32" /></LO>
+        <HI><POINT X="276.68" Y="189.68" /></HI>
+      </BOX>
+    </PAPER>
+  </SCHEMATIC>
+</PROJECT>

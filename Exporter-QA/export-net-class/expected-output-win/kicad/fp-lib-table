@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name jitx-design)(type KiCad)(uri "$(KIPRJMOD)/jitx-design.pretty")(options "")(descr ""))
+)

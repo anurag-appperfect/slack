@@ -1,0 +1,31 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# project_symbols
+#
+DEF basic_symbol U 0 40 Y Y 1 L N
+F0 "U" 0 59 30 H V C CNN
+F1 "basic_symbol" 0 -59 30 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+X 1 ~ -157 0 39 R 0 30 1 0 U
+X 2 ~ 157 0 39 L 0 30 1 0 U
+S -118 -39 118 39 1 0 0 f
+S -118 -39 118 39 1 0 0 F
+ENDDRAW
+ENDDEF
+DEF component U 0 40 Y Y 1 L N
+F0 "U" 0 59 30 H V C CNN
+F1 "component" 0 -59 30 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+X 1 1 -157 0 39 R 30 30 1 0 U
+X 2 2 157 0 39 L 30 30 1 0 U
+S -118 -39 118 39 1 0 0 f
+S -118 -39 118 39 1 0 0 F
+ENDDRAW
+ENDDEF
+#
+#End Library
