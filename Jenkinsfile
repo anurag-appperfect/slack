@@ -12,7 +12,8 @@ pipeline {
                 cd Exporter-QA
                 pytest test_exporter_jitx.py --html=report.html
                 git add .
-                git status
+                git commit -m "Added file with automated Jenikins job"
+                git push
                 '''
             }
         }
