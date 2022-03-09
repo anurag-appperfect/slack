@@ -1,11 +1,16 @@
 pipeline {
-    agent any
+    agent none
+    options {
+        skipDefaultCheckout(true)
+    }
     stages {
         stage('build') {
             steps {
-                sh '''
+                cleanWs()
+                checkout scm
+                bat '''
                 cd Exporter-QA
-                pytest test_exporter_jitx.py
+                pytest test_exporter_jitx.py --html=report.html
                 '''
             }
         }
