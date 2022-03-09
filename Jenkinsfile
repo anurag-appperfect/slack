@@ -10,10 +10,10 @@ pipeline {
                 checkout scm
                 bat '''
                 cd Exporter-QA
-                pytest test_exporter_jitx.py --html=report.html
+                echo "Hello world" > output.txt
                 git add .
-                git commit -m "Added file with automated Jenikins job"
-                git push
+                git commit -m "Added file with"
+                git push origin main
                 '''
             }
         }
