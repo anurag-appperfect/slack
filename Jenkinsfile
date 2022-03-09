@@ -9,11 +9,12 @@ pipeline {
                 cleanWs()
                 checkout scm
                 bat '''
-                cd Exporter-QA
                 echo "Hello world" > output.txt
                 git add .
                 git commit -m "Added file with"
-                git push origin main
+                git remote add origin https://github.com/anurag-appperfect/slack.git
+                git branch -M main
+                git push -u origin main
                 '''
             }
         }
