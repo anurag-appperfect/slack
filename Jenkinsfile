@@ -11,6 +11,7 @@ pipeline {
                 bat '''
                 cd Exporter-QA
                 pytest test_exporter_jitx.py --html=report.html
+                git status
                 '''
             }
         }
