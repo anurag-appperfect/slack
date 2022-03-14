@@ -5,8 +5,7 @@ pipeline {
             steps {
                 cleanWs()
                 checkout scm
-                sh 'pwd'
-                sh '''
+                bat '''
                     ls
                     docker build -t setup-jitx .
                     docker rm --force test-jitx
