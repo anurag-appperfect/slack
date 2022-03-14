@@ -14,11 +14,11 @@ pipeline {
                         sh '''
                              ls
                              docker build -t setup-jitx .
-                             docker run -dit -v $(pwd):/myvol3 --name test-jitx setup-jitx
-                             docker exec --workdir /myvol3 test-jitx chmod +x jitx.sh
-                             # docker exec --workdir /myvol3 test-jitx ./jitx.sh ./ 
-                             docker exec --workdir /myvol3 test-jitx ./jitx.sh ./ Exporter-QA
-                             docker exec --workdir /myvol3 test-jitx python merge_report.py
+                             docker run -dit --name test-jitx setup-jitx
+                             docker exec test-jitx chmod +x jitx.sh
+                             # docker exec test-jitx ./jitx.sh ./ 
+                             docker exec test-jitx ./jitx.sh ./ Exporter-QA
+                             docker exec test-jitx python merge_report.py
                         '''
                     }
                 }
