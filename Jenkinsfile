@@ -14,7 +14,7 @@ pipeline {
                     # docker exec --workdir /myvol3 test-jitx ./jitx.sh ./ 
                     docker exec --workdir /myvol3 test-jitx ./jitx.sh ./ JITX-QA
                 '''
-                slackUploadFile filePath: "Exporter-QA\\*.html", initialComment:  "HEY HEY"
+                slackUploadFile filePath: "JITX-QA\\*.html", initialComment:  "HEY HEY"
             }
         }
     }
