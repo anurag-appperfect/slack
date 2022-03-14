@@ -29,7 +29,7 @@ case "${unameOut}" in
 esac
 
 #Current date
-ddmmyy=$(date +%F)
+ddmmyy=$machine"_"$(date +%F_%T)
 
 # Script Validation
 if [[ $# -ne 1 && $# -ne 2 ]]; then
@@ -57,7 +57,7 @@ else
     case ${option} in 
         "Exporter-QA") dir_path="$1""Exporter-QA" 
             cd $dir_path
-            pytest test_exporter_jitx.py --html="Exporter_$machine_$ddmmyy.html"
+            pytest test_exporter_jitx.py --html="Exporter_$ddmmyy.html"
             ;; 
         "Importer-QA") dir_path="$1""Importer-QA" 
             cd $dir_path
