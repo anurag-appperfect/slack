@@ -1,0 +1,48 @@
+#use-added-syntax(jitx)
+defpackage output/avx-corporation/12061C105KAT2A :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern CAP1206 :
+  pad p[1] : smd-pad(1.8, 1.35) at loc(-1.4, 0.0, 90.0) on Top
+  pad p[2] : smd-pad(1.8, 1.35) at loc(1.4, 0.0, 90.0) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-0.35, 0.8), Point(0.35, 0.8)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-0.35, -0.8), Point(0.35, -0.8)])
+  ref-label()
+
+pcb-symbol CAP_1u_1206_100V_10pc-symbol :
+  pin p[1] at Point(0.0, 5.08) with :
+    direction = Up
+    length = 2.54
+  pin p[2] at Point(0.0, 2.54) with :
+    direction = Down
+    length = 2.54
+  layer("foreground") = Line(1.0, [Point(2.032, 3.302), Point(-2.032, 3.302)])
+  layer("foreground") = Line(1.0, [Point(-2.032, 4.318), Point(2.032, 4.318)])
+  layer("foreground") = Line(1.0, [Point(0.0, 5.08), Point(0.0, 4.318)])
+  layer("foreground") = Line(1.0, [Point(0.0, 2.54), Point(0.0, 3.302)])
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(-2.532, 5.88))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(-2.532, 6.942))
+
+public pcb-component component :
+  name = "CAP_1u_1206_100V_10pc"
+  description = "CAP_1u_1206_100V_10pc"
+  manufacturer = "AVX Corporation"
+  mpn = "12061C105KAT2A"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [p[1] | 1 | Up]
+    [p[2] | 2 | Down]
+  
+  assign-landpattern(CAP1206)
+  val sym = CAP_1u_1206_100V_10pc-symbol
+  symbol = sym(self.p[1] => sym.p[1], self.p[2] => sym.p[2])
+

@@ -1,0 +1,128 @@
+#use-added-syntax(jitx)
+defpackage output/texas-instruments/SN74LVC3G17DCUR :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern TIDCU8 :
+  pad p[1] : smd-pad(0.3, 0.8) at loc(-1.55, 0.75, 90.0) on Top
+  pad p[2] : smd-pad(0.3, 0.8) at loc(-1.55, 0.25, 90.0) on Top
+  pad p[3] : smd-pad(0.3, 0.8) at loc(-1.55, -0.25, 90.0) on Top
+  pad p[4] : smd-pad(0.3, 0.8) at loc(-1.55, -0.75, 90.0) on Top
+  pad p[5] : smd-pad(0.3, 0.8) at loc(1.55, -0.75, 90.0) on Top
+  pad p[6] : smd-pad(0.3, 0.8) at loc(1.55, -0.25, 90.0) on Top
+  pad p[7] : smd-pad(0.3, 0.8) at loc(1.55, 0.25, 90.0) on Top
+  pad p[8] : smd-pad(0.3, 0.8) at loc(1.55, 0.75, 90.0) on Top
+
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.25, [
+    Point(-1.425, 1.45), 
+    Point(-1.43451505843609, 1.49783542904564), 
+    Point(-1.46161165235168, 1.53838834764832), 
+    Point(-1.50216457095436, 1.56548494156391), 
+    Point(-1.55, 1.575), 
+    Point(-1.59783542904564, 1.56548494156391), 
+    Point(-1.63838834764832, 1.53838834764832), 
+    Point(-1.66548494156391, 1.49783542904564), 
+    Point(-1.675, 1.45), 
+    Point(-1.66548494156391, 1.40216457095436), 
+    Point(-1.63838834764832, 1.36161165235168), 
+    Point(-1.59783542904564, 1.33451505843609), 
+    Point(-1.55, 1.325), 
+    Point(-1.50216457095436, 1.33451505843609), 
+    Point(-1.46161165235168, 1.36161165235168), 
+    Point(-1.43451505843609, 1.40216457095436), 
+    Point(-1.425, 1.45)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-0.8, -1.05), Point(-0.8, 1.05)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(0.8, -1.05), Point(0.8, 1.05)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-0.8, 1.05), Point(0.8, 1.05)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-0.8, -1.05), Point(0.8, -1.05)])
+  ref-label()
+
+pcb-symbol SN74LVC3G17DCUR-symbol0 :
+  pin p1A at Point(0.0, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin p1Y at Point(20.32, -2.54) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin p2A at Point(0.0, -5.08) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin p2Y at Point(20.32, -5.08) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin p3A at Point(0.0, -7.62) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin p3Y at Point(20.32, -7.62) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(20.32, 10.16, loc(10.16, -5.08))
+  layer("foreground") = Line(1.0, [
+    Point(7.62, -2.286), 
+    Point(7.62, -7.366), 
+    Point(12.7, -4.826), 
+    Point(7.62, -2.286)])
+  layer("foreground") = Line(1.0, [Point(8.89, -4.064), Point(9.906, -4.064)])
+  layer("foreground") = Line(1.0, [Point(8.89, -4.064), Point(8.89, -5.842), Point(8.128, -5.842)])
+  layer("foreground") = Line(1.0, [Point(8.89, -5.842), Point(9.398, -5.842), Point(9.398, -4.064)])
+  layer("foreground") = Text("x3", 1.523, SW, loc(10.16, -8.128))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+pcb-symbol SN74LVC3G17DCUR-symbol1 :
+  pin GND at Point(0.0, -10.16) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VCC at Point(0.0, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(8.89, 12.7, loc(4.445, -6.35))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+public pcb-component component :
+  name = "SN74LVC3G17DCUR"
+  description = "SN74LVC3G17DCUR"
+  manufacturer = "Texas Instruments"
+  mpn = "SN74LVC3G17DCUR"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [p1A | 1 | Left]
+    [p1Y | 7 | Right]
+    [p2A | 3 | Left]
+    [p2Y | 5 | Right]
+    [p3A | 6 | Left]
+    [p3Y | 2 | Right]
+    [GND | 4 | Left]
+    [VCC | 8 | Left]
+
+  assign-landpattern(TIDCU8)
+  symbol :
+    val sym0 = SN74LVC3G17DCUR-symbol0
+    unit(0) = sym0(self.p1A => sym0.p1A, self.p1Y => sym0.p1Y, self.p2A => sym0.p2A, self.p2Y => sym0.p2Y, self.p3A => sym0.p3A, self.p3Y => sym0.p3Y)
+    val sym1 = SN74LVC3G17DCUR-symbol1
+    unit(1) = sym1(self.GND => sym1.GND, self.VCC => sym1.VCC)
+

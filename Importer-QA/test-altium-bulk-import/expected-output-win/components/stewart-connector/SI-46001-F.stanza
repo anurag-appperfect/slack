@@ -1,0 +1,184 @@
+#use-added-syntax(jitx)
+defpackage output/stewart-connector/SI-46001-F :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern SI-46001-F-lp :
+  pad MH1 : oval-pth-pad(0.7874, 2.3368, 2.3368) at loc(-7.874, 1.4986) on Top
+  pad MH2 : oval-pth-pad(0.7874, 2.3368, 2.3368) at loc(7.874, 1.4986) on Top
+  pad MOUNT[1] : oval-pth-pad(1.5875, 3.175, 3.175) at loc(-5.715, -2.3876) on Top
+  pad MOUNT[2] : oval-pth-pad(1.5875, 3.175, 3.175) at loc(5.715, -2.3876) on Top
+  pad p[1] : rect-pth-pad(0.4445, 1.397, 1.397) at loc(-4.445, 3.9624) on Top
+  pad p[2] : oval-pth-pad(0.4445, 1.27, 1.27) at loc(-3.175, 6.5024) on Top
+  pad p[3] : oval-pth-pad(0.4445, 1.397, 1.397) at loc(-1.905, 3.9624) on Top
+  pad p[4] : oval-pth-pad(0.4445, 1.27, 1.27) at loc(-0.635, 6.5024) on Top
+  pad p[5] : oval-pth-pad(0.4445, 1.397, 1.397) at loc(0.635, 3.9624) on Top
+  pad p[6] : oval-pth-pad(0.4445, 1.397, 1.397) at loc(1.905, 6.5024) on Top
+  pad p[7] : oval-pth-pad(0.4445, 1.397, 1.397) at loc(3.175, 3.9624) on Top
+  pad p[8] : oval-pth-pad(0.4445, 1.397, 1.397) at loc(4.445, 6.5024) on Top
+  pad p[9] : oval-pth-pad(0.508, 1.524, 1.524) at loc(6.3246, -6.5024) on Top
+  pad p[10] : oval-pth-pad(0.508, 1.524, 1.524) at loc(3.7846, -6.5024) on Top
+  pad p[11] : oval-pth-pad(0.508, 1.524, 1.524) at loc(-3.7846, -6.5024) on Top
+  pad p[12] : oval-pth-pad(0.508, 1.524, 1.524) at loc(-6.3246, -6.5024) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(8.636, -9.398), Point(8.636, 0.0)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-8.636, -9.398), Point(8.636, -9.398)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-8.636, -9.398), Point(-8.636, 0.0)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(8.636, 2.921), Point(8.636, 8.509)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-8.636, 8.509), Point(8.636, 8.509)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-8.636, 2.921), Point(-8.636, 8.509)])
+  ref-label()
+
+pcb-symbol SI-46001-F-symbol :
+  pin Ag at Point(20.32, -10.16) with :
+    direction = Right
+    length = 5.08
+  pin Ay at Point(20.32, -5.08) with :
+    direction = Right
+    length = 5.08
+  pin Cg at Point(20.32, -12.7) with :
+    direction = Right
+    length = 5.08
+  pin Cy at Point(20.32, -7.62) with :
+    direction = Right
+    length = 5.08
+  pin MH1 at Point(20.32, 0.0) with :
+    direction = Right
+    length = 5.08
+  pin MH2 at Point(20.32, -17.78) with :
+    direction = Right
+    length = 5.08
+  pin p[1] at Point(5.08, 0.0) with :
+    direction = Left
+    length = 5.08
+  pin p[2] at Point(5.08, -10.16) with :
+    direction = Left
+    length = 5.08
+  pin p[3] at Point(5.08, -2.54) with :
+    direction = Left
+    length = 5.08
+  pin p[4] at Point(5.08, -5.08) with :
+    direction = Left
+    length = 5.08
+  pin p[5] at Point(5.08, -12.7) with :
+    direction = Left
+    length = 5.08
+  pin p[6] at Point(5.08, -7.62) with :
+    direction = Left
+    length = 5.08
+  pin p[7] at Point(5.08, -15.24) with :
+    direction = Left
+    length = 5.08
+  pin p[8] at Point(5.08, -17.78) with :
+    direction = Left
+    length = 5.08
+  layer("foreground") = Rectangle(15.24, 22.86, loc(12.7, -8.89))
+  layer("foreground") = Rectangle(1.016, 0.762, loc(11.43, -1.651))
+  layer("foreground") = Rectangle(1.016, 0.762, loc(13.97, -1.651))
+  layer("foreground") = Rectangle(1.016, 0.762, loc(12.7, -2.921))
+  layer("foreground") = Line(0.0, [    
+    Point(5.08, 0.0), 
+    Point(7.62, 0.0), 
+    Point(7.62, -2.54), 
+    Point(5.08, -2.54)])
+  layer("foreground") = Line(0.0, [    
+    Point(5.08, -5.08), 
+    Point(7.62, -5.08), 
+    Point(7.62, -7.62), 
+    Point(5.08, -7.62)])
+  layer("foreground") = Line(0.0, [    
+    Point(5.08, -15.24), 
+    Point(7.62, -15.24), 
+    Point(7.62, -17.78), 
+    Point(5.08, -17.78)])
+  layer("foreground") = Line(0.0, [    
+    Point(5.08, -12.7), 
+    Point(7.62, -12.7), 
+    Point(7.62, -10.16), 
+    Point(5.08, -10.16)])
+  layer("foreground") = Line(0.0, [    
+    Point(10.16, 0.0), 
+    Point(10.16, -4.064), 
+    Point(15.24, -4.064), 
+    Point(15.24, 0.0), 
+    Point(10.16, 0.0)])
+  layer("foreground") = Line(0.0, [    
+    Point(10.668, -1.016), 
+    Point(10.668, -3.556), 
+    Point(14.732, -3.556), 
+    Point(14.732, -1.016)])
+  layer("foreground") = Line(0.0, [    
+    Point(10.668, -1.016), 
+    Point(12.192, -1.016), 
+    Point(12.192, -0.508), 
+    Point(13.208, -0.508), 
+    Point(13.208, -1.016), 
+    Point(14.732, -1.016)])
+  layer("foreground") = Line(0.0, [    
+    Point(11.43, -2.032), 
+    Point(11.43, -2.286), 
+    Point(13.97, -2.286), 
+    Point(13.97, -2.032)])
+  layer("foreground") = Line(0.0, [Point(12.7, -2.54), Point(12.7, -2.286)])
+  layer("foreground") = Line(0.0, [Point(17.78, -5.08), Point(17.78, -7.62)])
+  layer("foreground") = Line(0.0, [Point(17.78, -5.08), Point(20.574, -5.08)])
+  layer("foreground") = Line(0.0, [Point(17.78, -7.62), Point(20.574, -7.62)])
+  layer("foreground") = Line(0.0, [Point(17.018, -6.858), Point(18.542, -6.858)])
+  layer("foreground") = Line(0.0, [Point(17.018, -6.604), Point(16.51, -7.112)])
+  layer("foreground") = Line(0.0, [Point(16.764, -6.35), Point(16.256, -6.858)])
+  layer("foreground") = Line(0.0, [    
+    Point(17.78, -6.858), 
+    Point(17.018, -5.842), 
+    Point(18.542, -5.842), 
+    Point(17.78, -6.858)])
+  layer("foreground") = Line(0.0, [Point(16.256, -6.604), Point(16.256, -6.858), Point(16.51, -6.858)])
+  layer("foreground") = Line(0.0, [Point(16.51, -6.858), Point(16.51, -7.112), Point(16.764, -7.112)])
+  layer("foreground") = Line(0.0, [Point(17.78, -10.16), Point(17.78, -12.7)])
+  layer("foreground") = Line(0.0, [Point(17.78, -10.16), Point(20.574, -10.16)])
+  layer("foreground") = Line(0.0, [Point(17.78, -12.7), Point(20.574, -12.7)])
+  layer("foreground") = Line(0.0, [Point(17.018, -11.938), Point(18.542, -11.938)])
+  layer("foreground") = Line(0.0, [Point(17.018, -11.684), Point(16.51, -12.192)])
+  layer("foreground") = Line(0.0, [Point(16.764, -11.43), Point(16.256, -11.938)])
+  layer("foreground") = Line(0.0, [    
+    Point(17.78, -11.938), 
+    Point(17.018, -10.922), 
+    Point(18.542, -10.922), 
+    Point(17.78, -11.938)])
+  layer("foreground") = Line(0.0, [Point(16.256, -11.684), Point(16.256, -11.938), Point(16.51, -11.938)])
+  layer("foreground") = Line(0.0, [Point(16.51, -11.938), Point(16.51, -12.192), Point(16.764, -12.192)])
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(5.08, 2.84))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(5.08, 3.902))
+
+public pcb-component component :
+  name = "SI-46001-F"
+  description = "SI-46001-F"
+  manufacturer = "Stewart Connector"
+  mpn = "SI-46001-F"
+  pin-properties :
+    [pin:Ref | pads:Ref ... | side:Dir]
+    [Ag | p[10] | Right]
+    [Ay | p[12] | Right]
+    [Cg | p[9] | Right]
+    [Cy | p[11] | Right]
+    [MH1 | MH1 | Right]
+    [MH2 | MH2 | Right]
+    [p[1] | p[1] | Left]
+    [p[2] | p[2] | Left]
+    [p[3] | p[3] | Left]
+    [p[4] | p[4] | Left]
+    [p[5] | p[5] | Left]
+    [p[6] | p[6] | Left]
+    [p[7] | p[7] | Left]
+    [p[8] | p[8] | Left]
+  
+  assign-landpattern(SI-46001-F-lp)
+  val sym = SI-46001-F-symbol
+  symbol = sym(self.Ag => sym.Ag, self.Ay => sym.Ay, self.Cg => sym.Cg, self.Cy => sym.Cy, self.MH1 => sym.MH1, self.MH2 => sym.MH2, self.p[1] => sym.p[1], self.p[2] => sym.p[2], self.p[3] => sym.p[3], self.p[4] => sym.p[4], self.p[5] => sym.p[5], self.p[6] => sym.p[6], self.p[7] => sym.p[7], self.p[8] => sym.p[8])
+

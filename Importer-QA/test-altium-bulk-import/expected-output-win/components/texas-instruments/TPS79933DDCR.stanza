@@ -1,0 +1,90 @@
+#use-added-syntax(jitx)
+defpackage output/texas-instruments/TPS79933DDCR :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern DDC :
+  pad p[1] : smd-pad(0.6, 1.1) at loc(-1.35, 0.95, 90.0) on Top
+  pad p[2] : smd-pad(0.6, 1.1) at loc(-1.35, 0.0, 90.0) on Top
+  pad p[3] : smd-pad(0.6, 1.1) at loc(-1.35, -0.95, 90.0) on Top
+  pad p[4] : smd-pad(0.6, 1.1) at loc(1.35, -0.95, 90.0) on Top
+  pad p[5] : smd-pad(0.6, 1.1) at loc(1.35, 0.95, 90.0) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.25, [    
+    Point(-1.225, 1.8), 
+    Point(-1.23451505843609, 1.84783542904564), 
+    Point(-1.26161165235168, 1.88838834764832), 
+    Point(-1.30216457095436, 1.91548494156391), 
+    Point(-1.35, 1.925), 
+    Point(-1.39783542904564, 1.91548494156391), 
+    Point(-1.43838834764832, 1.88838834764832), 
+    Point(-1.46548494156391, 1.84783542904564), 
+    Point(-1.475, 1.8), 
+    Point(-1.46548494156391, 1.75216457095436), 
+    Point(-1.43838834764832, 1.71161165235168), 
+    Point(-1.39783542904564, 1.68451505843609), 
+    Point(-1.35, 1.675), 
+    Point(-1.30216457095436, 1.68451505843609), 
+    Point(-1.26161165235168, 1.71161165235168), 
+    Point(-1.23451505843609, 1.75216457095436), 
+    Point(-1.225, 1.8)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(0.5, -1.55), Point(0.5, 1.55)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-0.5, -1.55), Point(-0.5, 1.55)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-0.5, -1.55), Point(0.5, -1.55)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-0.5, 1.55), Point(0.5, 1.55)])
+  ref-label()
+
+pcb-symbol TPS79933DDCR-symbol :
+  pin EN at Point(0.0, -5.08) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GND at Point(7.62, -10.16) with :
+    direction = Down
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin IN at Point(0.0, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin NR at Point(15.24, -5.08) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin OUT at Point(15.24, -2.54) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(15.24, 10.16, loc(7.62, -5.08))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+public pcb-component component :
+  name = "TPS79933DDCR"
+  description = "TPS79933DDCR"
+  manufacturer = "Texas Instruments"
+  mpn = "TPS79933DDCR"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [EN | 3 | Left]
+    [GND | 2 | Down]
+    [IN | 1 | Left]
+    [NR | 4 | Right]
+    [OUT | 5 | Right]
+  
+  assign-landpattern(DDC)
+  val sym = TPS79933DDCR-symbol
+  symbol = sym(self.EN => sym.EN, self.GND => sym.GND, self.IN => sym.IN, self.NR => sym.NR, self.OUT => sym.OUT)
+

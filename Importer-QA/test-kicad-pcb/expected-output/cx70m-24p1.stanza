@@ -1,0 +1,87 @@
+#use-added-syntax(jitx)
+defpackage goldfish/cx70m-24p1 :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/symbols
+  import ocdb/symbol-utils
+  import ocdb/generic-components
+  import ocdb/box-symbol
+
+pcb-landpattern cx70m-24p1-lp :
+  pad A1 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, -2.2, 90.0)
+  pad A2 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, -1.8, 90.0)
+  pad A3 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, -1.4, 90.0)
+  pad A4 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, -1.0, 90.0)
+  pad A5 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, -0.6, 90.0)
+  pad A6 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, -0.2, 90.0)
+  pad A7 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, 0.2, 90.0)
+  pad A8 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, 0.6, 90.0)
+  pad A9 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, 1.0, 90.0)
+  pad B1 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, 3.4, 90.0)
+  pad B2 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, 3.0, 90.0)
+  pad B3 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, 2.6, 90.0)
+  pad B4 : pth-pad(Circle(0.3), Circle(0.2)) at loc(-7.2, 2.0, 90.0)
+  pad B5 : pth-pad(Circle(0.3), Circle(0.2)) at loc(-7.2, 1.2, 90.0)
+  pad B6 : pth-pad(Circle(0.3), Circle(0.2)) at loc(-7.2, 0.4, 90.0)
+  pad B7 : pth-pad(Circle(0.3), Circle(0.2)) at loc(-7.2, -0.4, 90.0)
+  pad B8 : pth-pad(Circle(0.3), Circle(0.2)) at loc(-7.2, -1.2, 90.0)
+  pad B9 : pth-pad(Circle(0.3), Circle(0.2)) at loc(-7.2, -2.0, 90.0)
+  pad S1 : smd-pad(Rectangle(0.46, 0.85)) at loc(-8.125, -3.915, 90.0)
+  pad A10 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, 1.4, 90.0)
+  pad A11 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, 1.8, 90.0)
+  pad A12 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, 2.2, 90.0)
+  pad B10 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, -2.6, 90.0)
+  pad B11 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, -3.0, 90.0)
+  pad B12 : smd-pad(Rectangle(0.23, 0.85)) at loc(-8.125, -3.4, 90.0)
+  pad p[1] : pth-pad(Capsule(1.2, 2.3), Capsule(0.6, 1.7)) at loc(-7.65, 5.55, 90.0)
+  pad p[2] : smd-pad(Rectangle(0.7, 2.3)) at loc(-2.6, 5.2, 90.0)
+  pad p[3] : smd-pad(Rectangle(0.46, 0.85)) at loc(-8.125, 3.915, 90.0)
+  pad p[4] : pth-pad(Capsule(1.2, 2.3), Capsule(0.6, 1.7)) at loc(-7.65, -5.55, 90.0)
+  pad p[5] : smd-pad(Rectangle(0.7, 2.3)) at loc(-2.6, -5.2, 90.0)
+  pad p[6] : pth-pad(Capsule(1.2, 2.3), Capsule(0.6, 1.7)) at loc(-2.6, -5.55, 90.0)
+  pad p[7] : pth-pad(Capsule(1.2, 2.3), Capsule(0.6, 1.7)) at loc(-2.6, 5.55, 90.0)
+
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [ Point(-0.3, 6.5), Point(-9.2, 6.5) ])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [ Point(-9.2, 6.5), Point(-9.2, -6.5) ])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [ Point(-9.2, -6.5), Point(-0.3, -6.5) ])
+  ref-label()
+
+public pcb-component cx70m-24p1 :
+  pin-properties :
+    [pin:Ref | pads:Ref ...]
+    [A1 | A1]
+    [A2 | A2]
+    [A3 | A3]
+    [A4 | A4]
+    [A5 | A5]
+    [A6 | A6]
+    [A7 | A7]
+    [A8 | A8]
+    [A9 | A9]
+    [B1 | B1]
+    [B2 | B2]
+    [B3 | B3]
+    [B4 | B4]
+    [B5 | B5]
+    [B6 | B6]
+    [B7 | B7]
+    [B8 | B8]
+    [B9 | B9]
+    [S1 | S1, p[1], p[2], p[3], p[4], p[5], p[6], p[7]]
+    [A10 | A10]
+    [A11 | A11]
+    [A12 | A12]
+    [B10 | B10]
+    [B11 | B11]
+    [B12 | B12]
+  
+  make-box-symbol()
+  assign-landpattern(cx70m-24p1-lp)
+
+  name = "usb-type-c:CX70M-24P1"

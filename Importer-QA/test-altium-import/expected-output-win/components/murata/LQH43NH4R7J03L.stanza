@@ -1,0 +1,184 @@
+#use-added-syntax(jitx)
+defpackage audio_board/murata/LQH43NH4R7J03L :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern IND_LQH43NH4R7J03L :
+  pad p[1] : smd-pad(0.9, 0.9) at loc(-1.25, 0.0) on Top
+  pad p[2] : smd-pad(0.9, 0.9) at loc(1.25, 0.0, 180.0) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [Point(-2.25, -1.72), Point(2.25, -1.72)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [Point(-2.25, 1.72), Point(2.25, 1.72)])
+  layer(SolderMask(Top)) = Polygon([    
+    Point(-0.65, -1.5), 
+    Point(-1.95, -1.5), 
+    Point(-2.35, -1.05), 
+    Point(-2.35, -0.85), 
+    Point(-3.85, -0.85), 
+    Point(-3.85, 0.85), 
+    Point(-2.35, 0.85), 
+    Point(-2.35, 1.05), 
+    Point(-1.95, 1.5), 
+    Point(-0.65, 1.5)])
+  layer(SolderMask(Top)) = Polygon([    
+    Point(2.35, 1.05), 
+    Point(2.35, 0.85), 
+    Point(3.85, 0.85), 
+    Point(3.85, -0.85), 
+    Point(2.35, -0.85), 
+    Point(2.35, -1.05), 
+    Point(1.95, -1.5), 
+    Point(0.65, -1.5), 
+    Point(0.65, 1.5), 
+    Point(1.95, 1.5)])
+  layer(Paste(Top)) = Polygon([    
+    Point(-0.75, -1.4), 
+    Point(-1.95, -1.4), 
+    Point(-2.25, -1.05), 
+    Point(-2.25, -0.75), 
+    Point(-3.75, -0.75), 
+    Point(-3.75, 0.75), 
+    Point(-2.25, 0.75), 
+    Point(-2.25, 1.05), 
+    Point(-1.95, 1.4), 
+    Point(-0.75, 1.4)])
+  layer(Paste(Top)) = Polygon([    
+    Point(2.25, 1.05), 
+    Point(2.25, 0.75), 
+    Point(3.75, 0.75), 
+    Point(3.75, -0.75), 
+    Point(2.25, -0.75), 
+    Point(2.25, -1.05), 
+    Point(1.95, -1.4), 
+    Point(0.75, -1.4), 
+    Point(0.75, 1.4), 
+    Point(1.95, 1.4)])
+  copper(LayerIndex(1)) = Polygon([    
+    Point(2.25, 1.05), 
+    Point(2.25, 0.75), 
+    Point(3.75, 0.75), 
+    Point(3.75, -0.75), 
+    Point(2.25, -0.75), 
+    Point(2.25, -1.05), 
+    Point(1.95, -1.4), 
+    Point(0.75, -1.4), 
+    Point(0.75, 1.4), 
+    Point(1.95, 1.4)])
+  copper(LayerIndex(1)) = Polygon([    
+    Point(-0.75, -1.4), 
+    Point(-1.95, -1.4), 
+    Point(-2.25, -1.05), 
+    Point(-2.25, -0.75), 
+    Point(-3.75, -0.75), 
+    Point(-3.75, 0.75), 
+    Point(-2.25, 0.75), 
+    Point(-2.25, 1.05), 
+    Point(-1.95, 1.4), 
+    Point(-0.75, 1.4)])
+  ref-label()
+
+pcb-symbol LQH43NH4R7J03L-symbol :
+  pin p[1] at Point(5.08, 0.0) with :
+    direction = Left
+    length = 5.08
+  pin p[2] at Point(20.32, 0.0) with :
+    direction = Right
+    length = 5.08
+  layer("foreground") = Line(1.0, [    
+    Point(10.16, 0.0), 
+    Point(10.1355973061121, 0.247764708960483), 
+    Point(10.0633270062893, 0.486007959103664), 
+    Point(9.94596640762423, 0.705574195934895), 
+    Point(9.78802561210692, 0.898025612106915), 
+    Point(9.5955741959349, 1.05596640762423), 
+    Point(9.37600795910367, 1.17332700628933), 
+    Point(9.13776470896048, 1.2455973061121), 
+    Point(8.89, 1.27), 
+    Point(8.64223529103952, 1.2455973061121), 
+    Point(8.40399204089634, 1.17332700628933), 
+    Point(8.18442580406511, 1.05596640762423), 
+    Point(7.99197438789309, 0.898025612106915), 
+    Point(7.83403359237577, 0.705574195934895), 
+    Point(7.71667299371067, 0.486007959103664), 
+    Point(7.6444026938879, 0.247764708960483), 
+    Point(7.62, 1.55525006935442e-016)])
+  layer("foreground") = Line(1.0, [    
+    Point(12.7, 0.0), 
+    Point(12.6755973061121, 0.247764708960483), 
+    Point(12.6033270062893, 0.486007959103664), 
+    Point(12.4859664076242, 0.705574195934895), 
+    Point(12.3280256121069, 0.898025612106915), 
+    Point(12.1355741959349, 1.05596640762423), 
+    Point(11.9160079591037, 1.17332700628933), 
+    Point(11.6777647089605, 1.2455973061121), 
+    Point(11.43, 1.27), 
+    Point(11.1822352910395, 1.2455973061121), 
+    Point(10.9439920408963, 1.17332700628933), 
+    Point(10.7244258040651, 1.05596640762423), 
+    Point(10.5319743878931, 0.898025612106915), 
+    Point(10.3740335923758, 0.705574195934895), 
+    Point(10.2566729937107, 0.486007959103664), 
+    Point(10.1844026938879, 0.247764708960483), 
+    Point(10.16, 1.55525006935442e-016)])
+  layer("foreground") = Line(1.0, [    
+    Point(15.24, 0.0), 
+    Point(15.2155973061121, 0.247764708960483), 
+    Point(15.1433270062893, 0.486007959103664), 
+    Point(15.0259664076242, 0.705574195934895), 
+    Point(14.8680256121069, 0.898025612106915), 
+    Point(14.6755741959349, 1.05596640762423), 
+    Point(14.4560079591037, 1.17332700628933), 
+    Point(14.2177647089605, 1.2455973061121), 
+    Point(13.97, 1.27), 
+    Point(13.7222352910395, 1.2455973061121), 
+    Point(13.4839920408963, 1.17332700628933), 
+    Point(13.2644258040651, 1.05596640762423), 
+    Point(13.0719743878931, 0.898025612106915), 
+    Point(12.9140335923758, 0.705574195934895), 
+    Point(12.7966729937107, 0.486007959103664), 
+    Point(12.7244026938879, 0.247764708960483), 
+    Point(12.7, 1.55525006935442e-016)])
+  layer("foreground") = Line(1.0, [    
+    Point(17.78, 0.0), 
+    Point(17.7555973061121, 0.247764708960483), 
+    Point(17.6833270062893, 0.486007959103664), 
+    Point(17.5659664076242, 0.705574195934895), 
+    Point(17.4080256121069, 0.898025612106915), 
+    Point(17.2155741959349, 1.05596640762423), 
+    Point(16.9960079591037, 1.17332700628933), 
+    Point(16.7577647089605, 1.2455973061121), 
+    Point(16.51, 1.27), 
+    Point(16.2622352910395, 1.2455973061121), 
+    Point(16.0239920408963, 1.17332700628933), 
+    Point(15.8044258040651, 1.05596640762423), 
+    Point(15.6119743878931, 0.898025612106915), 
+    Point(15.4540335923758, 0.705574195934895), 
+    Point(15.3366729937107, 0.486007959103664), 
+    Point(15.2644026938879, 0.247764708960483), 
+    Point(15.24, 1.55525006935442e-016)])
+  layer("foreground") = Line(1.0, [Point(7.62, 0.0), Point(5.08, 0.0)])
+  layer("foreground") = Line(1.0, [Point(17.78, 0.0), Point(20.32, 0.0)])
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(4.58, 2.07))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(4.58, 3.132))
+
+public pcb-component component :
+  name = "LQH43NH4R7J03L"
+  description = "LQH43NH4R7J03L"
+  manufacturer = "Murata"
+  mpn = "LQH43NH4R7J03L"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [p[1] | 1 | Left]
+    [p[2] | 2 | Right]
+  
+  assign-landpattern(IND_LQH43NH4R7J03L)
+  val sym = LQH43NH4R7J03L-symbol
+  symbol = sym(self.p[1] => sym.p[1], self.p[2] => sym.p[2])
+

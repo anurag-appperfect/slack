@@ -1,0 +1,65 @@
+#use-added-syntax(jitx)
+defpackage output/unknown/C1206C476M9PACTU :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern CAPC12063216_L :
+  pad p[1] : smd-pad(1.7, 0.95) at loc(-1.4, 0.0, 90.0) on Top
+  pad p[2] : smd-pad(1.7, 0.95) at loc(1.4, 0.0, 90.0) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.1, [    
+    Point(0.05, 0.0), 
+    Point(0.0461939766255643, 0.0191341716182545), 
+    Point(0.0353553390593274, 0.0353553390593274), 
+    Point(0.0191341716182545, 0.0461939766255643), 
+    Point(3.06151588455594e-018, 0.05), 
+    Point(-0.0191341716182545, 0.0461939766255643), 
+    Point(-0.0353553390593274, 0.0353553390593274), 
+    Point(-0.0461939766255643, 0.0191341716182545), 
+    Point(-0.05, 6.12303176911189e-018), 
+    Point(-0.0461939766255643, -0.0191341716182545), 
+    Point(-0.0353553390593274, -0.0353553390593274), 
+    Point(-0.0191341716182545, -0.0461939766255643), 
+    Point(-9.18454765366783e-018, -0.05), 
+    Point(0.0191341716182545, -0.0461939766255643), 
+    Point(0.0353553390593274, -0.0353553390593274), 
+    Point(0.0461939766255643, -0.0191341716182545), 
+    Point(0.05, -1.22460635382238e-017)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-1.65, -1.075), Point(0.0, -1.075)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-1.65, 1.075), Point(0.0, 1.075)])
+  ref-label()
+
+pcb-symbol CMP-001-1214-01-symbol :
+  pin p[1] at Point(0.0, -2.54) with :
+    direction = Up
+    length = 2.54
+  pin p[2] at Point(0.0, -5.08) with :
+    direction = Down
+    length = 2.54
+  layer("foreground") = Line(1.0, [Point(2.032, -4.318), Point(-2.032, -4.318)])
+  layer("foreground") = Line(1.0, [Point(-2.032, -3.302), Point(2.032, -3.302)])
+  layer("foreground") = Line(1.0, [Point(0.0, -2.54), Point(0.0, -3.302)])
+  layer("foreground") = Line(1.0, [Point(0.0, -5.08), Point(0.0, -4.318)])
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(-2.532, -1.74))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(-2.532, -0.678))
+
+public pcb-component component :
+  name = "CMP-001-1214-01"
+  description = "CAP CER 47UF 6.3V X5R 1206"
+  mpn = "C1206C476M9PACTU"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [p[1] | 1 | Up]
+    [p[2] | 2 | Down]
+  
+  assign-landpattern(CAPC12063216_L)
+  val sym = CMP-001-1214-01-symbol
+  symbol = sym(self.p[1] => sym.p[1], self.p[2] => sym.p[2])
+

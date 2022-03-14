@@ -1,0 +1,78 @@
+#use-added-syntax(jitx)
+defpackage output/ecs-txo-2520-33-160-an-tr/CMP-001-0785-02 :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern ECS-TXO-2520-33-160-AN-TR-Footprint-1 :
+  pad p[1] : smd-pad(0.9, 0.8) at loc(0.0, 0.0) on Top
+  pad p[2] : smd-pad(0.9, 0.8) at loc(1.85, 0.0) on Top
+  pad p[3] : smd-pad(0.9, 0.8) at loc(1.85, 1.45) on Top
+  pad p[4] : smd-pad(0.9, 0.8) at loc(0.0, 1.45) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [    
+    Point(-0.81566, -0.14), 
+    Point(-0.822841204902885, -0.103897644990677), 
+    Point(-0.843291546262861, -0.0732915462628611), 
+    Point(-0.873897644990677, -0.0528412049028852), 
+    Point(-0.91, -0.04566), 
+    Point(-0.946102355009323, -0.0528412049028852), 
+    Point(-0.976708453737139, -0.0732915462628611), 
+    Point(-0.997158795097115, -0.103897644990677), 
+    Point(-1.00434, -0.14), 
+    Point(-0.997158795097115, -0.176102355009323), 
+    Point(-0.976708453737139, -0.206708453737139), 
+    Point(-0.946102355009323, -0.227158795097115), 
+    Point(-0.91, -0.23434), 
+    Point(-0.873897644990677, -0.227158795097115), 
+    Point(-0.843291546262861, -0.206708453737139), 
+    Point(-0.822841204902885, -0.176102355009323), 
+    Point(-0.81566, -0.14)])
+  ref-label()
+
+pcb-symbol CMP-001-0785-02-symbol :
+  pin GND at Point(12.7, -2.54) with :
+    direction = Right
+    length = 2.54
+    number-size = 1.523
+    name-size = 1.523
+  pin Out at Point(12.7, 2.54) with :
+    direction = Right
+    length = 2.54
+    number-size = 1.523
+    name-size = 1.523
+  pin Tri-state at Point(-5.08, -2.54) with :
+    direction = Left
+    length = 2.54
+    number-size = 1.523
+    name-size = 1.523
+  pin VDD at Point(-5.08, 2.54) with :
+    direction = Left
+    length = 2.54
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(17.78, 10.16, loc(3.81, 0.0))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(-5.08, 5.38))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(-5.08, 6.442))
+
+public pcb-component component :
+  name = "CMP-001-0785-02"
+  description = "16.0000MHZ"
+  manufacturer = "ECS-TXO-2520-33-160-AN-TR"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [GND | 2 | Right]
+    [Out | 3 | Right]
+    [Tri-state | 1 | Left]
+    [VDD | 4 | Left]
+  
+  assign-landpattern(ECS-TXO-2520-33-160-AN-TR-Footprint-1)
+  val sym = CMP-001-0785-02-symbol
+  symbol = sym(self.GND => sym.GND, self.Out => sym.Out, self.Tri-state => sym.Tri-state, self.VDD => sym.VDD)
+

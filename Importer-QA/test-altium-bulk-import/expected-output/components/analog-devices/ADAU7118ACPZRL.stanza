@@ -1,0 +1,178 @@
+#use-added-syntax(jitx)
+defpackage output/analog-devices/ADAU7118ACPZRL :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern PQFN50P300X300X75_HS-17L :
+  pad p[1] : oval-smd-pad(0.25, 0.4) at loc(-1.275, 0.75, 90.0) on Top
+  pad p[2] : oval-smd-pad(0.25, 0.4) at loc(-1.275, 0.25, 90.0) on Top
+  pad p[3] : oval-smd-pad(0.25, 0.4) at loc(-1.275, -0.25, 90.0) on Top
+  pad p[4] : oval-smd-pad(0.25, 0.4) at loc(-1.275, -0.75, 90.0) on Top
+  pad p[5] : oval-smd-pad(0.25, 0.4) at loc(-0.75, -1.275) on Top
+  pad p[6] : oval-smd-pad(0.25, 0.4) at loc(-0.25, -1.275) on Top
+  pad p[7] : oval-smd-pad(0.25, 0.4) at loc(0.25, -1.275) on Top
+  pad p[8] : oval-smd-pad(0.25, 0.4) at loc(0.75, -1.275) on Top
+  pad p[9] : oval-smd-pad(0.25, 0.4) at loc(1.275, -0.75, 90.0) on Top
+  pad p[10] : oval-smd-pad(0.25, 0.4) at loc(1.275, -0.25, 90.0) on Top
+  pad p[11] : oval-smd-pad(0.25, 0.4) at loc(1.275, 0.25, 90.0) on Top
+  pad p[12] : oval-smd-pad(0.25, 0.4) at loc(1.275, 0.75, 90.0) on Top
+  pad p[13] : oval-smd-pad(0.25, 0.4) at loc(0.75, 1.275) on Top
+  pad p[14] : oval-smd-pad(0.25, 0.4) at loc(0.25, 1.275) on Top
+  pad p[15] : oval-smd-pad(0.25, 0.4) at loc(-0.25, 1.275) on Top
+  pad p[16] : oval-smd-pad(0.25, 0.4) at loc(-0.75, 1.275) on Top
+  pad p[17] : smd-pad(1.6, 1.6) at loc(0.0, 0.0) on Top
+
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.25, [
+    Point(-2.025, 1.35), 
+    Point(-2.03451505843609, 1.39783542904564), 
+    Point(-2.06161165235168, 1.43838834764832), 
+    Point(-2.10216457095436, 1.46548494156391), 
+    Point(-2.15, 1.475), 
+    Point(-2.19783542904564, 1.46548494156391), 
+    Point(-2.23838834764832, 1.43838834764832), 
+    Point(-2.26548494156391, 1.39783542904564), 
+    Point(-2.275, 1.35), 
+    Point(-2.26548494156391, 1.30216457095436), 
+    Point(-2.23838834764832, 1.26161165235168), 
+    Point(-2.19783542904564, 1.23451505843609), 
+    Point(-2.15, 1.225), 
+    Point(-2.10216457095436, 1.23451505843609), 
+    Point(-2.06161165235168, 1.26161165235168), 
+    Point(-2.03451505843609, 1.30216457095436), 
+    Point(-2.025, 1.35)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-1.5, 1.275), Point(-1.5, 1.5)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-1.5, 1.5), Point(-1.275, 1.5)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(1.275, 1.5), Point(1.5, 1.5)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(1.5, 1.275), Point(1.5, 1.5)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(1.5, -1.5), Point(1.5, -1.275)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(1.275, -1.5), Point(1.5, -1.5)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-1.5, -1.5), Point(-1.5, -1.275)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-1.5, -1.5), Point(-1.275, -1.5)])
+  ref-label()
+
+pcb-symbol ADAU7118ACPZRL-symbol :
+  pin ADDRCONFIG at Point(45.72, -5.08) with :
+    direction = Right
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin BCLK at Point(45.72, -15.24) with :
+    direction = Right
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin DVDD at Point(43.18, 12.7) with :
+    direction = Up
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin EN at Point(45.72, 0.0) with :
+    direction = Right
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin EPAD at Point(27.94, 12.7) with :
+    direction = Up
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin FSYNC at Point(38.1, -25.4) with :
+    direction = Down
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin GND at Point(38.1, 12.7) with :
+    direction = Up
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin IOVDD at Point(33.02, 12.7) with :
+    direction = Up
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin PDM_CLK0 at Point(7.62, 2.54) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin PDM_CLK1 at Point(7.62, -12.7) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin PDM_DAT0 at Point(7.62, -2.54) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin PDM_DAT1 at Point(7.62, -7.62) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin PDM_DAT2 at Point(7.62, -17.78) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin PDM_DAT3 at Point(22.86, -25.4) with :
+    direction = Down
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin SCL at Point(27.94, -25.4) with :
+    direction = Down
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin SDA at Point(33.02, -25.4) with :
+    direction = Down
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin SDATA at Point(45.72, -10.16) with :
+    direction = Right
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(38.1, 38.1, loc(26.67, -6.35))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(7.62, 13.0))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(7.62, 14.062))
+
+public pcb-component component :
+  name = "ADAU7118ACPZRL"
+  description = "ADAU7118ACPZRL"
+  manufacturer = "Analog Devices"
+  mpn = "ADAU7118ACPZRL"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [ADDRCONFIG | 12 | Right]
+    [BCLK | 10 | Right]
+    [DVDD | 14 | Up]
+    [EN | 13 | Right]
+    [EPAD | 17 | Up]
+    [FSYNC | 9 | Down]
+    [GND | 15 | Up]
+    [IOVDD | 16 | Up]
+    [PDM_CLK0 | 1 | Left]
+    [PDM_CLK1 | 4 | Left]
+    [PDM_DAT0 | 2 | Left]
+    [PDM_DAT1 | 3 | Left]
+    [PDM_DAT2 | 5 | Left]
+    [PDM_DAT3 | 6 | Down]
+    [SCL | 7 | Down]
+    [SDA | 8 | Down]
+    [SDATA | 11 | Right]
+
+  assign-landpattern(PQFN50P300X300X75_HS-17L)
+  val sym = ADAU7118ACPZRL-symbol
+  symbol = sym(self.ADDRCONFIG => sym.ADDRCONFIG, self.BCLK => sym.BCLK, self.DVDD => sym.DVDD, self.EN => sym.EN, self.EPAD => sym.EPAD, self.FSYNC => sym.FSYNC, self.GND => sym.GND, self.IOVDD => sym.IOVDD, self.PDM_CLK0 => sym.PDM_CLK0, self.PDM_CLK1 => sym.PDM_CLK1, self.PDM_DAT0 => sym.PDM_DAT0, self.PDM_DAT1 => sym.PDM_DAT1, self.PDM_DAT2 => sym.PDM_DAT2, self.PDM_DAT3 => sym.PDM_DAT3, self.SCL => sym.SCL, self.SDA => sym.SDA, self.SDATA => sym.SDATA)
+

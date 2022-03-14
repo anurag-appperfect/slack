@@ -1,0 +1,38 @@
+#use-added-syntax(jitx)
+defpackage KicadProject/pins5 :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/symbols
+  import ocdb/symbol-utils
+  import ocdb/generic-components
+  import ocdb/box-symbol
+
+pcb-landpattern pins5-lp :
+  pad p[1] : pth-pad(Circle(0.85), Circle(0.5)) at loc(0.0, 0.0, 0.0)
+  pad p[2] : pth-pad(Circle(0.85), Circle(0.5)) at loc(0.0, -2.54, 0.0)
+  pad p[3] : pth-pad(Circle(0.85), Circle(0.5)) at loc(0.0, -5.08, 0.0)
+  pad p[4] : pth-pad(Circle(0.85), Circle(0.5)) at loc(0.0, -7.62, 0.0)
+  pad p[5] : pth-pad(Circle(0.85), Circle(0.5)) at loc(0.0, -10.16, 0.0)
+
+  
+  ref-label()
+
+public pcb-component pins5 :
+  pin-properties :
+    [pin:Ref | pads:Int ...]
+    [p[1] | 1]
+    [p[2] | 2]
+    [p[3] | 3]
+    [p[4] | 4]
+    [p[5] | 5]
+  
+  make-box-symbol()
+  assign-landpattern(pins5-lp)
+
+  name = "pins5"

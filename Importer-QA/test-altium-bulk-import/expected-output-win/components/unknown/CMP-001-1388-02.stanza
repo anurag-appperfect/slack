@@ -1,0 +1,120 @@
+#use-added-syntax(jitx)
+defpackage output/unknown/CMP-001-1388-02 :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern SN65HVD1786DR :
+  pad p[1] : round-rect-smd-pad(1.97, 0.59, 0.15045) at loc(-1.905, -2.475, 270.0) on Top
+  pad p[2] : round-rect-smd-pad(1.97, 0.59, 0.15045) at loc(-0.635, -2.475, 270.0) on Top
+  pad p[3] : round-rect-smd-pad(1.97, 0.59, 0.15045) at loc(0.635, -2.475, 270.0) on Top
+  pad p[4] : round-rect-smd-pad(1.97, 0.59, 0.15045) at loc(1.905, -2.475, 270.0) on Top
+  pad p[5] : round-rect-smd-pad(1.97, 0.59, 0.15045) at loc(1.905, 2.475, 90.0) on Top
+  pad p[6] : round-rect-smd-pad(1.97, 0.59, 0.15045) at loc(0.635, 2.475, 90.0) on Top
+  pad p[7] : round-rect-smd-pad(1.97, 0.59, 0.15045) at loc(-0.635, 2.475, 90.0) on Top
+  pad p[8] : round-rect-smd-pad(1.97, 0.59, 0.15045) at loc(-1.905, 2.475, 90.0) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [    
+    Point(-1.805, -3.78), 
+    Point(-1.81261204674887, -3.74173165676349), 
+    Point(-1.83428932188135, -3.70928932188135), 
+    Point(-1.86673165676349, -3.68761204674887), 
+    Point(-1.905, -3.68), 
+    Point(-1.94326834323651, -3.68761204674887), 
+    Point(-1.97571067811865, -3.70928932188135), 
+    Point(-1.99738795325113, -3.74173165676349), 
+    Point(-2.005, -3.78), 
+    Point(-1.99738795325113, -3.81826834323651), 
+    Point(-1.97571067811865, -3.85071067811865), 
+    Point(-1.94326834323651, -3.87238795325113), 
+    Point(-1.905, -3.88), 
+    Point(-1.86673165676349, -3.87238795325113), 
+    Point(-1.83428932188135, -3.85071067811865), 
+    Point(-1.81261204674887, -3.81826834323651), 
+    Point(-1.805, -3.78)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [Point(-2.38, -3.4), Point(-2.38, -2.0)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [Point(-2.5, -2.0), Point(-2.38, -2.0)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [Point(-2.5, -2.0), Point(-2.5, 2.0)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [Point(-2.5, 2.0), Point(-2.38, 2.0)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [Point(2.38, -2.0), Point(2.5, -2.0)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [Point(2.5, -2.0), Point(2.5, 2.0)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [Point(2.38, 2.0), Point(2.5, 2.0)])
+  ref-label()
+
+pcb-symbol CMP-001-1388-02-symbol0 :
+  pin A+ at Point(12.7, -2.54) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin B- at Point(12.7, -10.16) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin DE at Point(0.0, -10.16) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin DI at Point(0.0, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin RO at Point(0.0, -5.08) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nRE at Point(0.0, -7.62) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(12.7, 12.7, loc(6.35, -6.35))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+pcb-symbol CMP-001-1388-02-symbol1 :
+  pin GND at Point(0.0, -7.62) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VCC at Point(0.0, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(7.62, 10.16, loc(3.81, -5.08))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+public pcb-component component :
+  name = "CMP-001-1388-02"
+  description = "SN65HVD1786DR"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [A+ | 6 | Right]
+    [B- | 7 | Right]
+    [DE | 3 | Left]
+    [DI | 4 | Left]
+    [RO | 1 | Left]
+    [nRE | 2 | Left]
+    [GND | 5 | Left]
+    [VCC | 8 | Left]
+  
+  assign-landpattern(SN65HVD1786DR)
+  symbol :
+    val sym0 = CMP-001-1388-02-symbol0
+    unit(0) = sym0(self.A+ => sym0.A+, self.B- => sym0.B-, self.DE => sym0.DE, self.DI => sym0.DI, self.RO => sym0.RO, self.nRE => sym0.nRE)
+    val sym1 = CMP-001-1388-02-symbol1
+    unit(1) = sym1(self.GND => sym1.GND, self.VCC => sym1.VCC)
+

@@ -1,0 +1,381 @@
+#use-added-syntax(jitx)
+defpackage goldfish/atmega32u4-ep :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/symbols
+  import ocdb/symbol-utils
+  import ocdb/generic-components
+  import ocdb/box-symbol
+
+pcb-landpattern qfn-44-1ep_7x7mm_p05mm_ep52x52mm :
+  pad p[1] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, 2.5, 0.0)
+  pad p[2] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, 2.0, 0.0)
+  pad p[3] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, 1.5, 0.0)
+  pad p[4] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, 1.0, 0.0)
+  pad p[5] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, 0.5, 0.0)
+  pad p[6] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, 0.0, 0.0)
+  pad p[7] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, -0.5, 0.0)
+  pad p[8] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, -1.0, 0.0)
+  pad p[9] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, -1.5, 0.0)
+  pad p[10] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, -2.0, 0.0)
+  pad p[11] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, -2.5, 0.0)
+  pad p[12] : smd-pad(Capsule(1.1, 0.3)) at loc(-2.5, -3.35, -270.0)
+  pad p[13] : smd-pad(Capsule(1.1, 0.3)) at loc(-2.0, -3.35, -270.0)
+  pad p[14] : smd-pad(Capsule(1.1, 0.3)) at loc(-1.5, -3.35, -270.0)
+  pad p[15] : smd-pad(Capsule(1.1, 0.3)) at loc(-1.0, -3.35, -270.0)
+  pad p[16] : smd-pad(Capsule(1.1, 0.3)) at loc(-0.5, -3.35, -270.0)
+  pad p[17] : smd-pad(Capsule(1.1, 0.3)) at loc(0.0, -3.35, -270.0)
+  pad p[18] : smd-pad(Capsule(1.1, 0.3)) at loc(0.5, -3.35, -270.0)
+  pad p[19] : smd-pad(Capsule(1.1, 0.3)) at loc(1.0, -3.35, -270.0)
+  pad p[20] : smd-pad(Capsule(1.1, 0.3)) at loc(1.5, -3.35, -270.0)
+  pad p[21] : smd-pad(Capsule(1.1, 0.3)) at loc(2.0, -3.35, -270.0)
+  pad p[22] : smd-pad(Capsule(1.1, 0.3)) at loc(2.5, -3.35, -270.0)
+  pad p[23] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, -2.5, 0.0)
+  pad p[24] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, -2.0, 0.0)
+  pad p[25] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, -1.5, 0.0)
+  pad p[26] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, -1.0, 0.0)
+  pad p[27] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, -0.5, 0.0)
+  pad p[28] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, 0.0, 0.0)
+  pad p[29] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, 0.5, 0.0)
+  pad p[30] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, 1.0, 0.0)
+  pad p[31] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, 1.5, 0.0)
+  pad p[32] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, 2.0, 0.0)
+  pad p[33] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, 2.5, 0.0)
+  pad p[34] : smd-pad(Capsule(1.1, 0.3)) at loc(2.5, 3.35, -270.0)
+  pad p[35] : smd-pad(Capsule(1.1, 0.3)) at loc(2.0, 3.35, -270.0)
+  pad p[36] : smd-pad(Capsule(1.1, 0.3)) at loc(1.5, 3.35, -270.0)
+  pad p[37] : smd-pad(Capsule(1.1, 0.3)) at loc(1.0, 3.35, -270.0)
+  pad p[38] : smd-pad(Capsule(1.1, 0.3)) at loc(0.5, 3.35, -270.0)
+  pad p[39] : smd-pad(Capsule(1.1, 0.3)) at loc(0.0, 3.35, -270.0)
+  pad p[40] : smd-pad(Capsule(1.1, 0.3)) at loc(-0.5, 3.35, -270.0)
+  pad p[41] : smd-pad(Capsule(1.1, 0.3)) at loc(-1.0, 3.35, -270.0)
+  pad p[42] : smd-pad(Capsule(1.1, 0.3)) at loc(-1.5, 3.35, -270.0)
+  pad p[43] : smd-pad(Capsule(1.1, 0.3)) at loc(-2.0, 3.35, -270.0)
+  pad p[44] : smd-pad(Capsule(1.1, 0.3)) at loc(-2.5, 3.35, -270.0)
+  pad p[45] : smd-pad(Rectangle(5.2, 5.2)) at loc(0.0, 0.0, 0.0)
+
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(3.62, -3.62), Point(3.62, -2.95) ])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(3.62, -3.62), Point(2.95, -3.62) ])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(3.62, 3.62), Point(3.62, 2.95) ])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(3.62, 3.62), Point(2.95, 3.62) ])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(-3.62, -3.62), Point(-2.95, -3.62) ])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(-3.62, -3.62), Point(-3.62, -2.95) ])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(-3.62, 3.62), Point(-2.95, 3.62) ])
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-1.03, 1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(0.0, 0.0, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-2.06, 2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-2.06, 1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(1.03, -1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-2.06, -2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(1.03, -2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-2.06, -1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-1.03, -2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(2.06, 0.0, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(0.0, 2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(1.03, 0.0, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-1.03, 2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-1.03, 0.0, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(2.06, 1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(2.06, -2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(2.06, -1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(1.03, 2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(1.03, 1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(0.0, -2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(0.0, -1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-2.06, 0.0, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(2.06, 2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-1.03, -1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(0.0, 1.03, 0.0))
+  model3d = Model3D("QFN-44-1EP_7x7mm_P0.5mm_EP5.2x5.2mm.wrl",
+    Vec3D(0.0, 0.0, 0.0),
+    Vec3D(1.0, 1.0, 1.0),
+    Vec3D(0.0, 0.0, 0.0))
+  ref-label()
+
+pcb-symbol atmega32u4-ep-symbol :
+  pin INT6AIN0PE6 at Point(24.13, -16.51) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin PDIMOSIPCINT2PB2 at Point(24.13, 34.29) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin PDOMISOPCINT3PB3 at Point(24.13, 31.75) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin OC0AOC1C~RTS~PCINT7PB7 at Point(24.13, 21.59) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin nRESET~ at Point(-25.4, 39.37) with :
+    direction = Left
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin VCC[0] at Point(-5.08, 41.91) with :
+    direction = Up
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin GND[0] at Point(-3.81, -36.83) with :
+    direction = Down
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin XTAL2 at Point(-25.4, 24.13) with :
+    direction = Left
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin XTAL1 at Point(-25.4, 29.209) with :
+    direction = Left
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin OC0BSCLINT0PD0 at Point(24.13, 8.889) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin SDAINT1PD1 at Point(24.13, 6.35) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin UVCC at Point(-11.43, 41.91) with :
+    direction = Up
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin RXDINT2PD2 at Point(24.13, 3.81) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin TXDINT3PD3 at Point(24.13, 1.27) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin XCK1~CTS~PD5 at Point(24.13, -3.81) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin GND[1] at Point(-1.27, -36.83) with :
+    direction = Down
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin AVCC[0] at Point(3.81, 41.91) with :
+    direction = Up
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ICP2ADC8PD4 at Point(24.13, -1.27) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin T1~OC4D~ADC9PD6 at Point(24.13, -6.35) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin T0OC4DADC10PD7 at Point(24.13, -8.89) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC11PCINT4PB4 at Point(24.13, 29.209) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC12OC1A~OC4B~PCINT12PB5 at Point(24.13, 26.669) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin D- at Point(-25.4, 2.54) with :
+    direction = Left
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC13OC1BOC4BPCINT13PB6 at Point(24.13, 24.13) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin OC3A~OC4A~PC6 at Point(24.13, 16.509) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ICP3CLK0OC4APC7 at Point(24.13, 13.969) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin p~HWB~PE2 at Point(24.13, -13.97) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin VCC[1] at Point(-2.54, 41.91) with :
+    direction = Up
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin GND[2] at Point(1.27, -36.83) with :
+    direction = Down
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC7TDIPF7 at Point(24.13, -34.29) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC6TDOPF6 at Point(24.13, -31.75) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC5TMSPF5 at Point(24.13, -29.21) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC4TCKPF4 at Point(24.13, -26.67) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin D+ at Point(-25.4, 5.08) with :
+    direction = Left
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC1PF1 at Point(24.13, -24.13) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC0PF0 at Point(24.13, -21.59) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin AREF at Point(-25.4, -21.59) with :
+    direction = Left
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin GND[3] at Point(3.81, -36.83) with :
+    direction = Down
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin AVCC[1] at Point(6.35, 41.91) with :
+    direction = Up
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin PAD at Point(-16.51, -36.83) with :
+    direction = Down
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin UGND at Point(-10.16, -36.83) with :
+    direction = Down
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin UCAP at Point(-25.4, -1.27) with :
+    direction = Left
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin VBUS at Point(-25.4, 8.889) with :
+    direction = Left
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin SSPCINT0PB0 at Point(24.13, 39.37) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin SCLKPCINT1PB1 at Point(24.13, 36.83) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+
+  layer("foreground") = Rectangle(49.53, 78.74, loc(-0.635, 2.54))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(-25.4, 42.21))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(-25.4, 43.272))
+
+public pcb-component atmega32u4-ep :
+  pin INT6AIN0PE6
+  pin UVCC
+  pin D-
+  pin D+
+  pin UGND
+  pin UCAP
+  pin VBUS
+  pin SSPCINT0PB0
+  pin SCLKPCINT1PB1
+  pin PDIMOSIPCINT2PB2
+  pin PDOMISOPCINT3PB3
+  pin OC0AOC1C~RTS~PCINT7PB7
+  pin nRESET~
+  pin XTAL2
+  pin XTAL1
+  pin OC0BSCLINT0PD0
+  pin SDAINT1PD1
+  pin RXDINT2PD2
+  pin TXDINT3PD3
+  pin XCK1~CTS~PD5
+  pin ICP2ADC8PD4
+  pin T1~OC4D~ADC9PD6
+  pin T0OC4DADC10PD7
+  pin ADC11PCINT4PB4
+  pin ADC12OC1A~OC4B~PCINT12PB5
+  pin ADC13OC1BOC4BPCINT13PB6
+  pin OC3A~OC4A~PC6
+  pin ICP3CLK0OC4APC7
+  pin p~HWB~PE2
+  pin ADC7TDIPF7
+  pin ADC6TDOPF6
+  pin ADC5TMSPF5
+  pin ADC4TCKPF4
+  pin ADC1PF1
+  pin ADC0PF0
+  pin AREF
+  pin PAD
+  port GND : pin[4]
+  port AVCC : pin[2]
+  port VCC : pin[2]
+  val lp = qfn-44-1ep_7x7mm_p05mm_ep52x52mm
+  val sym = atmega32u4-ep-symbol
+  landpattern = lp(INT6AIN0PE6 => lp.p[1], UVCC => lp.p[2], D- => lp.p[3], D+ => lp.p[4], UGND => lp.p[5], UCAP => lp.p[6], VBUS => lp.p[7], SSPCINT0PB0 => lp.p[8], SCLKPCINT1PB1 => lp.p[9], PDIMOSIPCINT2PB2 => lp.p[10], PDOMISOPCINT3PB3 => lp.p[11], OC0AOC1C~RTS~PCINT7PB7 => lp.p[12], nRESET~ => lp.p[13], VCC[0] => lp.p[14], GND[0] => lp.p[15], XTAL2 => lp.p[16], XTAL1 => lp.p[17], OC0BSCLINT0PD0 => lp.p[18], SDAINT1PD1 => lp.p[19], RXDINT2PD2 => lp.p[20], TXDINT3PD3 => lp.p[21], XCK1~CTS~PD5 => lp.p[22], GND[1] => lp.p[23], AVCC[0] => lp.p[24], ICP2ADC8PD4 => lp.p[25], T1~OC4D~ADC9PD6 => lp.p[26], T0OC4DADC10PD7 => lp.p[27], ADC11PCINT4PB4 => lp.p[28], ADC12OC1A~OC4B~PCINT12PB5 => lp.p[29], ADC13OC1BOC4BPCINT13PB6 => lp.p[30], OC3A~OC4A~PC6 => lp.p[31], ICP3CLK0OC4APC7 => lp.p[32], p~HWB~PE2 => lp.p[33], VCC[1] => lp.p[34], GND[2] => lp.p[35], ADC7TDIPF7 => lp.p[36], ADC6TDOPF6 => lp.p[37], ADC5TMSPF5 => lp.p[38], ADC4TCKPF4 => lp.p[39], ADC1PF1 => lp.p[40], ADC0PF0 => lp.p[41], AREF => lp.p[42], GND[3] => lp.p[43], AVCC[1] => lp.p[44], PAD => lp.p[45])
+  symbol = sym(INT6AIN0PE6 => sym.INT6AIN0PE6, UVCC => sym.UVCC, D- => sym.D-, D+ => sym.D+, UGND => sym.UGND, UCAP => sym.UCAP, VBUS => sym.VBUS, SSPCINT0PB0 => sym.SSPCINT0PB0, SCLKPCINT1PB1 => sym.SCLKPCINT1PB1, PDIMOSIPCINT2PB2 => sym.PDIMOSIPCINT2PB2, PDOMISOPCINT3PB3 => sym.PDOMISOPCINT3PB3, OC0AOC1C~RTS~PCINT7PB7 => sym.OC0AOC1C~RTS~PCINT7PB7, nRESET~ => sym.nRESET~, VCC[0] => sym.VCC[0], GND[0] => sym.GND[0], XTAL2 => sym.XTAL2, XTAL1 => sym.XTAL1, OC0BSCLINT0PD0 => sym.OC0BSCLINT0PD0, SDAINT1PD1 => sym.SDAINT1PD1, RXDINT2PD2 => sym.RXDINT2PD2, TXDINT3PD3 => sym.TXDINT3PD3, XCK1~CTS~PD5 => sym.XCK1~CTS~PD5, GND[1] => sym.GND[1], AVCC[0] => sym.AVCC[0], ICP2ADC8PD4 => sym.ICP2ADC8PD4, T1~OC4D~ADC9PD6 => sym.T1~OC4D~ADC9PD6, T0OC4DADC10PD7 => sym.T0OC4DADC10PD7, ADC11PCINT4PB4 => sym.ADC11PCINT4PB4, ADC12OC1A~OC4B~PCINT12PB5 => sym.ADC12OC1A~OC4B~PCINT12PB5, ADC13OC1BOC4BPCINT13PB6 => sym.ADC13OC1BOC4BPCINT13PB6, OC3A~OC4A~PC6 => sym.OC3A~OC4A~PC6, ICP3CLK0OC4APC7 => sym.ICP3CLK0OC4APC7, p~HWB~PE2 => sym.p~HWB~PE2, VCC[1] => sym.VCC[1], GND[2] => sym.GND[2], ADC7TDIPF7 => sym.ADC7TDIPF7, ADC6TDOPF6 => sym.ADC6TDOPF6, ADC5TMSPF5 => sym.ADC5TMSPF5, ADC4TCKPF4 => sym.ADC4TCKPF4, ADC1PF1 => sym.ADC1PF1, ADC0PF0 => sym.ADC0PF0, AREF => sym.AREF, GND[3] => sym.GND[3], AVCC[1] => sym.AVCC[1], PAD => sym.PAD)
+  
+  name = "Package_DFN_QFN:QFN-44-1EP_7x7mm_P0.5mm_EP5.2x5.2mm"
+  description = "44-Lead Plastic Quad Flat No-Lead Package, 7x7mm Body (see Atmel Appnote 8826"
+  reference-prefix = "U"
+  mpn = "ATMEGA32U4-EP"

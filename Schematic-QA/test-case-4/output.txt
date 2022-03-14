@@ -1,0 +1,9 @@
+Checks finished. Saved to "checks.txt".
+  537 checks total.
+  533 checks passed.
+  4 checks failed.
+  0 checks errored during execution.
+Visualizing Design
+[layout-design] Using cached output.
+Visualizing Schematic
+[layout-design] Using cached output.

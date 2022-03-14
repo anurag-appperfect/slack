@@ -1,0 +1,72 @@
+#use-added-syntax(jitx)
+defpackage output/diodes-incorporated/DMG2305UX-7 :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern DMG2305UX-7 :
+  pad D : round-rect-smd-pad(0.9, 0.8, 0.2) at loc(0.0, 1.0, 90.0) on Top
+  pad G : round-rect-smd-pad(0.9, 0.8, 0.2) at loc(-0.95, -1.0, 270.0) on Top
+  pad S : round-rect-smd-pad(0.9, 0.8, 0.2) at loc(0.95, -1.0, 270.0) on Top
+
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [Point(-1.53, -0.7), Point(-1.53, 0.7)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [Point(-1.53, 0.7), Point(-0.58, 0.7)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [Point(1.53, -0.7), Point(1.53, 0.7)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [Point(0.58, 0.7), Point(1.53, 0.7)])
+  ref-label()
+
+pcb-symbol CMP-012-0038-01-symbol :
+  pin D at Point(5.08, 0.0) with :
+    direction = Up
+    length = 2.54
+  pin G at Point(0.0, -5.08) with :
+    direction = Left
+    length = 2.54
+  pin S at Point(5.08, -5.08) with :
+    direction = Down
+    length = 2.54
+  layer("foreground") = Polygon([Point(7.62, -3.048), Point(6.858, -1.778), Point(8.382, -1.778)])
+  layer("foreground") = Polygon([Point(5.08, -2.54), Point(3.556, -2.032), Point(3.556, -3.048)])
+  layer("foreground") = Line(1.0, [Point(5.08, -4.318), Point(2.54, -4.318)])
+  layer("foreground") = Line(1.0, [Point(5.08, -2.54), Point(2.54, -2.54)])
+  layer("foreground") = Line(1.0, [Point(5.08, -0.762), Point(2.54, -0.762)])
+  layer("foreground") = Line(1.0, [Point(2.032, -5.08), Point(2.032, 0.0)])
+  layer("foreground") = Line(1.0, [Point(2.54, -4.826), Point(2.54, -3.81)])
+  layer("foreground") = Line(1.0, [Point(2.54, -2.032), Point(2.54, -3.048)])
+  layer("foreground") = Line(1.0, [Point(2.54, -0.254), Point(2.54, -1.27)])
+  layer("foreground") = Line(1.0, [Point(0.0, -5.08), Point(2.032, -5.08)])
+  layer("foreground") = Line(1.0, [Point(5.08, -2.54), Point(5.08, -5.08)])
+  layer("foreground") = Line(1.0, [Point(5.08, -5.08), Point(7.62, -5.08)])
+  layer("foreground") = Line(1.0, [Point(5.08, 0.0), Point(7.62, 0.0)])
+  layer("foreground") = Line(1.0, [Point(7.62, 0.0), Point(7.62, -1.778)])
+  layer("foreground") = Line(1.0, [Point(7.62, -5.08), Point(7.62, -3.048)])
+  layer("foreground") = Line(1.0, [
+    Point(8.382, -3.302), 
+    Point(8.128, -3.048), 
+    Point(7.112, -3.048), 
+    Point(6.858, -2.794)])
+  layer("foreground") = Line(1.0, [Point(5.08, -0.762), Point(5.08, 0.0)])
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(-0.5, 0.8))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(-0.5, 1.862))
+
+public pcb-component component :
+  name = "CMP-012-0038-01"
+  description = "DMG2305UX"
+  manufacturer = "Diodes Incorporated"
+  mpn = "DMG2305UX-7"
+  pin-properties :
+    [pin:Ref | pads:Ref ... | side:Dir]
+    [D | D | Up]
+    [G | G | Left]
+    [S | S | Down]
+
+  assign-landpattern(DMG2305UX-7)
+  val sym = CMP-012-0038-01-symbol
+  symbol = sym(self.D => sym.D, self.G => sym.G, self.S => sym.S)
+

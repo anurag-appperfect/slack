@@ -1,0 +1,32 @@
+#use-added-syntax(jitx)
+defpackage output/kyocera-avx/04025A4R7CAT2A :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+  import ocdb/box-symbol
+
+pcb-landpattern CAPC1005X56N :
+  pad p[1] : smd-pad(0.59, 0.63) at loc(-0.42, 0.0) on Top
+  pad p[2] : smd-pad(0.59, 0.63) at loc(0.42, 0.0) on Top
+
+  ref-label()
+
+public pcb-component component :
+  name = "04025A4R7CAT2A"
+  description = "C0G"
+  manufacturer = "Kyocera AVX"
+  mpn = "04025A4R7CAT2A"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [p[2] | 2 | Right]
+    [p[1] | 1 | Left]
+
+  assign-landpattern(CAPC1005X56N)
+  make-box-symbol()
+

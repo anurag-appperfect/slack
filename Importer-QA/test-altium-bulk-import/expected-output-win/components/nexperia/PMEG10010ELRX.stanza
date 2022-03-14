@@ -1,0 +1,64 @@
+#use-added-syntax(jitx)
+defpackage output/nexperia/PMEG10010ELRX :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern SODFL350X110-2M :
+  pad p[1] : smd-pad(1.2, 1.4) at loc(-1.45, 0.0, 90.0) on Top
+  pad p[2] : smd-pad(1.2, 1.4) at loc(1.45, 0.0, 90.0) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.1, [    
+    Point(-2.0, 0.9), 
+    Point(-2.00380602337444, 0.919134171618255), 
+    Point(-2.01464466094067, 0.935355339059327), 
+    Point(-2.03086582838175, 0.946193976625564), 
+    Point(-2.05, 0.95), 
+    Point(-2.06913417161825, 0.946193976625564), 
+    Point(-2.08535533905933, 0.935355339059327), 
+    Point(-2.09619397662556, 0.919134171618255), 
+    Point(-2.1, 0.9), 
+    Point(-2.09619397662556, 0.880865828381746), 
+    Point(-2.08535533905933, 0.864644660940673), 
+    Point(-2.06913417161825, 0.853806023374436), 
+    Point(-2.05, 0.85), 
+    Point(-2.03086582838175, 0.853806023374436), 
+    Point(-2.01464466094067, 0.864644660940673), 
+    Point(-2.00380602337444, 0.880865828381746), 
+    Point(-2.0, 0.9)])
+  ref-label()
+
+pcb-symbol PMEG10010ELRX-symbol :
+  pin A at Point(5.08, 0.0) with :
+    direction = Left
+    length = 5.08
+  pin K at Point(7.62, 0.0) with :
+    direction = Right
+    length = 5.08
+  layer("foreground") = Polygon([Point(5.08, -2.54), Point(7.62, 0.0), Point(5.08, 2.54)])
+  layer("foreground") = Line(1.0, [Point(7.62, 2.54), Point(7.62, -2.54)])
+  layer("foreground") = Line(1.0, [Point(7.62, 2.54), Point(8.382, 2.54), Point(8.382, 1.778)])
+  layer("foreground") = Line(1.0, [Point(7.62, -2.54), Point(6.858, -2.54), Point(6.858, -1.778)])
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(5.08, 3.34))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(5.08, 4.402))
+
+public pcb-component component :
+  name = "PMEG10010ELRX"
+  description = "PMEG10010ELRX"
+  manufacturer = "Nexperia"
+  mpn = "PMEG10010ELRX"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [A | 2 | Left]
+    [K | 1 | Right]
+  
+  assign-landpattern(SODFL350X110-2M)
+  val sym = PMEG10010ELRX-symbol
+  symbol = sym(self.A => sym.A, self.K => sym.K)
+

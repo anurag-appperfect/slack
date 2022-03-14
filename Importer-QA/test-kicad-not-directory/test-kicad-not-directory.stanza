@@ -1,0 +1,5 @@
+#use-added-syntax(jitx)
+defpackage test-kicad-not-directory:
+    import jitx/commands
+
+import-kicad("input.txt","output")    

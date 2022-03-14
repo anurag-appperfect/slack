@@ -1,0 +1,88 @@
+#use-added-syntax(jitx)
+defpackage output/unknown/CSD19536KTT :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern DPAK254P1510X470-3N :
+  pad p[1] : smd-pad(1.6, 3.7) at loc(-6.65, 2.54, 90.0) on Top
+  pad p[2] : smd-pad(8.65, 8.6) at loc(4.25, 0.0, 90.0) on Top
+  pad p[3] : smd-pad(1.6, 3.7) at loc(-6.65, -2.54, 90.0) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.25, [    
+    Point(-6.525, 3.89), 
+    Point(-6.53451505843609, 3.93783542904564), 
+    Point(-6.56161165235168, 3.97838834764832), 
+    Point(-6.60216457095436, 4.00548494156391), 
+    Point(-6.65, 4.015), 
+    Point(-6.69783542904564, 4.00548494156391), 
+    Point(-6.73838834764832, 3.97838834764832), 
+    Point(-6.76548494156391, 3.93783542904564), 
+    Point(-6.775, 3.89), 
+    Point(-6.76548494156391, 3.84216457095436), 
+    Point(-6.73838834764832, 3.80161165235168), 
+    Point(-6.69783542904564, 3.77451505843609), 
+    Point(-6.65, 3.765), 
+    Point(-6.60216457095436, 3.77451505843609), 
+    Point(-6.56161165235168, 3.80161165235168), 
+    Point(-6.53451505843609, 3.84216457095436), 
+    Point(-6.525, 3.89)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-2.45, 5.15), Point(-0.45, 5.15)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-2.45, -5.15), Point(-2.45, 5.15)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-2.45, -5.15), Point(-0.45, -5.15)])
+  ref-label()
+
+pcb-symbol CMP-00164-01-symbol :
+  pin D at Point(10.16, -2.54) with :
+    direction = Down
+    length = 5.08
+  pin G at Point(5.08, 0.0) with :
+    direction = Left
+    length = 5.08
+  pin S at Point(10.16, 2.54) with :
+    direction = Up
+    length = 5.08
+  layer("foreground") = Polygon([Point(7.62, 0.0), Point(9.144, -0.508), Point(9.144, 0.508)])
+  layer("foreground") = Polygon([Point(12.7, 0.508), Point(11.938, -0.762), Point(13.462, -0.762)])
+  layer("foreground") = Line(1.0, [Point(10.16, 1.778), Point(7.62, 1.778)])
+  layer("foreground") = Line(1.0, [Point(10.16, 0.0), Point(7.62, 0.0)])
+  layer("foreground") = Line(1.0, [Point(10.16, -1.778), Point(7.62, -1.778)])
+  layer("foreground") = Line(1.0, [Point(10.16, 0.0), Point(10.16, -2.54)])
+  layer("foreground") = Line(1.0, [Point(7.112, 2.286), Point(7.112, -2.286)])
+  layer("foreground") = Line(1.0, [Point(7.62, 2.286), Point(7.62, 1.27)])
+  layer("foreground") = Line(1.0, [Point(7.62, -0.508), Point(7.62, 0.508)])
+  layer("foreground") = Line(1.0, [Point(7.62, -2.286), Point(7.62, -1.27)])
+  layer("foreground") = Line(1.0, [Point(5.08, 0.0), Point(7.112, 0.0)])
+  layer("foreground") = Line(1.0, [Point(10.16, 1.778), Point(10.16, 2.54)])
+  layer("foreground") = Line(1.0, [Point(10.16, 2.54), Point(12.7, 2.54)])
+  layer("foreground") = Line(1.0, [Point(10.16, -2.54), Point(12.7, -2.54)])
+  layer("foreground") = Line(1.0, [Point(12.7, -2.54), Point(12.7, -0.762)])
+  layer("foreground") = Line(1.0, [Point(12.7, 2.54), Point(12.7, 0.508)])
+  layer("foreground") = Line(1.0, [    
+    Point(13.462, 0.762), 
+    Point(13.208, 0.508), 
+    Point(12.192, 0.508), 
+    Point(11.938, 0.254)])
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(4.58, 3.34))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(4.58, 4.402))
+
+public pcb-component component :
+  name = "CMP-00164-01"
+  description = "CSD19536KTT"
+  mpn = "CSD19536KTT"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [D | 3 | Down]
+    [G | 1 | Left]
+    [S | 2 | Up]
+  
+  assign-landpattern(DPAK254P1510X470-3N)
+  val sym = CMP-00164-01-symbol
+  symbol = sym(self.D => sym.D, self.G => sym.G, self.S => sym.S)
+

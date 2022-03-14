@@ -1,0 +1,5 @@
+#use-added-syntax(jitx)
+defpackage test-kicad-overwrite-import:
+    import jitx/commands
+
+import-kicad("input","output",[`overwrite => true])    

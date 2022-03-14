@@ -1,0 +1,2542 @@
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+  utils/checks.stanza:136.4: Assertion 'p-props is GenericPin' passed.
+    p-props = [GenericPin object]
+  utils/checks.stanza:137.4: Assertion 'contains?(max-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)))' passed.
+    max-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)) = 5.0
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+  utils/checks.stanza:136.4: Assertion 'p-props is GenericPin' passed.
+    p-props = [GenericPin object]
+  utils/checks.stanza:137.4: Assertion 'contains?(max-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)))' passed.
+    max-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)) = 5.0
+
+utils/checks.stanza:25.10: Check 'power-pin' passed.
+  Defined at utils/checks.stanza:140.7.
+  utils/checks.stanza:141.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 141, 9), p, ($quote power-pin))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 141, 9) = utils/checks.stanza:141.9
+    p = Pin(L535/D204(relative))
+  utils/checks.stanza:143.2: Assertion 'p-props is PowerPin' passed.
+    p-props = [PowerPin object]
+  utils/checks.stanza:145.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 145, 9), p, ($quote rail-voltage))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 145, 9) = utils/checks.stanza:145.9
+    p = Pin(L535/D204(relative))
+  utils/checks.stanza:147.2: Assertion 'contains?(recommended-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)))' passed.
+    recommended-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)) = 5.0
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+  utils/checks.stanza:136.4: Assertion 'p-props is GenericPin' passed.
+    p-props = [GenericPin object]
+  utils/checks.stanza:137.4: Assertion 'contains?(max-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)))' passed.
+    max-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)) = 5.0
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+  utils/checks.stanza:136.4: Assertion 'p-props is GenericPin' passed.
+    p-props = [GenericPin object]
+  utils/checks.stanza:137.4: Assertion 'contains?(max-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)))' passed.
+    max-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)) = 5.0
+
+utils/checks.stanza:25.10: Check 'power-pin' passed.
+  Defined at utils/checks.stanza:140.7.
+  utils/checks.stanza:141.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 141, 9), p, ($quote power-pin))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 141, 9) = utils/checks.stanza:141.9
+    p = Pin(L700/D204(relative))
+  utils/checks.stanza:143.2: Assertion 'p-props is PowerPin' passed.
+    p-props = [PowerPin object]
+  utils/checks.stanza:145.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 145, 9), p, ($quote rail-voltage))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 145, 9) = utils/checks.stanza:145.9
+    p = Pin(L700/D204(relative))
+  utils/checks.stanza:147.2: Assertion 'contains?(recommended-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)))' passed.
+    recommended-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)) = 5.0
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+  utils/checks.stanza:136.4: Assertion 'p-props is GenericPin' passed.
+    p-props = [GenericPin object]
+  utils/checks.stanza:137.4: Assertion 'contains?(max-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)))' passed.
+    max-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)) = 3.3
+
+utils/checks.stanza:25.10: Check 'power-pin' passed.
+  Defined at utils/checks.stanza:140.7.
+  utils/checks.stanza:141.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 141, 9), p, ($quote power-pin))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 141, 9) = utils/checks.stanza:141.9
+    p = Pin(L1372/D204(relative))
+  utils/checks.stanza:143.2: Assertion 'p-props is PowerPin' passed.
+    p-props = [PowerPin object]
+  utils/checks.stanza:145.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 145, 9), p, ($quote rail-voltage))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 145, 9) = utils/checks.stanza:145.9
+    p = Pin(L1372/D204(relative))
+  utils/checks.stanza:147.2: Assertion 'contains?(recommended-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)))' passed.
+    recommended-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)) = 3.3
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+  utils/checks.stanza:136.4: Assertion 'p-props is GenericPin' passed.
+    p-props = [GenericPin object]
+  utils/checks.stanza:137.4: Assertion 'contains?(max-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)))' passed.
+    max-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)) = 3.3
+
+utils/checks.stanza:25.10: Check 'power-pin' passed.
+  Defined at utils/checks.stanza:140.7.
+  utils/checks.stanza:141.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 141, 9), p, ($quote power-pin))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 141, 9) = utils/checks.stanza:141.9
+    p = Pin(L1373/D204(relative))
+  utils/checks.stanza:143.2: Assertion 'p-props is PowerPin' passed.
+    p-props = [PowerPin object]
+  utils/checks.stanza:145.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 145, 9), p, ($quote rail-voltage))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 145, 9) = utils/checks.stanza:145.9
+    p = Pin(L1373/D204(relative))
+  utils/checks.stanza:147.2: Assertion 'contains?(recommended-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)))' passed.
+    recommended-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)) = 3.3
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+  utils/checks.stanza:136.4: Assertion 'p-props is GenericPin' passed.
+    p-props = [GenericPin object]
+  utils/checks.stanza:137.4: Assertion 'contains?(max-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)))' passed.
+    max-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)) = 3.3
+
+utils/checks.stanza:25.10: Check 'power-pin' passed.
+  Defined at utils/checks.stanza:140.7.
+  utils/checks.stanza:141.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 141, 9), p, ($quote power-pin))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 141, 9) = utils/checks.stanza:141.9
+    p = Pin(L1375/D204(relative))
+  utils/checks.stanza:143.2: Assertion 'p-props is PowerPin' passed.
+    p-props = [PowerPin object]
+  utils/checks.stanza:145.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 145, 9), p, ($quote rail-voltage))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 145, 9) = utils/checks.stanza:145.9
+    p = Pin(L1375/D204(relative))
+  utils/checks.stanza:147.2: Assertion 'contains?(recommended-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)))' passed.
+    recommended-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)) = 3.3
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+  utils/checks.stanza:136.4: Assertion 'p-props is GenericPin' passed.
+    p-props = [GenericPin object]
+  utils/checks.stanza:137.4: Assertion 'contains?(max-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)))' passed.
+    max-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)) = 3.3
+
+utils/checks.stanza:25.10: Check 'power-pin' passed.
+  Defined at utils/checks.stanza:140.7.
+  utils/checks.stanza:141.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 141, 9), p, ($quote power-pin))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 141, 9) = utils/checks.stanza:141.9
+    p = Pin(L1376/D204(relative))
+  utils/checks.stanza:143.2: Assertion 'p-props is PowerPin' passed.
+    p-props = [PowerPin object]
+  utils/checks.stanza:145.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 145, 9), p, ($quote rail-voltage))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 145, 9) = utils/checks.stanza:145.9
+    p = Pin(L1376/D204(relative))
+  utils/checks.stanza:147.2: Assertion 'contains?(recommended-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)))' passed.
+    recommended-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)) = 3.3
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:25.10: Check 'power-pin' passed.
+  Defined at utils/checks.stanza:140.7.
+  utils/checks.stanza:141.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 141, 9), p, ($quote power-pin))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 141, 9) = utils/checks.stanza:141.9
+    p = Pin(L2027/D204(relative))
+  utils/checks.stanza:143.2: Assertion 'p-props is PowerPin' passed.
+    p-props = [PowerPin object]
+  utils/checks.stanza:145.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 145, 9), p, ($quote rail-voltage))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 145, 9) = utils/checks.stanza:145.9
+    p = Pin(L2027/D204(relative))
+  utils/checks.stanza:147.2: Assertion 'contains?(recommended-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)))' passed.
+    recommended-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)) = 3.3
+
+utils/checks.stanza:25.10: Check 'power-pin' passed.
+  Defined at utils/checks.stanza:140.7.
+  utils/checks.stanza:141.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 141, 9), p, ($quote power-pin))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 141, 9) = utils/checks.stanza:141.9
+    p = Pin(L2028/D204(relative))
+  utils/checks.stanza:143.2: Assertion 'p-props is PowerPin' passed.
+    p-props = [PowerPin object]
+  utils/checks.stanza:145.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 145, 9), p, ($quote rail-voltage))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 145, 9) = utils/checks.stanza:145.9
+    p = Pin(L2028/D204(relative))
+  utils/checks.stanza:147.2: Assertion 'contains?(recommended-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)))' passed.
+    recommended-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)) = 3.3
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+  utils/checks.stanza:136.4: Assertion 'p-props is GenericPin' passed.
+    p-props = [GenericPin object]
+  utils/checks.stanza:137.4: Assertion 'contains?(max-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)))' passed.
+    max-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 137, 43), p, ($quote rail-voltage)) = 3.3
+
+utils/checks.stanza:25.10: Check 'power-pin' passed.
+  Defined at utils/checks.stanza:140.7.
+  utils/checks.stanza:141.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 141, 9), p, ($quote power-pin))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 141, 9) = utils/checks.stanza:141.9
+    p = Pin(L2260/D204(relative))
+  utils/checks.stanza:143.2: Assertion 'p-props is PowerPin' passed.
+    p-props = [PowerPin object]
+  utils/checks.stanza:145.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 145, 9), p, ($quote rail-voltage))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 145, 9) = utils/checks.stanza:145.9
+    p = Pin(L2260/D204(relative))
+  utils/checks.stanza:147.2: Assertion 'contains?(recommended-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)))' passed.
+    recommended-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)) = 3.3
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:23.10: Check 'generic-pin' passed.
+  Defined at utils/checks.stanza:132.7.
+
+utils/checks.stanza:25.10: Check 'power-pin' passed.
+  Defined at utils/checks.stanza:140.7.
+  utils/checks.stanza:141.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 141, 9), p, ($quote power-pin))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 141, 9) = utils/checks.stanza:141.9
+    p = Pin(L2462/D204(relative))
+  utils/checks.stanza:143.2: Assertion 'p-props is PowerPin' passed.
+    p-props = [PowerPin object]
+  utils/checks.stanza:145.2: Assertion 'jitx/client/has-property?(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 145, 9), p, ($quote rail-voltage))' passed.
+    jitx/commands/JITX-CLIENT = [StanzaJITXClient object]
+    core/FileInfo(utils/checks.stanza, 145, 9) = utils/checks.stanza:145.9
+    p = Pin(L2462/D204(relative))
+  utils/checks.stanza:147.2: Assertion 'contains?(recommended-voltage(p-props), jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)))' passed.
+    recommended-voltage(p-props) = [Interval object]
+    jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 147, 49), p, ($quote rail-voltage)) = 5.0
+
+utils/checks.stanza:28.4: Check 'io' passed.
+  Defined at utils/checks.stanza:39.7.
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:102.4: Assertion passed.
+  utils/checks.stanza:103.4: Assertion 'min(voh(driver(o))) > vih' passed.
+    min(voh(driver(o))) = 2.64
+    vih = 2.6
+    Margin: 2.64 - 2.6 = 0.04
+  utils/checks.stanza:104.4: Assertion 'max(vol(driver(o))) < vil' passed.
+    max(vol(driver(o))) = 0.33
+    vil = 0.8
+    Margin: 0.8 - 0.33 = 0.47
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:102.4: Assertion passed.
+  utils/checks.stanza:103.4: Assertion 'min(voh(driver(o))) > vih' passed.
+    min(voh(driver(o))) = 2.64
+    vih = 2.6
+    Margin: 2.64 - 2.6 = 0.04
+  utils/checks.stanza:104.4: Assertion 'max(vol(driver(o))) < vil' passed.
+    max(vol(driver(o))) = 0.33
+    vil = 0.8
+    Margin: 0.8 - 0.33 = 0.47
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:78.16: Assertion 'i < iol(o)' passed.
+    i = 0.000402439024390244
+    iol(o) = 0.028
+    Margin: 0.028 - 0.000402439024390244 = 0.0275975609756098
+  utils/checks.stanza:84.20: Assertion 'rail-voltage > vih-v' passed.
+    rail-voltage = 3.3
+    vih-v = 2.475
+    Margin: 3.3 - 2.475 = 0.825
+  utils/checks.stanza:86.20: Assertion 'contains?(max-voltage(jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 86, 49), p, ($quote generic-pin))), rail-voltage)' passed.
+    max-voltage(jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 86, 49), p, ($quote generic-pin))) = [Interval object]
+    rail-voltage = 3.3
+  utils/checks.stanza:86.20: Assertion 'contains?(max-voltage(jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 86, 49), p, ($quote generic-pin))), rail-voltage)' passed.
+    max-voltage(jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 86, 49), p, ($quote generic-pin))) = [Interval object]
+    rail-voltage = 3.3
+  utils/checks.stanza:87.10: Assertion 'is-net-ok?' passed.
+  utils/checks.stanza:78.16: Assertion 'i < iol(o)' passed.
+    i = 0.000402439024390244
+    iol(o) = 0.028
+    Margin: 0.028 - 0.000402439024390244 = 0.0275975609756098
+  utils/checks.stanza:84.20: Assertion 'rail-voltage > vih-v' passed.
+    rail-voltage = 3.3
+    vih-v = 2.475
+    Margin: 3.3 - 2.475 = 0.825
+  utils/checks.stanza:86.20: Assertion 'contains?(max-voltage(jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 86, 49), p, ($quote generic-pin))), rail-voltage)' passed.
+    max-voltage(jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 86, 49), p, ($quote generic-pin))) = [Interval object]
+    rail-voltage = 3.3
+  utils/checks.stanza:86.20: Assertion 'contains?(max-voltage(jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 86, 49), p, ($quote generic-pin))), rail-voltage)' passed.
+    max-voltage(jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 86, 49), p, ($quote generic-pin))) = [Interval object]
+    rail-voltage = 3.3
+  utils/checks.stanza:87.10: Assertion 'is-net-ok?' passed.
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:102.4: Assertion passed.
+  utils/checks.stanza:103.4: Assertion 'min(voh(driver(o))) > vih' passed.
+    min(voh(driver(o))) = 2.64
+    vih = 2.6
+    Margin: 2.64 - 2.6 = 0.04
+  utils/checks.stanza:104.4: Assertion 'max(vol(driver(o))) < vil' passed.
+    max(vol(driver(o))) = 0.33
+    vil = 0.8
+    Margin: 0.8 - 0.33 = 0.47
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:102.4: Assertion passed.
+  utils/checks.stanza:103.4: Assertion 'min(voh(driver(o))) > vih' passed.
+    min(voh(driver(o))) = 2.64
+    vih = 2.31
+    Margin: 2.64 - 2.31 = 0.330000000000001
+  utils/checks.stanza:104.4: Assertion 'max(vol(driver(o))) < vil' passed.
+    max(vol(driver(o))) = 0.33
+    vil = 0.6
+    Margin: 0.6 - 0.33 = 0.27
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:102.4: Assertion passed.
+  utils/checks.stanza:103.4: Assertion 'min(voh(driver(o))) > vih' passed.
+    min(voh(driver(o))) = 3.1
+    vih = 2.475
+    Margin: 3.1 - 2.475 = 0.625
+  utils/checks.stanza:104.4: Assertion 'max(vol(driver(o))) < vil' passed.
+    max(vol(driver(o))) = 0.4
+    vil = 0.825
+    Margin: 0.825 - 0.4 = 0.425
+  utils/checks.stanza:106.6: Assertion 'contains?(max-voltage(jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 106, 35), in-p, ($quote generic-pin))), voh(driver(o)))' passed.
+    max-voltage(jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 106, 35), in-p, ($quote generic-pin))) = [Interval object]
+    voh(driver(o)) = [Interval object]
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:98.2: Assertion passed.
+  utils/checks.stanza:102.4: Assertion passed.
+  utils/checks.stanza:103.4: Assertion 'min(voh(driver(o))) > vih' passed.
+    min(voh(driver(o))) = 2.6
+    vih = 2.475
+    Margin: 2.6 - 2.475 = 0.125
+  utils/checks.stanza:104.4: Assertion 'max(vol(driver(o))) < vil' passed.
+    max(vol(driver(o))) = 0.5
+    vil = 0.825
+    Margin: 0.825 - 0.5 = 0.325
+  utils/checks.stanza:106.6: Assertion 'contains?(max-voltage(jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 106, 35), in-p, ($quote generic-pin))), voh(driver(o)))' passed.
+    max-voltage(jitx/client/get-property(jitx/commands/JITX-CLIENT, core/FileInfo(utils/checks.stanza, 106, 35), in-p, ($quote generic-pin))) = [Interval object]
+    voh(driver(o)) = [Interval object]
+  utils/checks.stanza:98.2: Assertion passed.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.25
+    min-copper-copper-space = 0.2
+    Margin: 0.25 - 0.2 = 0.0499999999999999
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.4
+    min-copper-width = 0.2
+    Margin: 0.4 - 0.2 = 0.2
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' failed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' failed.
+    min-space(copper) = 0.0
+    min-copper-copper-space = 0.2
+    Margin: 0.0 - 0.2 = -0.2
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.73
+    min-copper-width = 0.2
+    Margin: 0.73 - 0.2 = 0.53
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.35
+    min-copper-copper-space = 0.2
+    Margin: 0.35 - 0.2 = 0.15
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.6
+    min-copper-width = 0.2
+    Margin: 0.6 - 0.2 = 0.4
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.35
+    min-copper-copper-space = 0.2
+    Margin: 0.35 - 0.2 = 0.15
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.6
+    min-copper-width = 0.2
+    Margin: 0.6 - 0.2 = 0.4
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' failed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' failed.
+    min-space(copper) = 0.15
+    min-copper-copper-space = 0.2
+    Margin: 0.15 - 0.2 = -0.0500000000000001
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.35
+    min-copper-width = 0.2
+    Margin: 0.35 - 0.2 = 0.15
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.3
+    min-copper-copper-space = 0.2
+    Margin: 1.3 - 0.2 = 1.1
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.6
+    min-copper-width = 0.2
+    Margin: 0.6 - 0.2 = 0.4
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.3
+    min-copper-copper-space = 0.2
+    Margin: 1.3 - 0.2 = 1.1
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.6
+    min-copper-width = 0.2
+    Margin: 0.6 - 0.2 = 0.4
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.4
+    min-copper-copper-space = 0.2
+    Margin: 1.4 - 0.2 = 1.2
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.5
+    min-copper-width = 0.2
+    Margin: 0.5 - 0.2 = 0.3
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.25
+    min-copper-copper-space = 0.2
+    Margin: 0.25 - 0.2 = 0.0499999999999995
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.25
+    min-copper-width = 0.2
+    Margin: 0.25 - 0.2 = 0.05
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.255
+    min-copper-copper-space = 0.2
+    Margin: 0.255 - 0.2 = 0.055
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.42
+    min-copper-width = 0.2
+    Margin: 0.42 - 0.2 = 0.22
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.51
+    min-copper-copper-space = 0.2
+    Margin: 0.51 - 0.2 = 0.31
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.76
+    min-copper-width = 0.2
+    Margin: 0.76 - 0.2 = 0.56
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.4
+    min-copper-copper-space = 0.2
+    Margin: 0.4 - 0.2 = 0.2
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.7
+    min-copper-width = 0.2
+    Margin: 0.7 - 0.2 = 0.5
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.79769313486232e+308
+    min-copper-copper-space = 0.2
+    Margin: 1.79769313486232e+308 - 0.2 = 1.79769313486232e+308
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 1.1
+    min-copper-width = 0.2
+    Margin: 1.1 - 0.2 = 0.9
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.79769313486232e+308
+    min-copper-copper-space = 0.2
+    Margin: 1.79769313486232e+308 - 0.2 = 1.79769313486232e+308
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 1.1
+    min-copper-width = 0.2
+    Margin: 1.1 - 0.2 = 0.9
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.79769313486232e+308
+    min-copper-copper-space = 0.2
+    Margin: 1.79769313486232e+308 - 0.2 = 1.79769313486232e+308
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 1.1
+    min-copper-width = 0.2
+    Margin: 1.1 - 0.2 = 0.9
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.79769313486232e+308
+    min-copper-copper-space = 0.2
+    Margin: 1.79769313486232e+308 - 0.2 = 1.79769313486232e+308
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 1.1
+    min-copper-width = 0.2
+    Margin: 1.1 - 0.2 = 0.9
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.79769313486232e+308
+    min-copper-copper-space = 0.2
+    Margin: 1.79769313486232e+308 - 0.2 = 1.79769313486232e+308
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 1.1
+    min-copper-width = 0.2
+    Margin: 1.1 - 0.2 = 0.9
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.79769313486232e+308
+    min-copper-copper-space = 0.2
+    Margin: 1.79769313486232e+308 - 0.2 = 1.79769313486232e+308
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 1.1
+    min-copper-width = 0.2
+    Margin: 1.1 - 0.2 = 0.9
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.79769313486232e+308
+    min-copper-copper-space = 0.2
+    Margin: 1.79769313486232e+308 - 0.2 = 1.79769313486232e+308
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 1.1
+    min-copper-width = 0.2
+    Margin: 1.1 - 0.2 = 0.9
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.79769313486232e+308
+    min-copper-copper-space = 0.2
+    Margin: 1.79769313486232e+308 - 0.2 = 1.79769313486232e+308
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 1.1
+    min-copper-width = 0.2
+    Margin: 1.1 - 0.2 = 0.9
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.79769313486232e+308
+    min-copper-copper-space = 0.2
+    Margin: 1.79769313486232e+308 - 0.2 = 1.79769313486232e+308
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 1.1
+    min-copper-width = 0.2
+    Margin: 1.1 - 0.2 = 0.9
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.79769313486232e+308
+    min-copper-copper-space = 0.2
+    Margin: 1.79769313486232e+308 - 0.2 = 1.79769313486232e+308
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 1.1
+    min-copper-width = 0.2
+    Margin: 1.1 - 0.2 = 0.9
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.79769313486232e+308
+    min-copper-copper-space = 0.2
+    Margin: 1.79769313486232e+308 - 0.2 = 1.79769313486232e+308
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 1.1
+    min-copper-width = 0.2
+    Margin: 1.1 - 0.2 = 0.9
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.79769313486232e+308
+    min-copper-copper-space = 0.2
+    Margin: 1.79769313486232e+308 - 0.2 = 1.79769313486232e+308
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 1.1
+    min-copper-width = 0.2
+    Margin: 1.1 - 0.2 = 0.9
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.79769313486232e+308
+    min-copper-copper-space = 0.2
+    Margin: 1.79769313486232e+308 - 0.2 = 1.79769313486232e+308
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 1.1
+    min-copper-width = 0.2
+    Margin: 1.1 - 0.2 = 0.9
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.25
+    min-copper-copper-space = 0.2
+    Margin: 0.25 - 0.2 = 0.0499999999999999
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.4
+    min-copper-width = 0.2
+    Margin: 0.4 - 0.2 = 0.2
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' failed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' failed.
+    min-space(copper) = 0.0
+    min-copper-copper-space = 0.2
+    Margin: 0.0 - 0.2 = -0.2
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.73
+    min-copper-width = 0.2
+    Margin: 0.73 - 0.2 = 0.53
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.35
+    min-copper-copper-space = 0.2
+    Margin: 0.35 - 0.2 = 0.15
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.6
+    min-copper-width = 0.2
+    Margin: 0.6 - 0.2 = 0.4
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.35
+    min-copper-copper-space = 0.2
+    Margin: 0.35 - 0.2 = 0.15
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.6
+    min-copper-width = 0.2
+    Margin: 0.6 - 0.2 = 0.4
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' failed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' failed.
+    min-space(copper) = 0.15
+    min-copper-copper-space = 0.2
+    Margin: 0.15 - 0.2 = -0.0500000000000001
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.35
+    min-copper-width = 0.2
+    Margin: 0.35 - 0.2 = 0.15
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.3
+    min-copper-copper-space = 0.2
+    Margin: 1.3 - 0.2 = 1.1
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.6
+    min-copper-width = 0.2
+    Margin: 0.6 - 0.2 = 0.4
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.3
+    min-copper-copper-space = 0.2
+    Margin: 1.3 - 0.2 = 1.1
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.6
+    min-copper-width = 0.2
+    Margin: 0.6 - 0.2 = 0.4
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.3
+    min-copper-copper-space = 0.2
+    Margin: 1.3 - 0.2 = 1.1
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.6
+    min-copper-width = 0.2
+    Margin: 0.6 - 0.2 = 0.4
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.3
+    min-copper-copper-space = 0.2
+    Margin: 1.3 - 0.2 = 1.1
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.6
+    min-copper-width = 0.2
+    Margin: 0.6 - 0.2 = 0.4
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 1.4
+    min-copper-copper-space = 0.2
+    Margin: 1.4 - 0.2 = 1.2
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.5
+    min-copper-width = 0.2
+    Margin: 0.5 - 0.2 = 0.3
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.25
+    min-copper-copper-space = 0.2
+    Margin: 0.25 - 0.2 = 0.0499999999999995
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.25
+    min-copper-width = 0.2
+    Margin: 0.25 - 0.2 = 0.05
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.255
+    min-copper-copper-space = 0.2
+    Margin: 0.255 - 0.2 = 0.055
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.42
+    min-copper-width = 0.2
+    Margin: 0.42 - 0.2 = 0.22
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.51
+    min-copper-copper-space = 0.2
+    Margin: 0.51 - 0.2 = 0.31
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.76
+    min-copper-width = 0.2
+    Margin: 0.76 - 0.2 = 0.56
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+  utils/checks.stanza:312.4: Assertion 'min-space(copper) >= min-copper-copper-space' passed.
+    min-space(copper) = 0.39
+    min-copper-copper-space = 0.2
+    Margin: 0.39 - 0.2 = 0.19
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+  utils/checks.stanza:320.4: Assertion 'min-width(copper) >= min-copper-width' passed.
+    min-width(copper) = 0.57
+    min-copper-width = 0.2
+    Margin: 0.57 - 0.2 = 0.37
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.
+
+utils/checks.stanza:354.6: Check 'check-min-copper-copper-space' passed.
+  Defined at utils/checks.stanza:308.7.
+
+utils/checks.stanza:355.6: Check 'check-min-copper-width' passed.
+  Defined at utils/checks.stanza:316.7.
+
+utils/checks.stanza:356.6: Check 'check-min-solder-mask-sliver' passed.
+  Defined at utils/checks.stanza:334.7.

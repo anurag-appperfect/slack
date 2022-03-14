@@ -1,0 +1,28 @@
+#use-added-syntax(jitx)
+defpackage output/unknown/Testpoint_SMT_2mm :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+  import ocdb/box-symbol
+
+pcb-landpattern TestPoint_SMT_2mm :
+  pad TP : chamfered-rect-smd-pad(2.0, 2.0, 0.0) at loc(0.0, 0.0) on Top
+
+  ref-label()
+
+public pcb-component component :
+  name = "Testpoint_SMT_2mm"
+  description = "Testpoint_SMT_2mm"
+  pin-properties :
+    [pin:Ref | pads:Ref ... | side:Dir]
+    [TP | TP | Down]
+
+  assign-landpattern(TestPoint_SMT_2mm)
+  make-box-symbol()
+

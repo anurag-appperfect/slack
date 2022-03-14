@@ -1,0 +1,5 @@
+package KicadProject/pins2 defined-in "pins2.stanza"
+package KicadProject/cx70m-24p1 defined-in "cx70m-24p1.stanza"
+package KicadProject/pins12 defined-in "pins12.stanza"
+package KicadProject/pins5 defined-in "pins5.stanza"
+package KicadProject/logo defined-in "logo.stanza"

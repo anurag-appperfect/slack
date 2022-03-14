@@ -1,0 +1,46 @@
+#use-added-syntax(jitx)
+defpackage KicadProject :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/symbols
+  import ocdb/symbol-utils
+  import ocdb/generic-components
+  import ocdb/box-symbol
+
+  import KicadProject/pins2
+  import KicadProject/pins12
+  import KicadProject/cx70m-24p1
+  import KicadProject/pins5
+  import KicadProject/logo
+
+pcb-module KicadProject :
+  inst G*** : logo
+  inst G***-1 : logo
+  inst G***-2 : logo
+  inst J1 : cx70m-24p1
+  inst REF** : pins12
+  inst REF**-1 : pins2
+  inst REF**-2 : pins5
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(G***) at loc(0.0, 0.0, 0.0) on Top
+  place(G***-1) at loc(0.0, 0.0, 0.0) on Top
+  place(G***-2) at loc(0.0, 0.0, 0.0) on Top
+
+  
+
+  
+
+make-default-board(KicadProject, 4, Rectangle(10.0, 10.0))
+
+view-board()
+view-schematic()
+export-cad()

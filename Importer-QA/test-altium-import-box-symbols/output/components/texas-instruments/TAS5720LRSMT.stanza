@@ -1,0 +1,310 @@
+#use-added-syntax(jitx)
+defpackage audio_board/texas-instruments/TAS5720LRSMT :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern AUDIO_POWER_AMP :
+  pad p[1] : oval-smd-pad(0.2, 0.6) at loc(-1.9, 1.4, 90.0) on Top
+  pad p[2] : oval-smd-pad(0.2, 0.6) at loc(-1.9, 1.0, 90.0) on Top
+  pad p[3] : oval-smd-pad(0.2, 0.6) at loc(-1.9, 0.6, 90.0) on Top
+  pad p[4] : oval-smd-pad(0.2, 0.6) at loc(-1.9, 0.2, 90.0) on Top
+  pad p[5] : oval-smd-pad(0.2, 0.6) at loc(-1.9, -0.2, 90.0) on Top
+  pad p[6] : oval-smd-pad(0.2, 0.6) at loc(-1.9, -0.6, 90.0) on Top
+  pad p[7] : oval-smd-pad(0.2, 0.6) at loc(-1.9, -1.0, 90.0) on Top
+  pad p[8] : oval-smd-pad(0.2, 0.6) at loc(-1.9, -1.4, 90.0) on Top
+  pad p[9] : oval-smd-pad(0.2, 0.6) at loc(-1.4, -1.9) on Top
+  pad p[10] : oval-smd-pad(0.2, 0.6) at loc(-1.0, -1.9) on Top
+  pad p[11] : oval-smd-pad(0.2, 0.6) at loc(-0.6, -1.9) on Top
+  pad p[12] : oval-smd-pad(0.2, 0.6) at loc(-0.2, -1.9) on Top
+  pad p[13] : oval-smd-pad(0.2, 0.6) at loc(0.2, -1.9) on Top
+  pad p[14] : oval-smd-pad(0.2, 0.6) at loc(0.6, -1.9) on Top
+  pad p[15] : oval-smd-pad(0.2, 0.6) at loc(1.0, -1.9) on Top
+  pad p[16] : oval-smd-pad(0.2, 0.6) at loc(1.4, -1.9) on Top
+  pad p[17] : oval-smd-pad(0.2, 0.6) at loc(1.9, -1.4, 90.0) on Top
+  pad p[18] : oval-smd-pad(0.2, 0.6) at loc(1.9, -1.0, 90.0) on Top
+  pad p[19] : oval-smd-pad(0.2, 0.6) at loc(1.9, -0.6, 90.0) on Top
+  pad p[20] : oval-smd-pad(0.2, 0.6) at loc(1.9, -0.2, 90.0) on Top
+  pad p[21] : oval-smd-pad(0.2, 0.6) at loc(1.9, 0.2, 90.0) on Top
+  pad p[22] : oval-smd-pad(0.2, 0.6) at loc(1.9, 0.6, 90.0) on Top
+  pad p[23] : oval-smd-pad(0.2, 0.6) at loc(1.9, 1.0, 90.0) on Top
+  pad p[24] : oval-smd-pad(0.2, 0.6) at loc(1.9, 1.4, 90.0) on Top
+  pad p[25] : oval-smd-pad(0.2, 0.6) at loc(1.4, 1.9) on Top
+  pad p[26] : oval-smd-pad(0.2, 0.6) at loc(1.0, 1.9) on Top
+  pad p[27] : oval-smd-pad(0.2, 0.6) at loc(0.6, 1.9) on Top
+  pad p[28] : oval-smd-pad(0.2, 0.6) at loc(0.2, 1.9) on Top
+  pad p[29] : oval-smd-pad(0.2, 0.6) at loc(-0.2, 1.9) on Top
+  pad p[30] : oval-smd-pad(0.2, 0.6) at loc(-0.6, 1.9) on Top
+  pad p[31] : oval-smd-pad(0.2, 0.6) at loc(-1.0, 1.9) on Top
+  pad p[32] : oval-smd-pad(0.2, 0.6) at loc(-1.4, 1.9) on Top
+  pad p[33] : smd-pad(2.8, 2.8) at loc(0.0, 0.0) on Top
+
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [
+    Point(-2.667, 1.905), 
+    Point(-2.67666729937107, 1.95360079591037), 
+    Point(-2.70419743878931, 1.99480256121069), 
+    Point(-2.74539920408963, 2.02233270062893), 
+    Point(-2.794, 2.032), 
+    Point(-2.84260079591037, 2.02233270062893), 
+    Point(-2.88380256121069, 1.99480256121069), 
+    Point(-2.91133270062893, 1.95360079591037), 
+    Point(-2.921, 1.905), 
+    Point(-2.91133270062893, 1.85639920408963), 
+    Point(-2.88380256121069, 1.81519743878931), 
+    Point(-2.84260079591037, 1.78766729937107), 
+    Point(-2.794, 1.778), 
+    Point(-2.74539920408963, 1.78766729937107), 
+    Point(-2.70419743878931, 1.81519743878931), 
+    Point(-2.67666729937107, 1.85639920408963), 
+    Point(-2.667, 1.905)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-2.225, -2.225), Point(-2.025, -2.225)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-2.225, -2.225), Point(-2.225, -2.025)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(2.025, -2.225), Point(2.225, -2.225)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(2.225, -2.225), Point(2.225, -2.025)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(2.225, 2.025), Point(2.225, 2.225)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-2.225, 1.725), Point(-2.225, 2.225)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-2.225, 2.225), Point(-1.725, 2.225)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(2.025, 2.225), Point(2.225, 2.225)])
+  layer(Paste(Top)) = Polygon([
+    Point(0.1, -1.329), 
+    Point(1.329, -1.329), 
+    Point(1.329, -0.1), 
+    Point(0.1, -0.1)])
+  layer(Paste(Top)) = Polygon([
+    Point(-1.329, -1.329), 
+    Point(-0.1, -1.329), 
+    Point(-0.1, -0.1), 
+    Point(-1.329, -0.1)])
+  layer(Paste(Top)) = Polygon([
+    Point(0.1, 0.1), 
+    Point(1.329, 0.1), 
+    Point(1.329, 1.329), 
+    Point(0.1, 1.329)])
+  layer(Paste(Top)) = Polygon([
+    Point(-1.329, 0.1), 
+    Point(-0.1, 0.1), 
+    Point(-0.1, 1.329), 
+    Point(-1.329, 1.329)])
+  ref-label()
+
+pcb-symbol TAS5720LRSMT-symbol :
+  pin ADR0 at Point(5.08, -7.62) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin ADR1 at Point(5.08, -10.16) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin AVDD at Point(5.08, 30.48) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin BCLK at Point(5.08, 0.0) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin BST_N at Point(35.56, 0.0) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin BST_P at Point(35.56, 12.7) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin DVDD at Point(5.08, 25.4) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin FAULT_N at Point(5.08, -33.02) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GND[0] at Point(35.56, -12.7) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GND[1] at Point(35.56, -15.24) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GVDD at Point(5.08, 20.32) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin LRCLK at Point(5.08, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin MCLK at Point(5.08, 2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin OUT_N[0] at Point(35.56, -5.08) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin OUT_N[1] at Point(35.56, -7.62) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin OUT_P[0] at Point(35.56, 5.08) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin OUT_P[1] at Point(35.56, 7.62) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin PAD at Point(35.56, -33.02) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin PGND[0] at Point(35.56, -25.4) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin PGND[1] at Point(35.56, -20.32) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin PGND[2] at Point(35.56, -27.94) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin PGND[3] at Point(35.56, -22.86) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin PVDD[0] at Point(5.08, 7.62) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin PVDD[1] at Point(5.08, 15.24) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin PVDD[2] at Point(5.08, 10.16) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin PVDD[3] at Point(5.08, 12.7) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SCL at Point(5.08, -17.78) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SDA at Point(5.08, -15.24) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SDIN at Point(5.08, -20.32) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SD_N at Point(5.08, -27.94) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VCOM at Point(35.56, 25.4) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VREF_N at Point(35.56, 30.48) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VREG at Point(35.56, 20.32) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(30.48, 71.12, loc(20.32, 0.0))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(5.08, 35.86))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(5.08, 36.922))
+
+public pcb-component component :
+  name = "TAS5720LRSMT"
+  description = "TAS5720LRSMT"
+  manufacturer = "Texas Instruments"
+  mpn = "TAS5720LRSMT"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [ADR0 | 13 | Left]
+    [ADR1 | 12 | Left]
+    [AVDD | 28 | Left]
+    [BCLK | 6 | Left]
+    [BST_N | 18 | Right]
+    [BST_P | 23 | Right]
+    [DVDD | 11 | Left]
+    [FAULT_N | 2 | Left]
+    [GND[0] | 10 | Right]
+    [GND[1] | 29 | Right]
+    [GVDD | 30 | Left]
+    [LRCLK | 4 | Left]
+    [MCLK | 5 | Left]
+    [OUT_N[0] | 17 | Right]
+    [OUT_N[1] | 16 | Right]
+    [OUT_P[0] | 24 | Right]
+    [OUT_P[1] | 25 | Right]
+    [PAD | 33 | Right]
+    [PGND[0] | 21 | Right]
+    [PGND[1] | 19 | Right]
+    [PGND[2] | 22 | Right]
+    [PGND[3] | 20 | Right]
+    [PVDD[0] | 27 | Left]
+    [PVDD[1] | 14 | Left]
+    [PVDD[2] | 26 | Left]
+    [PVDD[3] | 15 | Left]
+    [SCL | 8 | Left]
+    [SDA | 9 | Left]
+    [SDIN | 7 | Left]
+    [SD_N | 3 | Left]
+    [VCOM | 32 | Right]
+    [VREF_N | 1 | Right]
+    [VREG | 31 | Right]
+
+  assign-landpattern(AUDIO_POWER_AMP)
+  val sym = TAS5720LRSMT-symbol
+  symbol = sym(self.ADR0 => sym.ADR0, self.ADR1 => sym.ADR1, self.AVDD => sym.AVDD, self.BCLK => sym.BCLK, self.BST_N => sym.BST_N, self.BST_P => sym.BST_P, self.DVDD => sym.DVDD, self.FAULT_N => sym.FAULT_N, self.GND[0] => sym.GND[0], self.GND[1] => sym.GND[1], self.GVDD => sym.GVDD, self.LRCLK => sym.LRCLK, self.MCLK => sym.MCLK, self.OUT_N[0] => sym.OUT_N[0], self.OUT_N[1] => sym.OUT_N[1], self.OUT_P[0] => sym.OUT_P[0], self.OUT_P[1] => sym.OUT_P[1], self.PAD => sym.PAD, self.PGND[0] => sym.PGND[0], self.PGND[1] => sym.PGND[1], self.PGND[2] => sym.PGND[2], self.PGND[3] => sym.PGND[3], self.PVDD[0] => sym.PVDD[0], self.PVDD[1] => sym.PVDD[1], self.PVDD[2] => sym.PVDD[2], self.PVDD[3] => sym.PVDD[3], self.SCL => sym.SCL, self.SDA => sym.SDA, self.SDIN => sym.SDIN, self.SD_N => sym.SD_N, self.VCOM => sym.VCOM, self.VREF_N => sym.VREF_N, self.VREG => sym.VREG)
+

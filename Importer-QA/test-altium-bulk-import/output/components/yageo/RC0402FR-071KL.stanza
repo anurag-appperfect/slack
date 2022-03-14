@@ -1,0 +1,53 @@
+#use-added-syntax(jitx)
+defpackage output/yageo/RC0402FR-071KL :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern RES0402 :
+  pad p[1] : smd-pad(0.55, 0.6) at loc(-0.425, 0.0, 90.0) on Top
+  pad p[2] : smd-pad(0.55, 0.6) at loc(0.425, 0.0, 90.0) on Top
+
+  ref-label()
+
+pcb-symbol RES_1K_0402_1pc-symbol :
+  pin p[1] at Point(0.0, 2.54) with :
+    direction = Down
+    length = 2.54
+  pin p[2] at Point(0.0, 7.62) with :
+    direction = Up
+    length = 2.54
+  layer("foreground") = Line(1.0, [
+    Point(0.0, 7.62), 
+    Point(0.0, 6.604), 
+    Point(0.508, 6.35), 
+    Point(-0.508, 5.842), 
+    Point(0.508, 5.334), 
+    Point(-0.508, 4.826), 
+    Point(0.508, 4.318), 
+    Point(-0.508, 3.81), 
+    Point(0.0, 3.556), 
+    Point(0.0, 2.54)])
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(-1.008, 8.42))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(-1.008, 9.482))
+
+public pcb-component component :
+  name = "RES_1K_0402_1pc"
+  description = "RES_1K_0402_1pc"
+  manufacturer = "Yageo"
+  mpn = "RC0402FR-071KL"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [p[1] | 1 | Down]
+    [p[2] | 2 | Up]
+
+  assign-landpattern(RES0402)
+  val sym = RES_1K_0402_1pc-symbol
+  symbol = sym(self.p[1] => sym.p[1], self.p[2] => sym.p[2])
+

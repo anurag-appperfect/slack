@@ -1,0 +1,5 @@
+include "components/stanza.proj"
+
+package audio_board defined-in "audio_board.stanza"
+package caster_mcb_rev_2 defined-in "caster_mcb_rev_2.stanza"
+package v2_bottom_rev_2 defined-in "v2_bottom_rev_2.stanza"

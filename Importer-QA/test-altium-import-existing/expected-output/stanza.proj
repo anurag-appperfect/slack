@@ -1,0 +1,3 @@
+include "components/stanza.proj"
+
+package audio_board defined-in "audio_board.stanza"

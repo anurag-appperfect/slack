@@ -1,0 +1,269 @@
+#use-added-syntax(jitx)
+defpackage output/ftdi--future-technology-devices-international-ltd/FT232RL-REEL :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern SSOP-28 :
+  pad p[1] : smd-pad(0.36281, 1.65) at loc(-3.625, 4.225, 90.0) on Top
+  pad p[2] : smd-pad(0.36281, 1.65) at loc(-3.625, 3.575, 90.0) on Top
+  pad p[3] : smd-pad(0.36281, 1.65) at loc(-3.625, 2.925, 90.0) on Top
+  pad p[4] : smd-pad(0.36281, 1.65) at loc(-3.625, 2.275, 90.0) on Top
+  pad p[5] : smd-pad(0.36281, 1.65) at loc(-3.625, 1.625, 90.0) on Top
+  pad p[6] : smd-pad(0.36281, 1.65) at loc(-3.625, 0.975, 90.0) on Top
+  pad p[7] : smd-pad(0.36281, 1.65) at loc(-3.625, 0.325, 90.0) on Top
+  pad p[8] : smd-pad(0.36281, 1.65) at loc(-3.625, -0.325, 90.0) on Top
+  pad p[9] : smd-pad(0.36281, 1.65) at loc(-3.625, -0.975, 90.0) on Top
+  pad p[10] : smd-pad(0.36281, 1.65) at loc(-3.625, -1.625, 90.0) on Top
+  pad p[11] : smd-pad(0.36281, 1.65) at loc(-3.625, -2.275, 90.0) on Top
+  pad p[12] : smd-pad(0.36281, 1.65) at loc(-3.625, -2.925, 90.0) on Top
+  pad p[13] : smd-pad(0.36281, 1.65) at loc(-3.625, -3.575, 90.0) on Top
+  pad p[14] : smd-pad(0.36281, 1.65) at loc(-3.625, -4.225, 90.0) on Top
+  pad p[15] : smd-pad(0.36281, 1.65) at loc(3.625, -4.225, 90.0) on Top
+  pad p[16] : smd-pad(0.36281, 1.65) at loc(3.625, -3.575, 90.0) on Top
+  pad p[17] : smd-pad(0.36281, 1.65) at loc(3.625, -2.925, 90.0) on Top
+  pad p[18] : smd-pad(0.36281, 1.65) at loc(3.625, -2.275, 90.0) on Top
+  pad p[19] : smd-pad(0.36281, 1.65) at loc(3.625, -1.625, 90.0) on Top
+  pad p[20] : smd-pad(0.36281, 1.65) at loc(3.625, -0.975, 90.0) on Top
+  pad p[21] : smd-pad(0.36281, 1.65) at loc(3.625, -0.325, 90.0) on Top
+  pad p[22] : smd-pad(0.36281, 1.65) at loc(3.625, 0.325, 90.0) on Top
+  pad p[23] : smd-pad(0.36281, 1.65) at loc(3.625, 0.975, 90.0) on Top
+  pad p[24] : smd-pad(0.36281, 1.65) at loc(3.625, 1.625, 90.0) on Top
+  pad p[25] : smd-pad(0.36281, 1.65) at loc(3.625, 2.275, 90.0) on Top
+  pad p[26] : smd-pad(0.36281, 1.65) at loc(3.625, 2.925, 90.0) on Top
+  pad p[27] : smd-pad(0.36281, 1.65) at loc(3.625, 3.575, 90.0) on Top
+  pad p[28] : smd-pad(0.36281, 1.65) at loc(3.625, 4.225, 90.0) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.6, [    
+    Point(-1.073, 4.223), 
+    Point(-1.09583614024661, 4.33780502970953), 
+    Point(-1.16086796564404, 4.43513203435596), 
+    Point(-1.25819497029047, 4.50016385975339), 
+    Point(-1.373, 4.523), 
+    Point(-1.48780502970953, 4.50016385975339), 
+    Point(-1.58513203435596, 4.43513203435596), 
+    Point(-1.65016385975339, 4.33780502970953), 
+    Point(-1.673, 4.223), 
+    Point(-1.65016385975339, 4.10819497029047), 
+    Point(-1.58513203435596, 4.01086796564404), 
+    Point(-1.48780502970953, 3.94583614024661), 
+    Point(-1.373, 3.923), 
+    Point(-1.25819497029047, 3.94583614024661), 
+    Point(-1.16086796564404, 4.01086796564404), 
+    Point(-1.09583614024661, 4.10819497029047), 
+    Point(-1.073, 4.223)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.25, [    
+    Point(-3.5, 5.025), 
+    Point(-3.50951505843609, 5.07283542904564), 
+    Point(-3.53661165235168, 5.11338834764832), 
+    Point(-3.57716457095436, 5.14048494156391), 
+    Point(-3.625, 5.15), 
+    Point(-3.67283542904564, 5.14048494156391), 
+    Point(-3.71338834764832, 5.11338834764832), 
+    Point(-3.74048494156391, 5.07283542904564), 
+    Point(-3.75, 5.025), 
+    Point(-3.74048494156391, 4.97716457095436), 
+    Point(-3.71338834764832, 4.93661165235168), 
+    Point(-3.67283542904564, 4.90951505843609), 
+    Point(-3.625, 4.9), 
+    Point(-3.57716457095436, 4.90951505843609), 
+    Point(-3.53661165235168, 4.93661165235168), 
+    Point(-3.50951505843609, 4.97716457095436), 
+    Point(-3.5, 5.025)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-2.4, -5.25), Point(2.4, -5.25)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-2.4, 5.25), Point(2.4, 5.25)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(2.4, -5.25), Point(2.4, 5.25)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-2.4, -5.25), Point(-2.4, 5.25)])
+  ref-label()
+
+pcb-symbol FT232RL-symbol :
+  pin AGND at Point(0.0, -38.1) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin CBUS0 at Point(30.48, -25.4) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin CBUS1 at Point(30.48, -27.94) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin CBUS2 at Point(30.48, -30.48) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin CBUS3 at Point(30.48, -33.02) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin CBUS4 at Point(30.48, -35.56) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GND[0] at Point(0.0, -45.72) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GND[1] at Point(0.0, -43.18) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GND[2] at Point(0.0, -40.64) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin NC[0] at Point(30.48, -45.72) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin NC[1] at Point(30.48, -43.18) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin OSCI at Point(0.0, -25.4) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin OSCO at Point(0.0, -27.94) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin RXD at Point(30.48, -5.08) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin TEST at Point(30.48, -40.64) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin TXD at Point(30.48, -2.54) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin USBDM at Point(0.0, -10.16) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin USBDP at Point(0.0, -12.7) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VCC at Point(0.0, -5.08) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VCCIO at Point(0.0, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nCTS at Point(30.48, -10.16) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nDCD at Point(30.48, -17.78) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nDSR at Point(30.48, -15.24) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nDTR at Point(30.48, -12.7) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nRESET at Point(0.0, -17.78) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nRI at Point(30.48, -20.32) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nRTS at Point(30.48, -7.62) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin p3V3OUT at Point(0.0, -33.02) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(30.48, 48.26, loc(15.24, -24.13))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+public pcb-component component :
+  name = "FT232RL"
+  description = "FT232RL"
+  manufacturer = "FTDI, Future Technology Devices International Ltd"
+  mpn = "FT232RL-REEL"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [AGND | 25 | Left]
+    [CBUS0 | 23 | Right]
+    [CBUS1 | 22 | Right]
+    [CBUS2 | 13 | Right]
+    [CBUS3 | 14 | Right]
+    [CBUS4 | 12 | Right]
+    [GND[0] | 21 | Left]
+    [GND[1] | 18 | Left]
+    [GND[2] | 7 | Left]
+    [NC[0] | 24 | Right]
+    [NC[1] | 8 | Right]
+    [OSCI | 27 | Left]
+    [OSCO | 28 | Left]
+    [RXD | 5 | Right]
+    [TEST | 26 | Right]
+    [TXD | 1 | Right]
+    [USBDM | 16 | Left]
+    [USBDP | 15 | Left]
+    [VCC | 20 | Left]
+    [VCCIO | 4 | Left]
+    [nCTS | 11 | Right]
+    [nDCD | 10 | Right]
+    [nDSR | 9 | Right]
+    [nDTR | 2 | Right]
+    [nRESET | 19 | Left]
+    [nRI | 6 | Right]
+    [nRTS | 3 | Right]
+    [p3V3OUT | 17 | Left]
+  
+  assign-landpattern(SSOP-28)
+  val sym = FT232RL-symbol
+  symbol = sym(self.AGND => sym.AGND, self.CBUS0 => sym.CBUS0, self.CBUS1 => sym.CBUS1, self.CBUS2 => sym.CBUS2, self.CBUS3 => sym.CBUS3, self.CBUS4 => sym.CBUS4, self.GND[0] => sym.GND[0], self.GND[1] => sym.GND[1], self.GND[2] => sym.GND[2], self.NC[0] => sym.NC[0], self.NC[1] => sym.NC[1], self.OSCI => sym.OSCI, self.OSCO => sym.OSCO, self.RXD => sym.RXD, self.TEST => sym.TEST, self.TXD => sym.TXD, self.USBDM => sym.USBDM, self.USBDP => sym.USBDP, self.VCC => sym.VCC, self.VCCIO => sym.VCCIO, self.nCTS => sym.nCTS, self.nDCD => sym.nDCD, self.nDSR => sym.nDSR, self.nDTR => sym.nDTR, self.nRESET => sym.nRESET, self.nRI => sym.nRI, self.nRTS => sym.nRTS, self.p3V3OUT => sym.p3V3OUT)
+

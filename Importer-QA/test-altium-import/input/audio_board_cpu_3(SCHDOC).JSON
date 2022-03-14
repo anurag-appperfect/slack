@@ -1,0 +1,3791 @@
+{
+  "User": "sgole",
+  "Machine": "LAPTOP-N38DD62T",
+  "DateTime": "210825-1556",
+  "Version": "0.1.1.1",
+  "FileType": "SCHDOC",
+  "FileName": null,
+  "Objects": {
+    "SheetSize": {
+      "LocX": 279.4,
+      "LocY": 215.9
+    },
+    "ParameterExport": "FONTIDCOUNT=2|SIZE1=10|FONTNAME1=Times New Roman|SIZE2=8|FONTNAME2=Times New Roman|USEMBCS=T|ISBOC=T|HOTSPOTGRIDON=T|HOTSPOTGRIDSIZE=5|SHEETSTYLE=10|SYSTEMFONT=1|BORDERON=T|SHEETNUMBERSPACESIZE=12|AREACOLOR=16317695|SNAPGRIDON=T|SNAPGRIDSIZE=5|VISIBLEGRIDON=T|VISIBLEGRIDSIZE=10|CUSTOMX=1500|CUSTOMY=950|CUSTOMXZONES=6|CUSTOMYZONES=4|CUSTOMMARGINWIDTH=20|SHOWTEMPLATEGRAPHICS=T|TEMPLATEFILENAME=C:\\Users\\Sean Korphi\\Downloads\\SchTemplate.SchDot|DISPLAY_UNIT=0",
+    "Parameters": [
+      {
+        "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=87|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=270|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Digi-Key|NAME=Supplier 1|READONLYSTATE=3|UNIQUEID=LBZNHTTB",
+        "Name": "Supplier 1",
+        "Text": "Digi-Key",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 17.78,
+          "YLoc": 68.58
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=88|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=270|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=NXP Semiconductors|NAME=Manufacturer|UNIQUEID=GPSJZBTW",
+        "Name": "Manufacturer",
+        "Text": "NXP Semiconductors",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 17.78,
+          "YLoc": 68.58
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=89|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=220|COLOR=8388608|FONTID=1|TEXT=MIMXRT1011CAE4A|NAME=Manufacturer Part Number|UNIQUEID=BLOBQUCD",
+        "Name": "Manufacturer Part Number",
+        "Text": "MIMXRT1011CAE4A",
+        "IsHidden": false,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 17.78,
+          "YLoc": 55.88
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=90|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=270|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Yes|NAME=RoHS|UNIQUEID=RAHPTILO",
+        "Name": "RoHS",
+        "Text": "Yes",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 17.78,
+          "YLoc": 68.58
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=91|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=270|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Microprocessors|NAME=Category|UNIQUEID=ECIEOALE",
+        "Name": "Category",
+        "Text": "Microprocessors",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 17.78,
+          "YLoc": 68.58
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=92|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=270|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=475|NAME=Stock 1|READONLYSTATE=3|UNIQUEID=RTVAFQUD",
+        "Name": "Stock 1",
+        "Text": "475",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 17.78,
+          "YLoc": 68.58
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=93|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=270|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=1=5.40000, 10=4.42800 (USD)|NAME=Pricing 1|READONLYSTATE=3|UNIQUEID=KCHYJZLQ",
+        "Name": "Pricing 1",
+        "Text": "1=5.40000, 10=4.42800 (USD)",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 17.78,
+          "YLoc": 68.58
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=94|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=270|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Yes|NAME=RoHS Compliant|UNIQUEID=ZVVHLEIY",
+        "Name": "RoHS Compliant",
+        "Text": "Yes",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 17.78,
+          "YLoc": 68.58
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=95|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=270|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=568-MIMXRT1011CAE4A-ND|NAME=Supplier Part Number 1|READONLYSTATE=3|UNIQUEID=EEFXSPIA",
+        "Name": "Supplier Part Number 1",
+        "Text": "568-MIMXRT1011CAE4A-ND",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 17.78,
+          "YLoc": 68.58
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=230|COLOR=8388608|FONTID=1|TEXT=bort|NAME=Comment|UNIQUEID=MJCBNYQN",
+        "Name": "Comment",
+        "Text": "bort",
+        "IsHidden": false,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 17.78,
+          "YLoc": 58.42
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=87|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=300|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Digi-Key|NAME=Supplier 1|READONLYSTATE=3|UNIQUEID=OWWGFAIH",
+        "Name": "Supplier 1",
+        "Text": "Digi-Key",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 152.4,
+          "YLoc": 76.2
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=88|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=300|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=NXP Semiconductors|NAME=Manufacturer|UNIQUEID=HZKYRSVW",
+        "Name": "Manufacturer",
+        "Text": "NXP Semiconductors",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 152.4,
+          "YLoc": 76.2
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=89|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=281|COLOR=8388608|FONTID=1|TEXT=MIMXRT1011CAE4A|NAME=Manufacturer Part Number|UNIQUEID=GMPWQJAB",
+        "Name": "Manufacturer Part Number",
+        "Text": "MIMXRT1011CAE4A",
+        "IsHidden": false,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 152.4,
+          "YLoc": 71.374
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=90|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=300|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Yes|NAME=RoHS|UNIQUEID=MEGUMEEP",
+        "Name": "RoHS",
+        "Text": "Yes",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 152.4,
+          "YLoc": 76.2
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=91|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=300|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Microprocessors|NAME=Category|UNIQUEID=IDWVKUZB",
+        "Name": "Category",
+        "Text": "Microprocessors",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 152.4,
+          "YLoc": 76.2
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=92|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=300|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=475|NAME=Stock 1|READONLYSTATE=3|UNIQUEID=ZFEFSWWR",
+        "Name": "Stock 1",
+        "Text": "475",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 152.4,
+          "YLoc": 76.2
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=93|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=300|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=1=5.40000, 10=4.42800 (USD)|NAME=Pricing 1|READONLYSTATE=3|UNIQUEID=OHNTCNSF",
+        "Name": "Pricing 1",
+        "Text": "1=5.40000, 10=4.42800 (USD)",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 152.4,
+          "YLoc": 76.2
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=94|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=300|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Yes|NAME=RoHS Compliant|UNIQUEID=WVTAUNUC",
+        "Name": "RoHS Compliant",
+        "Text": "Yes",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 152.4,
+          "YLoc": 76.2
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=95|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=300|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=568-MIMXRT1011CAE4A-ND|NAME=Supplier Part Number 1|READONLYSTATE=3|UNIQUEID=UVQOWAMM",
+        "Name": "Supplier Part Number 1",
+        "Text": "568-MIMXRT1011CAE4A-ND",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 152.4,
+          "YLoc": 76.2
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=291|COLOR=8388608|FONTID=1|TEXT=bort|NAME=Comment|UNIQUEID=ENLOWRZZ",
+        "Name": "Comment",
+        "Text": "bort",
+        "IsHidden": false,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 152.4,
+          "YLoc": 73.914
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=9|OWNERPARTID=-1|LOCATION.X=305|LOCATION.Y=275|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Digi-Key|NAME=Supplier 1|READONLYSTATE=3|UNIQUEID=DEQZVYHW",
+        "Name": "Supplier 1",
+        "Text": "Digi-Key",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 77.47,
+          "YLoc": 69.85
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=10|OWNERPARTID=-1|LOCATION.X=305|LOCATION.Y=285|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Adesto Technologies|NAME=Manufacturer|UNIQUEID=DGVWDQJS",
+        "Name": "Manufacturer",
+        "Text": "Adesto Technologies",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 77.47,
+          "YLoc": 72.39
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=11|OWNERPARTID=-1|LOCATION.X=305|LOCATION.Y=285|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=AT25SF128A-SHB-T|NAME=Manufacturer Part Number|UNIQUEID=INYBOYSS",
+        "Name": "Manufacturer Part Number",
+        "Text": "AT25SF128A-SHB-T",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 77.47,
+          "YLoc": 72.39
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=12|OWNERPARTID=-1|LOCATION.X=305|LOCATION.Y=285|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Yes|NAME=RoHS|UNIQUEID=MCDXRZGB",
+        "Name": "RoHS",
+        "Text": "Yes",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 77.47,
+          "YLoc": 72.39
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=13|OWNERPARTID=-1|LOCATION.X=305|LOCATION.Y=285|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Memory|NAME=Category|UNIQUEID=SDZQNAEI",
+        "Name": "Category",
+        "Text": "Memory",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 77.47,
+          "YLoc": 72.39
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=14|OWNERPARTID=-1|LOCATION.X=305|LOCATION.Y=285|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=1060|NAME=Stock 1|READONLYSTATE=3|UNIQUEID=SGJWOGZI",
+        "Name": "Stock 1",
+        "Text": "1060",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 77.47,
+          "YLoc": 72.39
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=15|OWNERPARTID=-1|LOCATION.X=305|LOCATION.Y=285|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=1=1.51000, 10=1.37500, 25=1.33800, 50=1.33120, 100=1.18990, 250=1.18644, 500=1.16854, 1000=1.11894 (USD)|NAME=Pricing 1|READONLYSTATE=3|UNIQUEID=JTJRBMVF",
+        "Name": "Pricing 1",
+        "Text": "1=1.51000, 10=1.37500, 25=1.33800, 50=1.33120, 100=1.18990, 250=1.18644, 500=1.16854, 1000=1.11894 (USD)",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 77.47,
+          "YLoc": 72.39
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=16|OWNERPARTID=-1|LOCATION.X=305|LOCATION.Y=275|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=1265-1348-1-ND|NAME=Supplier Part Number 1|READONLYSTATE=3|UNIQUEID=MXNTUJEE",
+        "Name": "Supplier Part Number 1",
+        "Text": "1265-1348-1-ND",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 77.47,
+          "YLoc": 69.85
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=340|LOCATION.Y=220|COLOR=8388608|FONTID=1|TEXT=AT25SF128A-SHB-T|NAME=Comment|UNIQUEID=DMWGVONV",
+        "Name": "Comment",
+        "Text": "AT25SF128A-SHB-T",
+        "IsHidden": false,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 86.36,
+          "YLoc": 55.88
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=436|INDEXINSHEET=6|OWNERPARTID=-1|LOCATION.X=441|LOCATION.Y=292|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Samsung Electro-Mechanics|NAME=Manufacturer 1|UNIQUEID=UTIDBPBH",
+        "Name": "Manufacturer 1",
+        "Text": "Samsung Electro-Mechanics",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 112.014,
+          "YLoc": 74.168
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=436|INDEXINSHEET=7|OWNERPARTID=-1|LOCATION.X=441|LOCATION.Y=292|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=CL21B475KOFNNNE|NAME=Manufacturer Part Number 1|UNIQUEID=NSVZCLCF",
+        "Name": "Manufacturer Part Number 1",
+        "Text": "CL21B475KOFNNNE",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 112.014,
+          "YLoc": 74.168
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=436|INDEXINSHEET=8|OWNERPARTID=-1|LOCATION.X=459|LOCATION.Y=261|COLOR=8388608|FONTID=1|TEXT=4.7uF|NAME=Value|UNIQUEID=ZTEOKIDD",
+        "Name": "Value",
+        "Text": "4.7uF",
+        "IsHidden": false,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 116.586,
+          "YLoc": 66.294
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=436|INDEXINSHEET=9|OWNERPARTID=-1|LOCATION.X=459|LOCATION.Y=251|COLOR=8388608|FONTID=1|TEXT=0805|NAME=Package / Case|UNIQUEID=BXHOVIWV",
+        "Name": "Package / Case",
+        "Text": "0805",
+        "IsHidden": false,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 116.586,
+          "YLoc": 63.754
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=436|INDEXINSHEET=10|OWNERPARTID=-1|LOCATION.X=459|LOCATION.Y=241|COLOR=8388608|FONTID=1|TEXT=16V|NAME=Voltage|UNIQUEID=LLSHNRZH",
+        "Name": "Voltage",
+        "Text": "16V",
+        "IsHidden": false,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 116.586,
+          "YLoc": 61.214
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=436|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=441|LOCATION.Y=292|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=CAP_4u7_0805_16V_10pc|NAME=Comment|UNIQUEID=UWSIFAIT",
+        "Name": "Comment",
+        "Text": "CAP_4u7_0805_16V_10pc",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 112.014,
+          "YLoc": 74.168
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=456|INDEXINSHEET=6|OWNERPARTID=-1|LOCATION.X=481|LOCATION.Y=292|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Taiyo Yuden|NAME=Manufacturer 1|UNIQUEID=TMLLCKTZ",
+        "Name": "Manufacturer 1",
+        "Text": "Taiyo Yuden",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 122.174,
+          "YLoc": 74.168
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=456|INDEXINSHEET=7|OWNERPARTID=-1|LOCATION.X=481|LOCATION.Y=292|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=TMK105BJ104KV-F|NAME=Manufacturer Part Number 1|UNIQUEID=WISGUNYN",
+        "Name": "Manufacturer Part Number 1",
+        "Text": "TMK105BJ104KV-F",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 122.174,
+          "YLoc": 74.168
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=456|INDEXINSHEET=8|OWNERPARTID=-1|LOCATION.X=481|LOCATION.Y=292|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Yageo|NAME=Manufacturer 2|UNIQUEID=NKJXIOHG",
+        "Name": "Manufacturer 2",
+        "Text": "Yageo",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 122.174,
+          "YLoc": 74.168
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=456|INDEXINSHEET=9|OWNERPARTID=-1|LOCATION.X=481|LOCATION.Y=292|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=CC0402KRX7R8BB104|NAME=Manufacturer Part Number 2|UNIQUEID=BDKFCSLK",
+        "Name": "Manufacturer Part Number 2",
+        "Text": "CC0402KRX7R8BB104",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 122.174,
+          "YLoc": 74.168
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=456|INDEXINSHEET=10|OWNERPARTID=-1|LOCATION.X=499|LOCATION.Y=261|COLOR=8388608|FONTID=1|TEXT=100n|NAME=Value|UNIQUEID=FCBILCCM",
+        "Name": "Value",
+        "Text": "100n",
+        "IsHidden": false,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 126.746,
+          "YLoc": 66.294
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=456|INDEXINSHEET=11|OWNERPARTID=-1|LOCATION.X=499|LOCATION.Y=251|COLOR=8388608|FONTID=1|TEXT=0402|NAME=Package / Case|UNIQUEID=VKVKFZUJ",
+        "Name": "Package / Case",
+        "Text": "0402",
+        "IsHidden": false,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 126.746,
+          "YLoc": 63.754
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=456|INDEXINSHEET=12|OWNERPARTID=-1|LOCATION.X=499|LOCATION.Y=241|COLOR=8388608|FONTID=1|TEXT=25V|NAME=Voltage|UNIQUEID=LFTNWWVE",
+        "Name": "Voltage",
+        "Text": "25V",
+        "IsHidden": false,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 126.746,
+          "YLoc": 61.214
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=456|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=481|LOCATION.Y=292|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=CAP_100n_0402_25V_10pc|NAME=Comment|UNIQUEID=HWCHRDMI",
+        "Name": "Comment",
+        "Text": "CAP_100n_0402_25V_10pc",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 122.174,
+          "YLoc": 74.168
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=495|OWNERPARTID=-1|LOCATION.X=175|LOCATION.Y=335|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Yageo|NAME=Manufacturer 1|UNIQUEID=ISXVWNNF",
+        "Name": "Manufacturer 1",
+        "Text": "Yageo",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 44.45,
+          "YLoc": 85.09
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=495|INDEXINSHEET=1|OWNERPARTID=-1|LOCATION.X=175|LOCATION.Y=335|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=RC0402FR-0710KL|NAME=Manufacturer Part Number 1|UNIQUEID=FSJKQILF",
+        "Name": "Manufacturer Part Number 1",
+        "Text": "RC0402FR-0710KL",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 44.45,
+          "YLoc": 85.09
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=495|INDEXINSHEET=2|OWNERPARTID=-1|LOCATION.X=183|LOCATION.Y=351|COLOR=8388608|FONTID=1|TEXT=0402|NAME=Package / Case|UNIQUEID=CJCJQBMH",
+        "Name": "Package / Case",
+        "Text": "0402",
+        "IsHidden": false,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 46.482,
+          "YLoc": 89.154
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=495|INDEXINSHEET=3|OWNERPARTID=-1|LOCATION.X=183|LOCATION.Y=341|COLOR=8388608|FONTID=1|TEXT=10K|NAME=Value|UNIQUEID=MPHLZLCI",
+        "Name": "Value",
+        "Text": "10K",
+        "IsHidden": false,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 46.482,
+          "YLoc": 86.614
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=495|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=175|LOCATION.Y=325|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=RES_10K_0402_1pc|NAME=Comment|UNIQUEID=QANJDILX",
+        "Name": "Comment",
+        "Text": "RES_10K_0402_1pc",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 44.45,
+          "YLoc": 82.55
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=534|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=827|LOCATION.Y=342|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Testpoint_SMT_2mm|NAME=Comment|UNIQUEID=NGWWCVZS",
+        "Name": "Comment",
+        "Text": "Testpoint_SMT_2mm",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 210.058,
+          "YLoc": 86.868
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=545|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=827|LOCATION.Y=498|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Testpoint_SMT_2mm|NAME=Comment|UNIQUEID=YNGTPLOR",
+        "Name": "Comment",
+        "Text": "Testpoint_SMT_2mm",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 210.058,
+          "YLoc": 126.492
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=555|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=847|LOCATION.Y=418|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Testpoint_SMT_2mm|NAME=Comment|UNIQUEID=PHITUZJL",
+        "Name": "Comment",
+        "Text": "Testpoint_SMT_2mm",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 215.138,
+          "YLoc": 106.172
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=66|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=CurrentTime|READONLYSTATE=1|UNIQUEID=HGTTPDCC",
+        "Name": "CurrentTime",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=67|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=CurrentDate|READONLYSTATE=1|UNIQUEID=YFDBRCLL",
+        "Name": "CurrentDate",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=68|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=Time|READONLYSTATE=1|UNIQUEID=TEEDBQSD",
+        "Name": "Time",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=69|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=Date|READONLYSTATE=1|UNIQUEID=CXDMCGAJ",
+        "Name": "Date",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=70|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=DocumentFullPathAndName|READONLYSTATE=1|UNIQUEID=GNSZLVJZ",
+        "Name": "DocumentFullPathAndName",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=71|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=DocumentName|READONLYSTATE=1|UNIQUEID=ADVMZQHP",
+        "Name": "DocumentName",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=72|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=ModifiedDate|READONLYSTATE=1|UNIQUEID=EPTNKIDQ",
+        "Name": "ModifiedDate",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=73|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=ApprovedBy|READONLYSTATE=1|UNIQUEID=NQRRAQAS",
+        "Name": "ApprovedBy",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=74|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=CheckedBy|READONLYSTATE=1|UNIQUEID=ETVEJLZX",
+        "Name": "CheckedBy",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=75|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=Author|READONLYSTATE=1|UNIQUEID=UFDXVGEL",
+        "Name": "Author",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=76|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=CompanyName|READONLYSTATE=1|UNIQUEID=QOHMMMZY",
+        "Name": "CompanyName",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=77|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=DrawnBy|READONLYSTATE=1|UNIQUEID=KCMVESYJ",
+        "Name": "DrawnBy",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=78|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=Engineer|READONLYSTATE=1|UNIQUEID=DCHFUCFT",
+        "Name": "Engineer",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=79|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=Organization|READONLYSTATE=1|UNIQUEID=QVSEEFVG",
+        "Name": "Organization",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=80|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=Address1|READONLYSTATE=1|UNIQUEID=MFBMJOFS",
+        "Name": "Address1",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=81|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=Address2|READONLYSTATE=1|UNIQUEID=UXTHZETC",
+        "Name": "Address2",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=82|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=Address3|READONLYSTATE=1|UNIQUEID=GUUSYYRN",
+        "Name": "Address3",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=83|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=Address4|READONLYSTATE=1|UNIQUEID=IOVRTUUF",
+        "Name": "Address4",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=84|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=Title|READONLYSTATE=1|UNIQUEID=HFIZRMAO",
+        "Name": "Title",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=85|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=DocumentNumber|READONLYSTATE=1|UNIQUEID=XPKXIYUM",
+        "Name": "DocumentNumber",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=86|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=Revision|READONLYSTATE=1|UNIQUEID=BPYJKCHN",
+        "Name": "Revision",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=87|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=5|NAME=SheetNumber|READONLYSTATE=1|UNIQUEID=ONDUSNYZ",
+        "Name": "SheetNumber",
+        "Text": "5",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=88|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=7|NAME=SheetTotal|READONLYSTATE=1|UNIQUEID=DOATVULU",
+        "Name": "SheetTotal",
+        "Text": "7",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=89|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=Rule|READONLYSTATE=1|UNIQUEID=TGVJNTFK",
+        "Name": "Rule",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=90|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=ImagePath|READONLYSTATE=1|UNIQUEID=TJQDWKUF",
+        "Name": "ImagePath",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=91|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=ProjectName|READONLYSTATE=1|UNIQUEID=XVKDIFVJ",
+        "Name": "ProjectName",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=92|OWNERPARTID=-1|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=*|NAME=Application_BuildNumber|READONLYSTATE=1|UNIQUEID=QLUUYBRH",
+        "Name": "Application_BuildNumber",
+        "Text": "*",
+        "IsHidden": true,
+        "AutoPosition": true,
+        "LocXY": {
+          "XLoc": 0.0,
+          "YLoc": 0.0
+        },
+        "Rotation": 0,
+        "TextPointSize": 10,
+        "ColorBGR": 8388608,
+        "TextJustification": 0
+      }
+    ],
+    "Components": [
+      {
+        "ParameterExport": "LIBREFERENCE=MIMXRT1011CAE4A|COMPONENTDESCRIPTION=i.MX RT1010: 3.3V 400MHz ARM®Cortex®-M7 32-Bit Crossover Microprocessor-LQFP-80|PARTCOUNT=8|DISPLAYMODECOUNT=1|INDEXINSHEET=1|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=270|CURRENTPARTID=4|LIBRARYPATH=*|SOURCELIBRARYNAME=audio_board.SchLib|TARGETFILENAME=*|UNIQUEID=EEZIKYBB|AREACOLOR=11599871|COLOR=128|PARTIDLOCKED=F|DESIGNITEMID=MIMXRT1011CAE4A|ALLPINCOUNT=80",
+        "FullPartDesignator": "U2D",
+        "PartID": 4,
+        "PartCount": 7,
+        "IsMultiPart": true,
+        "Location": {
+          "LocX": 17.78,
+          "LocY": 17.78
+        },
+        "Rotation": 0,
+        "IsMirrored": false,
+        "LibraryReference": "MIMXRT1011CAE4A",
+        "Library": "*",
+        "AllPinCount": 0,
+        "Pins": [
+          {
+            "ParameterExport": "OWNERINDEX=26|OWNERPARTID=4|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=140|LOCATION.Y=250|NAME=GPIO_SD_11|DESIGNATOR=64|SWAPIDPIN=0|SWAPIDPART=0¦&¦64",
+            "Location": {
+              "LocX": 35.56,
+              "LocY": 63.5
+            },
+            "Designator": "64",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=26|OWNERPARTID=4|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=140|LOCATION.Y=260|NAME=GPIO_SD_10|DESIGNATOR=65|SWAPIDPIN=0|SWAPIDPART=0¦&¦65",
+            "Location": {
+              "LocX": 35.56,
+              "LocY": 66.04
+            },
+            "Designator": "65",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=26|OWNERPARTID=4|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=140|LOCATION.Y=270|NAME=GPIO_SD_09|DESIGNATOR=66|SWAPIDPIN=0|SWAPIDPART=0¦&¦66",
+            "Location": {
+              "LocX": 35.56,
+              "LocY": 68.58
+            },
+            "Designator": "66",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=26|OWNERPARTID=4|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=140|LOCATION.Y=280|NAME=GPIO_SD_08|DESIGNATOR=67|SWAPIDPIN=0|SWAPIDPART=0¦&¦67",
+            "Location": {
+              "LocX": 35.56,
+              "LocY": 71.12
+            },
+            "Designator": "67",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=26|OWNERPARTID=4|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=140|LOCATION.Y=290|NAME=GPIO_SD_07|DESIGNATOR=68|SWAPIDPIN=0|SWAPIDPART=0¦&¦68",
+            "Location": {
+              "LocX": 35.56,
+              "LocY": 73.66
+            },
+            "Designator": "68",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=26|OWNERPARTID=4|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=140|LOCATION.Y=300|NAME=GPIO_SD_06|DESIGNATOR=69|SWAPIDPIN=0|SWAPIDPART=0¦&¦69",
+            "Location": {
+              "LocX": 35.56,
+              "LocY": 76.2
+            },
+            "Designator": "69",
+            "NetName": null
+          }
+        ],
+        "Parameters": [
+          {
+            "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=87|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=270|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Digi-Key|NAME=Supplier 1|READONLYSTATE=3|UNIQUEID=LBZNHTTB",
+            "Name": "Supplier 1",
+            "Text": "Digi-Key",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 17.78,
+              "YLoc": 68.58
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=88|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=270|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=NXP Semiconductors|NAME=Manufacturer|UNIQUEID=GPSJZBTW",
+            "Name": "Manufacturer",
+            "Text": "NXP Semiconductors",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 17.78,
+              "YLoc": 68.58
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=89|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=220|COLOR=8388608|FONTID=1|TEXT=MIMXRT1011CAE4A|NAME=Manufacturer Part Number|UNIQUEID=BLOBQUCD",
+            "Name": "Manufacturer Part Number",
+            "Text": "MIMXRT1011CAE4A",
+            "IsHidden": false,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 17.78,
+              "YLoc": 55.88
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=90|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=270|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Yes|NAME=RoHS|UNIQUEID=RAHPTILO",
+            "Name": "RoHS",
+            "Text": "Yes",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 17.78,
+              "YLoc": 68.58
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=91|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=270|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Microprocessors|NAME=Category|UNIQUEID=ECIEOALE",
+            "Name": "Category",
+            "Text": "Microprocessors",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 17.78,
+              "YLoc": 68.58
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=92|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=270|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=475|NAME=Stock 1|READONLYSTATE=3|UNIQUEID=RTVAFQUD",
+            "Name": "Stock 1",
+            "Text": "475",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 17.78,
+              "YLoc": 68.58
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=93|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=270|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=1=5.40000, 10=4.42800 (USD)|NAME=Pricing 1|READONLYSTATE=3|UNIQUEID=KCHYJZLQ",
+            "Name": "Pricing 1",
+            "Text": "1=5.40000, 10=4.42800 (USD)",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 17.78,
+              "YLoc": 68.58
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=94|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=270|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Yes|NAME=RoHS Compliant|UNIQUEID=ZVVHLEIY",
+            "Name": "RoHS Compliant",
+            "Text": "Yes",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 17.78,
+              "YLoc": 68.58
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=95|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=270|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=568-MIMXRT1011CAE4A-ND|NAME=Supplier Part Number 1|READONLYSTATE=3|UNIQUEID=EEFXSPIA",
+            "Name": "Supplier Part Number 1",
+            "Text": "568-MIMXRT1011CAE4A-ND",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 17.78,
+              "YLoc": 68.58
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=26|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=70|LOCATION.Y=230|COLOR=8388608|FONTID=1|TEXT=bort|NAME=Comment|UNIQUEID=MJCBNYQN",
+            "Name": "Comment",
+            "Text": "bort",
+            "IsHidden": false,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 17.78,
+              "YLoc": 58.42
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          }
+        ]
+      },
+      {
+        "ParameterExport": "LIBREFERENCE=MIMXRT1011CAE4A|COMPONENTDESCRIPTION=i.MX RT1010: 3.3V 400MHz ARM®Cortex®-M7 32-Bit Crossover Microprocessor-LQFP-80|PARTCOUNT=8|DISPLAYMODECOUNT=1|INDEXINSHEET=2|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=300|CURRENTPARTID=5|LIBRARYPATH=*|SOURCELIBRARYNAME=audio_board.SchLib|TARGETFILENAME=*|UNIQUEID=KKETFSJJ|AREACOLOR=11599871|COLOR=128|PARTIDLOCKED=F|DESIGNITEMID=MIMXRT1011CAE4A|ALLPINCOUNT=80",
+        "FullPartDesignator": "U2E",
+        "PartID": 5,
+        "PartCount": 7,
+        "IsMultiPart": true,
+        "Location": {
+          "LocX": 152.4,
+          "LocY": 152.4
+        },
+        "Rotation": 0,
+        "IsMirrored": false,
+        "LibraryReference": "MIMXRT1011CAE4A",
+        "Library": "*",
+        "AllPinCount": 0,
+        "Pins": [
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=58|PINLENGTH=30|LOCATION.X=600|LOCATION.Y=601|NAME=GPIO_10|DESIGNATOR=2|SWAPIDPIN=0|SWAPIDPART=0¦&¦2",
+            "Location": {
+              "LocX": 152.4,
+              "LocY": 152.654
+            },
+            "Designator": "2",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=58|PINLENGTH=30|LOCATION.X=600|LOCATION.Y=591|NAME=GPIO_09|DESIGNATOR=3|SWAPIDPIN=0|SWAPIDPART=0¦&¦3",
+            "Location": {
+              "LocX": 152.4,
+              "LocY": 150.114
+            },
+            "Designator": "3",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=58|PINLENGTH=30|LOCATION.X=600|LOCATION.Y=491|NAME=GPIO_00|DESIGNATOR=13|SWAPIDPIN=0|SWAPIDPART=0¦&¦13",
+            "Location": {
+              "LocX": 152.4,
+              "LocY": 124.714
+            },
+            "Designator": "13",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=730|LOCATION.Y=511|NAME=GPIO_SD_05|DESIGNATOR=70|SWAPIDPIN=0|SWAPIDPART=0¦&¦70",
+            "Location": {
+              "LocX": 185.42,
+              "LocY": 129.794
+            },
+            "Designator": "70",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=730|LOCATION.Y=601|NAME=GPIO_13|DESIGNATOR=79|SWAPIDPIN=0|SWAPIDPART=0¦&¦79",
+            "Location": {
+              "LocX": 185.42,
+              "LocY": 152.654
+            },
+            "Designator": "79",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=730|LOCATION.Y=411|NAME=GPIO_AD_05|DESIGNATOR=55|SWAPIDPIN=0|SWAPIDPART=0¦&¦55",
+            "Location": {
+              "LocX": 185.42,
+              "LocY": 104.394
+            },
+            "Designator": "55",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=730|LOCATION.Y=421|NAME=GPIO_AD_04|DESIGNATOR=56|SWAPIDPIN=0|SWAPIDPART=0¦&¦56",
+            "Location": {
+              "LocX": 185.42,
+              "LocY": 106.934
+            },
+            "Designator": "56",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=730|LOCATION.Y=431|NAME=GPIO_AD_03|DESIGNATOR=57|SWAPIDPIN=0|SWAPIDPART=0¦&¦57",
+            "Location": {
+              "LocX": 185.42,
+              "LocY": 109.474
+            },
+            "Designator": "57",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=730|LOCATION.Y=441|NAME=GPIO_AD_02|DESIGNATOR=58|SWAPIDPIN=0|SWAPIDPART=0¦&¦58",
+            "Location": {
+              "LocX": 185.42,
+              "LocY": 112.014
+            },
+            "Designator": "58",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=730|LOCATION.Y=451|NAME=GPIO_AD_01|DESIGNATOR=59|SWAPIDPIN=0|SWAPIDPART=0¦&¦59",
+            "Location": {
+              "LocX": 185.42,
+              "LocY": 114.554
+            },
+            "Designator": "59",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=730|LOCATION.Y=461|NAME=GPIO_AD_00|DESIGNATOR=60|SWAPIDPIN=0|SWAPIDPART=0¦&¦60",
+            "Location": {
+              "LocX": 185.42,
+              "LocY": 117.094
+            },
+            "Designator": "60",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=730|LOCATION.Y=481|NAME=GPIO_SD_12|DESIGNATOR=62|SWAPIDPIN=0|SWAPIDPART=0¦&¦62",
+            "Location": {
+              "LocX": 185.42,
+              "LocY": 122.174
+            },
+            "Designator": "62",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=730|LOCATION.Y=381|NAME=GPIO_AD_07|DESIGNATOR=51|SWAPIDPIN=0|SWAPIDPART=0¦&¦51",
+            "Location": {
+              "LocX": 185.42,
+              "LocY": 96.774
+            },
+            "Designator": "51",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=730|LOCATION.Y=391|NAME=GPIO_AD_06|DESIGNATOR=52|SWAPIDPIN=0|SWAPIDPART=0¦&¦52",
+            "Location": {
+              "LocX": 185.42,
+              "LocY": 99.314
+            },
+            "Designator": "52",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=58|PINLENGTH=30|LOCATION.X=600|LOCATION.Y=451|NAME=TEST_MODE|DESIGNATOR=23|SWAPIDPIN=0|SWAPIDPART=0¦&¦23",
+            "Location": {
+              "LocX": 152.4,
+              "LocY": 114.554
+            },
+            "Designator": "23",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=1|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=730|LOCATION.Y=311|NAME=GPIO_AD_14|DESIGNATOR=43|SWAPIDPIN=0|SWAPIDPART=0¦&¦43",
+            "Location": {
+              "LocX": 185.42,
+              "LocY": 78.994
+            },
+            "Designator": "43",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=58|PINLENGTH=30|LOCATION.X=600|LOCATION.Y=440|NAME=RTC_XTALI|DESIGNATOR=27|SWAPIDPIN=0|SWAPIDPART=0¦&¦27",
+            "Location": {
+              "LocX": 152.4,
+              "LocY": 111.76
+            },
+            "Designator": "27",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|OWNERPARTID=5|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=58|PINLENGTH=30|LOCATION.X=600|LOCATION.Y=430|NAME=RTC_XTALO|DESIGNATOR=28|SWAPIDPIN=0|SWAPIDPART=0¦&¦28",
+            "Location": {
+              "LocX": 152.4,
+              "LocY": 109.22
+            },
+            "Designator": "28",
+            "NetName": null
+          }
+        ],
+        "Parameters": [
+          {
+            "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=87|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=300|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Digi-Key|NAME=Supplier 1|READONLYSTATE=3|UNIQUEID=OWWGFAIH",
+            "Name": "Supplier 1",
+            "Text": "Digi-Key",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 152.4,
+              "YLoc": 76.2
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=88|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=300|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=NXP Semiconductors|NAME=Manufacturer|UNIQUEID=HZKYRSVW",
+            "Name": "Manufacturer",
+            "Text": "NXP Semiconductors",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 152.4,
+              "YLoc": 76.2
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=89|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=281|COLOR=8388608|FONTID=1|TEXT=MIMXRT1011CAE4A|NAME=Manufacturer Part Number|UNIQUEID=GMPWQJAB",
+            "Name": "Manufacturer Part Number",
+            "Text": "MIMXRT1011CAE4A",
+            "IsHidden": false,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 152.4,
+              "YLoc": 71.374
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=90|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=300|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Yes|NAME=RoHS|UNIQUEID=MEGUMEEP",
+            "Name": "RoHS",
+            "Text": "Yes",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 152.4,
+              "YLoc": 76.2
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=91|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=300|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Microprocessors|NAME=Category|UNIQUEID=IDWVKUZB",
+            "Name": "Category",
+            "Text": "Microprocessors",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 152.4,
+              "YLoc": 76.2
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=92|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=300|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=475|NAME=Stock 1|READONLYSTATE=3|UNIQUEID=ZFEFSWWR",
+            "Name": "Stock 1",
+            "Text": "475",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 152.4,
+              "YLoc": 76.2
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=93|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=300|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=1=5.40000, 10=4.42800 (USD)|NAME=Pricing 1|READONLYSTATE=3|UNIQUEID=OHNTCNSF",
+            "Name": "Pricing 1",
+            "Text": "1=5.40000, 10=4.42800 (USD)",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 152.4,
+              "YLoc": 76.2
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=94|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=300|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Yes|NAME=RoHS Compliant|UNIQUEID=WVTAUNUC",
+            "Name": "RoHS Compliant",
+            "Text": "Yes",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 152.4,
+              "YLoc": 76.2
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=95|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=300|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=568-MIMXRT1011CAE4A-ND|NAME=Supplier Part Number 1|READONLYSTATE=3|UNIQUEID=UVQOWAMM",
+            "Name": "Supplier Part Number 1",
+            "Text": "568-MIMXRT1011CAE4A-ND",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 152.4,
+              "YLoc": 76.2
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=209|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=600|LOCATION.Y=291|COLOR=8388608|FONTID=1|TEXT=bort|NAME=Comment|UNIQUEID=ENLOWRZZ",
+            "Name": "Comment",
+            "Text": "bort",
+            "IsHidden": false,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 152.4,
+              "YLoc": 73.914
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          }
+        ]
+      },
+      {
+        "ParameterExport": "LIBREFERENCE=AT25SF128A-SHB-T|COMPONENTDESCRIPTION=Serial NOR Flash Memory 128Mb 2.7V to 3.6V 8-Pin SOIC Surface Mount T/R|PARTCOUNT=2|DISPLAYMODECOUNT=1|INDEXINSHEET=3|OWNERPARTID=-1|LOCATION.X=310|LOCATION.Y=260|CURRENTPARTID=1|LIBRARYPATH=*|SOURCELIBRARYNAME=audio_board.SchLib|TARGETFILENAME=*|UNIQUEID=ZSMREAOK|AREACOLOR=11599871|COLOR=128|PARTIDLOCKED=T|NOTUSEDBTABLENAME=T|DESIGNITEMID=AT25SF128A-SHB-T|ALLPINCOUNT=8",
+        "FullPartDesignator": "MEM1",
+        "PartID": 1,
+        "PartCount": 1,
+        "IsMultiPart": false,
+        "Location": {
+          "LocX": 78.74,
+          "LocY": 78.74
+        },
+        "Rotation": 0,
+        "IsMirrored": false,
+        "LibraryReference": "AT25SF128A-SHB-T",
+        "Library": "*",
+        "AllPinCount": 0,
+        "Pins": [
+          {
+            "ParameterExport": "OWNERINDEX=392|OWNERPARTID=1|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=58|PINLENGTH=30|LOCATION.X=340|LOCATION.Y=300|NAME=*CS|DESIGNATOR=1|SWAPIDPIN=0|SWAPIDPART=0¦&¦1",
+            "Location": {
+              "LocX": 86.36,
+              "LocY": 76.2
+            },
+            "Designator": "1",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=392|OWNERPARTID=1|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=58|PINLENGTH=30|LOCATION.X=340|LOCATION.Y=280|NAME=SO(I/O1)|DESIGNATOR=2|SWAPIDPIN=0|SWAPIDPART=0¦&¦2",
+            "Location": {
+              "LocX": 86.36,
+              "LocY": 71.12
+            },
+            "Designator": "2",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=392|OWNERPARTID=1|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=58|PINLENGTH=30|LOCATION.X=340|LOCATION.Y=270|NAME=*WP(I/O2)|DESIGNATOR=3|SWAPIDPIN=0|SWAPIDPART=0¦&¦3",
+            "Location": {
+              "LocX": 86.36,
+              "LocY": 68.58
+            },
+            "Designator": "3",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=392|OWNERPARTID=1|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=410|LOCATION.Y=240|NAME=GND|DESIGNATOR=4|SWAPIDPIN=0|SWAPIDPART=0¦&¦4",
+            "Location": {
+              "LocX": 104.14,
+              "LocY": 60.96
+            },
+            "Designator": "4",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=392|OWNERPARTID=1|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=58|PINLENGTH=30|LOCATION.X=340|LOCATION.Y=290|NAME=SI(I/O0)|DESIGNATOR=5|SWAPIDPIN=0|SWAPIDPART=0¦&¦5",
+            "Location": {
+              "LocX": 86.36,
+              "LocY": 73.66
+            },
+            "Designator": "5",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=392|OWNERPARTID=1|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=58|PINLENGTH=30|LOCATION.X=340|LOCATION.Y=240|NAME=SCK|DESIGNATOR=6|SWAPIDPIN=0|SWAPIDPART=0¦&¦6",
+            "Location": {
+              "LocX": 86.36,
+              "LocY": 60.96
+            },
+            "Designator": "6",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=392|OWNERPARTID=1|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=58|PINLENGTH=30|LOCATION.X=340|LOCATION.Y=260|NAME=*HOLD(I/O3)|DESIGNATOR=7|SWAPIDPIN=0|SWAPIDPART=0¦&¦7",
+            "Location": {
+              "LocX": 86.36,
+              "LocY": 66.04
+            },
+            "Designator": "7",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=392|OWNERPARTID=1|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=56|PINLENGTH=30|LOCATION.X=410|LOCATION.Y=300|NAME=VCC|DESIGNATOR=8|SWAPIDPIN=0|SWAPIDPART=0¦&¦8",
+            "Location": {
+              "LocX": 104.14,
+              "LocY": 76.2
+            },
+            "Designator": "8",
+            "NetName": null
+          }
+        ],
+        "Parameters": [
+          {
+            "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=9|OWNERPARTID=-1|LOCATION.X=305|LOCATION.Y=275|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Digi-Key|NAME=Supplier 1|READONLYSTATE=3|UNIQUEID=DEQZVYHW",
+            "Name": "Supplier 1",
+            "Text": "Digi-Key",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 77.47,
+              "YLoc": 69.85
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=10|OWNERPARTID=-1|LOCATION.X=305|LOCATION.Y=285|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Adesto Technologies|NAME=Manufacturer|UNIQUEID=DGVWDQJS",
+            "Name": "Manufacturer",
+            "Text": "Adesto Technologies",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 77.47,
+              "YLoc": 72.39
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=11|OWNERPARTID=-1|LOCATION.X=305|LOCATION.Y=285|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=AT25SF128A-SHB-T|NAME=Manufacturer Part Number|UNIQUEID=INYBOYSS",
+            "Name": "Manufacturer Part Number",
+            "Text": "AT25SF128A-SHB-T",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 77.47,
+              "YLoc": 72.39
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=12|OWNERPARTID=-1|LOCATION.X=305|LOCATION.Y=285|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Yes|NAME=RoHS|UNIQUEID=MCDXRZGB",
+            "Name": "RoHS",
+            "Text": "Yes",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 77.47,
+              "YLoc": 72.39
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=13|OWNERPARTID=-1|LOCATION.X=305|LOCATION.Y=285|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Memory|NAME=Category|UNIQUEID=SDZQNAEI",
+            "Name": "Category",
+            "Text": "Memory",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 77.47,
+              "YLoc": 72.39
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=14|OWNERPARTID=-1|LOCATION.X=305|LOCATION.Y=285|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=1060|NAME=Stock 1|READONLYSTATE=3|UNIQUEID=SGJWOGZI",
+            "Name": "Stock 1",
+            "Text": "1060",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 77.47,
+              "YLoc": 72.39
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=15|OWNERPARTID=-1|LOCATION.X=305|LOCATION.Y=285|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=1=1.51000, 10=1.37500, 25=1.33800, 50=1.33120, 100=1.18990, 250=1.18644, 500=1.16854, 1000=1.11894 (USD)|NAME=Pricing 1|READONLYSTATE=3|UNIQUEID=JTJRBMVF",
+            "Name": "Pricing 1",
+            "Text": "1=1.51000, 10=1.37500, 25=1.33800, 50=1.33120, 100=1.18990, 250=1.18644, 500=1.16854, 1000=1.11894 (USD)",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 77.47,
+              "YLoc": 72.39
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=16|OWNERPARTID=-1|LOCATION.X=305|LOCATION.Y=275|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=1265-1348-1-ND|NAME=Supplier Part Number 1|READONLYSTATE=3|UNIQUEID=MXNTUJEE",
+            "Name": "Supplier Part Number 1",
+            "Text": "1265-1348-1-ND",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 77.47,
+              "YLoc": 69.85
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=392|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=340|LOCATION.Y=220|COLOR=8388608|FONTID=1|TEXT=AT25SF128A-SHB-T|NAME=Comment|UNIQUEID=DMWGVONV",
+            "Name": "Comment",
+            "Text": "AT25SF128A-SHB-T",
+            "IsHidden": false,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 86.36,
+              "YLoc": 55.88
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          }
+        ]
+      },
+      {
+        "ParameterExport": "LIBREFERENCE=CAP_4u7_0805_16V_10pc|COMPONENTDESCRIPTION=CAP CER 4.7uF 16V 0805|PARTCOUNT=2|DISPLAYMODECOUNT=1|INDEXINSHEET=16|OWNERPARTID=-1|LOCATION.X=450|LOCATION.Y=260|CURRENTPARTID=1|LIBRARYPATH=*|SOURCELIBRARYNAME=Passives.IntLib|TARGETFILENAME=*|UNIQUEID=RBUWYTZQ|AREACOLOR=11599871|COLOR=128|PARTIDLOCKED=T|NOTUSEDBTABLENAME=T|DESIGNITEMID=CAP_4u7_0805_16V_10pc|ALLPINCOUNT=2",
+        "FullPartDesignator": "C49",
+        "PartID": 1,
+        "PartCount": 1,
+        "IsMultiPart": false,
+        "Location": {
+          "LocX": 114.3,
+          "LocY": 114.3
+        },
+        "Rotation": 0,
+        "IsMirrored": false,
+        "LibraryReference": "CAP_4u7_0805_16V_10pc",
+        "Library": "*",
+        "AllPinCount": 0,
+        "Pins": [
+          {
+            "ParameterExport": "OWNERINDEX=436|OWNERPARTID=1|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=33|PINLENGTH=10|LOCATION.X=450|LOCATION.Y=280|NAME=1|DESIGNATOR=1",
+            "Location": {
+              "LocX": 114.3,
+              "LocY": 71.12
+            },
+            "Designator": "1",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=436|OWNERPARTID=1|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=35|PINLENGTH=10|LOCATION.X=450|LOCATION.Y=270|NAME=2|DESIGNATOR=2",
+            "Location": {
+              "LocX": 114.3,
+              "LocY": 68.58
+            },
+            "Designator": "2",
+            "NetName": null
+          }
+        ],
+        "Parameters": [
+          {
+            "ParameterExport": "OWNERINDEX=436|INDEXINSHEET=6|OWNERPARTID=-1|LOCATION.X=441|LOCATION.Y=292|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Samsung Electro-Mechanics|NAME=Manufacturer 1|UNIQUEID=UTIDBPBH",
+            "Name": "Manufacturer 1",
+            "Text": "Samsung Electro-Mechanics",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 112.014,
+              "YLoc": 74.168
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=436|INDEXINSHEET=7|OWNERPARTID=-1|LOCATION.X=441|LOCATION.Y=292|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=CL21B475KOFNNNE|NAME=Manufacturer Part Number 1|UNIQUEID=NSVZCLCF",
+            "Name": "Manufacturer Part Number 1",
+            "Text": "CL21B475KOFNNNE",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 112.014,
+              "YLoc": 74.168
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=436|INDEXINSHEET=8|OWNERPARTID=-1|LOCATION.X=459|LOCATION.Y=261|COLOR=8388608|FONTID=1|TEXT=4.7uF|NAME=Value|UNIQUEID=ZTEOKIDD",
+            "Name": "Value",
+            "Text": "4.7uF",
+            "IsHidden": false,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 116.586,
+              "YLoc": 66.294
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=436|INDEXINSHEET=9|OWNERPARTID=-1|LOCATION.X=459|LOCATION.Y=251|COLOR=8388608|FONTID=1|TEXT=0805|NAME=Package / Case|UNIQUEID=BXHOVIWV",
+            "Name": "Package / Case",
+            "Text": "0805",
+            "IsHidden": false,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 116.586,
+              "YLoc": 63.754
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=436|INDEXINSHEET=10|OWNERPARTID=-1|LOCATION.X=459|LOCATION.Y=241|COLOR=8388608|FONTID=1|TEXT=16V|NAME=Voltage|UNIQUEID=LLSHNRZH",
+            "Name": "Voltage",
+            "Text": "16V",
+            "IsHidden": false,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 116.586,
+              "YLoc": 61.214
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=436|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=441|LOCATION.Y=292|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=CAP_4u7_0805_16V_10pc|NAME=Comment|UNIQUEID=UWSIFAIT",
+            "Name": "Comment",
+            "Text": "CAP_4u7_0805_16V_10pc",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 112.014,
+              "YLoc": 74.168
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          }
+        ]
+      },
+      {
+        "ParameterExport": "LIBREFERENCE=CAP_100n_0402_25V_10pc|COMPONENTDESCRIPTION=CAP CER 0.1UF 25V 0402|PARTCOUNT=2|DISPLAYMODECOUNT=1|INDEXINSHEET=17|OWNERPARTID=-1|LOCATION.X=490|LOCATION.Y=290|CURRENTPARTID=1|LIBRARYPATH=*|SOURCELIBRARYNAME=Passives.IntLib|TARGETFILENAME=*|UNIQUEID=XJTGXFTD|AREACOLOR=11599871|COLOR=128|PARTIDLOCKED=T|NOTUSEDBTABLENAME=T|DESIGNITEMID=CAP_100n_0402_25V_10pc|ALLPINCOUNT=2",
+        "FullPartDesignator": "C50",
+        "PartID": 1,
+        "PartCount": 1,
+        "IsMultiPart": false,
+        "Location": {
+          "LocX": 124.46,
+          "LocY": 124.46
+        },
+        "Rotation": 0,
+        "IsMirrored": false,
+        "LibraryReference": "CAP_100n_0402_25V_10pc",
+        "Library": "*",
+        "AllPinCount": 0,
+        "Pins": [
+          {
+            "ParameterExport": "OWNERINDEX=456|OWNERPARTID=1|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=33|PINLENGTH=10|LOCATION.X=490|LOCATION.Y=280|NAME=1|DESIGNATOR=1",
+            "Location": {
+              "LocX": 124.46,
+              "LocY": 71.12
+            },
+            "Designator": "1",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=456|OWNERPARTID=1|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=35|PINLENGTH=10|LOCATION.X=490|LOCATION.Y=270|NAME=2|DESIGNATOR=2",
+            "Location": {
+              "LocX": 124.46,
+              "LocY": 68.58
+            },
+            "Designator": "2",
+            "NetName": null
+          }
+        ],
+        "Parameters": [
+          {
+            "ParameterExport": "OWNERINDEX=456|INDEXINSHEET=6|OWNERPARTID=-1|LOCATION.X=481|LOCATION.Y=292|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Taiyo Yuden|NAME=Manufacturer 1|UNIQUEID=TMLLCKTZ",
+            "Name": "Manufacturer 1",
+            "Text": "Taiyo Yuden",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 122.174,
+              "YLoc": 74.168
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=456|INDEXINSHEET=7|OWNERPARTID=-1|LOCATION.X=481|LOCATION.Y=292|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=TMK105BJ104KV-F|NAME=Manufacturer Part Number 1|UNIQUEID=WISGUNYN",
+            "Name": "Manufacturer Part Number 1",
+            "Text": "TMK105BJ104KV-F",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 122.174,
+              "YLoc": 74.168
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=456|INDEXINSHEET=8|OWNERPARTID=-1|LOCATION.X=481|LOCATION.Y=292|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Yageo|NAME=Manufacturer 2|UNIQUEID=NKJXIOHG",
+            "Name": "Manufacturer 2",
+            "Text": "Yageo",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 122.174,
+              "YLoc": 74.168
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=456|INDEXINSHEET=9|OWNERPARTID=-1|LOCATION.X=481|LOCATION.Y=292|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=CC0402KRX7R8BB104|NAME=Manufacturer Part Number 2|UNIQUEID=BDKFCSLK",
+            "Name": "Manufacturer Part Number 2",
+            "Text": "CC0402KRX7R8BB104",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 122.174,
+              "YLoc": 74.168
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=456|INDEXINSHEET=10|OWNERPARTID=-1|LOCATION.X=499|LOCATION.Y=261|COLOR=8388608|FONTID=1|TEXT=100n|NAME=Value|UNIQUEID=FCBILCCM",
+            "Name": "Value",
+            "Text": "100n",
+            "IsHidden": false,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 126.746,
+              "YLoc": 66.294
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=456|INDEXINSHEET=11|OWNERPARTID=-1|LOCATION.X=499|LOCATION.Y=251|COLOR=8388608|FONTID=1|TEXT=0402|NAME=Package / Case|UNIQUEID=VKVKFZUJ",
+            "Name": "Package / Case",
+            "Text": "0402",
+            "IsHidden": false,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 126.746,
+              "YLoc": 63.754
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=456|INDEXINSHEET=12|OWNERPARTID=-1|LOCATION.X=499|LOCATION.Y=241|COLOR=8388608|FONTID=1|TEXT=25V|NAME=Voltage|UNIQUEID=LFTNWWVE",
+            "Name": "Voltage",
+            "Text": "25V",
+            "IsHidden": false,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 126.746,
+              "YLoc": 61.214
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=456|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=481|LOCATION.Y=292|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=CAP_100n_0402_25V_10pc|NAME=Comment|UNIQUEID=HWCHRDMI",
+            "Name": "Comment",
+            "Text": "CAP_100n_0402_25V_10pc",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 122.174,
+              "YLoc": 74.168
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          }
+        ]
+      },
+      {
+        "ParameterExport": "LIBREFERENCE=RES_10K_0402_1pc|COMPONENTDESCRIPTION=RES SMD 10K OHM 1% 1/16W 0402|PARTCOUNT=2|DISPLAYMODECOUNT=1|INDEXINSHEET=35|OWNERPARTID=-1|LOCATION.X=180|LOCATION.Y=340|CURRENTPARTID=1|LIBRARYPATH=*|SOURCELIBRARYNAME=Passives.IntLib|TARGETFILENAME=*|UNIQUEID=ZUXCWGQK|AREACOLOR=11599871|COLOR=128|PARTIDLOCKED=T|DESIGNITEMID=RES_10K_0402_1pc|ALLPINCOUNT=2",
+        "FullPartDesignator": "R26",
+        "PartID": 1,
+        "PartCount": 1,
+        "IsMultiPart": false,
+        "Location": {
+          "LocX": 45.72,
+          "LocY": 45.72
+        },
+        "Rotation": 0,
+        "IsMirrored": false,
+        "LibraryReference": "RES_10K_0402_1pc",
+        "Library": "*",
+        "AllPinCount": 0,
+        "Pins": [
+          {
+            "ParameterExport": "OWNERINDEX=495|OWNERPARTID=1|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=33|PINLENGTH=10|LOCATION.X=180|LOCATION.Y=370|NAME=2|DESIGNATOR=2",
+            "Location": {
+              "LocX": 45.72,
+              "LocY": 93.98
+            },
+            "Designator": "2",
+            "NetName": null
+          },
+          {
+            "ParameterExport": "OWNERINDEX=495|OWNERPARTID=1|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=35|PINLENGTH=10|LOCATION.X=180|LOCATION.Y=350|NAME=1|DESIGNATOR=1",
+            "Location": {
+              "LocX": 45.72,
+              "LocY": 88.9
+            },
+            "Designator": "1",
+            "NetName": null
+          }
+        ],
+        "Parameters": [
+          {
+            "ParameterExport": "OWNERINDEX=495|OWNERPARTID=-1|LOCATION.X=175|LOCATION.Y=335|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Yageo|NAME=Manufacturer 1|UNIQUEID=ISXVWNNF",
+            "Name": "Manufacturer 1",
+            "Text": "Yageo",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 44.45,
+              "YLoc": 85.09
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=495|INDEXINSHEET=1|OWNERPARTID=-1|LOCATION.X=175|LOCATION.Y=335|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=RC0402FR-0710KL|NAME=Manufacturer Part Number 1|UNIQUEID=FSJKQILF",
+            "Name": "Manufacturer Part Number 1",
+            "Text": "RC0402FR-0710KL",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 44.45,
+              "YLoc": 85.09
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=495|INDEXINSHEET=2|OWNERPARTID=-1|LOCATION.X=183|LOCATION.Y=351|COLOR=8388608|FONTID=1|TEXT=0402|NAME=Package / Case|UNIQUEID=CJCJQBMH",
+            "Name": "Package / Case",
+            "Text": "0402",
+            "IsHidden": false,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 46.482,
+              "YLoc": 89.154
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=495|INDEXINSHEET=3|OWNERPARTID=-1|LOCATION.X=183|LOCATION.Y=341|COLOR=8388608|FONTID=1|TEXT=10K|NAME=Value|UNIQUEID=MPHLZLCI",
+            "Name": "Value",
+            "Text": "10K",
+            "IsHidden": false,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 46.482,
+              "YLoc": 86.614
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          },
+          {
+            "ParameterExport": "OWNERINDEX=495|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=175|LOCATION.Y=325|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=RES_10K_0402_1pc|NAME=Comment|UNIQUEID=QANJDILX",
+            "Name": "Comment",
+            "Text": "RES_10K_0402_1pc",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 44.45,
+              "YLoc": 82.55
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          }
+        ]
+      },
+      {
+        "ParameterExport": "LIBREFERENCE=Testpoint_SMT_2mm|COMPONENTDESCRIPTION=Testpoint 2mm Octagonal|PARTCOUNT=2|DISPLAYMODECOUNT=1|INDEXINSHEET=59|OWNERPARTID=-1|LOCATION.X=830|LOCATION.Y=340|ORIENTATION=2|CURRENTPARTID=1|LIBRARYPATH=*|SOURCELIBRARYNAME=Misc.IntLib|TARGETFILENAME=*|UNIQUEID=YEEWNAPK|AREACOLOR=11599871|COLOR=128|PARTIDLOCKED=T|DESIGNITEMID=Testpoint_SMT_2mm|ALLPINCOUNT=1|COMPONENTKINDVERSION2=5",
+        "FullPartDesignator": "en_tdm",
+        "PartID": 1,
+        "PartCount": 1,
+        "IsMultiPart": false,
+        "Location": {
+          "LocX": 210.82,
+          "LocY": 210.82
+        },
+        "Rotation": 2,
+        "IsMirrored": false,
+        "LibraryReference": "Testpoint_SMT_2mm",
+        "Library": "*",
+        "AllPinCount": 0,
+        "Pins": [
+          {
+            "ParameterExport": "OWNERINDEX=534|OWNERPARTID=1|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=33|PINLENGTH=4|LOCATION.X=830|LOCATION.Y=336|NAME=TP|DESIGNATOR=TP",
+            "Location": {
+              "LocX": 210.82,
+              "LocY": 85.344
+            },
+            "Designator": "TP",
+            "NetName": null
+          }
+        ],
+        "Parameters": [
+          {
+            "ParameterExport": "OWNERINDEX=534|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=827|LOCATION.Y=342|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Testpoint_SMT_2mm|NAME=Comment|UNIQUEID=NGWWCVZS",
+            "Name": "Comment",
+            "Text": "Testpoint_SMT_2mm",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 210.058,
+              "YLoc": 86.868
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          }
+        ]
+      },
+      {
+        "ParameterExport": "LIBREFERENCE=Testpoint_SMT_2mm|COMPONENTDESCRIPTION=Testpoint 2mm Octagonal|PARTCOUNT=2|DISPLAYMODECOUNT=1|INDEXINSHEET=61|OWNERPARTID=-1|LOCATION.X=830|LOCATION.Y=490|CURRENTPARTID=1|LIBRARYPATH=*|SOURCELIBRARYNAME=Misc.IntLib|TARGETFILENAME=*|UNIQUEID=FVOKWKWI|AREACOLOR=11599871|COLOR=128|PARTIDLOCKED=T|DESIGNITEMID=Testpoint_SMT_2mm|ALLPINCOUNT=1|COMPONENTKINDVERSION2=5",
+        "FullPartDesignator": "wtch_dwg_2",
+        "PartID": 1,
+        "PartCount": 1,
+        "IsMultiPart": false,
+        "Location": {
+          "LocX": 210.82,
+          "LocY": 210.82
+        },
+        "Rotation": 0,
+        "IsMirrored": false,
+        "LibraryReference": "Testpoint_SMT_2mm",
+        "Library": "*",
+        "AllPinCount": 0,
+        "Pins": [
+          {
+            "ParameterExport": "OWNERINDEX=545|OWNERPARTID=1|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=35|PINLENGTH=4|LOCATION.X=830|LOCATION.Y=494|NAME=TP|DESIGNATOR=TP",
+            "Location": {
+              "LocX": 210.82,
+              "LocY": 125.476
+            },
+            "Designator": "TP",
+            "NetName": null
+          }
+        ],
+        "Parameters": [
+          {
+            "ParameterExport": "OWNERINDEX=545|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=827|LOCATION.Y=498|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Testpoint_SMT_2mm|NAME=Comment|UNIQUEID=YNGTPLOR",
+            "Name": "Comment",
+            "Text": "Testpoint_SMT_2mm",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 210.058,
+              "YLoc": 126.492
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          }
+        ]
+      },
+      {
+        "ParameterExport": "LIBREFERENCE=Testpoint_SMT_2mm|COMPONENTDESCRIPTION=Testpoint 2mm Octagonal|PARTCOUNT=2|DISPLAYMODECOUNT=1|INDEXINSHEET=62|OWNERPARTID=-1|LOCATION.X=850|LOCATION.Y=410|CURRENTPARTID=1|LIBRARYPATH=*|SOURCELIBRARYNAME=Misc.IntLib|TARGETFILENAME=*|UNIQUEID=VOLPYZBD|AREACOLOR=11599871|COLOR=128|PARTIDLOCKED=T|DESIGNITEMID=Testpoint_SMT_2mm|ALLPINCOUNT=1|COMPONENTKINDVERSION2=5",
+        "FullPartDesignator": "en_pa",
+        "PartID": 1,
+        "PartCount": 1,
+        "IsMultiPart": false,
+        "Location": {
+          "LocX": 215.9,
+          "LocY": 215.9
+        },
+        "Rotation": 0,
+        "IsMirrored": false,
+        "LibraryReference": "Testpoint_SMT_2mm",
+        "Library": "*",
+        "AllPinCount": 0,
+        "Pins": [
+          {
+            "ParameterExport": "OWNERINDEX=555|OWNERPARTID=1|FORMALTYPE=1|ELECTRICAL=4|PINCONGLOMERATE=35|PINLENGTH=4|LOCATION.X=850|LOCATION.Y=414|NAME=TP|DESIGNATOR=TP",
+            "Location": {
+              "LocX": 215.9,
+              "LocY": 105.156
+            },
+            "Designator": "TP",
+            "NetName": null
+          }
+        ],
+        "Parameters": [
+          {
+            "ParameterExport": "OWNERINDEX=555|INDEXINSHEET=-1|OWNERPARTID=-1|LOCATION.X=847|LOCATION.Y=418|COLOR=8388608|FONTID=1|ISHIDDEN=T|TEXT=Testpoint_SMT_2mm|NAME=Comment|UNIQUEID=PHITUZJL",
+            "Name": "Comment",
+            "Text": "Testpoint_SMT_2mm",
+            "IsHidden": true,
+            "AutoPosition": true,
+            "LocXY": {
+              "XLoc": 215.138,
+              "YLoc": 106.172
+            },
+            "Rotation": 0,
+            "TextPointSize": 10,
+            "ColorBGR": 8388608,
+            "TextJustification": 0
+          }
+        ]
+      }
+    ],
+    "SheetSymbols": [],
+    "SheetEntrys": [],
+    "Texts": [
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=1|OWNERPARTID=-1|LOCATION.X=865|LOCATION.Y=54|COLOR=8388608|FONTID=2|TEXT=COBALT ROBOTICS, INC.|UNIQUEID=LKGTWGXO",
+        "Location": {
+          "LocX": 219.71,
+          "LocY": 13.716
+        },
+        "Rotation": 0,
+        "ColorBGR": 8388608,
+        "Text": "COBALT ROBOTICS, INC.",
+        "TextPointSize": 8.0,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=2|OWNERPARTID=-1|LOCATION.X=865|LOCATION.Y=46|COLOR=8388608|FONTID=2|TEXT=2121 S EL CAMINO REAL|UNIQUEID=IQNHPNDI",
+        "Location": {
+          "LocX": 219.71,
+          "LocY": 11.684
+        },
+        "Rotation": 0,
+        "ColorBGR": 8388608,
+        "Text": "2121 S EL CAMINO REAL",
+        "TextPointSize": 8.0,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=3|OWNERPARTID=-1|LOCATION.X=865|LOCATION.Y=38|COLOR=8388608|FONTID=2|TEXT=SUITE C110|UNIQUEID=XVWPGLUW",
+        "Location": {
+          "LocX": 219.71,
+          "LocY": 9.652
+        },
+        "Rotation": 0,
+        "ColorBGR": 8388608,
+        "Text": "SUITE C110",
+        "TextPointSize": 8.0,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=4|OWNERPARTID=-1|LOCATION.X=865|LOCATION.Y=30|COLOR=8388608|FONTID=2|TEXT=SAN MATEO, CA  94403|UNIQUEID=KLXCMMUN",
+        "Location": {
+          "LocX": 219.71,
+          "LocY": 7.62
+        },
+        "Rotation": 0,
+        "ColorBGR": 8388608,
+        "Text": "SAN MATEO, CA  94403",
+        "TextPointSize": 8.0,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=6|OWNERPARTID=-1|LOCATION.X=645|LOCATION.Y=65|COLOR=8388608|FONTID=1|TEXT==Title|UNIQUEID=DQXWYLUD",
+        "Location": {
+          "LocX": 163.83,
+          "LocY": 16.51
+        },
+        "Rotation": 0,
+        "ColorBGR": 8388608,
+        "Text": "=Title",
+        "TextPointSize": 10.0,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=7|OWNERPARTID=-1|LOCATION.X=670|LOCATION.Y=50|COLOR=8388608|FONTID=1|TEXT==DocumentNumber|UNIQUEID=AMEYWXCA",
+        "Location": {
+          "LocX": 170.18,
+          "LocY": 12.7
+        },
+        "Rotation": 0,
+        "ColorBGR": 8388608,
+        "Text": "=DocumentNumber",
+        "TextPointSize": 10.0,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=8|OWNERPARTID=-1|LOCATION.X=800|LOCATION.Y=50|COLOR=8388608|FONTID=1|TEXT==Revision|UNIQUEID=PKIKIVCV",
+        "Location": {
+          "LocX": 203.2,
+          "LocY": 12.7
+        },
+        "Rotation": 0,
+        "ColorBGR": 8388608,
+        "Text": "=Revision",
+        "TextPointSize": 10.0,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=9|OWNERPARTID=-1|LOCATION.X=775|LOCATION.Y=50|COLOR=8388608|FONTID=1|TEXT=Rev:|UNIQUEID=VZNTPQYQ",
+        "Location": {
+          "LocX": 196.85,
+          "LocY": 12.7
+        },
+        "Rotation": 0,
+        "ColorBGR": 8388608,
+        "Text": "Rev:",
+        "TextPointSize": 10.0,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=10|OWNERPARTID=-1|LOCATION.X=670|LOCATION.Y=35|COLOR=8388608|FONTID=1|TEXT==Date|UNIQUEID=FPLQNXXZ",
+        "Location": {
+          "LocX": 170.18,
+          "LocY": 8.89
+        },
+        "Rotation": 0,
+        "ColorBGR": 8388608,
+        "Text": "=Date",
+        "TextPointSize": 10.0,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=11|OWNERPARTID=-1|LOCATION.X=805|LOCATION.Y=35|COLOR=8388608|FONTID=1|TEXT==SheetNumber|UNIQUEID=QUBZIWRW",
+        "Location": {
+          "LocX": 204.47,
+          "LocY": 8.89
+        },
+        "Rotation": 0,
+        "ColorBGR": 8388608,
+        "Text": "=SheetNumber",
+        "TextPointSize": 10.0,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=12|OWNERPARTID=-1|LOCATION.X=685|LOCATION.Y=20|COLOR=8388608|FONTID=1|TEXT==DocumentName|UNIQUEID=UXWZXFYH",
+        "Location": {
+          "LocX": 173.99,
+          "LocY": 5.08
+        },
+        "Rotation": 0,
+        "ColorBGR": 8388608,
+        "Text": "=DocumentName",
+        "TextPointSize": 10.0,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=18|OWNERPARTID=-1|LOCATION.X=645|LOCATION.Y=50|COLOR=8388608|FONTID=1|TEXT=P\\N:|UNIQUEID=GSLUDLJI",
+        "Location": {
+          "LocX": 163.83,
+          "LocY": 12.7
+        },
+        "Rotation": 0,
+        "ColorBGR": 8388608,
+        "Text": "P\\N:",
+        "TextPointSize": 10.0,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=19|OWNERPARTID=-1|LOCATION.X=645|LOCATION.Y=35|COLOR=8388608|FONTID=1|TEXT=Date:|UNIQUEID=LEMOLKOL",
+        "Location": {
+          "LocX": 163.83,
+          "LocY": 8.89
+        },
+        "Rotation": 0,
+        "ColorBGR": 8388608,
+        "Text": "Date:",
+        "TextPointSize": 10.0,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=20|OWNERPARTID=-1|LOCATION.X=645|LOCATION.Y=20|COLOR=8388608|FONTID=1|TEXT=Filename:|UNIQUEID=OBQHBWOO",
+        "Location": {
+          "LocX": 163.83,
+          "LocY": 5.08
+        },
+        "Rotation": 0,
+        "ColorBGR": 8388608,
+        "Text": "Filename:",
+        "TextPointSize": 10.0,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=21|OWNERPARTID=-1|LOCATION.X=820|LOCATION.Y=35|COLOR=8388608|FONTID=1|TEXT=of|UNIQUEID=VSPIIAVN",
+        "Location": {
+          "LocX": 208.28,
+          "LocY": 8.89
+        },
+        "Rotation": 0,
+        "ColorBGR": 8388608,
+        "Text": "of",
+        "TextPointSize": 10.0,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=22|OWNERPARTID=-1|LOCATION.X=835|LOCATION.Y=35|COLOR=8388608|FONTID=1|TEXT==SheetTotal|UNIQUEID=IEGBRTVW",
+        "Location": {
+          "LocX": 212.09,
+          "LocY": 8.89
+        },
+        "Rotation": 0,
+        "ColorBGR": 8388608,
+        "Text": "=SheetTotal",
+        "TextPointSize": 10.0,
+        "TextJustification": 0
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=23|OWNERPARTID=-1|LOCATION.X=775|LOCATION.Y=35|COLOR=8388608|FONTID=1|TEXT=Sheet|UNIQUEID=HRGPMEOG",
+        "Location": {
+          "LocX": 196.85,
+          "LocY": 8.89
+        },
+        "Rotation": 0,
+        "ColorBGR": 8388608,
+        "Text": "Sheet",
+        "TextPointSize": 10.0,
+        "TextJustification": 0
+      }
+    ],
+    "Lines": [
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=5|OWNERPARTID=-1|LOCATIONCOUNT=3|X1=1080|Y1=80|X2=855|Y2=80|X3=855|Y3=20|UNIQUEID=UWYMKGQG",
+        "ColorBGR": 0,
+        "LineWidth": 0,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 274.32,
+            "LocY": 20.32
+          },
+          {
+            "LocX": 217.17,
+            "LocY": 20.32
+          },
+          {
+            "LocX": 217.17,
+            "LocY": 5.08
+          }
+        ]
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=13|OWNERPARTID=-1|LOCATIONCOUNT=3|X1=855|Y1=80|X2=640|Y2=80|X3=640|Y3=20|UNIQUEID=NBAYYBNJ",
+        "ColorBGR": 0,
+        "LineWidth": 0,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 217.17,
+            "LocY": 20.32
+          },
+          {
+            "LocX": 162.56,
+            "LocY": 20.32
+          },
+          {
+            "LocX": 162.56,
+            "LocY": 5.08
+          }
+        ]
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=14|OWNERPARTID=-1|LOCATIONCOUNT=2|X1=640|Y1=65|X2=855|Y2=65|UNIQUEID=ONSGMLMS",
+        "ColorBGR": 0,
+        "LineWidth": 0,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 162.56,
+            "LocY": 16.51
+          },
+          {
+            "LocX": 217.17,
+            "LocY": 16.51
+          }
+        ]
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=15|OWNERPARTID=-1|LOCATIONCOUNT=2|X1=640|Y1=50|X2=855|Y2=50|UNIQUEID=MJTNTCNZ",
+        "ColorBGR": 0,
+        "LineWidth": 0,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 162.56,
+            "LocY": 12.7
+          },
+          {
+            "LocX": 217.17,
+            "LocY": 12.7
+          }
+        ]
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=16|OWNERPARTID=-1|LOCATIONCOUNT=2|X1=640|Y1=35|X2=855|Y2=35|UNIQUEID=HRZRUZSA",
+        "ColorBGR": 0,
+        "LineWidth": 0,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 162.56,
+            "LocY": 8.89
+          },
+          {
+            "LocX": 217.17,
+            "LocY": 8.89
+          }
+        ]
+      },
+      {
+        "ParameterExport": "OWNERINDEX=1|INDEXINSHEET=17|OWNERPARTID=-1|LOCATIONCOUNT=2|X1=770|Y1=65|X2=770|Y2=35|UNIQUEID=RDCMWZBP",
+        "ColorBGR": 0,
+        "LineWidth": 0,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 195.58,
+            "LocY": 16.51
+          },
+          {
+            "LocX": 195.58,
+            "LocY": 8.89
+          }
+        ]
+      },
+      {
+        "ParameterExport": "OWNERINDEX=436|ISNOTACCESIBLE=T|INDEXINSHEET=4|OWNERPARTID=1|LINEWIDTH=1|COLOR=16711680|LOCATIONCOUNT=2|X1=450|Y1=280|X2=450|Y2=277|UNIQUEID=6f6051e2-4209-4ace-843b-02e16bd11161",
+        "ColorBGR": 16711680,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 114.3,
+            "LocY": 71.12
+          },
+          {
+            "LocX": 114.3,
+            "LocY": 70.358
+          }
+        ]
+      },
+      {
+        "ParameterExport": "OWNERINDEX=436|ISNOTACCESIBLE=T|INDEXINSHEET=5|OWNERPARTID=1|LINEWIDTH=1|COLOR=16711680|LOCATIONCOUNT=2|X1=450|Y1=270|X2=450|Y2=273|UNIQUEID=7f66edb9-a9e7-4dc1-b9ea-b5884a37be6c",
+        "ColorBGR": 16711680,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 114.3,
+            "LocY": 68.58
+          },
+          {
+            "LocX": 114.3,
+            "LocY": 69.342
+          }
+        ]
+      },
+      {
+        "ParameterExport": "OWNERINDEX=456|ISNOTACCESIBLE=T|INDEXINSHEET=4|OWNERPARTID=1|LINEWIDTH=1|COLOR=16711680|LOCATIONCOUNT=2|X1=490|Y1=280|X2=490|Y2=277|UNIQUEID=bb9b16c4-23d5-4d91-b3e2-7ce64d159640",
+        "ColorBGR": 16711680,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 124.46,
+            "LocY": 71.12
+          },
+          {
+            "LocX": 124.46,
+            "LocY": 70.358
+          }
+        ]
+      },
+      {
+        "ParameterExport": "OWNERINDEX=456|ISNOTACCESIBLE=T|INDEXINSHEET=5|OWNERPARTID=1|LINEWIDTH=1|COLOR=16711680|LOCATIONCOUNT=2|X1=490|Y1=270|X2=490|Y2=273|UNIQUEID=64c776ee-a00c-4d09-99a2-f88f31874b6a",
+        "ColorBGR": 16711680,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 124.46,
+            "LocY": 68.58
+          },
+          {
+            "LocX": 124.46,
+            "LocY": 69.342
+          }
+        ]
+      },
+      {
+        "ParameterExport": "OWNERINDEX=495|ISNOTACCESIBLE=T|INDEXINSHEET=6|OWNERPARTID=1|LINEWIDTH=1|COLOR=16711680|LOCATIONCOUNT=10|X1=180|Y1=370|X2=180|Y2=366|X3=182|Y3=365|X4=178|Y4=363|X5=182|Y5=361|X6=178|Y6=359|X7=182|Y7=357|X8=178|Y8=355|X9=180|Y9=354|X10=180|Y10=350|UNIQUEID=WPDKOUHI",
+        "ColorBGR": 16711680,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 45.72,
+            "LocY": 93.98
+          },
+          {
+            "LocX": 45.72,
+            "LocY": 92.964
+          },
+          {
+            "LocX": 46.228,
+            "LocY": 92.71
+          },
+          {
+            "LocX": 45.212,
+            "LocY": 92.202
+          },
+          {
+            "LocX": 46.228,
+            "LocY": 91.694
+          },
+          {
+            "LocX": 45.212,
+            "LocY": 91.186
+          },
+          {
+            "LocX": 46.228,
+            "LocY": 90.678
+          },
+          {
+            "LocX": 45.212,
+            "LocY": 90.17
+          },
+          {
+            "LocX": 45.72,
+            "LocY": 89.916
+          },
+          {
+            "LocX": 45.72,
+            "LocY": 88.9
+          }
+        ]
+      }
+    ],
+    "Arcs": [],
+    "Polygons": [],
+    "Rectangles": [
+      {
+        "ParameterExport": "OWNERINDEX=26|ISNOTACCESIBLE=T|INDEXINSHEET=5|OWNERPARTID=2|LOCATION.X=100|LOCATION.Y=170|CORNER.X=260|CORNER.Y=360|LINEWIDTH=1|AREACOLOR=11599871|ISSOLID=T|TRANSPARENT=T|UNIQUEID=QQGXIYJR",
+        "AreaColorBGR": 11599871,
+        "Location": {
+          "LocX": 25.4,
+          "LocY": 43.18
+        },
+        "CornerLocation": {
+          "LocX": 66.04,
+          "LocY": 91.44
+        }
+      },
+      {
+        "ParameterExport": "OWNERINDEX=26|ISNOTACCESIBLE=T|INDEXINSHEET=26|OWNERPARTID=3|LOCATION.X=100|LOCATION.Y=270|CORNER.X=282|CORNER.Y=320|LINEWIDTH=1|AREACOLOR=11599871|ISSOLID=T|TRANSPARENT=T|UNIQUEID=XWXVVKBE",
+        "AreaColorBGR": 11599871,
+        "Location": {
+          "LocX": 25.4,
+          "LocY": 68.58
+        },
+        "CornerLocation": {
+          "LocX": 71.628,
+          "LocY": 81.28
+        }
+      },
+      {
+        "ParameterExport": "OWNERINDEX=26|ISNOTACCESIBLE=T|INDEXINSHEET=34|OWNERPARTID=4|LOCATION.X=70|LOCATION.Y=240|CORNER.X=140|CORNER.Y=310|LINEWIDTH=1|AREACOLOR=11599871|ISSOLID=T|TRANSPARENT=T|UNIQUEID=500434f0-52dc-4a26-861b-0eba77c64039",
+        "AreaColorBGR": 11599871,
+        "Location": {
+          "LocX": 17.78,
+          "LocY": 60.96
+        },
+        "CornerLocation": {
+          "LocX": 35.56,
+          "LocY": 78.74
+        }
+      },
+      {
+        "ParameterExport": "OWNERINDEX=26|ISNOTACCESIBLE=T|INDEXINSHEET=49|OWNERPARTID=5|LOCATION.X=70|LOCATION.Y=271|CORNER.X=200|CORNER.Y=601|LINEWIDTH=1|AREACOLOR=11599871|ISSOLID=T|TRANSPARENT=T|UNIQUEID=FOTPFOVW",
+        "AreaColorBGR": 11599871,
+        "Location": {
+          "LocX": 17.78,
+          "LocY": 68.834
+        },
+        "CornerLocation": {
+          "LocX": 50.8,
+          "LocY": 152.654
+        }
+      },
+      {
+        "ParameterExport": "OWNERINDEX=26|ISNOTACCESIBLE=T|INDEXINSHEET=62|OWNERPARTID=6|LOCATION.X=70|LOCATION.Y=180|CORNER.X=120|CORNER.Y=270|LINEWIDTH=1|AREACOLOR=11599871|ISSOLID=T|TRANSPARENT=T|UNIQUEID=RDCKUKYF",
+        "AreaColorBGR": 11599871,
+        "Location": {
+          "LocX": 17.78,
+          "LocY": 45.72
+        },
+        "CornerLocation": {
+          "LocX": 30.48,
+          "LocY": 68.58
+        }
+      },
+      {
+        "ParameterExport": "OWNERINDEX=26|ISNOTACCESIBLE=T|INDEXINSHEET=63|OWNERPARTID=7|LOCATION.X=70|LOCATION.Y=270|CORNER.X=140|CORNER.Y=390|LINEWIDTH=1|AREACOLOR=11599871|ISSOLID=T|TRANSPARENT=T|UNIQUEID=CDKWWVAS",
+        "AreaColorBGR": 11599871,
+        "Location": {
+          "LocX": 17.78,
+          "LocY": 68.58
+        },
+        "CornerLocation": {
+          "LocX": 35.56,
+          "LocY": 99.06
+        }
+      },
+      {
+        "ParameterExport": "OWNERINDEX=26|ISNOTACCESIBLE=T|INDEXINSHEET=79|OWNERPARTID=1|LOCATION.X=100|LOCATION.Y=160|CORNER.X=320|CORNER.Y=330|LINEWIDTH=1|AREACOLOR=11599871|ISSOLID=T|TRANSPARENT=T|UNIQUEID=KBAVEJKS",
+        "AreaColorBGR": 11599871,
+        "Location": {
+          "LocX": 25.4,
+          "LocY": 40.64
+        },
+        "CornerLocation": {
+          "LocX": 81.28,
+          "LocY": 83.82
+        }
+      },
+      {
+        "ParameterExport": "OWNERINDEX=209|ISNOTACCESIBLE=T|INDEXINSHEET=5|OWNERPARTID=2|LOCATION.X=630|LOCATION.Y=200|CORNER.X=790|CORNER.Y=390|LINEWIDTH=1|AREACOLOR=11599871|ISSOLID=T|TRANSPARENT=T|UNIQUEID=TEPCNGTC",
+        "AreaColorBGR": 11599871,
+        "Location": {
+          "LocX": 160.02,
+          "LocY": 50.8
+        },
+        "CornerLocation": {
+          "LocX": 200.66,
+          "LocY": 99.06
+        }
+      },
+      {
+        "ParameterExport": "OWNERINDEX=209|ISNOTACCESIBLE=T|INDEXINSHEET=26|OWNERPARTID=3|LOCATION.X=630|LOCATION.Y=300|CORNER.X=812|CORNER.Y=350|LINEWIDTH=1|AREACOLOR=11599871|ISSOLID=T|TRANSPARENT=T|UNIQUEID=UKFFWZWN",
+        "AreaColorBGR": 11599871,
+        "Location": {
+          "LocX": 160.02,
+          "LocY": 76.2
+        },
+        "CornerLocation": {
+          "LocX": 206.248,
+          "LocY": 88.9
+        }
+      },
+      {
+        "ParameterExport": "OWNERINDEX=209|ISNOTACCESIBLE=T|INDEXINSHEET=34|OWNERPARTID=4|LOCATION.X=600|LOCATION.Y=270|CORNER.X=670|CORNER.Y=340|LINEWIDTH=1|AREACOLOR=11599871|ISSOLID=T|TRANSPARENT=T|UNIQUEID=YRTSZEHK",
+        "AreaColorBGR": 11599871,
+        "Location": {
+          "LocX": 152.4,
+          "LocY": 68.58
+        },
+        "CornerLocation": {
+          "LocX": 170.18,
+          "LocY": 86.36
+        }
+      },
+      {
+        "ParameterExport": "OWNERINDEX=209|ISNOTACCESIBLE=T|INDEXINSHEET=49|OWNERPARTID=5|LOCATION.X=600|LOCATION.Y=301|CORNER.X=730|CORNER.Y=631|LINEWIDTH=1|AREACOLOR=11599871|ISSOLID=T|TRANSPARENT=T|UNIQUEID=cea7b91c-70ae-4174-b28c-6f1dbf8986d9",
+        "AreaColorBGR": 11599871,
+        "Location": {
+          "LocX": 152.4,
+          "LocY": 76.454
+        },
+        "CornerLocation": {
+          "LocX": 185.42,
+          "LocY": 160.274
+        }
+      },
+      {
+        "ParameterExport": "OWNERINDEX=209|ISNOTACCESIBLE=T|INDEXINSHEET=62|OWNERPARTID=6|LOCATION.X=600|LOCATION.Y=210|CORNER.X=650|CORNER.Y=300|LINEWIDTH=1|AREACOLOR=11599871|ISSOLID=T|TRANSPARENT=T|UNIQUEID=OBEEOARI",
+        "AreaColorBGR": 11599871,
+        "Location": {
+          "LocX": 152.4,
+          "LocY": 53.34
+        },
+        "CornerLocation": {
+          "LocX": 165.1,
+          "LocY": 76.2
+        }
+      },
+      {
+        "ParameterExport": "OWNERINDEX=209|ISNOTACCESIBLE=T|INDEXINSHEET=63|OWNERPARTID=7|LOCATION.X=600|LOCATION.Y=300|CORNER.X=670|CORNER.Y=420|LINEWIDTH=1|AREACOLOR=11599871|ISSOLID=T|TRANSPARENT=T|UNIQUEID=SJQQVWSV",
+        "AreaColorBGR": 11599871,
+        "Location": {
+          "LocX": 152.4,
+          "LocY": 76.2
+        },
+        "CornerLocation": {
+          "LocX": 170.18,
+          "LocY": 106.68
+        }
+      },
+      {
+        "ParameterExport": "OWNERINDEX=209|ISNOTACCESIBLE=T|INDEXINSHEET=79|OWNERPARTID=1|LOCATION.X=630|LOCATION.Y=190|CORNER.X=850|CORNER.Y=360|LINEWIDTH=1|AREACOLOR=11599871|ISSOLID=T|TRANSPARENT=T|UNIQUEID=JICMPUWK",
+        "AreaColorBGR": 11599871,
+        "Location": {
+          "LocX": 160.02,
+          "LocY": 48.26
+        },
+        "CornerLocation": {
+          "LocX": 215.9,
+          "LocY": 91.44
+        }
+      },
+      {
+        "ParameterExport": "OWNERINDEX=392|ISNOTACCESIBLE=T|INDEXINSHEET=8|OWNERPARTID=1|LOCATION.X=340|LOCATION.Y=230|CORNER.X=410|CORNER.Y=310|LINEWIDTH=1|AREACOLOR=11599871|ISSOLID=T|TRANSPARENT=T|UNIQUEID=e717405a-fdb8-4c23-bf22-2ea9607baa0c",
+        "AreaColorBGR": 11599871,
+        "Location": {
+          "LocX": 86.36,
+          "LocY": 58.42
+        },
+        "CornerLocation": {
+          "LocX": 104.14,
+          "LocY": 78.74
+        }
+      }
+    ],
+    "Wires": [
+      {
+        "ParameterExport": "INDEXINSHEET=37|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=QGWKWWBP|LOCATIONCOUNT=3|X1=170|Y1=300|X2=180|Y2=300|X3=220|Y3=300",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 43.18,
+            "LocY": 76.2
+          },
+          {
+            "LocX": 45.72,
+            "LocY": 76.2
+          },
+          {
+            "LocX": 55.88,
+            "LocY": 76.2
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=38|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=YBUYRNUR|LOCATIONCOUNT=2|X1=170|Y1=290|X2=220|Y2=290",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 43.18,
+            "LocY": 73.66
+          },
+          {
+            "LocX": 55.88,
+            "LocY": 73.66
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=39|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=RUWUHJQG|LOCATIONCOUNT=2|X1=170|Y1=280|X2=220|Y2=280",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 43.18,
+            "LocY": 71.12
+          },
+          {
+            "LocX": 55.88,
+            "LocY": 71.12
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=40|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=HQOOMPGX|LOCATIONCOUNT=2|X1=170|Y1=270|X2=220|Y2=270",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 43.18,
+            "LocY": 68.58
+          },
+          {
+            "LocX": 55.88,
+            "LocY": 68.58
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=41|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=JTWRRGAE|LOCATIONCOUNT=2|X1=170|Y1=260|X2=220|Y2=260",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 43.18,
+            "LocY": 66.04
+          },
+          {
+            "LocX": 55.88,
+            "LocY": 66.04
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=42|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=UAEVZIUH|LOCATIONCOUNT=2|X1=170|Y1=250|X2=220|Y2=250",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 43.18,
+            "LocY": 63.5
+          },
+          {
+            "LocX": 55.88,
+            "LocY": 63.5
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=43|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=SNOQTVVU|LOCATIONCOUNT=2|X1=310|Y1=270|X2=270|Y2=270",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 78.74,
+            "LocY": 68.58
+          },
+          {
+            "LocX": 68.58,
+            "LocY": 68.58
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=44|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=GDBKIVPI|LOCATIONCOUNT=2|X1=310|Y1=260|X2=270|Y2=260",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 78.74,
+            "LocY": 66.04
+          },
+          {
+            "LocX": 68.58,
+            "LocY": 66.04
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=45|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=XOKYSPCQ|LOCATIONCOUNT=2|X1=310|Y1=280|X2=270|Y2=280",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 78.74,
+            "LocY": 71.12
+          },
+          {
+            "LocX": 68.58,
+            "LocY": 71.12
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=46|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=EZEIRLIF|LOCATIONCOUNT=2|X1=310|Y1=290|X2=270|Y2=290",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 78.74,
+            "LocY": 73.66
+          },
+          {
+            "LocX": 68.58,
+            "LocY": 73.66
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=47|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=XNDLSMAG|LOCATIONCOUNT=2|X1=310|Y1=300|X2=270|Y2=300",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 78.74,
+            "LocY": 76.2
+          },
+          {
+            "LocX": 68.58,
+            "LocY": 76.2
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=48|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=BOQGCFSK|LOCATIONCOUNT=2|X1=310|Y1=240|X2=270|Y2=240",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 78.74,
+            "LocY": 60.96
+          },
+          {
+            "LocX": 68.58,
+            "LocY": 60.96
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=49|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=KTJCIEEF|LOCATIONCOUNT=3|X1=450|Y1=290|X2=450|Y2=300|X3=440|Y3=300",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 114.3,
+            "LocY": 73.66
+          },
+          {
+            "LocX": 114.3,
+            "LocY": 76.2
+          },
+          {
+            "LocX": 111.76,
+            "LocY": 76.2
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=50|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=EZTSTOOJ|LOCATIONCOUNT=3|X1=450|Y1=260|X2=450|Y2=240|X3=440|Y3=240",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 114.3,
+            "LocY": 66.04
+          },
+          {
+            "LocX": 114.3,
+            "LocY": 60.96
+          },
+          {
+            "LocX": 111.76,
+            "LocY": 60.96
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=51|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=MQCETGHJ|LOCATIONCOUNT=3|X1=490|Y1=260|X2=490|Y2=240|X3=450|Y3=240",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 124.46,
+            "LocY": 66.04
+          },
+          {
+            "LocX": 124.46,
+            "LocY": 60.96
+          },
+          {
+            "LocX": 114.3,
+            "LocY": 60.96
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=52|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=XAELEYOV|LOCATIONCOUNT=2|X1=470|Y1=330|X2=470|Y2=300",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 119.38,
+            "LocY": 83.82
+          },
+          {
+            "LocX": 119.38,
+            "LocY": 76.2
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=53|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=LUEJMNPO|LOCATIONCOUNT=4|X1=450|Y1=300|X2=470|Y2=300|X3=490|Y3=300|X4=490|Y4=290",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 114.3,
+            "LocY": 76.2
+          },
+          {
+            "LocX": 119.38,
+            "LocY": 76.2
+          },
+          {
+            "LocX": 124.46,
+            "LocY": 76.2
+          },
+          {
+            "LocX": 124.46,
+            "LocY": 73.66
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=54|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=DWKFXDOM|LOCATIONCOUNT=2|X1=180|Y1=300|X2=180|Y2=340",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 45.72,
+            "LocY": 76.2
+          },
+          {
+            "LocX": 45.72,
+            "LocY": 86.36
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=55|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=ELUVVTGD|LOCATIONCOUNT=2|X1=180|Y1=380|X2=180|Y2=400",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 45.72,
+            "LocY": 96.52
+          },
+          {
+            "LocX": 45.72,
+            "LocY": 101.6
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=57|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=AXRKQQVC|LOCATIONCOUNT=3|X1=570|Y1=451|X2=550|Y2=451|X3=550|Y3=450",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 144.78,
+            "LocY": 114.554
+          },
+          {
+            "LocX": 139.7,
+            "LocY": 114.554
+          },
+          {
+            "LocX": 139.7,
+            "LocY": 114.3
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=60|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=DPSWYJQX|LOCATIONCOUNT=4|X1=830|Y1=340|X2=830|Y2=370|X3=760|Y3=370|X4=760|Y4=381",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 210.82,
+            "LocY": 86.36
+          },
+          {
+            "LocX": 210.82,
+            "LocY": 93.98
+          },
+          {
+            "LocX": 193.04,
+            "LocY": 93.98
+          },
+          {
+            "LocX": 193.04,
+            "LocY": 96.774
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=63|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=DGLAVJZZ|LOCATIONCOUNT=4|X1=850|Y1=410|X2=850|Y2=400|X3=760|Y3=400|X4=760|Y4=391",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 215.9,
+            "LocY": 104.14
+          },
+          {
+            "LocX": 215.9,
+            "LocY": 101.6
+          },
+          {
+            "LocX": 193.04,
+            "LocY": 101.6
+          },
+          {
+            "LocX": 193.04,
+            "LocY": 99.314
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=64|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=WXESLRHT|LOCATIONCOUNT=2|X1=760|Y1=460|X2=760|Y2=461",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 193.04,
+            "LocY": 116.84
+          },
+          {
+            "LocX": 193.04,
+            "LocY": 117.094
+          }
+        ]
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=65|OWNERPARTID=-1|LINEWIDTH=1|COLOR=8388608|UNIQUEID=GHADYSBM|LOCATIONCOUNT=3|X1=760|Y1=460|X2=830|Y2=460|X3=830|Y3=490",
+        "ColorBGR": 8388608,
+        "LineWidth": 1,
+        "LineStyle": 0,
+        "PointList": [
+          {
+            "LocX": 193.04,
+            "LocY": 116.84
+          },
+          {
+            "LocX": 210.82,
+            "LocY": 116.84
+          },
+          {
+            "LocX": 210.82,
+            "LocY": 124.46
+          }
+        ]
+      }
+    ],
+    "NetLabels": [
+      {
+        "ParameterExport": "INDEXINSHEET=4|OWNERPARTID=-1|LOCATION.X=180|LOCATION.Y=300|COLOR=128|FONTID=1|TEXT=flexspi_ss0|UNIQUEID=QJLISFPI",
+        "Location": {
+          "LocX": 45.72,
+          "LocY": 76.2
+        },
+        "Rotation": 0,
+        "ColorBGR": 128,
+        "Text": "flexspi_ss0",
+        "TextPointSize": 10.0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=5|OWNERPARTID=-1|LOCATION.X=180|LOCATION.Y=290|COLOR=128|FONTID=1|TEXT=flexspi_d1_a|UNIQUEID=OFXJMMXB",
+        "Location": {
+          "LocX": 45.72,
+          "LocY": 73.66
+        },
+        "Rotation": 0,
+        "ColorBGR": 128,
+        "Text": "flexspi_d1_a",
+        "TextPointSize": 10.0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=6|OWNERPARTID=-1|LOCATION.X=180|LOCATION.Y=280|COLOR=128|FONTID=1|TEXT=flexspi_d2_a|UNIQUEID=EDMAOXNQ",
+        "Location": {
+          "LocX": 45.72,
+          "LocY": 71.12
+        },
+        "Rotation": 0,
+        "ColorBGR": 128,
+        "Text": "flexspi_d2_a",
+        "TextPointSize": 10.0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=7|OWNERPARTID=-1|LOCATION.X=180|LOCATION.Y=270|COLOR=128|FONTID=1|TEXT=flexspi_d0_a|UNIQUEID=HRQXBTCO",
+        "Location": {
+          "LocX": 45.72,
+          "LocY": 68.58
+        },
+        "Rotation": 0,
+        "ColorBGR": 128,
+        "Text": "flexspi_d0_a",
+        "TextPointSize": 10.0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=8|OWNERPARTID=-1|LOCATION.X=180|LOCATION.Y=260|COLOR=128|FONTID=1|TEXT=flexspi_clk_a|UNIQUEID=IULSWPFJ",
+        "Location": {
+          "LocX": 45.72,
+          "LocY": 66.04
+        },
+        "Rotation": 0,
+        "ColorBGR": 128,
+        "Text": "flexspi_clk_a",
+        "TextPointSize": 10.0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=9|OWNERPARTID=-1|LOCATION.X=180|LOCATION.Y=250|COLOR=128|FONTID=1|TEXT=flexspi_d3_a|UNIQUEID=YCHZWCEO",
+        "Location": {
+          "LocX": 45.72,
+          "LocY": 63.5
+        },
+        "Rotation": 0,
+        "ColorBGR": 128,
+        "Text": "flexspi_d3_a",
+        "TextPointSize": 10.0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=10|OWNERPARTID=-1|LOCATION.X=270|LOCATION.Y=260|COLOR=128|FONTID=1|TEXT=flexspi_d3_a|UNIQUEID=VWVTAAYB",
+        "Location": {
+          "LocX": 68.58,
+          "LocY": 66.04
+        },
+        "Rotation": 0,
+        "ColorBGR": 128,
+        "Text": "flexspi_d3_a",
+        "TextPointSize": 10.0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=11|OWNERPARTID=-1|LOCATION.X=270|LOCATION.Y=270|COLOR=128|FONTID=1|TEXT=flexspi_d2_a|UNIQUEID=AVETCZAG",
+        "Location": {
+          "LocX": 68.58,
+          "LocY": 68.58
+        },
+        "Rotation": 0,
+        "ColorBGR": 128,
+        "Text": "flexspi_d2_a",
+        "TextPointSize": 10.0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=12|OWNERPARTID=-1|LOCATION.X=270|LOCATION.Y=300|COLOR=128|FONTID=1|TEXT=flexspi_ss0|UNIQUEID=ZHQXABLK",
+        "Location": {
+          "LocX": 68.58,
+          "LocY": 76.2
+        },
+        "Rotation": 0,
+        "ColorBGR": 128,
+        "Text": "flexspi_ss0",
+        "TextPointSize": 10.0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=13|OWNERPARTID=-1|LOCATION.X=270|LOCATION.Y=240|COLOR=128|FONTID=1|TEXT=flexspi_clk_a|UNIQUEID=WPSPBGKJ",
+        "Location": {
+          "LocX": 68.58,
+          "LocY": 60.96
+        },
+        "Rotation": 0,
+        "ColorBGR": 128,
+        "Text": "flexspi_clk_a",
+        "TextPointSize": 10.0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=14|OWNERPARTID=-1|LOCATION.X=270|LOCATION.Y=290|COLOR=128|FONTID=1|TEXT=flexspi_d0_a|UNIQUEID=JNDBKQTC",
+        "Location": {
+          "LocX": 68.58,
+          "LocY": 73.66
+        },
+        "Rotation": 0,
+        "ColorBGR": 128,
+        "Text": "flexspi_d0_a",
+        "TextPointSize": 10.0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=15|OWNERPARTID=-1|LOCATION.X=270|LOCATION.Y=280|COLOR=128|FONTID=1|TEXT=flexspi_d1_a|UNIQUEID=UPCSGXNX",
+        "Location": {
+          "LocX": 68.58,
+          "LocY": 71.12
+        },
+        "Rotation": 0,
+        "ColorBGR": 128,
+        "Text": "flexspi_d1_a",
+        "TextPointSize": 10.0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=19|OWNERPARTID=-1|LOCATION.X=780|LOCATION.Y=400|COLOR=128|FONTID=1|TEXT=en_audio_pa|UNIQUEID=VOLRERNK",
+        "Location": {
+          "LocX": 198.12,
+          "LocY": 101.6
+        },
+        "Rotation": 0,
+        "ColorBGR": 128,
+        "Text": "en_audio_pa",
+        "TextPointSize": 10.0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=20|OWNERPARTID=-1|LOCATION.X=780|LOCATION.Y=370|COLOR=128|FONTID=1|TEXT=en_pdm_tdm|UNIQUEID=AFGHNMET",
+        "Location": {
+          "LocX": 198.12,
+          "LocY": 93.98
+        },
+        "Rotation": 0,
+        "ColorBGR": 128,
+        "Text": "en_pdm_tdm",
+        "TextPointSize": 10.0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=58|OWNERPARTID=-1|LOCATION.X=780|LOCATION.Y=460|COLOR=128|FONTID=1|TEXT=watchdog_2|UNIQUEID=EGHQYYBM",
+        "Location": {
+          "LocX": 198.12,
+          "LocY": 116.84
+        },
+        "Rotation": 0,
+        "ColorBGR": 128,
+        "Text": "watchdog_2",
+        "TextPointSize": 10.0
+      }
+    ],
+    "Directives": [],
+    "Buss": [],
+    "BusEntrys": [
+      {
+        "ParameterExport": "INDEXINSHEET=18|OWNERPARTID=-1|STYLE=2|SHOWNETNAME=T|LOCATION.X=470|LOCATION.Y=330|ORIENTATION=1|COLOR=128|FONTID=1|TEXT=3v3_ldo_1A|UNIQUEID=EGLFYTKI",
+        "Name": "3v3_ldo_1A",
+        "ColorBGR": 128,
+        "Location": {
+          "LocX": 119.38,
+          "LocY": 83.82
+        },
+        "Rotation": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=36|OWNERPARTID=-1|STYLE=2|SHOWNETNAME=T|LOCATION.X=180|LOCATION.Y=400|ORIENTATION=1|COLOR=128|FONTID=1|TEXT=3v3_ldo_1A|UNIQUEID=CCBIZRND",
+        "Name": "3v3_ldo_1A",
+        "ColorBGR": 128,
+        "Location": {
+          "LocX": 45.72,
+          "LocY": 101.6
+        },
+        "Rotation": 0
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=56|OWNERPARTID=-1|STYLE=4|SHOWNETNAME=T|LOCATION.X=550|LOCATION.Y=450|ORIENTATION=2|COLOR=128|FONTID=1|TEXT=GND|UNIQUEID=CIHOPHWW",
+        "Name": "GND",
+        "ColorBGR": 128,
+        "Location": {
+          "LocX": 139.7,
+          "LocY": 114.3
+        },
+        "Rotation": 0
+      }
+    ],
+    "Ports": [],
+    "PowerObjects": [
+      {
+        "ParameterExport": "INDEXINSHEET=18|OWNERPARTID=-1|STYLE=2|SHOWNETNAME=T|LOCATION.X=470|LOCATION.Y=330|ORIENTATION=1|COLOR=128|FONTID=1|TEXT=3v3_ldo_1A|UNIQUEID=EGLFYTKI",
+        "Text": "3v3_ldo_1A",
+        "Location": {
+          "LocX": 119.38,
+          "LocY": 83.82
+        },
+        "ColorBGR": 128,
+        "Rotation": 1,
+        "ShowNetName": true,
+        "ObjectSyle": 2
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=36|OWNERPARTID=-1|STYLE=2|SHOWNETNAME=T|LOCATION.X=180|LOCATION.Y=400|ORIENTATION=1|COLOR=128|FONTID=1|TEXT=3v3_ldo_1A|UNIQUEID=CCBIZRND",
+        "Text": "3v3_ldo_1A",
+        "Location": {
+          "LocX": 45.72,
+          "LocY": 101.6
+        },
+        "ColorBGR": 128,
+        "Rotation": 1,
+        "ShowNetName": true,
+        "ObjectSyle": 2
+      },
+      {
+        "ParameterExport": "INDEXINSHEET=56|OWNERPARTID=-1|STYLE=4|SHOWNETNAME=T|LOCATION.X=550|LOCATION.Y=450|ORIENTATION=2|COLOR=128|FONTID=1|TEXT=GND|UNIQUEID=CIHOPHWW",
+        "Text": "GND",
+        "Location": {
+          "LocX": 139.7,
+          "LocY": 114.3
+        },
+        "ColorBGR": 128,
+        "Rotation": 2,
+        "ShowNetName": true,
+        "ObjectSyle": 4
+      }
+    ],
+    "OffSheetConnectors": [],
+    "HarnessConnectors": [],
+    "HarnessEntrys": [],
+    "HarnessSignals": []
+  }
+}

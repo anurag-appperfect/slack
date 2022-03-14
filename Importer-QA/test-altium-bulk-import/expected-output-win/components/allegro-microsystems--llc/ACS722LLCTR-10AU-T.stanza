@@ -1,0 +1,150 @@
+#use-added-syntax(jitx)
+defpackage output/allegro-microsystems--llc/ACS722LLCTR-10AU-T :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern ACS722 :
+  pad p[1] : smd-pad(0.65, 1.75) at loc(-1.905, -2.8) on Top
+  pad p[2] : smd-pad(0.65, 1.75) at loc(-0.635, -2.8) on Top
+  pad p[3] : smd-pad(0.65, 1.75) at loc(0.635, -2.8) on Top
+  pad p[4] : smd-pad(0.65, 1.75) at loc(1.905, -2.8) on Top
+  pad p[5] : smd-pad(0.65, 1.75) at loc(1.905, 2.8) on Top
+  pad p[6] : smd-pad(0.65, 1.75) at loc(0.635, 2.8) on Top
+  pad p[7] : smd-pad(0.65, 1.75) at loc(-0.635, 2.8) on Top
+  pad p[8] : smd-pad(0.65, 1.75) at loc(-1.905, 2.8) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.5, [    
+    Point(-2.948, -3.048), 
+    Point(-2.95561204674887, -3.00973165676349), 
+    Point(-2.97728932188135, -2.97728932188135), 
+    Point(-3.00973165676349, -2.95561204674887), 
+    Point(-3.048, -2.948), 
+    Point(-3.08626834323651, -2.95561204674887), 
+    Point(-3.11871067811865, -2.97728932188135), 
+    Point(-3.14038795325113, -3.00973165676349), 
+    Point(-3.148, -3.048), 
+    Point(-3.14038795325113, -3.08626834323651), 
+    Point(-3.11871067811865, -3.11871067811865), 
+    Point(-3.08626834323651, -3.14038795325113), 
+    Point(-3.048, -3.148), 
+    Point(-3.00973165676349, -3.14038795325113), 
+    Point(-2.97728932188135, -3.11871067811865), 
+    Point(-2.95561204674887, -3.08626834323651), 
+    Point(-2.948, -3.048)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(-2.2098, 1.0354), Point(2.2098, 1.0354)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(-2.2098, -0.895), Point(2.2098, -0.895)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(-1.6002, -0.895), Point(-1.6002, 1.0354)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(-2.2098, -0.895), Point(-2.2098, 1.0354)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(2.2098, -0.895), Point(2.2098, 1.0354)])
+  ref-label()
+
+pcb-landpattern SOG0508A :
+  pad p[1] : smd-pad(0.635, 2.3876) at loc(0.0, 0.0) on Top
+  pad p[2] : smd-pad(0.635, 2.3876) at loc(1.27, 0.0) on Top
+  pad p[3] : smd-pad(0.635, 2.3876) at loc(2.54, 0.0) on Top
+  pad p[4] : smd-pad(0.635, 2.3876) at loc(3.81, 0.0) on Top
+  pad p[5] : smd-pad(0.635, 2.3876) at loc(3.81, 4.9784) on Top
+  pad p[6] : smd-pad(0.635, 2.3876) at loc(2.54, 4.9784) on Top
+  pad p[7] : smd-pad(0.635, 2.3876) at loc(1.27, 4.9784) on Top
+  pad p[8] : smd-pad(0.635, 2.3876) at loc(0.0, 4.9784) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.5, [    
+    Point(-1.043, 0.4064), 
+    Point(-1.05061204674887, 0.444668343236509), 
+    Point(-1.07228932188135, 0.477110678118655), 
+    Point(-1.10473165676349, 0.498787953251129), 
+    Point(-1.143, 0.5064), 
+    Point(-1.18126834323651, 0.498787953251129), 
+    Point(-1.21371067811865, 0.477110678118655), 
+    Point(-1.23538795325113, 0.444668343236509), 
+    Point(-1.243, 0.4064), 
+    Point(-1.23538795325113, 0.368131656763491), 
+    Point(-1.21371067811865, 0.335689321881345), 
+    Point(-1.18126834323651, 0.314012046748871), 
+    Point(-1.143, 0.3064), 
+    Point(-1.10473165676349, 0.314012046748871), 
+    Point(-1.07228932188135, 0.335689321881345), 
+    Point(-1.05061204674887, 0.368131656763491), 
+    Point(-1.043, 0.4064)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(4.1148, 1.524), Point(4.1148, 3.4544)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(-0.3048, 1.524), Point(-0.3048, 3.4544)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(0.3048, 1.524), Point(0.3048, 3.4544)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(-0.3048, 1.524), Point(4.1148, 1.524)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(-0.3048, 3.4544), Point(4.1148, 3.4544)])
+  ref-label()
+
+pcb-symbol CMP-010-0008-04-symbol :
+  pin BW_SEL at Point(17.78, -7.62) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GND at Point(17.78, -10.16) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin IP+[0] at Point(0.0, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin IP+[1] at Point(0.0, -5.08) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin IP-[0] at Point(0.0, -7.62) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin IP-[1] at Point(0.0, -10.16) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VCC at Point(17.78, -2.54) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VIOUT at Point(17.78, -5.08) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(17.78, 12.7, loc(8.89, -6.35))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+public pcb-component component (n:Int) :
+  name = "CMP-010-0008-04"
+  description = "ACS722LLCTR-10AU"
+  manufacturer = "Allegro MicroSystems, LLC"
+  mpn = "ACS722LLCTR-10AU-T"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [BW_SEL | 6 | Right]
+    [GND | 5 | Right]
+    [IP+[0] | 1 | Left]
+    [IP+[1] | 2 | Left]
+    [IP-[0] | 3 | Left]
+    [IP-[1] | 4 | Left]
+    [VCC | 8 | Right]
+    [VIOUT | 7 | Right]
+  
+  val lp = switch(n) :
+    0 : ACS722
+    1 : SOG0508A
+  assign-landpattern(lp)
+  val sym = CMP-010-0008-04-symbol
+  symbol = sym(self.BW_SEL => sym.BW_SEL, self.GND => sym.GND, self.IP+[0] => sym.IP+[0], self.IP+[1] => sym.IP+[1], self.IP-[0] => sym.IP-[0], self.IP-[1] => sym.IP-[1], self.VCC => sym.VCC, self.VIOUT => sym.VIOUT)
+

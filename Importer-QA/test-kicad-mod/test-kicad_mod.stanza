@@ -1,0 +1,5 @@
+#use-added-syntax(jitx)
+defpackage test-kicad_mod:
+    import jitx/commands
+
+import-kicad("input","output")    

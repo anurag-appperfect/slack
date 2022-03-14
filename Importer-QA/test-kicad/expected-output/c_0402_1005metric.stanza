@@ -1,0 +1,37 @@
+#use-added-syntax(jitx)
+defpackage goldfish/c_0402_1005metric :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/symbols
+  import ocdb/symbol-utils
+  import ocdb/generic-components
+  import ocdb/box-symbol
+
+pcb-landpattern c_0402_1005metric-lp :
+  pad p[1] : smd-pad(RoundedRectangle(0.59, 0.64, 0.07375)) at loc(-0.485, 0.0, 0.0)
+  pad p[2] : smd-pad(RoundedRectangle(0.59, 0.64, 0.07375)) at loc(0.485, 0.0, 0.0)
+
+  
+  model3d = Model3D("C_0402_1005Metric.wrl",
+    Vec3D(0.0, 0.0, 0.0),
+    Vec3D(1.0, 1.0, 1.0),
+    Vec3D(0.0, 0.0, 0.0))
+  ref-label()
+
+public pcb-component c_0402_1005metric :
+  pin-properties :
+    [pin:Ref | pads:Int ...]
+    [p[1] | 1]
+    [p[2] | 2]
+  
+  make-box-symbol()
+  assign-landpattern(c_0402_1005metric-lp)
+
+  name = "Capacitor_SMD:C_0402_1005Metric"
+  description = "Capacitor SMD 0402 (1005 Metric"

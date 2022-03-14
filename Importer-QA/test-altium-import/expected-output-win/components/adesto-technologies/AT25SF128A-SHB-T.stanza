@@ -1,0 +1,113 @@
+#use-added-syntax(jitx)
+defpackage audio_board/adesto-technologies/AT25SF128A-SHB-T :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern IC8_AT25SF128A-SHB-T_ADO :
+  pad p[1] : smd-pad(1.4986, 0.5334) at loc(-3.6576, 1.905) on Top
+  pad p[2] : smd-pad(1.4986, 0.5334) at loc(-3.6576, 0.635) on Top
+  pad p[3] : smd-pad(1.4986, 0.5334) at loc(-3.6576, -0.635) on Top
+  pad p[4] : smd-pad(1.4986, 0.5334) at loc(-3.6576, -1.905) on Top
+  pad p[5] : smd-pad(1.4986, 0.5334) at loc(3.6576, -1.905) on Top
+  pad p[6] : smd-pad(1.4986, 0.5334) at loc(3.6576, -0.635) on Top
+  pad p[7] : smd-pad(1.4986, 0.5334) at loc(3.6576, 0.635) on Top
+  pad p[8] : smd-pad(1.4986, 0.5334) at loc(3.6576, 1.905) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [    
+    Point(-3.37639, 2.921), 
+    Point(-3.39006199716565, 2.98973377128709), 
+    Point(-3.42899655103108, 3.04800344896892), 
+    Point(-3.48726622871291, 3.08693800283435), 
+    Point(-3.556, 3.10061), 
+    Point(-3.62473377128709, 3.08693800283435), 
+    Point(-3.68300344896892, 3.04800344896892), 
+    Point(-3.72193800283435, 2.98973377128709), 
+    Point(-3.73561, 2.921), 
+    Point(-3.72193800283435, 2.85226622871291), 
+    Point(-3.68300344896892, 2.79399655103108), 
+    Point(-3.62473377128709, 2.75506199716565), 
+    Point(-3.556, 2.74139), 
+    Point(-3.48726622871291, 2.75506199716565), 
+    Point(-3.42899655103108, 2.79399655103108), 
+    Point(-3.39006199716565, 2.85226622871291), 
+    Point(-3.37639, 2.921)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.1524, [Point(-2.8194, -2.8194), Point(-2.8194, -2.49234)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.1524, [Point(-2.8194, 2.49234), Point(-2.8194, 2.8194)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.1524, [Point(-2.8194, 2.8194), Point(2.8194, 2.8194)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.1524, [Point(2.8194, -2.8194), Point(2.8194, -2.49234)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.1524, [Point(-2.8194, -2.8194), Point(2.8194, -2.8194)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.1524, [Point(2.8194, 2.49234), Point(2.8194, 2.8194)])
+  ref-label()
+
+pcb-symbol AT25SF128A-SHB-T-symbol :
+  pin *CS at Point(7.62, 10.16) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin *HOLDIO3 at Point(7.62, 0.0) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin *WPIO2 at Point(7.62, 2.54) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin GND at Point(25.4, -5.08) with :
+    direction = Right
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin SCK at Point(7.62, -5.08) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin SIIO0 at Point(7.62, 7.62) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin SOIO1 at Point(7.62, 5.08) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin VCC at Point(25.4, 10.16) with :
+    direction = Right
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(17.78, 20.32, loc(16.51, 2.54))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(7.62, 13.0))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(7.62, 14.062))
+
+public pcb-component component :
+  name = "AT25SF128A-SHB-T"
+  description = "AT25SF128A-SHB-T"
+  manufacturer = "Adesto Technologies"
+  mpn = "AT25SF128A-SHB-T"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [*CS | 1 | Left]
+    [*HOLDIO3 | 7 | Left]
+    [*WPIO2 | 3 | Left]
+    [GND | 4 | Right]
+    [SCK | 6 | Left]
+    [SIIO0 | 5 | Left]
+    [SOIO1 | 2 | Left]
+    [VCC | 8 | Right]
+  
+  assign-landpattern(IC8_AT25SF128A-SHB-T_ADO)
+  val sym = AT25SF128A-SHB-T-symbol
+  symbol = sym(self.*CS => sym.*CS, self.*HOLDIO3 => sym.*HOLDIO3, self.*WPIO2 => sym.*WPIO2, self.GND => sym.GND, self.SCK => sym.SCK, self.SIIO0 => sym.SIIO0, self.SOIO1 => sym.SOIO1, self.VCC => sym.VCC)
+

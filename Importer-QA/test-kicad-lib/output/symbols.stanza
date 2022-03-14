@@ -1,0 +1,231 @@
+
+pcb-symbol ATMEGA32U4-EP :
+  pin INT6AIN0PE6 at Point(24.13, -16.51) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin PDIMOSIPCINT2PB2 at Point(24.13, 34.29) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin PDOMISOPCINT3PB3 at Point(24.13, 31.75) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin OC0AOC1C~RTS~PCINT7PB7 at Point(24.13, 21.59) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin nRESET~ at Point(-25.4, 39.37) with :
+    direction = Left
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin VCC[0] at Point(-5.08, 41.91) with :
+    direction = Up
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin GND[0] at Point(-3.81, -36.83) with :
+    direction = Down
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin XTAL2 at Point(-25.4, 24.13) with :
+    direction = Left
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin XTAL1 at Point(-25.4, 29.209) with :
+    direction = Left
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin OC0BSCLINT0PD0 at Point(24.13, 8.889) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin SDAINT1PD1 at Point(24.13, 6.35) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin UVCC at Point(-11.43, 41.91) with :
+    direction = Up
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin RXDINT2PD2 at Point(24.13, 3.81) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin TXDINT3PD3 at Point(24.13, 1.27) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin XCK1~CTS~PD5 at Point(24.13, -3.81) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin GND[1] at Point(-1.27, -36.83) with :
+    direction = Down
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin AVCC[0] at Point(3.81, 41.91) with :
+    direction = Up
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ICP2ADC8PD4 at Point(24.13, -1.27) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin T1~OC4D~ADC9PD6 at Point(24.13, -6.35) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin T0OC4DADC10PD7 at Point(24.13, -8.89) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC11PCINT4PB4 at Point(24.13, 29.209) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC12OC1A~OC4B~PCINT12PB5 at Point(24.13, 26.669) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin D- at Point(-25.4, 2.54) with :
+    direction = Left
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC13OC1BOC4BPCINT13PB6 at Point(24.13, 24.13) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin OC3A~OC4A~PC6 at Point(24.13, 16.509) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ICP3CLK0OC4APC7 at Point(24.13, 13.969) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin p~HWB~PE2 at Point(24.13, -13.97) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin VCC[1] at Point(-2.54, 41.91) with :
+    direction = Up
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin GND[2] at Point(1.27, -36.83) with :
+    direction = Down
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC7TDIPF7 at Point(24.13, -34.29) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC6TDOPF6 at Point(24.13, -31.75) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC5TMSPF5 at Point(24.13, -29.21) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC4TCKPF4 at Point(24.13, -26.67) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin D+ at Point(-25.4, 5.08) with :
+    direction = Left
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC1PF1 at Point(24.13, -24.13) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin ADC0PF0 at Point(24.13, -21.59) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin AREF at Point(-25.4, -21.59) with :
+    direction = Left
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin GND[3] at Point(3.81, -36.83) with :
+    direction = Down
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin AVCC[1] at Point(6.35, 41.91) with :
+    direction = Up
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin PAD at Point(-16.51, -36.83) with :
+    direction = Down
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin UGND at Point(-10.16, -36.83) with :
+    direction = Down
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin UCAP at Point(-25.4, -1.27) with :
+    direction = Left
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin VBUS at Point(-25.4, 8.889) with :
+    direction = Left
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin SSPCINT0PB0 at Point(24.13, 39.37) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+  pin SCLKPCINT1PB1 at Point(24.13, 36.83) with :
+    direction = Right
+    length = 3.81
+    number-size = 0.609
+    name-size = 0.609
+
+  layer("foreground") = Rectangle(49.53, 78.74, loc(-0.635, 2.54))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(-25.4, 42.21))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(-25.4, 43.272))

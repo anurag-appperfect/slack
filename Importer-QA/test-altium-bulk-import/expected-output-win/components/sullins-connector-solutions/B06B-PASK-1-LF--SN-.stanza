@@ -1,0 +1,79 @@
+#use-added-syntax(jitx)
+defpackage output/sullins-connector-solutions/B06B-PASK-1-LF--SN- :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern B06B-PASK-1LFSN :
+  pad MOUNT : oval-pth-pad(0.55, 1.1, 1.1) at loc(5.74993, 0.85) on Top
+  pad p[1] : rect-pth-pad(0.4, 1.308, 1.308) at loc(4.24992, -0.85) on Top
+  pad p[2] : oval-pth-pad(0.4, 1.308, 1.308) at loc(2.24992, -0.85) on Top
+  pad p[3] : oval-pth-pad(0.4, 1.308, 1.308) at loc(0.24993, -0.85) on Top
+  pad p[4] : oval-pth-pad(0.4, 1.308, 1.308) at loc(-1.75008, -0.85) on Top
+  pad p[5] : oval-pth-pad(0.4, 1.308, 1.308) at loc(-3.75007, -0.85) on Top
+  pad p[6] : oval-pth-pad(0.4, 1.308, 1.308) at loc(-5.74992, -0.85) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-8.255, -4.445), Point(-8.255, 1.48164)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-8.255, -4.445), Point(6.71493, -4.445)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(6.71492, 1.39648), Point(6.71493, -4.445)])
+  ref-label()
+
+pcb-symbol CMP-001-1354-01-symbol :
+  pin p[1] at Point(0.0, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin p[2] at Point(0.0, -5.08) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin p[3] at Point(0.0, -7.62) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin p[4] at Point(0.0, -10.16) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin p[5] at Point(0.0, -12.7) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin p[6] at Point(0.0, -15.24) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(5.08, 17.78, loc(2.54, -8.89))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+public pcb-component component :
+  name = "CMP-001-1354-01"
+  description = "MOTOR ENC"
+  manufacturer = "Sullins Connector Solutions"
+  mpn = "B06B-PASK-1(LF)(SN)"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [p[1] | 1 | Left]
+    [p[2] | 2 | Left]
+    [p[3] | 3 | Left]
+    [p[4] | 4 | Left]
+    [p[5] | 5 | Left]
+    [p[6] | 6 | Left]
+  
+  assign-landpattern(B06B-PASK-1LFSN)
+  val sym = CMP-001-1354-01-symbol
+  symbol = sym(self.p[1] => sym.p[1], self.p[2] => sym.p[2], self.p[3] => sym.p[3], self.p[4] => sym.p[4], self.p[5] => sym.p[5], self.p[6] => sym.p[6])
+

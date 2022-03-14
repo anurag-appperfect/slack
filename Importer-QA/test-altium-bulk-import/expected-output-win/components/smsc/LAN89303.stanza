@@ -1,0 +1,298 @@
+#use-added-syntax(jitx)
+defpackage output/smsc/LAN89303 :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern QFN325mmx5mm :
+  pad p[1] : oval-smd-pad(0.28, 0.8) at loc(-2.4, 1.75, 90.0) on Top
+  pad p[2] : oval-smd-pad(0.28, 0.8) at loc(-2.4, 1.25, 90.0) on Top
+  pad p[3] : oval-smd-pad(0.28, 0.8) at loc(-2.4, 0.75, 90.0) on Top
+  pad p[4] : oval-smd-pad(0.28, 0.8) at loc(-2.4, 0.25, 90.0) on Top
+  pad p[5] : oval-smd-pad(0.28, 0.8) at loc(-2.4, -0.25, 90.0) on Top
+  pad p[6] : oval-smd-pad(0.28, 0.8) at loc(-2.4, -0.75, 90.0) on Top
+  pad p[7] : oval-smd-pad(0.28, 0.8) at loc(-2.4, -1.25, 90.0) on Top
+  pad p[8] : oval-smd-pad(0.28, 0.8) at loc(-2.4, -1.75, 90.0) on Top
+  pad p[9] : oval-smd-pad(0.28, 0.8) at loc(-1.75, -2.4) on Top
+  pad p[10] : oval-smd-pad(0.28, 0.8) at loc(-1.25, -2.4) on Top
+  pad p[11] : oval-smd-pad(0.28, 0.8) at loc(-0.75, -2.4) on Top
+  pad p[12] : oval-smd-pad(0.28, 0.8) at loc(-0.25, -2.4) on Top
+  pad p[13] : oval-smd-pad(0.28, 0.8) at loc(0.25, -2.4) on Top
+  pad p[14] : oval-smd-pad(0.28, 0.8) at loc(0.75, -2.4) on Top
+  pad p[15] : oval-smd-pad(0.28, 0.8) at loc(1.25, -2.4) on Top
+  pad p[16] : oval-smd-pad(0.28, 0.8) at loc(1.75, -2.4) on Top
+  pad p[17] : oval-smd-pad(0.28, 0.8) at loc(2.4, -1.75, 90.0) on Top
+  pad p[18] : oval-smd-pad(0.28, 0.8) at loc(2.4, -1.25, 90.0) on Top
+  pad p[19] : oval-smd-pad(0.28, 0.8) at loc(2.4, -0.75, 90.0) on Top
+  pad p[20] : oval-smd-pad(0.28, 0.8) at loc(2.4, -0.25, 90.0) on Top
+  pad p[21] : oval-smd-pad(0.28, 0.8) at loc(2.4, 0.25, 90.0) on Top
+  pad p[22] : oval-smd-pad(0.28, 0.8) at loc(2.4, 0.75, 90.0) on Top
+  pad p[23] : oval-smd-pad(0.28, 0.8) at loc(2.4, 1.25, 90.0) on Top
+  pad p[24] : oval-smd-pad(0.28, 0.8) at loc(2.4, 1.75, 90.0) on Top
+  pad p[25] : oval-smd-pad(0.28, 0.8) at loc(1.75, 2.4) on Top
+  pad p[26] : oval-smd-pad(0.28, 0.8) at loc(1.25, 2.4) on Top
+  pad p[27] : oval-smd-pad(0.28, 0.8) at loc(0.75, 2.4) on Top
+  pad p[28] : oval-smd-pad(0.28, 0.8) at loc(0.25, 2.4) on Top
+  pad p[29] : oval-smd-pad(0.28, 0.8) at loc(-0.25, 2.4) on Top
+  pad p[30] : oval-smd-pad(0.28, 0.8) at loc(-0.75, 2.4) on Top
+  pad p[31] : oval-smd-pad(0.28, 0.8) at loc(-1.25, 2.4) on Top
+  pad p[32] : oval-smd-pad(0.28, 0.8) at loc(-1.75, 2.4) on Top
+  pad p[33] : smd-pad(3.2, 3.2) at loc(0.0, 0.0) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.25, [    
+    Point(-3.225, 2.55), 
+    Point(-3.23451505843609, 2.59783542904564), 
+    Point(-3.26161165235168, 2.63838834764832), 
+    Point(-3.30216457095436, 2.66548494156391), 
+    Point(-3.35, 2.675), 
+    Point(-3.39783542904564, 2.66548494156391), 
+    Point(-3.43838834764832, 2.63838834764832), 
+    Point(-3.46548494156391, 2.59783542904564), 
+    Point(-3.475, 2.55), 
+    Point(-3.46548494156391, 2.50216457095436), 
+    Point(-3.43838834764832, 2.46161165235168), 
+    Point(-3.39783542904564, 2.43451505843609), 
+    Point(-3.35, 2.425), 
+    Point(-3.30216457095436, 2.43451505843609), 
+    Point(-3.26161165235168, 2.46161165235168), 
+    Point(-3.23451505843609, 2.50216457095436), 
+    Point(-3.225, 2.55)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-2.7, 2.29), Point(-2.7, 2.7)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-2.7, 2.7), Point(-2.29, 2.7)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(2.29, 2.7), Point(2.7, 2.7)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(2.7, 2.29), Point(2.7, 2.7)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(2.7, -2.7), Point(2.7, -2.29)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(2.29, -2.7), Point(2.7, -2.7)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-2.7, -2.7), Point(-2.7, -2.29)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-2.7, -2.7), Point(-2.29, -2.7)])
+  ref-label()
+
+pcb-symbol CMP-001-1416-03-symbol0 :
+  pin FREQ_SEL0 at Point(0.0, -40.64) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin FREQ_SEL1 at Point(0.0, -43.18) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin HDC at Point(0.0, -5.08) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin HDI at Point(0.0, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin HDO at Point(0.0, -7.62) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin INH at Point(0.0, -17.78) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin NC at Point(33.02, -40.64) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin OSCI at Point(33.02, -25.4) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin OSCO at Point(33.02, -33.02) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin RXI at Point(33.02, -12.7) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin TEST at Point(0.0, -35.56) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin TXO at Point(33.02, -5.08) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin TXON at Point(0.0, -15.24) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nAUTO_F_CHANGE at Point(0.0, -27.94) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nAUTO_SLEEP at Point(0.0, -30.48) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nLOOPBACK at Point(0.0, -10.16) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nRESET at Point(0.0, -25.4) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nSLEEP at Point(0.0, -22.86) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(33.02, 45.72, loc(16.51, -22.86))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+pcb-symbol CMP-001-1416-03-symbol1 :
+  pin AGND[0] at Point(25.4, -35.56) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin AGND[1] at Point(25.4, -33.02) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin AVCC at Point(0.0, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin DGND at Point(25.4, -30.48) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin DVCC[0] at Point(25.4, -7.62) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin DVCC[1] at Point(25.4, -10.16) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin FILTERI at Point(0.0, -35.56) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin FILTERO at Point(0.0, -40.64) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GNDPLL at Point(0.0, -20.32) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GND_PAD at Point(25.4, -40.64) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin L1 at Point(0.0, -25.4) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin L2 at Point(0.0, -30.48) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin PLLCAP at Point(0.0, -12.7) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VCAP at Point(25.4, -2.54) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VREF at Point(0.0, -7.62) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(25.4, 43.18, loc(12.7, -21.59))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+public pcb-component component :
+  name = "CMP-001-1416-03"
+  description = "SIG100"
+  manufacturer = "SMSC"
+  mpn = "LAN89303"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [FREQ_SEL0 | 13 | Left]
+    [FREQ_SEL1 | 12 | Left]
+    [HDC | 6 | Left]
+    [HDI | 8 | Left]
+    [HDO | 7 | Left]
+    [INH | 18 | Left]
+    [NC | 11 | Right]
+    [OSCI | 31 | Right]
+    [OSCO | 32 | Right]
+    [RXI | 24 | Right]
+    [TEST | 1 | Left]
+    [TXO | 23 | Right]
+    [TXON | 16 | Left]
+    [nAUTO_F_CHANGE | 9 | Left]
+    [nAUTO_SLEEP | 10 | Left]
+    [nLOOPBACK | 15 | Left]
+    [nRESET | 2 | Left]
+    [nSLEEP | 17 | Left]
+    [AGND[0] | 28 | Right]
+    [AGND[1] | 22 | Right]
+    [AVCC | 25 | Left]
+    [DGND | 4 | Right]
+    [DVCC[0] | 5 | Right]
+    [DVCC[1] | 14 | Right]
+    [FILTERI | 19 | Left]
+    [FILTERO | 20 | Left]
+    [GNDPLL | 30 | Left]
+    [GND_PAD | 33 | Right]
+    [L1 | 27 | Left]
+    [L2 | 26 | Left]
+    [PLLCAP | 29 | Left]
+    [VCAP | 3 | Right]
+    [VREF | 21 | Left]
+  
+  assign-landpattern(QFN325mmx5mm)
+  symbol :
+    val sym0 = CMP-001-1416-03-symbol0
+    unit(0) = sym0(self.FREQ_SEL0 => sym0.FREQ_SEL0, self.FREQ_SEL1 => sym0.FREQ_SEL1, self.HDC => sym0.HDC, self.HDI => sym0.HDI, self.HDO => sym0.HDO, self.INH => sym0.INH, self.NC => sym0.NC, self.OSCI => sym0.OSCI, self.OSCO => sym0.OSCO, self.RXI => sym0.RXI, self.TEST => sym0.TEST, self.TXO => sym0.TXO, self.TXON => sym0.TXON, self.nAUTO_F_CHANGE => sym0.nAUTO_F_CHANGE, self.nAUTO_SLEEP => sym0.nAUTO_SLEEP, self.nLOOPBACK => sym0.nLOOPBACK, self.nRESET => sym0.nRESET, self.nSLEEP => sym0.nSLEEP)
+    val sym1 = CMP-001-1416-03-symbol1
+    unit(1) = sym1(self.AGND[0] => sym1.AGND[0], self.AGND[1] => sym1.AGND[1], self.AVCC => sym1.AVCC, self.DGND => sym1.DGND, self.DVCC[0] => sym1.DVCC[0], self.DVCC[1] => sym1.DVCC[1], self.FILTERI => sym1.FILTERI, self.FILTERO => sym1.FILTERO, self.GNDPLL => sym1.GNDPLL, self.GND_PAD => sym1.GND_PAD, self.L1 => sym1.L1, self.L2 => sym1.L2, self.PLLCAP => sym1.PLLCAP, self.VCAP => sym1.VCAP, self.VREF => sym1.VREF)
+

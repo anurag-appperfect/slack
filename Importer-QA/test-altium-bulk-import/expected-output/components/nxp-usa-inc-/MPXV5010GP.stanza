@@ -1,0 +1,133 @@
+#use-added-syntax(jitx)
+defpackage output/nxp-usa-inc-/MPXV5010GP :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern NXP1369-01 :
+  pad p[1] : smd-pad(1.2, 2.6) at loc(-8.275, 3.81, 90.0) on Top
+  pad p[2] : smd-pad(1.2, 2.6) at loc(-8.275, 1.27, 90.0) on Top
+  pad p[3] : smd-pad(1.2, 2.6) at loc(-8.275, -1.27, 90.0) on Top
+  pad p[4] : smd-pad(1.2, 2.6) at loc(-8.275, -3.81, 90.0) on Top
+  pad p[5] : smd-pad(1.2, 2.6) at loc(8.275, -3.81, 90.0) on Top
+  pad p[6] : smd-pad(1.2, 2.6) at loc(8.275, -1.27, 90.0) on Top
+  pad p[7] : smd-pad(1.2, 2.6) at loc(8.275, 1.27, 90.0) on Top
+  pad p[8] : smd-pad(1.2, 2.6) at loc(8.275, 3.81, 90.0) on Top
+
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.25, [
+    Point(-8.15, 4.96), 
+    Point(-8.15951505843609, 5.00783542904564), 
+    Point(-8.18661165235168, 5.04838834764832), 
+    Point(-8.22716457095436, 5.07548494156391), 
+    Point(-8.275, 5.085), 
+    Point(-8.32283542904564, 5.07548494156391), 
+    Point(-8.36338834764832, 5.04838834764832), 
+    Point(-8.39048494156391, 5.00783542904564), 
+    Point(-8.4, 4.96), 
+    Point(-8.39048494156391, 4.91216457095436), 
+    Point(-8.36338834764832, 4.87161165235168), 
+    Point(-8.32283542904564, 4.84451505843609), 
+    Point(-8.275, 4.835), 
+    Point(-8.22716457095436, 4.84451505843609), 
+    Point(-8.18661165235168, 4.87161165235168), 
+    Point(-8.15951505843609, 4.91216457095436), 
+    Point(-8.15, 4.96)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.6, [
+    Point(-5.2372, 4.80062), 
+    Point(-5.26003614024661, 4.91542502970953), 
+    Point(-5.32506796564404, 5.01275203435596), 
+    Point(-5.42239497029047, 5.07778385975339), 
+    Point(-5.5372, 5.10062), 
+    Point(-5.65200502970953, 5.07778385975339), 
+    Point(-5.74933203435596, 5.01275203435596), 
+    Point(-5.81436385975339, 4.91542502970953), 
+    Point(-5.8372, 4.80062), 
+    Point(-5.81436385975339, 4.68581497029047), 
+    Point(-5.74933203435597, 4.58848796564404), 
+    Point(-5.65200502970953, 4.52345614024661), 
+    Point(-5.5372, 4.50062), 
+    Point(-5.42239497029047, 4.52345614024661), 
+    Point(-5.32506796564404, 4.58848796564404), 
+    Point(-5.26003614024661, 4.68581497029047), 
+    Point(-5.2372, 4.80062)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-6.575, -6.175), Point(6.575, -6.175)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(6.575, -6.175), Point(6.575, 5.81662)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-6.575, -6.175), Point(-6.575, 5.81662)])
+  copper(LayerIndex(1)) = Rectangle(9.144, 2.032, loc(-5.1874, 3.81))
+  copper(LayerIndex(1)) = Rectangle(9.906, 2.032, loc(4.8456, 3.81))
+  copper(LayerIndex(1)) = Rectangle(9.906, 2.032, loc(4.8456, 1.27))
+  copper(LayerIndex(1)) = Rectangle(9.906, 2.032, loc(4.8456, -1.27))
+  copper(LayerIndex(1)) = Rectangle(9.906, 3.366, loc(4.84596, -4.47696))
+  ref-label()
+
+pcb-symbol MPXV5010GP-symbol :
+  pin GND at Point(0.0, -7.62) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin NC[0] at Point(17.78, -10.16) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin NC[1] at Point(17.78, -2.54) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin NC[2] at Point(17.78, -5.08) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin NC[3] at Point(17.78, -7.62) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin NC[4] at Point(0.0, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VOUT at Point(0.0, -10.16) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin p+V at Point(0.0, -5.08) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(17.78, 12.7, loc(8.89, -6.35))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+public pcb-component component :
+  name = "MPXV5010GP"
+  description = "MPXV5010GP"
+  manufacturer = "NXP USA Inc."
+  mpn = "MPXV5010GP"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [GND | 3 | Left]
+    [NC[0] | 5 | Right]
+    [NC[1] | 8 | Right]
+    [NC[2] | 7 | Right]
+    [NC[3] | 6 | Right]
+    [NC[4] | 1 | Left]
+    [VOUT | 4 | Left]
+    [p+V | 2 | Left]
+
+  assign-landpattern(NXP1369-01)
+  val sym = MPXV5010GP-symbol
+  symbol = sym(self.GND => sym.GND, self.NC[0] => sym.NC[0], self.NC[1] => sym.NC[1], self.NC[2] => sym.NC[2], self.NC[3] => sym.NC[3], self.NC[4] => sym.NC[4], self.VOUT => sym.VOUT, self.p+V => sym.p+V)
+

@@ -1,0 +1,995 @@
+#use-added-syntax(jitx)
+defpackage audio_board :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-module audio_board_mic-submodule-clk_1 :
+  public inst mic_clk_1 : output/unknown/Testpoint_SMT_2mm/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(mic_clk_1) at loc(98.1964, 63.119, 270.0) on Bottom
+
+  pin net0-mic_clk_1
+
+  net Net0-mic_clk_1 (net0-mic_clk_1, mic_clk_1.TP)
+
+
+
+
+pcb-module audio_board_mic-submodule :
+  inst audio_board_mic-submodule-clk_1 : audio_board_mic-submodule-clk_1
+
+  place(audio_board_mic-submodule-clk_1) at loc(0.0, 0.0) on Top
+
+  schematic-group(audio_board_mic-submodule-clk_1) = audio_board_mic-submodule-clk_1
+
+  inst C1 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  inst C12 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  inst C23 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  inst C25 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  inst C39 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  inst C4 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  inst C40 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  inst C56 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  inst C57 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  inst M1 : output/knowles/SPH0690LM4H-1/component
+  inst M2 : output/knowles/SPH0690LM4H-1/component
+  inst M3 : output/knowles/SPH0690LM4H-1/component
+  inst M4 : output/knowles/SPH0690LM4H-1/component
+  inst M5 : output/knowles/SPH0690LM4H-1/component
+  inst M6 : output/knowles/SPH0690LM4H-1/component
+  inst M7 : output/knowles/SPH0690LM4H-1/component
+  inst R11 : output/yageo/RC0402FR-070RL/component
+  inst R12 : output/yageo/RC0402FR-070RL/component
+  inst R13 : output/yageo/RC0402FR-070RL/component
+  inst R14 : output/yageo/RC0402FR-070RL/component
+  inst R15 : output/yageo/RC0402FR-070RL/component
+  inst R16 : output/yageo/RC0402FR-070RL/component
+  inst R21 : output/yageo/RC0402FR-070RL/component
+  inst ST1 : output/unknown/CMP-00028-00004-1/component
+  inst ST2 : output/unknown/CMP-00028-00004-1/component
+  inst ST3 : output/unknown/CMP-00028-00004-1/component
+  inst ST4 : output/unknown/CMP-00028-00004-1/component
+  inst ST5 : output/unknown/CMP-00028-00004-1/component
+  inst ST6 : output/unknown/CMP-00028-00004-1/component
+  inst U5 : output/analog-devices/ADAU7118ACPZRL/component
+
+  for inst in [C1, C12, C23, C25, C39, C4, C40, C56, C57, M1, M2, M3, M4, M5, M6, M7, R11, R12, R13, R14, R15, R16, R21, ST1, ST2, ST3, ST4, ST5, ST6, U5] do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(C1) at loc(39.5478, 64.8716, 90.0) on Top
+  place(C12) at loc(72.2376, 123.4694, 90.0) on Bottom
+  place(C23) at loc(97.409, 38.1254, 180.0) on Top
+  place(C25) at loc(59.8932, 38.0238) on Top
+  place(C39) at loc(70.612, 123.9012, 90.0) on Top
+  place(C4) at loc(78.613, 70.6374) on Top
+  place(C40) at loc(90.0684, 98.9076) on Top
+  place(C56) at loc(110.4138, 72.136, 90.0) on Top
+  place(C57) at loc(52.6034, 98.9076) on Top
+  place(M1) at loc(38.25854, 68.51558) on Top
+  place(M2) at loc(74.9808, 69.26085, 90.0) on Top
+  place(M3) at loc(93.7514, 36.79965, 90.0) on Top
+  place(M4) at loc(56.24515, 36.79965, 90.0) on Top
+  place(M5) at loc(93.74515, 100.22954, 270.0) on Top
+  place(M6) at loc(111.73313, 68.5038, 180.0) on Top
+  place(M7) at loc(56.24515, 100.2344, 270.0) on Top
+  place(R11) at loc(39.624, 72.1868, 90.0) on Top
+  place(R12) at loc(71.3232, 70.5358) on Top
+  place(R13) at loc(89.9668, 38.1762, 180.0) on Top
+  place(R14) at loc(52.6034, 38.1254) on Top
+  place(R15) at loc(97.4344, 98.8568) on Top
+  place(R16) at loc(59.9694, 98.9076) on Top
+  place(R21) at loc(110.4138, 64.8462, 90.0) on Top
+  place(ST1) at loc(107.4928, 87.1982) on Top
+  place(ST2) at loc(42.51919, 87.26559) on Top
+  place(ST3) at loc(71.69757, 31.15828) on Top
+  place(ST4) at loc(107.47108, 49.76558) on Top
+  place(ST5) at loc(42.51919, 49.76558) on Top
+  place(ST6) at loc(74.99513, 106.01559) on Top
+  place(U5) at loc(75.1586, 124.1044, 90.0) on Top
+
+  pin gnd
+  pin en_pdm_tdm
+  pin net0-i2c_clk
+  pin net0-i2c_sda
+  pin mic_clk_0
+  pin net0-mic_clk_1
+  pin mic_data_pdm_0
+  pin mic_data_pdm_1
+  pin mic_data_pdm_2
+  pin mic_data_pdm_3
+  pin p1v8_ldo
+  pin sai1_rx_bclk
+  pin sai1_rx_sync
+  pin sai1_rxd0
+  pin netm1_1
+  pin netm2_1
+  pin netm3_1
+  pin netm4_1
+  pin netm5_1
+  pin netm6_1
+  pin netm7_1
+  pin p3v3_ldo_1a
+
+  net GND (gnd, C1.p[1], C4.p[2], C12.p[1], C23.p[1], C25.p[2], C39.p[1], C40.p[1], C56.p[2], C57.p[1], M1.GROUND, M2.GROUND, M3.SELECT, M3.GROUND, M4.SELECT, M4.GROUND, M5.SELECT, M5.GROUND, M6.GROUND, M7.SELECT, M7.GROUND, ST1.H1, ST2.H1, ST3.H1, ST4.H1, ST5.H1, ST6.H1, U5.ADDRCONFIG, U5.GND, U5.EPAD)
+  net Net0-en_pdm_tdm (en_pdm_tdm, U5.EN)
+  net Net0-i2c_clk (net0-i2c_clk, U5.SCL)
+  net Net0-i2c_sda (net0-i2c_sda, U5.SDA)
+  net Net0-mic_clk_0 (mic_clk_0, M1.CLOCK, M4.CLOCK, M7.CLOCK, U5.PDM_CLK0)
+  net Net0-mic_clk_1 (net0-mic_clk_1, audio_board_mic-submodule-clk_1.net0-mic_clk_1, M2.CLOCK, M3.CLOCK, M5.CLOCK, M6.CLOCK, U5.PDM_CLK1)
+  net Net0-mic_data_pdm_0 (mic_data_pdm_0, R11.p[2], R16.p[2], U5.PDM_DAT0)
+  net Net0-mic_data_pdm_1 (mic_data_pdm_1, R14.p[1], U5.PDM_DAT1)
+  net Net0-mic_data_pdm_2 (mic_data_pdm_2, R12.p[1], R13.p[2], U5.PDM_DAT2)
+  net Net0-mic_data_pdm_3 (mic_data_pdm_3, R15.p[2], R21.p[1], U5.PDM_DAT3)
+  net Net0-p1v8_ldo (p1v8_ldo, C39.p[2], U5.DVDD)
+  net Net0-sai1_rx_bclk (sai1_rx_bclk, U5.BCLK)
+  net Net0-sai1_rx_sync (sai1_rx_sync, U5.FSYNC)
+  net Net0-sai1_rxd0 (sai1_rxd0, U5.SDATA)
+  net NetM1_1 (netm1_1, M1.DATA, R11.p[1])
+  net NetM2_1 (netm2_1, M2.DATA, R12.p[2])
+  net NetM3_1 (netm3_1, M3.DATA, R13.p[1])
+  net NetM4_1 (netm4_1, M4.DATA, R14.p[2])
+  net NetM5_1 (netm5_1, M5.DATA, R15.p[1])
+  net NetM6_1 (netm6_1, M6.DATA, R21.p[2])
+  net NetM7_1 (netm7_1, M7.DATA, R16.p[1])
+  net p3v3_ldo_1A (p3v3_ldo_1a, C1.p[2], C4.p[1], C12.p[2], C23.p[2], C25.p[1], C40.p[2], C56.p[1], C57.p[2], M1.SELECT, M1.VDD, M2.SELECT, M2.VDD, M3.VDD, M4.VDD, M5.VDD, M6.SELECT, M6.VDD, M7.VDD, U5.IOVDD)
+
+
+  symbol(GND) = altium-power-gnd-power-sym
+  symbol(p3v3_ldo_1A) = altium-power-bar-sym
+
+
+pcb-module audio_board_power-submodule :
+  public inst C21 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  public inst C22 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  public inst C26 : output/samsung-electro-mechanics/CL21B475KOFNNNE/component
+  public inst C27 : output/kemet/C0402C102K5GACTU/component
+  public inst C28 : output/samsung-electro-mechanics/CL21B475KOFNNNE/component
+  public inst C44 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  public inst C46 : output/samsung-electro-mechanics/CL05B103KB5NNNC/component
+  public inst C58 : output/murata-electronics-north-america/GCM188R71H224KA64D/component
+  public inst C59 : output/tdk/CGB3B1X5R1A475M055AC/component
+  public inst C60 : output/murata-electronics-north-america/GCM188R71H224KA64D/component
+  public inst C61 : output/murata-electronics-north-america/GCM188R71H224KA64D/component
+  public inst C62 : output/samsung/CL10A226MQ8NRNE/component
+  public inst C9 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  public inst CN4 : output/samtec/USBR-B-S-S-O-VT/component
+  public inst F1 : output/murata/BLM18EG121SN1D/component
+  public inst L1 : output/murata/LQH43NH4R7J03L/component
+  public inst R1 : output/yageo/AF0402FR-0730K9L/component
+  public inst R10 : output/yageo/RC0402FR-07330RL/component
+  public inst U1 : output/microchip/MIC5247-1-8YM5-TR/component
+  public inst U11 : output/analog-devices/ADM7171ACPZ-3-3-R7/component
+  public inst U12 : output/texas-instruments/TPD3S014DBVR/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(C21) at loc(71.6788, 123.9012, 270.0) on Top
+  place(C22) at loc(70.3244, 55.7276) on Top
+  place(C26) at loc(52.578, 69.5198, 270.0) on Top
+  place(C27) at loc(48.4886, 77.1144, 270.0) on Bottom
+  place(C28) at loc(51.816, 78.5876, 90.0) on Top
+  place(C44) at loc(51.2572, 57.023, 180.0) on Bottom
+  place(C46) at loc(69.5198, 123.8758, 270.0) on Top
+  place(C58) at loc(61.8998, 83.0834, 180.0) on Top
+  place(C59) at loc(64.516, 77.5462, 180.0) on Bottom
+  place(C60) at loc(64.6176, 79.3242, 180.0) on Bottom
+  place(C61) at loc(64.6176, 80.899, 180.0) on Bottom
+  place(C62) at loc(65.532, 80.0582, 90.0) on Top
+  place(C9) at loc(71.1708, 123.4694, 270.0) on Bottom
+  place(CN4) at loc(58.0642, 58.4254, 90.0) on Top
+  place(F1) at loc(68.707, 54.8894, 90.0) on Top
+  place(L1) at loc(62.9666, 77.998, 90.0) on Top
+  place(R1) at loc(64.8462, 83.439) on Bottom
+  place(R10) at loc(51.2826, 59.817) on Bottom
+  place(U1) at loc(67.1576, 124.7902, 90.0) on Top
+  place(U11) at loc(50.1904, 74.2696, 270.0) on Top
+  place(U12) at loc(68.0212, 59.6646, 90.0) on Top
+
+  pin gnd
+  pin dcdc_out
+  pin p+5_usb
+  pin p1v8_ldo
+  pin usb_diff_n
+  pin usb_diff_p
+  pin netc22_1
+  pin netc27_1
+  pin netc44_1
+  pin netc46_1
+  pin netc58_1
+  pin netl1_1
+  pin p3v3_ldo_1a
+  pin p5v_500ma_sys
+
+  net GND (gnd, C9.p[2], C21.p[2], C22.p[2], C26.p[2], C27.p[2], C28.p[2], C44.p[2], C46.p[2], C58.p[2], C59.p[1], C60.p[1], C61.p[1], C62.p[2], CN4.GND, R10.p[1], U1.GND, U11.GND[0], U11.GND[1], U12.GND)
+  net Net0-dcdc_out (dcdc_out, C62.p[1], L1.p[2])
+  net Net0-p+5_usb (p+5_usb, CN4.VCC, F1.p[1])
+  net Net0-p1v8_ldo (p1v8_ldo, C21.p[1], U1.OUT)
+  net Net0-usb_diff_n (usb_diff_n, CN4.D-, U12.D2)
+  net Net0-usb_diff_p (usb_diff_p, CN4.D+, U12.D1)
+  net NetC22_1 (netc22_1, C22.p[1], F1.p[2], U12.EN, U12.IN)
+  net NetC27_1 (netc27_1, C27.p[1], U11.SS)
+  net NetC44_1 (netc44_1, C44.p[1], CN4.SHIELD[1], CN4.SHIELD[0], R10.p[2])
+  net NetC46_1 (netc46_1, C46.p[1], U1.BYP)
+  net NetC58_1 (netc58_1, C58.p[1], R1.p[2])
+  net NetL1_1 (netl1_1, L1.p[1])
+  net p3v3_ldo_1A (p3v3_ldo_1a, C9.p[1], C28.p[1], C59.p[2], C60.p[2], C61.p[2], R1.p[1], U1.IN, U1.EN, U11.VOUT[1], U11.VOUT[0], U11.SENSE)
+  net p5V_500mA_sys (p5v_500ma_sys, C26.p[1], U11.EN, U11.VIN[1], U11.VIN[0], U12.OUT)
+
+
+  symbol(Net0-p+5_usb) = altium-power-bar-sym
+
+
+pcb-module audio_board_amp-submodule-p :
+  public inst speaker_p : output/unknown/Testpoint_SMT_3mm/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(speaker_p) at loc(135.4328, 67.4624, 90.0) on Bottom
+
+  pin spker_p_filtered
+
+  net Net0-spker_p_filtered (spker_p_filtered, speaker_p.TP)
+
+
+
+
+pcb-module audio_board_amp-submodule-n :
+  public inst speaker_n : output/unknown/Testpoint_SMT_3mm/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(speaker_n) at loc(127.8128, 67.4624, 90.0) on Bottom
+
+  pin spker_n_filtered
+
+  net Net0-spker_n_filtered (spker_n_filtered, speaker_n.TP)
+
+
+
+
+pcb-module audio_board_amp-submodule :
+  inst audio_board_amp-submodule-n : audio_board_amp-submodule-n
+  inst audio_board_amp-submodule-p : audio_board_amp-submodule-p
+
+  place(audio_board_amp-submodule-n) at loc(0.0, 0.0) on Top
+  place(audio_board_amp-submodule-p) at loc(0.0, 0.0) on Top
+
+  schematic-group(audio_board_amp-submodule-n) = audio_board_amp-submodule-n
+  schematic-group(audio_board_amp-submodule-p) = audio_board_amp-submodule-p
+
+  inst C11 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  inst C29 : output/samsung-electro-mechanics/CL10B105KA8NNNC/component
+  inst C30 : output/samsung-electro-mechanics/CL10B105KA8NNNC/component
+  inst C31 : output/samsung-electro-mechanics/CL10B105KA8NNNC/component
+  inst C32 : output/kemet/T521X337M016ATE025/component
+  inst C33 : output/kemet/T521X337M016ATE025/component
+  inst C34 : output/murata-electronics-north-america/GRM32ER61C476ME15K/component
+  inst C35 : output/murata-electronics-north-america/GRM32ER61C476ME15K/component
+  inst C36 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  inst C37 : output/tdk/C4532C0G1H224K320KA/component
+  inst C38 : output/tdk/C4532C0G1H224K320KA/component
+  inst C64 : output/murata-electronics-north-america/GCM21BR71E684KA55L/component
+  inst C65 : output/murata-electronics-north-america/GCM21BR71E684KA55L/component
+  inst C7 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  inst C72 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  inst C8 : output/murata-electronics-north-america/GRM21BC71E106KE11L/component
+  inst CN2 : output/jst-sales-america-inc-/B2B-PH-K-S-LF--SN-/component
+  inst CN3 : output/molex/0430450227/component
+  inst L2 : output/taiyo-yuden/NR8040T100M/component
+  inst L3 : output/taiyo-yuden/NR8040T100M/component
+  inst Q1 : output/texas-instruments/CSD25501F3T/component
+  inst R22 : output/yageo/RC0402FR-0710KL/component
+  inst R9 : output/yageo/RC0402FR-0710KL/component
+  inst U13 : output/texas-instruments/TAS5720LRSMT/component
+
+  for inst in [C11, C29, C30, C31, C32, C33, C34, C35, C36, C37, C38, C64, C65, C7, C72, C8, CN2, CN3, L2, L3, Q1, R22, R9, U13] do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(C11) at loc(106.494, 104.6226) on Bottom
+  place(C29) at loc(116.5606, 103.0224, 270.0) on Bottom
+  place(C30) at loc(115.4938, 106.1466, 270.0) on Top
+  place(C31) at loc(116.9416, 106.1466, 270.0) on Top
+  place(C32) at loc(116.6876, 112.7252) on Top
+  place(C33) at loc(104.5972, 109.9312, 180.0) on Top
+  place(C34) at loc(120.4722, 105.8164) on Top
+  place(C35) at loc(104.8512, 105.8164, 180.0) on Top
+  place(C36) at loc(106.045, 103.5812, 180.0) on Top
+  place(C37) at loc(114.3127, 98.6028, 180.0) on Top
+  place(C38) at loc(107.7849, 98.6028) on Top
+  place(C64) at loc(135.9408, 84.1756, 180.0) on Top
+  place(C65) at loc(113.6904, 84.5058, 180.0) on Top
+  place(C7) at loc(117.094, 102.5906, 90.0) on Top
+  place(C72) at loc(116.0018, 102.5906, 270.0) on Top
+  place(C8) at loc(119.8626, 103.0986, 180.0) on Top
+  place(CN2) at loc(132.0226, 73.5076) on Top
+  place(CN3) at loc(90.9574, 113.2586, 90.0) on Top
+  place(L2) at loc(129.5654, 87.2998, 270.0) on Top
+  place(L3) at loc(119.9642, 87.4522, 270.0) on Top
+  place(Q1) at loc(112.2934, 118.5898, 180.0) on Top
+  place(R22) at loc(113.0554, 109.474, 90.0) on Top
+  place(R9) at loc(114.2492, 107.7722, 90.0) on Top
+  place(U13) at loc(110.9726, 104.0384, 270.0) on Top
+
+  pin gnd
+  pin en_audio_pa
+  pin net0-i2c_clk
+  pin net0-i2c_sda
+  pin p+12
+  pin sai1_mclk
+  pin sai1_tx_bclk
+  pin sai1_tx_sync
+  pin sai1_txd0
+  pin spker_n
+  pin spker_n_filtered
+  pin spker_p
+  pin spker_p_filtered
+  pin net12v_tp
+  pin netc29_2
+  pin netc30_1
+  pin netc30_2
+  pin netc31_2
+  pin netc37_2
+  pin netc38_2
+  pin netr9_1
+  pin p3v3_ldo_1a
+
+  net GND (gnd, C7.p[1], C8.p[1], C11.p[2], C29.p[1], C32.p[2], C33.p[2], C34.p[2], C35.p[2], C36.p[2], C64.p[1], C65.p[2], C72.p[2], CN3.p[2], Q1.G, R22.p[2], U13.GND[0], U13.ADR1, U13.ADR0, U13.PGND[1], U13.PGND[3], U13.PGND[0], U13.PGND[2], U13.GND[1], U13.PAD)
+  net Net0-en_audio_pa (en_audio_pa, R22.p[1], U13.SD_N)
+  net Net0-i2c_clk (net0-i2c_clk, U13.SCL)
+  net Net0-i2c_sda (net0-i2c_sda, U13.SDA)
+  net Net0-p+12 (p+12, C7.p[2], C8.p[2], C32.p[1], C33.p[1], C34.p[1], C35.p[1], C36.p[1], C72.p[1], Q1.S, U13.PVDD[1], U13.PVDD[3], U13.PVDD[2], U13.PVDD[0], U13.AVDD)
+  net Net0-sai1_mclk (sai1_mclk, U13.MCLK)
+  net Net0-sai1_tx_bclk (sai1_tx_bclk, U13.BCLK)
+  net Net0-sai1_tx_sync (sai1_tx_sync, U13.LRCLK)
+  net Net0-sai1_txd0 (sai1_txd0, U13.SDIN)
+  net Net0-spker_n (spker_n, C38.p[1], L3.p[1], U13.OUT_N[1], U13.OUT_N[0])
+  net Net0-spker_n_filtered (spker_n_filtered, audio_board_amp-submodule-n.spker_n_filtered, C65.p[1], CN2.p[2], L3.p[2])
+  net Net0-spker_p (spker_p, C37.p[1], L2.p[1], U13.OUT_P[0], U13.OUT_P[1])
+  net Net0-spker_p_filtered (spker_p_filtered, audio_board_amp-submodule-p.spker_p_filtered, C64.p[2], CN2.p[1], L2.p[2])
+  net Net12V_TP (net12v_tp, CN3.p[1], Q1.D)
+  net NetC29_2 (netc29_2, C29.p[2], U13.GVDD)
+  net NetC30_1 (netc30_1, C30.p[1], C31.p[1], U13.VREF_N)
+  net NetC30_2 (netc30_2, C30.p[2], U13.VCOM)
+  net NetC31_2 (netc31_2, C31.p[2], U13.VREG)
+  net NetC37_2 (netc37_2, C37.p[2], U13.BST_P)
+  net NetC38_2 (netc38_2, C38.p[2], U13.BST_N)
+  net NetR9_1 (netr9_1, R9.p[1], U13.FAULT_N)
+  net p3v3_ldo_1A (p3v3_ldo_1a, C11.p[1], R9.p[2], U13.DVDD)
+
+
+  symbol(GND) = altium-power-gnd-power-sym
+  symbol(Net0-p+12) = altium-power-bar-sym
+  symbol(p3v3_ldo_1A) = altium-power-bar-sym
+
+
+pcb-module audio_board_cpu_1-submodule-3v3 :
+  public inst swd_3v3 : output/unknown/Testpoint_SMT_2mm/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(swd_3v3) at loc(98.3488, 70.5866, 270.0) on Bottom
+
+  pin p3v3_ldo_1a
+
+  net p3v3_ldo_1A (p3v3_ldo_1a, swd_3v3.TP)
+
+
+
+pcb-module audio_board_cpu_1-submodule-sda :
+  public inst i2c_sda : output/unknown/Testpoint_SMT_2mm/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(i2c_sda) at loc(83.5406, 125.9332) on Bottom
+
+  pin net0-i2c_sda
+
+  net Net0-i2c_sda (net0-i2c_sda, i2c_sda.TP)
+
+
+
+pcb-module audio_board_cpu_1-submodule-bclk :
+  public inst rx_bclk : output/unknown/Testpoint_SMT_2mm/component
+  public inst tx_bclk : output/unknown/Testpoint_SMT_2mm/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(rx_bclk) at loc(78.4606, 131.0132, 270.0) on Bottom
+  place(tx_bclk) at loc(119.1006, 105.5116, 270.0) on Bottom
+
+  pin sai1_rx_bclk
+  pin sai1_tx_bclk
+
+  net Net0-sai1_rx_bclk (sai1_rx_bclk, rx_bclk.TP)
+  net Net0-sai1_tx_bclk (sai1_tx_bclk, tx_bclk.TP)
+
+
+
+pcb-module audio_board_cpu_1-submodule-tdi :
+  public inst jtag_tdi : output/unknown/Testpoint_SMT_2mm/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(jtag_tdi) at loc(93.2688, 84.836, 270.0) on Bottom
+
+  pin jtag_tdi_nc
+
+  net Net0-jtag_tdi_nc (jtag_tdi_nc, jtag_tdi.TP)
+
+
+
+
+pcb-module audio_board_cpu_1-submodule-clk :
+  public inst i2c_clk : output/unknown/Testpoint_SMT_2mm/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(i2c_clk) at loc(83.5406, 123.3932) on Bottom
+
+  pin net0-i2c_clk
+
+  net Net0-i2c_clk (net0-i2c_clk, i2c_clk.TP)
+
+
+
+pcb-module audio_board_cpu_1-submodule-sync :
+  public inst rx_sync : output/unknown/Testpoint_SMT_2mm/component
+  public inst tx_sync : output/unknown/Testpoint_SMT_2mm/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(rx_sync) at loc(83.5406, 131.0132, 270.0) on Bottom
+  place(tx_sync) at loc(119.1006, 108.0516, 270.0) on Bottom
+
+  pin sai1_rx_sync
+  pin sai1_tx_sync
+
+  net Net0-sai1_rx_sync (sai1_rx_sync, rx_sync.TP)
+  net Net0-sai1_tx_sync (sai1_tx_sync, tx_sync.TP)
+
+
+
+pcb-module audio_board_cpu_1-submodule-trstb :
+  public inst jtag_trstb : output/unknown/Testpoint_SMT_2mm/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(jtag_trstb) at loc(93.2688, 89.916, 270.0) on Bottom
+
+  pin net0-jtag_trstb
+
+  net Net0-jtag_trstb (net0-jtag_trstb, jtag_trstb.TP)
+
+
+
+
+pcb-module audio_board_cpu_1-submodule-d0 :
+  public inst rx_d0 : output/unknown/Testpoint_SMT_2mm/component
+  public inst tx_d0 : output/unknown/Testpoint_SMT_2mm/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(rx_d0) at loc(73.3806, 131.0132, 270.0) on Bottom
+  place(tx_d0) at loc(119.1006, 102.9716, 270.0) on Bottom
+
+  pin sai1_rxd0
+  pin sai1_txd0
+
+  net Net0-sai1_rxd0 (sai1_rxd0, rx_d0.TP)
+  net Net0-sai1_txd0 (sai1_txd0, tx_d0.TP)
+
+
+
+pcb-module audio_board_cpu_1-submodule-gnd :
+  public inst i2c_gnd : output/unknown/Testpoint_SMT_2mm/component
+  public inst swd_gnd : output/unknown/Testpoint_SMT_2mm/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(i2c_gnd) at loc(86.0806, 128.4732, 270.0) on Bottom
+  place(swd_gnd) at loc(97.409, 74.168, 270.0) on Bottom
+
+  pin gnd
+
+  net GND (gnd, i2c_gnd.TP, swd_gnd.TP)
+
+
+
+pcb-module audio_board_cpu_1-submodule :
+  inst audio_board_cpu_1-submodule-3v3 : audio_board_cpu_1-submodule-3v3
+  inst audio_board_cpu_1-submodule-bclk : audio_board_cpu_1-submodule-bclk
+  inst audio_board_cpu_1-submodule-clk : audio_board_cpu_1-submodule-clk
+  inst audio_board_cpu_1-submodule-d0 : audio_board_cpu_1-submodule-d0
+  inst audio_board_cpu_1-submodule-gnd : audio_board_cpu_1-submodule-gnd
+  inst audio_board_cpu_1-submodule-sda : audio_board_cpu_1-submodule-sda
+  inst audio_board_cpu_1-submodule-sync : audio_board_cpu_1-submodule-sync
+  inst audio_board_cpu_1-submodule-tdi : audio_board_cpu_1-submodule-tdi
+  inst audio_board_cpu_1-submodule-trstb : audio_board_cpu_1-submodule-trstb
+
+  place(audio_board_cpu_1-submodule-3v3) at loc(0.0, 0.0) on Top
+  place(audio_board_cpu_1-submodule-bclk) at loc(0.0, 0.0) on Top
+  place(audio_board_cpu_1-submodule-clk) at loc(0.0, 0.0) on Top
+  place(audio_board_cpu_1-submodule-d0) at loc(0.0, 0.0) on Top
+  place(audio_board_cpu_1-submodule-gnd) at loc(0.0, 0.0) on Top
+  place(audio_board_cpu_1-submodule-sda) at loc(0.0, 0.0) on Top
+  place(audio_board_cpu_1-submodule-sync) at loc(0.0, 0.0) on Top
+  place(audio_board_cpu_1-submodule-tdi) at loc(0.0, 0.0) on Top
+  place(audio_board_cpu_1-submodule-trstb) at loc(0.0, 0.0) on Top
+
+  schematic-group(audio_board_cpu_1-submodule-3v3) = audio_board_cpu_1-submodule-3v3
+  schematic-group(audio_board_cpu_1-submodule-bclk) = audio_board_cpu_1-submodule-bclk
+  schematic-group(audio_board_cpu_1-submodule-clk) = audio_board_cpu_1-submodule-clk
+  schematic-group(audio_board_cpu_1-submodule-d0) = audio_board_cpu_1-submodule-d0
+  schematic-group(audio_board_cpu_1-submodule-gnd) = audio_board_cpu_1-submodule-gnd
+  schematic-group(audio_board_cpu_1-submodule-sda) = audio_board_cpu_1-submodule-sda
+  schematic-group(audio_board_cpu_1-submodule-sync) = audio_board_cpu_1-submodule-sync
+  schematic-group(audio_board_cpu_1-submodule-tdi) = audio_board_cpu_1-submodule-tdi
+  schematic-group(audio_board_cpu_1-submodule-trstb) = audio_board_cpu_1-submodule-trstb
+
+  inst C13 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  inst C15 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  inst C63 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  inst C66 : output/kemet/C0402C102K5GACTU/component
+  inst C68 : output/kyocera-avx/04025A4R7CAT2A/component
+  inst C69 : output/kyocera-avx/04025A4R7CAT2A/component
+  inst C73 : output/kemet/C0402C102K5GACTU/component
+  inst C74 : output/samsung-electro-mechanics/CL05B103KB5NNNC/component
+  inst C75 : output/kemet/C0402C102K5GACTU/component
+  inst CN1 : output/samtec-inc-/FTSH-105-01-F-DV/component
+  inst R18 : output/yageo/RC0402FR-074K7L/component
+  inst R2 : output/yageo/RC0402FR-07220RL/component
+  inst R23 : output/yageo/RC0402FR-070RL/component
+  inst R24 : output/yageo/RC0402FR-071K91L/component
+  inst R25 : output/yageo/RC0402FR-070RL/component
+  inst R27 : output/yageo/RC0402FR-0710KL/component
+  inst R28 : output/yageo/RC0402FR-07220RL/component
+  inst R3 : output/yageo/RC0402FR-0710KL/component
+  inst R4 : output/koa-speer/RK73H1ETTP2204F/component
+  inst R5 : output/yageo/RC0402FR-074K7L/component
+  inst SW2 : output/c-k/PTS645SK50SMTR92-LFS/component
+  inst TP2 : output/unknown/Testpoint_SMT_2mm/component
+  inst U4 : output/texas-instruments/TPS3823-30DBVR/component
+  inst Y1 : output/murata/XRCGB24M000F2P29R0/component
+  inst mclk : output/unknown/Testpoint_SMT_2mm/component
+  inst swdclk : output/unknown/Testpoint_SMT_2mm/component
+  inst swdio : output/unknown/Testpoint_SMT_2mm/component
+  inst swo : output/unknown/Testpoint_SMT_2mm/component
+
+  for inst in [C13, C15, C63, C66, C68, C69, C73, C74, C75, CN1, R18, R2, R23, R24, R25, R27, R28, R3, R4, R5, SW2, TP2, U4, Y1, mclk, swdclk, swdio, swo] do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(C13) at loc(89.7128, 90.297, 90.0) on Top
+  place(C15) at loc(99.7712, 75.7002, 270.0) on Top
+  place(C63) at loc(83.9724, 99.441, 90.0) on Top
+  place(C66) at loc(86.3092, 94.2086) on Top
+  place(C68) at loc(89.8652, 67.7926, 90.0) on Top
+  place(C69) at loc(86.106, 67.7926, 270.0) on Top
+  place(C73) at loc(87.8332, 94.6404, 270.0) on Top
+  place(C74) at loc(68.3006, 75.3618, 180.0) on Top
+  place(C75) at loc(84.65, 88.1634) on Top
+  place(CN1) at loc(95.3008, 77.597, 270.0) on Top
+  place(R18) at loc(68.4276, 92.9132, 90.0) on Top
+  place(R2) at loc(85.1662, 98.4504, 90.0) on Top
+  place(R23) at loc(86.2584, 95.1992) on Top
+  place(R24) at loc(68.2752, 74.3712, 180.0) on Top
+  place(R25) at loc(95.2754, 82.0928, 90.0) on Top
+  place(R27) at loc(96.6724, 82.5246) on Top
+  place(R28) at loc(82.7532, 88.1126) on Top
+  place(R3) at loc(85.7504, 80.3148, 180.0) on Top
+  place(R4) at loc(84.5566, 67.818, 270.0) on Top
+  place(R5) at loc(70.4342, 92.9132, 90.0) on Top
+  place(SW2) at loc(91.2496, 122.5402) on Top
+  place(TP2) at loc(78.8162, 73.3298) on Bottom
+  place(U4) at loc(87.4014, 91.4908, 270.0) on Top
+  place(Y1) at loc(87.9602, 67.8688, 270.0) on Top
+  place(mclk) at loc(119.1006, 110.5916, 270.0) on Bottom
+  place(swdclk) at loc(93.2688, 74.168, 270.0) on Bottom
+  place(swdio) at loc(93.2688, 70.6882, 270.0) on Bottom
+  place(swo) at loc(93.2688, 79.756, 270.0) on Bottom
+
+  pin gnd
+  pin net0-i2c_clk
+  pin net0-i2c_sda
+  pin jtag_tck_swdclk
+  pin jtag_tdi_nc
+  pin jtag_tdo_swo
+  pin jtag_tms_swdio
+  pin net0-jtag_trstb
+  pin manual_reset
+  pin nreset
+  pin por_button
+  pin sai1_mclk
+  pin sai1_rx_bclk
+  pin sai1_rx_sync
+  pin sai1_rxd0
+  pin sai1_tx_bclk
+  pin sai1_tx_sync
+  pin sai1_txd0
+  pin watchdog_1
+  pin watchdog_2
+  pin netc68_2
+  pin netc69_2
+  pin netc73_1
+  pin netc74_1
+  pin netc75_1
+  pin nettp2_tp
+  pin p3v3_ldo_1a
+
+  net GND (gnd, audio_board_cpu_1-submodule-gnd.gnd, C13.p[2], C15.p[1], C63.p[2], C66.p[2], C68.p[1], C69.p[1], C74.p[2], C75.p[2], CN1.p[3], CN1.p[5], R3.p[1], R4.p[1], SW2.p[1], SW2.p[2], U4.GND, Y1.p[2], Y1.p[4])
+  net Net0-i2c_clk (net0-i2c_clk, audio_board_cpu_1-submodule-clk.net0-i2c_clk, R5.p[1])
+  net Net0-i2c_sda (net0-i2c_sda, audio_board_cpu_1-submodule-sda.net0-i2c_sda, R18.p[1])
+  net Net0-jtag_tck_swdclk (jtag_tck_swdclk, CN1.p[4], swdclk.TP)
+  net Net0-jtag_tdi_nc (jtag_tdi_nc, audio_board_cpu_1-submodule-tdi.jtag_tdi_nc, CN1.p[8])
+  net Net0-jtag_tdo_swo (jtag_tdo_swo, CN1.p[6], swo.TP)
+  net Net0-jtag_tms_swdio (jtag_tms_swdio, CN1.p[2], swdio.TP)
+  net Net0-jtag_trstb (net0-jtag_trstb, audio_board_cpu_1-submodule-trstb.net0-jtag_trstb, CN1.p[10], R25.p[1])
+  net Net0-manual_reset (manual_reset, C66.p[1], R2.p[1], R23.p[1], R25.p[2], R27.p[1], U4.nMR)
+  net Net0-nreset (nreset, R24.p[2], U4.nRESET)
+  net Net0-por_button (por_button, C63.p[1], R2.p[2], SW2.p[3], SW2.p[4])
+  net Net0-sai1_mclk (sai1_mclk, mclk.TP)
+  net Net0-sai1_rx_bclk (sai1_rx_bclk, audio_board_cpu_1-submodule-bclk.sai1_rx_bclk)
+  net Net0-sai1_rx_sync (sai1_rx_sync, audio_board_cpu_1-submodule-sync.sai1_rx_sync)
+  net Net0-sai1_rxd0 (sai1_rxd0, audio_board_cpu_1-submodule-d0.sai1_rxd0)
+  net Net0-sai1_tx_bclk (sai1_tx_bclk, audio_board_cpu_1-submodule-bclk.sai1_tx_bclk)
+  net Net0-sai1_tx_sync (sai1_tx_sync, audio_board_cpu_1-submodule-sync.sai1_tx_sync)
+  net Net0-sai1_txd0 (sai1_txd0, audio_board_cpu_1-submodule-d0.sai1_txd0)
+  net Net0-watchdog_1 (watchdog_1, C73.p[2], R3.p[2])
+  net Net0-watchdog_2 (watchdog_2, R28.p[1])
+  net NetC68_2 (netc68_2, C68.p[2], Y1.p[1])
+  net NetC69_2 (netc69_2, C69.p[2], R4.p[2], Y1.p[3])
+  net NetC73_1 (netc73_1, C73.p[1], R23.p[2])
+  net NetC74_1 (netc74_1, C74.p[1], R24.p[1])
+  net NetC75_1 (netc75_1, C75.p[1], R28.p[2], U4.WDI)
+  net NetTP2_TP (nettp2_tp, TP2.TP)
+  net p3v3_ldo_1A (p3v3_ldo_1a, audio_board_cpu_1-submodule-3v3.p3v3_ldo_1a, C13.p[1], C15.p[2], CN1.p[1], R5.p[2], R18.p[2], R27.p[2], U4.VDD)
+
+
+  symbol(GND) = altium-power-gnd-power-sym
+  symbol(p3v3_ldo_1A) = altium-power-bar-sym
+
+
+pcb-module audio_board_cpu_2-submodule :
+  public inst C10 : output/murata-electronics-north-america/GCM188R71H224KA64D/component
+  public inst C14 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  public inst C16 : output/murata-electronics-north-america/GCM188R71H224KA64D/component
+  public inst C17 : output/murata-electronics-north-america/GCM188R71H224KA64D/component
+  public inst C18 : output/tdk/CGB3B1X5R1A475M055AC/component
+  public inst C19 : output/murata-electronics-north-america/GCM188R71H224KA64D/component
+  public inst C2 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  public inst C20 : output/tdk/CGB3B1X5R1A475M055AC/component
+  public inst C24 : output/murata-electronics-north-america/GCM188R71H224KA64D/component
+  public inst C3 : output/murata-electronics-north-america/GCM188R71H224KA64D/component
+  public inst C41 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  public inst C42 : output/murata-electronics-north-america/GCM188R71H224KA64D/component
+  public inst C43 : output/murata-electronics-north-america/GCM188R71H224KA64D/component
+  public inst C45 : output/tdk/CGB3B1X5R1A475M055AC/component
+  public inst C47 : output/tdk/CGB3B1X5R1A475M055AC/component
+  public inst C48 : output/tdk/CGB3B1X5R1A475M055AC/component
+  public inst C5 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  public inst C51 : output/samsung-electro-mechanics/CL21B475KOFNNNE/component
+  public inst C52 : output/tdk/CGB3B1X5R1A475M055AC/component
+  public inst C53 : output/tdk/CGB3B1X5R1A475M055AC/component
+  public inst C54 : output/tdk/CGB3B1X5R1A475M055AC/component
+  public inst C55 : output/tdk/CGB3B1X5R1A475M055AC/component
+  public inst C6 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  public inst C67 : output/tdk/CGB3B1X5R1A475M055AC/component
+  public inst C70 : output/murata-electronics-north-america/GCM188R71H224KA64D/component
+  public inst C71 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(C10) at loc(71.3486, 90.4748, 180.0) on Bottom
+  place(C14) at loc(75.0062, 93.6752, 90.0) on Bottom
+  place(C16) at loc(83.8454, 85.5218, 270.0) on Top
+  place(C17) at loc(71.7296, 78.6892, 270.0) on Bottom
+  place(C18) at loc(72.7456, 92.964, 90.0) on Bottom
+  place(C19) at loc(83.7438, 72.771, 180.0) on Top
+  place(C2) at loc(65.21, 87.63) on Top
+  place(C20) at loc(76.8604, 78.8924, 90.0) on Bottom
+  place(C24) at loc(78.4098, 79.2734, 270.0) on Bottom
+  place(C3) at loc(87.4522, 86.7156, 270.0) on Top
+  place(C41) at loc(75.057, 78.2574, 270.0) on Bottom
+  place(C42) at loc(71.882, 72.7964, 90.0) on Bottom
+  place(C43) at loc(79.9592, 78.5876, 270.0) on Bottom
+  place(C45) at loc(73.533, 78.8416, 90.0) on Bottom
+  place(C47) at loc(81.7118, 78.7772, 90.0) on Bottom
+  place(C48) at loc(74.6506, 72.771, 270.0) on Bottom
+  place(C5) at loc(79.951, 90.678) on Top
+  place(C51) at loc(82.4738, 74.549) on Top
+  place(C52) at loc(64.4652, 89.1794) on Top
+  place(C53) at loc(81.28, 92.6592, 180.0) on Top
+  place(C54) at loc(88.519, 84.1248, 180.0) on Top
+  place(C55) at loc(70.358, 72.8218, 270.0) on Bottom
+  place(C6) at loc(87.7824, 82.4992, 180.0) on Top
+  place(C67) at loc(85.6234, 85.6742, 270.0) on Top
+  place(C70) at loc(84.963, 77.216, 270.0) on Top
+  place(C71) at loc(83.6422, 77.089, 270.0) on Top
+
+  pin gnd
+  pin dcdc_out
+  pin vdd_high_cap
+  pin netc41_1
+  pin netc42_1
+  pin netc43_1
+  pin p3v3_ldo_1a
+  pin p5v_500ma_sys
+
+  net GND (gnd, C2.p[1], C3.p[1], C5.p[2], C6.p[1], C10.p[1], C14.p[1], C16.p[1], C17.p[2], C18.p[1], C19.p[1], C20.p[1], C24.p[2], C41.p[2], C42.p[2], C43.p[2], C45.p[1], C47.p[1], C48.p[1], C51.p[2], C52.p[1], C53.p[1], C54.p[1], C55.p[1], C67.p[1], C70.p[2], C71.p[2])
+  net Net0-dcdc_out (dcdc_out, C3.p[2], C10.p[2], C16.p[2], C18.p[2], C67.p[2])
+  net Net0-vdd_high_cap (vdd_high_cap, C20.p[2], C24.p[1])
+  net NetC41_1 (netc41_1, C41.p[1], C45.p[2])
+  net NetC42_1 (netc42_1, C42.p[1], C55.p[2])
+  net NetC43_1 (netc43_1, C43.p[1], C47.p[2])
+  net p3v3_ldo_1A (p3v3_ldo_1a, C2.p[2], C5.p[1], C6.p[2], C14.p[2], C17.p[1], C19.p[2], C51.p[1], C52.p[2], C53.p[2], C54.p[2], C70.p[1], C71.p[1])
+  net p5V_500mA_sys (p5v_500ma_sys, C48.p[2])
+
+
+
+
+pcb-module audio_board_cpu_3-submodule-pa :
+  public inst en_pa : output/unknown/Testpoint_SMT_2mm/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(en_pa) at loc(116.5606, 115.443, 270.0) on Bottom
+
+  pin en_audio_pa
+
+  net Net0-en_audio_pa (en_audio_pa, en_pa.TP)
+
+
+
+pcb-module audio_board_cpu_3-submodule-tdm :
+  public inst en_tdm : output/unknown/Testpoint_SMT_2mm/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(en_tdm) at loc(68.3006, 131.0132, 270.0) on Bottom
+
+  pin en_pdm_tdm
+
+  net Net0-en_pdm_tdm (en_pdm_tdm, en_tdm.TP)
+
+
+
+pcb-module audio_board_cpu_3-submodule-dwg_2 :
+  public inst wtch_dwg_2 : output/unknown/Testpoint_SMT_2mm/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(wtch_dwg_2) at loc(93.2688, 92.456, 270.0) on Bottom
+
+  pin watchdog_2
+
+  net Net0-watchdog_2 (watchdog_2, wtch_dwg_2.TP)
+
+
+
+pcb-module audio_board_cpu_3-submodule :
+  inst audio_board_cpu_3-submodule-dwg_2 : audio_board_cpu_3-submodule-dwg_2
+  inst audio_board_cpu_3-submodule-pa : audio_board_cpu_3-submodule-pa
+  inst audio_board_cpu_3-submodule-tdm : audio_board_cpu_3-submodule-tdm
+
+  place(audio_board_cpu_3-submodule-dwg_2) at loc(0.0, 0.0) on Top
+  place(audio_board_cpu_3-submodule-pa) at loc(0.0, 0.0) on Top
+  place(audio_board_cpu_3-submodule-tdm) at loc(0.0, 0.0) on Top
+
+  schematic-group(audio_board_cpu_3-submodule-dwg_2) = audio_board_cpu_3-submodule-dwg_2
+  schematic-group(audio_board_cpu_3-submodule-pa) = audio_board_cpu_3-submodule-pa
+  schematic-group(audio_board_cpu_3-submodule-tdm) = audio_board_cpu_3-submodule-tdm
+
+  inst C49 : output/samsung-electro-mechanics/CL21B475KOFNNNE/component
+  inst C50 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  inst MEM1 : output/adesto-technologies/AT25SF128A-SHB-T/component
+  inst R26 : output/yageo/RC0402FR-0710KL/component
+
+  for inst in [C49, C50, MEM1, R26] do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(C49) at loc(74.422, 94.7674, 180.0) on Top
+  place(C50) at loc(75.0062, 93.1926, 180.0) on Top
+  place(MEM1) at loc(75.0316, 98.8314) on Top
+  place(R26) at loc(68.961, 100.7618, 180.0) on Top
+
+  pin en_audio_pa
+  pin en_pdm_tdm
+  pin flexspi_clk_a
+  pin flexspi_d0_a
+  pin flexspi_d1_a
+  pin flexspi_d2_a
+  pin flexspi_d3_a
+  pin flexspi_ss0
+  pin watchdog_2
+  pin netc49_2
+  pin p3v3_ldo_1a
+
+  net Net0-en_audio_pa (en_audio_pa, audio_board_cpu_3-submodule-pa.en_audio_pa)
+  net Net0-en_pdm_tdm (en_pdm_tdm, audio_board_cpu_3-submodule-tdm.en_pdm_tdm)
+  net Net0-flexspi_clk_a (flexspi_clk_a, MEM1.SCK)
+  net Net0-flexspi_d0_a (flexspi_d0_a, MEM1.SIIO0)
+  net Net0-flexspi_d1_a (flexspi_d1_a, MEM1.SOIO1)
+  net Net0-flexspi_d2_a (flexspi_d2_a, MEM1.*WPIO2)
+  net Net0-flexspi_d3_a (flexspi_d3_a, MEM1.*HOLDIO3)
+  net Net0-flexspi_ss0 (flexspi_ss0, MEM1.*CS, R26.p[1])
+  net Net0-watchdog_2 (watchdog_2, audio_board_cpu_3-submodule-dwg_2.watchdog_2)
+  net NetC49_2 (netc49_2, C49.p[2], C50.p[2], MEM1.GND)
+  net p3v3_ldo_1A (p3v3_ldo_1a, C49.p[1], C50.p[1], MEM1.VCC, R26.p[2])
+
+
+  symbol(p3v3_ldo_1A) = altium-power-bar-sym
+
+
+pcb-module audio_board_cpu_4-submodule :
+  public inst R17 : output/koa-speer/RK73H1ETTP4702F/component
+  public inst R19 : output/yageo/RC0402FR-071KL/component
+  public inst R20 : output/yageo/RC0402FR-0710KL/component
+  public inst R29 : output/yageo/RC0402FR-0710KL/component
+  public inst R6 : output/koa-speer/RK73H1ETTP4702F/component
+  public inst R7 : output/koa-speer/RK73H1ETTP4702F/component
+  public inst R8 : output/koa-speer/RK73H1ETTP4702F/component
+  public inst SW1 : output/c-k/PTS645SK50SMTR92-LFS/component
+  public inst U7 : output/on-semiconductor---fairchild/NC7SZ04M5X/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(R17) at loc(82.6262, 90.0684, 180.0) on Bottom
+  place(R19) at loc(79.0194, 86.2838) on Bottom
+  place(R20) at loc(78.994, 87.2744) on Bottom
+  place(R29) at loc(96.9772, 56.9214, 270.0) on Top
+  place(R6) at loc(77.5716, 84.5058, 90.0) on Bottom
+  place(R7) at loc(75.9206, 84.5312, 90.0) on Bottom
+  place(R8) at loc(74.295, 84.5312, 90.0) on Bottom
+  place(SW1) at loc(86.614, 60.9092) on Top
+  place(U7) at loc(94.869, 59.8424) on Top
+
+  pin gnd
+  pin bootmode_0
+  pin bootmode_1
+  pin bt_cfg_0
+  pin bt_cfg_1
+  pin bt_cfg_2
+  pin bt_cfg_3
+  pin netr19_1
+  pin netr29_2
+  pin p3v3_ldo_1a
+
+  net GND (gnd, R6.p[2], R7.p[2], R8.p[2], R17.p[2], SW1.p[3], SW1.p[4], U7.GND)
+  net Net0-bootmode_0 (bootmode_0, R29.p[1], U7.Y)
+  net Net0-bootmode_1 (bootmode_1, R19.p[2], R20.p[2], U7.A)
+  net Net0-bt_cfg_0 (bt_cfg_0, R6.p[1])
+  net Net0-bt_cfg_1 (bt_cfg_1, R7.p[1])
+  net Net0-bt_cfg_2 (bt_cfg_2, R8.p[1])
+  net Net0-bt_cfg_3 (bt_cfg_3, R17.p[1])
+  net NetR19_1 (netr19_1, R19.p[1], SW1.p[1], SW1.p[2])
+  net NetR29_2 (netr29_2, R29.p[2])
+  net p3v3_ldo_1A (p3v3_ldo_1a, R20.p[1], U7.VCC)
+
+
+
+
+pcb-module main :
+  inst audio_board_amp-submodule : audio_board_amp-submodule
+  inst audio_board_cpu_1-submodule : audio_board_cpu_1-submodule
+  inst audio_board_cpu_2-submodule : audio_board_cpu_2-submodule
+  inst audio_board_cpu_3-submodule : audio_board_cpu_3-submodule
+  inst audio_board_cpu_4-submodule : audio_board_cpu_4-submodule
+  inst audio_board_mic-submodule : audio_board_mic-submodule
+  inst audio_board_power-submodule : audio_board_power-submodule
+
+  place(audio_board_amp-submodule) at loc(0.0, 0.0) on Top
+  place(audio_board_cpu_1-submodule) at loc(0.0, 0.0) on Top
+  place(audio_board_cpu_2-submodule) at loc(0.0, 0.0) on Top
+  place(audio_board_cpu_3-submodule) at loc(0.0, 0.0) on Top
+  place(audio_board_cpu_4-submodule) at loc(0.0, 0.0) on Top
+  place(audio_board_mic-submodule) at loc(0.0, 0.0) on Top
+  place(audio_board_power-submodule) at loc(0.0, 0.0) on Top
+
+  schematic-group(audio_board_amp-submodule) = audio_board_amp-submodule
+  schematic-group(audio_board_cpu_1-submodule) = audio_board_cpu_1-submodule
+  schematic-group(audio_board_cpu_2-submodule) = audio_board_cpu_2-submodule
+  schematic-group(audio_board_cpu_3-submodule) = audio_board_cpu_3-submodule
+  schematic-group(audio_board_cpu_4-submodule) = audio_board_cpu_4-submodule
+  schematic-group(audio_board_mic-submodule) = audio_board_mic-submodule
+  schematic-group(audio_board_power-submodule) = audio_board_power-submodule
+
+  inst U2 : output/nxp-semiconductors/MIMXRT1011CAE4A/component
+  inst _12V : output/unknown/Testpoint_SMT_3mm/component
+  inst _12V_gnd : output/unknown/Testpoint_SMT_3mm/component
+  inst _5V_reg : output/unknown/Testpoint_SMT_2mm/component
+
+  for inst in [U2, _12V, _12V_gnd, _5V_reg] do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(U2) at loc(75.4126, 82.3976) on Top
+  place(_12V) at loc(98.5012, 124.1552, 180.0) on Bottom
+  place(_12V_gnd) at loc(98.4504, 115.951, 90.0) on Bottom
+  place(_5V_reg) at loc(69.9516, 60.96) on Bottom
+
+  net GND (audio_board_amp-submodule.gnd, audio_board_cpu_1-submodule.gnd, audio_board_cpu_2-submodule.gnd, audio_board_cpu_4-submodule.gnd, audio_board_mic-submodule.gnd, audio_board_power-submodule.gnd, _12V_gnd.TP, U2.VSS[3], U2.VSS[1], U2.NGND_KEL0, U2.VSSA_ADC_3P3ADC_VREFL, U2.VSS[2], U2.VSS[0], U2.TEST_MODE, U2.DCDC_GND)
+  net Net0-bootmode_1 (audio_board_cpu_4-submodule.bootmode_1, U2.GPIO_SD_03)
+  net Net0-bt_cfg_0 (audio_board_cpu_4-submodule.bt_cfg_0, U2.GPIO_SD_02)
+  net Net0-bt_cfg_1 (audio_board_cpu_4-submodule.bt_cfg_1, U2.GPIO_SD_01)
+  net Net0-bt_cfg_2 (audio_board_cpu_4-submodule.bt_cfg_2, U2.GPIO_SD_00)
+  net Net0-bt_cfg_3 (audio_board_cpu_4-submodule.bt_cfg_3, U2.GPIO_SD_13)
+  net Net0-dcdc_out (audio_board_cpu_2-submodule.dcdc_out, audio_board_power-submodule.dcdc_out, U2.VDD_SOC_IN[0], U2.VDD_SOC_IN[1], U2.VDD_SOC_INDCDC_SENSE)
+  net Net0-en_audio_pa (audio_board_amp-submodule.en_audio_pa, audio_board_cpu_3-submodule.en_audio_pa, U2.GPIO_AD_06)
+  net Net0-en_pdm_tdm (audio_board_cpu_3-submodule.en_pdm_tdm, audio_board_mic-submodule.en_pdm_tdm, U2.GPIO_AD_07)
+  net Net0-flexspi_clk_a (audio_board_cpu_3-submodule.flexspi_clk_a, U2.GPIO_SD_10)
+  net Net0-flexspi_d0_a (audio_board_cpu_3-submodule.flexspi_d0_a, U2.GPIO_SD_09)
+  net Net0-flexspi_d1_a (audio_board_cpu_3-submodule.flexspi_d1_a, U2.GPIO_SD_07)
+  net Net0-flexspi_d2_a (audio_board_cpu_3-submodule.flexspi_d2_a, U2.GPIO_SD_08)
+  net Net0-flexspi_d3_a (audio_board_cpu_3-submodule.flexspi_d3_a, U2.GPIO_SD_11)
+  net Net0-flexspi_ss0 (audio_board_cpu_3-submodule.flexspi_ss0, U2.GPIO_SD_06)
+  net Net0-i2c_clk (audio_board_amp-submodule.net0-i2c_clk, audio_board_cpu_1-submodule.net0-i2c_clk, audio_board_mic-submodule.net0-i2c_clk, U2.GPIO_12)
+  net Net0-i2c_sda (audio_board_amp-submodule.net0-i2c_sda, audio_board_cpu_1-submodule.net0-i2c_sda, audio_board_mic-submodule.net0-i2c_sda, U2.GPIO_11)
+  net Net0-jtag_tck_swdclk (audio_board_cpu_1-submodule.jtag_tck_swdclk, U2.GPIO_AD_12)
+  net Net0-jtag_tdi_nc (audio_board_cpu_1-submodule.jtag_tdi_nc, U2.GPIO_AD_10)
+  net Net0-jtag_tdo_swo (audio_board_cpu_1-submodule.jtag_tdo_swo, U2.GPIO_AD_09)
+  net Net0-jtag_tms_swdio (audio_board_cpu_1-submodule.jtag_tms_swdio, U2.GPIO_AD_13)
+  net Net0-jtag_trstb (audio_board_cpu_1-submodule.net0-jtag_trstb, U2.GPIO_AD_08)
+  net Net0-p1v8_ldo (audio_board_mic-submodule.p1v8_ldo, audio_board_power-submodule.p1v8_ldo)
+  net Net0-sai1_mclk (audio_board_amp-submodule.sai1_mclk, audio_board_cpu_1-submodule.sai1_mclk, U2.GPIO_08)
+  net Net0-sai1_rx_bclk (audio_board_cpu_1-submodule.sai1_rx_bclk, audio_board_mic-submodule.sai1_rx_bclk, U2.GPIO_01)
+  net Net0-sai1_rx_sync (audio_board_cpu_1-submodule.sai1_rx_sync, audio_board_mic-submodule.sai1_rx_sync, U2.GPIO_02)
+  net Net0-sai1_rxd0 (audio_board_cpu_1-submodule.sai1_rxd0, audio_board_mic-submodule.sai1_rxd0, U2.GPIO_03)
+  net Net0-sai1_tx_bclk (audio_board_amp-submodule.sai1_tx_bclk, audio_board_cpu_1-submodule.sai1_tx_bclk, U2.GPIO_06)
+  net Net0-sai1_tx_sync (audio_board_amp-submodule.sai1_tx_sync, audio_board_cpu_1-submodule.sai1_tx_sync, U2.GPIO_07)
+  net Net0-sai1_txd0 (audio_board_amp-submodule.sai1_txd0, audio_board_cpu_1-submodule.sai1_txd0, U2.GPIO_04)
+  net Net0-usb_diff_n (audio_board_power-submodule.usb_diff_n, U2.USB_OTG1_DN)
+  net Net0-usb_diff_p (audio_board_power-submodule.usb_diff_p, U2.USB_OTG1_DP)
+  net Net0-vdd_high_cap (audio_board_cpu_2-submodule.vdd_high_cap, U2.VDD_HIGH_CAP)
+  net Net0-watchdog_1 (audio_board_cpu_1-submodule.watchdog_1, U2.GPIO_AD_11)
+  net Net0-watchdog_2 (audio_board_cpu_1-submodule.watchdog_2, audio_board_cpu_3-submodule.watchdog_2, U2.GPIO_AD_00)
+  net Net12V_TP (audio_board_amp-submodule.net12v_tp, _12V.TP)
+  net NetC41_1 (audio_board_cpu_2-submodule.netc41_1, U2.VDD_USB_CAP)
+  net NetC42_1 (audio_board_cpu_2-submodule.netc42_1, U2.VDD_SNVS_CAP)
+  net NetC43_1 (audio_board_cpu_2-submodule.netc43_1, U2.NVCC_PLL)
+  net NetC58_1 (audio_board_power-submodule.netc58_1, U2.DCDC_PSWITCH)
+  net NetC68_2 (audio_board_cpu_1-submodule.netc68_2, U2.XTALO)
+  net NetC69_2 (audio_board_cpu_1-submodule.netc69_2, U2.XTALI)
+  net NetC74_1 (audio_board_cpu_1-submodule.netc74_1, U2.POR_B)
+  net NetL1_1 (audio_board_power-submodule.netl1_1, U2.DCDC_LP)
+  net NetR29_2 (audio_board_cpu_4-submodule.netr29_2, U2.GPIO_SD_04)
+  net NetTP2_TP (audio_board_cpu_1-submodule.nettp2_tp, U2.USB_OTG1_CHD_B)
+  net p3v3_ldo_1A (audio_board_amp-submodule.p3v3_ldo_1a, audio_board_cpu_1-submodule.p3v3_ldo_1a, audio_board_cpu_2-submodule.p3v3_ldo_1a, audio_board_cpu_3-submodule.p3v3_ldo_1a, audio_board_cpu_4-submodule.p3v3_ldo_1a, audio_board_mic-submodule.p3v3_ldo_1a, audio_board_power-submodule.p3v3_ldo_1a, U2.NVCC_GPIO[2], U2.VDD_SNVS_IN, U2.VDD_HIGH_IN, U2.VSSA_ADC_3P3ADC_VREFH, U2.NVCC_GPIO[0], U2.NVCC_GPIO[1], U2.NVCC_GPIO[3], U2.DCDC_IN_Q, U2.DCDC_IN)
+  net p5V_500mA_sys (audio_board_cpu_2-submodule.p5v_500ma_sys, audio_board_power-submodule.p5v_500ma_sys, U2.USB_OTG1_VBUS, _5V_reg.TP)
+
+
+  symbol(GND) = altium-power-gnd-power-sym
+  symbol(Net0-dcdc_out) = altium-power-bar-sym
+  symbol(p3v3_ldo_1A) = altium-power-bar-sym
+  symbol(p5V_500mA_sys) = altium-power-bar-sym
+
+
+val main-design = make-default-board(main, 4, Rectangle(10.0, 10.0))
+set-export-backend(`altium)
+view-board()
+view-schematic()
+export-cad()

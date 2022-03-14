@@ -1,0 +1,88 @@
+#use-added-syntax(jitx)
+defpackage output/texas-instruments/SN74LV1T125DBVR :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern SOT95P280X145-5L30N :
+  pad p[1] : smd-pad(1.05, 0.6) at loc(-0.95, -1.35, 270.0) on Top
+  pad p[2] : smd-pad(1.05, 0.6) at loc(0.0, -1.35, 270.0) on Top
+  pad p[3] : smd-pad(1.05, 0.6) at loc(0.95, -1.35, 270.0) on Top
+  pad p[4] : smd-pad(1.05, 0.6) at loc(0.95, 1.35, 90.0) on Top
+  pad p[5] : smd-pad(1.05, 0.6) at loc(-0.95, 1.35, 90.0) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [    
+    Point(-0.8398, -2.2606), 
+    Point(-0.847412046748871, -2.22233165676349), 
+    Point(-0.869089321881345, -2.18988932188135), 
+    Point(-0.901531656763491, -2.16821204674887), 
+    Point(-0.9398, -2.1606), 
+    Point(-0.978068343236509, -2.16821204674887), 
+    Point(-1.01051067811865, -2.18988932188135), 
+    Point(-1.03218795325113, -2.22233165676349), 
+    Point(-1.0398, -2.2606), 
+    Point(-1.03218795325113, -2.29886834323651), 
+    Point(-1.01051067811865, -2.33131067811865), 
+    Point(-0.978068343236509, -2.35298795325113), 
+    Point(-0.9398, -2.3606), 
+    Point(-0.901531656763491, -2.35298795325113), 
+    Point(-0.869089321881345, -2.33131067811865), 
+    Point(-0.847412046748871, -2.29886834323651), 
+    Point(-0.8398, -2.2606)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [Point(1.53, -0.88), Point(1.53, 0.88)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.15, [Point(-1.53, -1.815), Point(-1.53, 0.88)])
+  ref-label()
+
+pcb-symbol CMP-012-0099-01-symbol :
+  pin A at Point(5.08, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GND at Point(5.08, -5.08) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VCC at Point(20.32, 0.0) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin Y at Point(20.32, -2.54) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nOE at Point(5.08, 0.0) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(15.24, 10.16, loc(12.7, -2.54))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(5.08, 2.84))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(5.08, 3.902))
+
+public pcb-component component :
+  name = "CMP-012-0099-01"
+  description = "SN74LV1T125"
+  manufacturer = "Texas Instruments"
+  mpn = "SN74LV1T125DBVR"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [A | 2 | Left]
+    [GND | 3 | Left]
+    [VCC | 5 | Right]
+    [Y | 4 | Right]
+    [nOE | 1 | Left]
+  
+  assign-landpattern(SOT95P280X145-5L30N)
+  val sym = CMP-012-0099-01-symbol
+  symbol = sym(self.A => sym.A, self.GND => sym.GND, self.VCC => sym.VCC, self.Y => sym.Y, self.nOE => sym.nOE)
+

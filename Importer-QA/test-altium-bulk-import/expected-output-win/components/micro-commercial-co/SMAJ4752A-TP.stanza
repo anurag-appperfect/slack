@@ -1,0 +1,52 @@
+#use-added-syntax(jitx)
+defpackage output/micro-commercial-co/SMAJ4752A-TP :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern DO-214AC :
+  pad p[1] : smd-pad(1.778, 2.159) at loc(-2.032, 0.0) on Top
+  pad p[2] : smd-pad(1.778, 2.159) at loc(2.032, 0.0) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(3.175, -1.3208), Point(3.175, 1.2954)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(3.81, 1.3326), Point(3.81, -1.3208)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-3.1518, -1.0564), Point(-3.1518, -1.3208)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-3.175, 1.1326), Point(-3.175, 1.3326)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-3.1518, -1.3208), Point(3.81, -1.3208)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-3.175, 1.3326), Point(3.81, 1.3326)])
+  ref-label()
+
+pcb-symbol ZENER_SMA_33V_1W-symbol :
+  pin A at Point(3.81, -7.62) with :
+    direction = Down
+    length = 5.08
+  pin K at Point(3.81, -5.08) with :
+    direction = Up
+    length = 5.08
+  layer("foreground") = Polygon([Point(6.35, -7.62), Point(3.81, -5.08), Point(1.27, -7.62)])
+  layer("foreground") = Line(1.0, [Point(6.35, -5.08), Point(1.27, -5.08)])
+  layer("foreground") = Line(1.0, [Point(7.62, -6.35), Point(6.35, -5.08)])
+  layer("foreground") = Line(1.0, [Point(1.27, -5.08), Point(0.0, -3.81)])
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(-0.5, -3.01))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(-0.5, -1.948))
+
+public pcb-component component :
+  name = "ZENER_SMA_33V_1W"
+  description = "ZENER_SMA_33V_1W"
+  manufacturer = "Micro Commercial Co"
+  mpn = "SMAJ4752A-TP"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [A | 2 | Down]
+    [K | 1 | Up]
+  
+  assign-landpattern(DO-214AC)
+  val sym = ZENER_SMA_33V_1W-symbol
+  symbol = sym(self.A => sym.A, self.K => sym.K)
+

@@ -1,0 +1,111 @@
+#use-added-syntax(jitx)
+defpackage output/linear-technology-analog-devices/LTC2955CTS8-1#TRMPBF :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern LinearTS8TSOT-23-8 :
+  pad p[1] : smd-pad(0.4, 1.22) at loc(-1.31, 0.975, 90.0) on Top
+  pad p[2] : smd-pad(0.4, 1.22) at loc(-1.31, 0.325, 90.0) on Top
+  pad p[3] : smd-pad(0.4, 1.22) at loc(-1.31, -0.325, 90.0) on Top
+  pad p[4] : smd-pad(0.4, 1.22) at loc(-1.31, -0.975, 90.0) on Top
+  pad p[5] : smd-pad(0.4, 1.22) at loc(1.31, -0.975, 90.0) on Top
+  pad p[6] : smd-pad(0.4, 1.22) at loc(1.31, -0.325, 90.0) on Top
+  pad p[7] : smd-pad(0.4, 1.22) at loc(1.31, 0.325, 90.0) on Top
+  pad p[8] : smd-pad(0.4, 1.22) at loc(1.31, 0.975, 90.0) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.25, [    
+    Point(-1.185, 1.725), 
+    Point(-1.19451505843609, 1.77283542904564), 
+    Point(-1.22161165235168, 1.81338834764832), 
+    Point(-1.26216457095436, 1.84048494156391), 
+    Point(-1.31, 1.85), 
+    Point(-1.35783542904564, 1.84048494156391), 
+    Point(-1.39838834764832, 1.81338834764832), 
+    Point(-1.42548494156391, 1.77283542904564), 
+    Point(-1.435, 1.725), 
+    Point(-1.42548494156391, 1.67716457095436), 
+    Point(-1.39838834764832, 1.63661165235168), 
+    Point(-1.35783542904564, 1.60951505843609), 
+    Point(-1.31, 1.6), 
+    Point(-1.26216457095436, 1.60951505843609), 
+    Point(-1.22161165235168, 1.63661165235168), 
+    Point(-1.19451505843609, 1.67716457095436), 
+    Point(-1.185, 1.725)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-0.381, -1.45), Point(-0.381, 1.45)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(0.381, -1.45), Point(0.381, 1.45)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-0.381, 1.45), Point(0.381, 1.45)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-0.381, -1.45), Point(0.381, -1.45)])
+  ref-label()
+
+pcb-symbol LTC2955CTS8-1#TRMPBF-symbol :
+  pin EN at Point(7.62, 0.0) with :
+    direction = Up
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GND at Point(0.0, -10.16) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin INT at Point(0.0, -5.08) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin KILL at Point(0.0, -7.62) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin ON at Point(15.24, -5.08) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin PB at Point(15.24, -10.16) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin TMR at Point(15.24, -7.62) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VIN at Point(15.24, -2.54) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(15.24, 12.7, loc(7.62, -6.35))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+public pcb-component component :
+  name = "LTC2955CTS8-1#TRMPBF"
+  description = "LTC2955CTS8-1#TRMPBF"
+  manufacturer = "Linear Technology/Analog Devices"
+  mpn = "LTC2955CTS8-1#TRMPBF"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [EN | 7 | Up]
+    [GND | 4 | Left]
+    [INT | 8 | Left]
+    [KILL | 2 | Left]
+    [ON | 1 | Right]
+    [PB | 5 | Right]
+    [TMR | 3 | Right]
+    [VIN | 6 | Right]
+  
+  assign-landpattern(LinearTS8TSOT-23-8)
+  val sym = LTC2955CTS8-1#TRMPBF-symbol
+  symbol = sym(self.EN => sym.EN, self.GND => sym.GND, self.INT => sym.INT, self.KILL => sym.KILL, self.ON => sym.ON, self.PB => sym.PB, self.TMR => sym.TMR, self.VIN => sym.VIN)
+

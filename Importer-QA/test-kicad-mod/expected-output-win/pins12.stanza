@@ -1,0 +1,52 @@
+#use-added-syntax(jitx)
+defpackage KicadProject/pins12 :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/symbols
+  import ocdb/symbol-utils
+  import ocdb/generic-components
+  import ocdb/box-symbol
+
+pcb-landpattern pins12-lp :
+  pad p[1] : pth-pad(Circle(0.85), Circle(0.5)) at loc(0.0, 0.0, 0.0)
+  pad p[2] : pth-pad(Circle(0.85), Circle(0.5)) at loc(0.0, -2.54, 0.0)
+  pad p[3] : pth-pad(Circle(0.85), Circle(0.5)) at loc(0.0, -5.08, 0.0)
+  pad p[4] : pth-pad(Circle(0.85), Circle(0.5)) at loc(0.0, -7.62, 0.0)
+  pad p[5] : pth-pad(Circle(0.85), Circle(0.5)) at loc(0.0, -10.16, 0.0)
+  pad p[6] : pth-pad(Circle(0.85), Circle(0.5)) at loc(0.0, -12.7, 0.0)
+  pad p[7] : pth-pad(Circle(0.85), Circle(0.5)) at loc(0.0, -15.24, 0.0)
+  pad p[8] : pth-pad(Circle(0.85), Circle(0.5)) at loc(0.0, -17.78, 0.0)
+  pad p[9] : pth-pad(Circle(0.85), Circle(0.5)) at loc(0.0, -20.32, 0.0)
+  pad p[10] : pth-pad(Circle(0.85), Circle(0.5)) at loc(0.0, -22.86, 0.0)
+  pad p[11] : pth-pad(Circle(0.85), Circle(0.5)) at loc(0.0, -25.4, 0.0)
+  pad p[12] : pth-pad(Circle(0.85), Circle(0.5)) at loc(0.0, -27.94, 0.0)
+
+  
+  ref-label()
+
+public pcb-component pins12 :
+  pin-properties :
+    [pin:Ref | pads:Int ...]
+    [p[1] | 1]
+    [p[2] | 2]
+    [p[3] | 3]
+    [p[4] | 4]
+    [p[5] | 5]
+    [p[6] | 6]
+    [p[7] | 7]
+    [p[8] | 8]
+    [p[9] | 9]
+    [p[10] | 10]
+    [p[11] | 11]
+    [p[12] | 12]
+  
+  make-box-symbol()
+  assign-landpattern(pins12-lp)
+
+  name = "pins12"

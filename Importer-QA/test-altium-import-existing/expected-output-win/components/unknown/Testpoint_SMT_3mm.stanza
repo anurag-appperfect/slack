@@ -1,0 +1,28 @@
+#use-added-syntax(jitx)
+defpackage audio_board/unknown/Testpoint_SMT_3mm :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+  import ocdb/box-symbol
+
+pcb-landpattern TestPoint_SMT_3mm :
+  pad TP : chamfered-rect-smd-pad(3.0, 3.0, 0.0) at loc(0.0, 0.0) on Top
+  
+  ref-label()
+
+public pcb-component component :
+  name = "Testpoint_SMT_3mm"
+  description = "Testpoint_SMT_3mm"
+  pin-properties :
+    [pin:Ref | pads:Ref ... | side:Dir]
+    [TP | TP | Down]
+  
+  assign-landpattern(TestPoint_SMT_3mm)
+  make-box-symbol()
+

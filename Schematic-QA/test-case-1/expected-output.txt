@@ -1,0 +1,21 @@
+Checks finished. Saved to "checks.txt".
+  537 checks total.
+  533 checks passed.
+  4 checks failed.
+  0 checks errored during execution.
+Visualizing Design
+JITX: Routing schematic group hum...
+JITX: Routing schematic group particle-counter...
+JITX: Routing schematic group power...
+JITX: Routing schematic group proc...
+JITX: Routing elements in no schematic group.
+[layout-island] Using cached output.
+[layout-island] Using cached output.
+[layout-island] Using cached output.
+[layout-island] Using cached output.
+[layout-island] Using cached output.
+JITX: Packing schematic groups into sheets.
+Visualizing Schematic
+[layout-design] Using cached output.
+[layout-design] Using cached output.
+Visualizing Schematic

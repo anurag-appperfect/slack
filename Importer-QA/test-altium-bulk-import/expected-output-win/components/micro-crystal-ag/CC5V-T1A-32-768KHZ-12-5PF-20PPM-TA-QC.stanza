@@ -1,0 +1,70 @@
+#use-added-syntax(jitx)
+defpackage output/micro-crystal-ag/CC5V-T1A-32-768KHZ-12-5PF-20PPM-TA-QC :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern CC5V-T1A-32768KHZ-125PF-20PPM-TA-QC :
+  pad p[1] : smd-pad(1.1, 1.9) at loc(-1.7, 0.0) on Top
+  pad p[2] : smd-pad(1.1, 1.9) at loc(1.7, 0.0) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.1, [    
+    Point(-2.109, 1.27), 
+    Point(-2.11280602337444, 1.28913417161825), 
+    Point(-2.12364466094067, 1.30535533905933), 
+    Point(-2.13986582838175, 1.31619397662556), 
+    Point(-2.159, 1.32), 
+    Point(-2.17813417161825, 1.31619397662556), 
+    Point(-2.19435533905933, 1.30535533905933), 
+    Point(-2.20519397662556, 1.28913417161825), 
+    Point(-2.209, 1.27), 
+    Point(-2.20519397662556, 1.25086582838175), 
+    Point(-2.19435533905933, 1.23464466094067), 
+    Point(-2.17813417161825, 1.22380602337444), 
+    Point(-2.159, 1.22), 
+    Point(-2.13986582838175, 1.22380602337444), 
+    Point(-2.12364466094067, 1.23464466094067), 
+    Point(-2.11280602337444, 1.25086582838175), 
+    Point(-2.109, 1.27)])
+  ref-label()
+
+pcb-symbol CMP-001-1454-01-symbol :
+  pin OSC1 at Point(5.08, 0.0) with :
+    direction = Left
+    length = 5.08
+  pin OSC2 at Point(12.7, 0.0) with :
+    direction = Right
+    length = 5.08
+  layer("foreground") = Line(1.0, [Point(8.128, 1.778), Point(9.652, 1.778)])
+  layer("foreground") = Line(1.0, [    
+    Point(9.652, 1.778), 
+    Point(9.652, -1.778), 
+    Point(8.128, -1.778), 
+    Point(8.128, 1.778)])
+  layer("foreground") = Line(1.0, [Point(5.08, 0.0), Point(7.62, 0.0)])
+  layer("foreground") = Line(1.0, [Point(10.16, 0.0), Point(12.7, 0.0), Point(11.43, 0.0)])
+  layer("foreground") = Line(1.0, [Point(7.62, 1.27), Point(7.62, -1.016)])
+  layer("foreground") = Line(1.0, [Point(10.16, 1.27), Point(10.16, -1.016)])
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(4.58, 2.578))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(4.58, 3.64))
+
+public pcb-component component :
+  name = "CMP-001-1454-01"
+  description = "CRYSTAL 32.7680KHZ 12.5PF SMD"
+  manufacturer = "Micro Crystal AG"
+  mpn = "CC5V-T1A-32.768KHZ-12.5PF-20PPM-TA-QC"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [OSC1 | 1 | Left]
+    [OSC2 | 2 | Right]
+  
+  assign-landpattern(CC5V-T1A-32768KHZ-125PF-20PPM-TA-QC)
+  val sym = CMP-001-1454-01-symbol
+  symbol = sym(self.OSC1 => sym.OSC1, self.OSC2 => sym.OSC2)
+

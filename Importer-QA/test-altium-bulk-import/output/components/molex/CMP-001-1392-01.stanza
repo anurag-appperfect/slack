@@ -1,0 +1,82 @@
+#use-added-syntax(jitx)
+defpackage output/molex/CMP-001-1392-01 :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern _1718561004 :
+  pad p[1] : rect-pth-pad(0.6, 1.9, 1.9) at loc(-3.80997, -1.0e-05) on Top
+  pad p[2] : oval-pth-pad(0.6, 1.9, 1.9) at loc(-1.26997, 0.0) on Top
+  pad p[3] : oval-pth-pad(0.6, 1.9, 1.9) at loc(1.27002, 0.0) on Top
+  pad p[4] : oval-pth-pad(0.6, 1.9, 1.9) at loc(3.81003, 0.0) on Top
+
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.5, [
+    Point(-3.683, -4.191), 
+    Point(-3.69266729937107, -4.14239920408963), 
+    Point(-3.72019743878931, -4.10119743878931), 
+    Point(-3.76139920408963, -4.07366729937107), 
+    Point(-3.81, -4.064), 
+    Point(-3.85860079591037, -4.07366729937107), 
+    Point(-3.89980256121069, -4.10119743878931), 
+    Point(-3.92733270062893, -4.14239920408963), 
+    Point(-3.937, -4.191), 
+    Point(-3.92733270062893, -4.23960079591037), 
+    Point(-3.89980256121069, -4.28080256121069), 
+    Point(-3.85860079591037, -4.30833270062893), 
+    Point(-3.81, -4.318), 
+    Point(-3.76139920408963, -4.30833270062893), 
+    Point(-3.72019743878931, -4.28080256121069), 
+    Point(-3.69266729937107, -4.23960079591037), 
+    Point(-3.683, -4.191)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(5.1, -3.4), Point(5.1, 3.2)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-5.07998, -3.4), Point(5.08002, -3.4)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-5.07998, 3.2), Point(5.08002, 3.2)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-5.1, 3.20001), Point(-5.1, -3.4)])
+  ref-label()
+
+pcb-symbol CMP-001-1392-01-symbol :
+  pin p[1] at Point(0.0, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin p[2] at Point(0.0, -5.08) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin p[3] at Point(0.0, -7.62) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin p[4] at Point(0.0, -10.16) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(7.62, 12.7, loc(3.81, -6.35))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+public pcb-component component :
+  name = "CMP-001-1392-01"
+  description = "4x1 Header; 171856"
+  manufacturer = "Molex"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [p[1] | 1 | Left]
+    [p[2] | 2 | Left]
+    [p[3] | 3 | Left]
+    [p[4] | 4 | Left]
+
+  assign-landpattern(_1718561004)
+  val sym = CMP-001-1392-01-symbol
+  symbol = sym(self.p[1] => sym.p[1], self.p[2] => sym.p[2], self.p[3] => sym.p[3], self.p[4] => sym.p[4])
+

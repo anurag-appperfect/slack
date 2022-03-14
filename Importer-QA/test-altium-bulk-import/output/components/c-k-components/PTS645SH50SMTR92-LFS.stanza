@@ -1,0 +1,75 @@
+#use-added-syntax(jitx)
+defpackage output/c-k-components/PTS645SH50SMTR92-LFS :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern SWTACTGray6mmx6mm :
+  pad p[1] : smd-pad(1.6, 1.3) at loc(-4.0, 2.25) on Top
+  pad p[2] : smd-pad(1.6, 1.3) at loc(4.0, 2.25) on Top
+  pad p[3] : smd-pad(1.6, 1.3) at loc(-4.0, -2.25) on Top
+  pad p[4] : smd-pad(1.6, 1.3) at loc(4.0, -2.25) on Top
+
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-2.921, 3.3), Point(2.921, 3.3)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(2.921, -3.3), Point(2.921, 3.3)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-2.921, -3.3), Point(2.921, -3.3)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-2.921, -3.3), Point(-2.921, 3.3)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-2.5, -2.3), Point(2.5, -2.3)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-2.5, 2.0), Point(2.5, 2.0)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(0.0, 1.0), Point(0.0, 2.0)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(0.0, -1.03), Point(0.0, -2.3)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(0.0, 0.85), Point(0.0, 0.98)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-1.16, -0.31), Point(0.0, 0.85)])
+  ref-label()
+
+pcb-symbol CMP-011-0036-02-symbol :
+  pin p[1] at Point(0.0, 5.08) with :
+    direction = Up
+    length = 5.08
+  pin p[2] at Point(-2.54, 5.08) with :
+    direction = Up
+    length = 5.08
+  pin p[3] at Point(-2.54, -5.08) with :
+    direction = Down
+    length = 5.08
+  pin p[4] at Point(0.0, -5.08) with :
+    direction = Down
+    length = 5.08
+  layer("foreground") = Polygon([
+    Point(1.778, 3.302), 
+    Point(1.524, 3.302), 
+    Point(1.524, -3.556), 
+    Point(1.778, -3.556), 
+    Point(1.778, -1.016), 
+    Point(2.54, -1.016), 
+    Point(2.54, 1.016), 
+    Point(1.778, 1.016)])
+  layer("foreground") = Line(1.0, [Point(0.0, 3.302), Point(0.0, 5.08)])
+  layer("foreground") = Line(1.0, [Point(0.0, 5.08), Point(-2.54, 5.08)])
+  layer("foreground") = Line(1.0, [Point(0.0, -3.556), Point(0.0, -5.08)])
+  layer("foreground") = Line(1.0, [Point(0.0, -5.08), Point(-2.54, -5.08)])
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(-3.04, 5.88))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(-3.04, 6.942))
+
+public pcb-component component :
+  name = "CMP-011-0036-02"
+  description = "SW-PB SMD 5mm Grey"
+  manufacturer = "C&K Components"
+  mpn = "PTS645SH50SMTR92 LFS"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [p[1] | 1 | Up]
+    [p[2] | 2 | Up]
+    [p[3] | 3 | Down]
+    [p[4] | 4 | Down]
+
+  assign-landpattern(SWTACTGray6mmx6mm)
+  val sym = CMP-011-0036-02-symbol
+  symbol = sym(self.p[1] => sym.p[1], self.p[2] => sym.p[2], self.p[3] => sym.p[3], self.p[4] => sym.p[4])
+

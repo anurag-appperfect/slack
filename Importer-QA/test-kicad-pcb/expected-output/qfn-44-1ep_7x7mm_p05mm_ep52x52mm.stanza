@@ -1,0 +1,154 @@
+#use-added-syntax(jitx)
+defpackage goldfish/qfn-44-1ep_7x7mm_p05mm_ep52x52mm :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/symbols
+  import ocdb/symbol-utils
+  import ocdb/generic-components
+  import ocdb/box-symbol
+
+pcb-landpattern qfn-44-1ep_7x7mm_p05mm_ep52x52mm-lp :
+  pad p[1] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, 2.5, 0.0)
+  pad p[2] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, 2.0, 0.0)
+  pad p[3] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, 1.5, 0.0)
+  pad p[4] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, 1.0, 0.0)
+  pad p[5] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, 0.5, 0.0)
+  pad p[6] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, 0.0, 0.0)
+  pad p[7] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, -0.5, 0.0)
+  pad p[8] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, -1.0, 0.0)
+  pad p[9] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, -1.5, 0.0)
+  pad p[10] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, -2.0, 0.0)
+  pad p[11] : smd-pad(Capsule(1.1, 0.3)) at loc(-3.35, -2.5, 0.0)
+  pad p[12] : smd-pad(Capsule(1.1, 0.3)) at loc(-2.5, -3.35, -270.0)
+  pad p[13] : smd-pad(Capsule(1.1, 0.3)) at loc(-2.0, -3.35, -270.0)
+  pad p[14] : smd-pad(Capsule(1.1, 0.3)) at loc(-1.5, -3.35, -270.0)
+  pad p[15] : smd-pad(Capsule(1.1, 0.3)) at loc(-1.0, -3.35, -270.0)
+  pad p[16] : smd-pad(Capsule(1.1, 0.3)) at loc(-0.5, -3.35, -270.0)
+  pad p[17] : smd-pad(Capsule(1.1, 0.3)) at loc(0.0, -3.35, -270.0)
+  pad p[18] : smd-pad(Capsule(1.1, 0.3)) at loc(0.5, -3.35, -270.0)
+  pad p[19] : smd-pad(Capsule(1.1, 0.3)) at loc(1.0, -3.35, -270.0)
+  pad p[20] : smd-pad(Capsule(1.1, 0.3)) at loc(1.5, -3.35, -270.0)
+  pad p[21] : smd-pad(Capsule(1.1, 0.3)) at loc(2.0, -3.35, -270.0)
+  pad p[22] : smd-pad(Capsule(1.1, 0.3)) at loc(2.5, -3.35, -270.0)
+  pad p[23] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, -2.5, 0.0)
+  pad p[24] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, -2.0, 0.0)
+  pad p[25] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, -1.5, 0.0)
+  pad p[26] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, -1.0, 0.0)
+  pad p[27] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, -0.5, 0.0)
+  pad p[28] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, 0.0, 0.0)
+  pad p[29] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, 0.5, 0.0)
+  pad p[30] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, 1.0, 0.0)
+  pad p[31] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, 1.5, 0.0)
+  pad p[32] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, 2.0, 0.0)
+  pad p[33] : smd-pad(Capsule(1.1, 0.3)) at loc(3.35, 2.5, 0.0)
+  pad p[34] : smd-pad(Capsule(1.1, 0.3)) at loc(2.5, 3.35, -270.0)
+  pad p[35] : smd-pad(Capsule(1.1, 0.3)) at loc(2.0, 3.35, -270.0)
+  pad p[36] : smd-pad(Capsule(1.1, 0.3)) at loc(1.5, 3.35, -270.0)
+  pad p[37] : smd-pad(Capsule(1.1, 0.3)) at loc(1.0, 3.35, -270.0)
+  pad p[38] : smd-pad(Capsule(1.1, 0.3)) at loc(0.5, 3.35, -270.0)
+  pad p[39] : smd-pad(Capsule(1.1, 0.3)) at loc(0.0, 3.35, -270.0)
+  pad p[40] : smd-pad(Capsule(1.1, 0.3)) at loc(-0.5, 3.35, -270.0)
+  pad p[41] : smd-pad(Capsule(1.1, 0.3)) at loc(-1.0, 3.35, -270.0)
+  pad p[42] : smd-pad(Capsule(1.1, 0.3)) at loc(-1.5, 3.35, -270.0)
+  pad p[43] : smd-pad(Capsule(1.1, 0.3)) at loc(-2.0, 3.35, -270.0)
+  pad p[44] : smd-pad(Capsule(1.1, 0.3)) at loc(-2.5, 3.35, -270.0)
+  pad p[45] : smd-pad(Rectangle(5.2, 5.2)) at loc(0.0, 0.0, 0.0)
+
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(3.62, -3.62), Point(3.62, -2.95) ])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(3.62, -3.62), Point(2.95, -3.62) ])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(3.62, 3.62), Point(3.62, 2.95) ])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(3.62, 3.62), Point(2.95, 3.62) ])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(-3.62, -3.62), Point(-2.95, -3.62) ])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(-3.62, -3.62), Point(-3.62, -2.95) ])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(-3.62, 3.62), Point(-2.95, 3.62) ])
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-1.03, 1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(0.0, 0.0, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-2.06, 2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-2.06, 1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(1.03, -1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-2.06, -2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(1.03, -2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-2.06, -1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-1.03, -2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(2.06, 0.0, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(0.0, 2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(1.03, 0.0, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-1.03, 2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-1.03, 0.0, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(2.06, 1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(2.06, -2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(2.06, -1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(1.03, 2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(1.03, 1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(0.0, -2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(0.0, -1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-2.06, 0.0, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(2.06, 2.06, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(-1.03, -1.03, 0.0))
+  layer(Paste(Top)) = Rectangle(0.83, 0.83, loc(0.0, 1.03, 0.0))
+  model3d = Model3D("QFN-44-1EP_7x7mm_P0.5mm_EP5.2x5.2mm.wrl",
+    Vec3D(0.0, 0.0, 0.0),
+    Vec3D(1.0, 1.0, 1.0),
+    Vec3D(0.0, 0.0, 0.0))
+  ref-label()
+
+public pcb-component qfn-44-1ep_7x7mm_p05mm_ep52x52mm :
+  pin-properties :
+    [pin:Ref | pads:Int ...]
+    [p[1] | 1]
+    [p[2] | 2]
+    [p[3] | 3]
+    [p[4] | 4]
+    [p[5] | 5]
+    [p[6] | 6]
+    [p[7] | 7]
+    [p[8] | 8]
+    [p[9] | 9]
+    [p[10] | 10]
+    [p[11] | 11]
+    [p[12] | 12]
+    [p[13] | 13]
+    [p[14] | 14]
+    [p[15] | 15]
+    [p[16] | 16]
+    [p[17] | 17]
+    [p[18] | 18]
+    [p[19] | 19]
+    [p[20] | 20]
+    [p[21] | 21]
+    [p[22] | 22]
+    [p[23] | 23]
+    [p[24] | 24]
+    [p[25] | 25]
+    [p[26] | 26]
+    [p[27] | 27]
+    [p[28] | 28]
+    [p[29] | 29]
+    [p[30] | 30]
+    [p[31] | 31]
+    [p[32] | 32]
+    [p[33] | 33]
+    [p[34] | 34]
+    [p[35] | 35]
+    [p[36] | 36]
+    [p[37] | 37]
+    [p[38] | 38]
+    [p[39] | 39]
+    [p[40] | 40]
+    [p[41] | 41]
+    [p[42] | 42]
+    [p[43] | 43]
+    [p[44] | 44]
+    [p[45] | 45]
+  
+  make-box-symbol()
+  assign-landpattern(qfn-44-1ep_7x7mm_p05mm_ep52x52mm-lp)
+
+  name = "Package_DFN_QFN:QFN-44-1EP_7x7mm_P0.5mm_EP5.2x5.2mm"
+  description = "44-Lead Plastic Quad Flat No-Lead Package, 7x7mm Body (see Atmel Appnote 8826"

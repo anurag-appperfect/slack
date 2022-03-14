@@ -1,0 +1,377 @@
+#use-added-syntax(jitx)
+defpackage ocdb/checks:
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/design-vars
+  import ocdb/space-derating
+  import ocdb/generator-utils
+  import ocdb/property-structs
+
+; ==== Check convenience functions ===
+; ====================================
+
+public defn check-design (module:JITXObject):
+  inside pcb-module:
+    for i in component-instances(module) do :
+      for p in pins(i) do :
+        ; Check more pins once we get more voltage information from SPICE
+        if has-property?(p.generic-pin) :
+          check generic-pin(p)
+        if has-property?(p.power-pin) :
+          check power-pin(p)
+        if has-property?(p.reset-pin) :
+          check reset-pin(p)
+    check io(module)
+    check-all-landpatterns(module)
+
+defn get-other-pin (comp:JITXObject,  p:JITXObject) :
+  val pins = pins(comp)
+  var op
+  for ps in pins do :
+    if ps != p :
+      op  = ps
+  op
+
+public pcb-check io (module:JITXObject) :
+  val pins = to-tuple(seq-cat(pins, component-instances(module)))
+  var net-pins = []
+  for p1 in pins do :
+    ; Look for Digital inputs\
+    if (has-property?(p1.digital-output) or has-property?(p1.digital-io)) :
+      ; Get all pins on the net
+      net-pins = to-tuple(filter({connected?([p1, _])}, pins))
+      val out-pins = to-tuple(filter({has-property?(_.digital-output)}, net-pins))
+      val io-pins  = to-tuple(filter({has-property?(_.digital-io)}, net-pins))
+      ; val in-pins  = to-tuple(filter({has-property?(_.digital-input)}, net-pins))
+      ; Check outputs against every pin
+      for out-p in cat(out-pins, io-pins) do :
+        val o = 
+          if has-property?(out-p.digital-output) : driver(property(out-p.digital-output))
+          else if has-property?(out-p.digital-io) : driver(property(out-p.digital-io))
+          else : fatal("Unhandled case.")
+
+        ; println("Out %_ is %_" % [ref(out-p) o])
+        ; for n in net-pins do: println(ref(n))
+
+        if (o is CMOSOutput or o is TTLOutput) :
+          for in-p in net-pins do :
+            if in-p != out-p :
+              ; println("checking %_ vs %_" % [ref(out-p) ref(in-p)])
+              check-single-push-pull-levels(out-p, in-p)
+
+        if o is OpenCollector :
+          ; println("checking %_ as OpenCollector" % [ref(out-p)])
+          var is-net-ok? = false
+          for p in net-pins do :
+            val myinst = containing-instance(p) as JITXObject
+            if has-property?(myinst.resistance) :
+              val high-pin = get-other-pin(myinst, p)
+              if has-property?(high-pin.rail-voltage):
+                val rail-voltage = property(high-pin.rail-voltage)
+                ; Valid opencollector nets have pull up resistors
+                is-net-ok? = true
+                val i = rail-voltage / property(myinst.resistance)
+                #CHECK( i < iol(o))
+                for p in net-pins do :
+                  if has-property?(p.digital-input) or has-property?(p.digital-io) :
+                    val vih-v = 
+                      if has-property?(p.digital-input) : vih(property(p.digital-input))
+                      else if has-property?(p.digital-io) : vih(property(p.digital-io))
+                    #CHECK(rail-voltage > vih-v)
+                  if has-property?(p.generic-pin):
+                    #CHECK(contains?(max-voltage(property(p.generic-pin)), rail-voltage))
+          #CHECK(is-net-ok?)
+
+
+; Checks two push-pull digital logic pins, at least one of which can output
+public defn check-single-push-pull-levels (out-p:JITXObject, in-p:JITXObject) :
+  ; if has-property?(in-p.digital-input): println(ref(gnd-pin(property(in-p.digital-input))))
+  val o = 
+    if has-property?(out-p.digital-output) : property(out-p.digital-output)
+    else if has-property?(out-p.digital-io) : property(out-p.digital-io)
+    else : fatal("Unhandled case.")
+
+  #CHECK((driver(o) is CMOSOutput) or (driver(o) is TTLOutput))
+  ; If in-p is just an input, check output against input
+  if has-property?(in-p.digital-input) :
+    val [vih vil] = [vih(property(in-p.digital-input)) vil(property(in-p.digital-input))]
+    #CHECK(connected?([gnd-pin(o) gnd-pin(property(in-p.digital-input))]))
+    #CHECK(min(voh(driver(o))) > vih)
+    #CHECK(max(vol(driver(o))) < vil)
+    if has-property?(in-p.generic-pin):
+      #CHECK(contains?(max-voltage(property(in-p.generic-pin)), voh(driver(o))))
+  else if has-property?(in-p.digital-io):
+    #CHECK(connected?([gnd-pin(o) gnd-pin(property(in-p.digital-io))]))
+    val i = driver(property(in-p.digital-io))
+    #CHECK((i is CMOSOutput) or (i is TTLOutput))
+    val [vih-v vil-v] = [vih(property(in-p.digital-io)) vil(property(in-p.digital-io))]
+    #CHECK(min(voh(driver(o))) > vih-v)
+    #CHECK(max(vol(driver(o))) < vil-v)
+    if has-property?(out-p.digital-io):
+      #CHECK(min(voh(i)) > vih(o))
+      #CHECK(min(voh(i)) > vih(o))
+      #CHECK(max(vol(i)) < vil(o))
+    if has-property?(in-p.generic-pin):
+      #CHECK(contains?(max-voltage(property(in-p.generic-pin)), voh(driver(o))))
+    if has-property?(out-p.generic-pin):
+      #CHECK(contains?(max-voltage(property(out-p.generic-pin)), voh(i)))
+  else if has-property?(in-p.digital-output) and o is DigitalOutput:
+    
+    #CHECK(tristateable(o))
+    #CHECK(tristateable(property(in-p.digital-output)))
+
+
+public pcb-check connected (p:JITXObject|Tuple<JITXObject>) :
+  #CHECK(connected?(p))
+
+; Checks any generic pin for rated voltage
+public pcb-check generic-pin (p:JITXObject):
+  if (has-property?(p.rail-voltage)) :
+    val p-props = property(p.generic-pin)
+    ; Check that the maxima are never crossed
+    #CHECK(p-props is GenericPin)
+    #CHECK(contains?(max-voltage(p-props), property(p.rail-voltage)))
+
+; Checks a power pin located on an active component
+public pcb-check power-pin (p:JITXObject) :
+  #CHECK(has-property?(p.power-pin))
+  val p-props = property(p.power-pin)
+  #CHECK(p-props is PowerPin)
+  ; println("%_ has power" % [ref(p)])
+  #CHECK(has-property?(p.rail-voltage))
+  ; println("%_ has %_" % [ref(p) property(p.rail-voltage)])
+  #CHECK(contains?(recommended-voltage(p-props), property(p.rail-voltage)))
+
+public pcb-check reset-pin (p:JITXObject) :
+  #CHECK(has-property?(p.reset-pin))
+  val p-props = property(p.reset-pin)
+  #CHECK(p-props is ResetPin)
+  ; Improve this to check togglability
+  #CHECK(connected?(p))
+
+defn check-rated-voltage (p:JITXObject) :
+  val rating = property(p.rated-voltage)
+  val v = property(p.voltage)
+  match(rating, v):
+    (r:Double, v:Double) : #CHECK(property(p.rated-voltage) >= v)
+    (r:[Double,Double], v:Double) : 
+      #CHECK(property(p.rated-voltage)[1] >= v)
+      #CHECK(property(p.rated-voltage)[0] <= v)
+    (r:[Double,Double], v:[Double|Double|Double]) : 
+      #CHECK(property(p.rated-voltage)[1] >= v[2])
+      #CHECK(property(p.rated-voltage)[0] <= v[0])
+    (r, v) : false
+
+; Checks if voltage on a pin is within acceptable limits
+public pcb-check voltage-levels (p:JITXObject, range:[Double,Double,Double]) :
+  #CHECK(has-property?(p.voltage))
+  #CHECK(property(p.voltage)[0] >= range[0])
+  #CHECK(property(p.voltage)[2] <= range[2])
+
+; ====== Component-level checks ======
+; ====================================
+
+; Checks resistors against operating point and environment
+public pcb-check resistor-check (r:JITXObject) :
+  #CHECK(has-property?(r.resistor))
+  #CHECK(has-property?(r.operating-point))
+  val [vpk i temp] = [lookup(property(r.operating-point), `voltage-pk) lookup(property(r.operating-point), `current-rms) property(r.temperature)]
+  val power = property(r.resistance) * pow(i, 2.0)
+  #CHECK(abs(vpk[0]) <= property(r.rated-voltage))
+  #CHECK(abs(vpk[1]) <= property(r.rated-voltage))
+  if has-property?(r.derating) :
+    ; Derate the power based on the piecewise linear curve from MFG
+    val derating = PWL(property(r.derating))[temp]
+    val pwr = derating * property(r.rated-power)
+    #CHECK(pwr * DERATE-RESISTOR-POWER > power)
+  else :
+    #CHECK(property(r.rated-power) * DERATE-RESISTOR-POWER > power)
+
+public pcb-check capacitor-check (c:JITXObject) :
+  #CHECK(has-property?(c.capacitor))
+  #CHECK(has-property?(c.operating-point))
+  val [vpk temp] = [lookup(property(c.operating-point), `voltage-pk) property(c.temperature)]
+  switch(property(c.type)) :
+
+    "ceramic" :
+      val vpk-derate-wc = PWL(DERATE-CAPACITOR-MLCC-VPK-WC)[temp]
+      #CHECK(vpk[0] <= (vpk-derate-wc * property(c.rated-voltage)))
+      #CHECK(vpk[1] <= (vpk-derate-wc * property(c.rated-voltage)))
+      val vpk-derate-nom = PWL(DERATE-CAPACITOR-MLCC-VPK-NOM)[temp]
+      #CHECK(vpk[0] <= (vpk-derate-nom * property(c.rated-voltage)))
+      #CHECK(vpk[1] <= (vpk-derate-nom * property(c.rated-voltage)))
+      #CHECK(temp <= min(DERATE-CAPACITOR-MLCC-TEMP, property(c.rated-temperature)[1]))
+
+    "electrolytic" :
+      #CHECK(has-property?(c.anode))
+      #CHECK(has-property?(c.electrolyte))
+      val [i-pk i-rms] = [lookup(property(c.operating-point), `current-pk) lookup(property(c.operating-point), `current-rms)]
+
+      if (property(c.anode) == "tantalum" and property(c.electrolyte) == "polymer") :
+        #CHECK(vpk[1]   <= (DERATE-CAPACITOR-ETANTPOLY-VPK * property(c.rated-voltage)))
+        #CHECK(temp  <= min(DERATE-CAPACITOR-ETANTPOLY-TEMP, property(c.rated-temperature)[1]))
+        #CHECK(i-pk  <= property(c.rated-current-pk))
+        #CHECK(i-rms <= PWL(property(c.rated-current-rms))[temp])
+        #CHECK(vpk[0]  >= 0.0)
+
+      else if (property(c.anode) == "tantalum" and property(c.electrolyte) == "manganese-dioxide") :
+        #CHECK(i-pk <= property(c.rated-current-pk))
+        #CHECK(i-rms <= PWL(property(c.rated-current-rms))[temp])
+        #CHECK(vpk[0]  >= 0.0)
+        if i-pk <= 2.0 :
+          val vpk-derate-wc = PWL(DERATE-CAPACITOR-ETANTMNO2-VPK-WC)[temp]
+          val vpk-derate-nom = PWL(DERATE-CAPACITOR-ETANTMNO2-VPK-NOM)[temp]
+          #CHECK(vpk[1]  <= (vpk-derate-wc * property(c.rated-voltage)))
+          #CHECK(vpk[1]  <= (vpk-derate-nom * property(c.rated-voltage)))
+          #CHECK(temp <= min(DERATE-CAPACITOR-ETANTMNO2-TEMP-NOM, property(c.rated-temperature)[1]))
+          #CHECK(temp <= min(DERATE-CAPACITOR-ETANTMNO2-TEMP-WC, property(c.rated-temperature)[1]))
+        else if i-pk > 2.0 :
+          #CHECK(vpk[1]  <= (DERATE-CAPACITOR-ETANTMNO2-VPK * property(c.rated-voltage)))
+          #CHECK(temp <= min(DERATE-CAPACITOR-ETANTMNO2-TEMP-NOM, property(c.rated-temperature)[1]))
+
+      else :
+        println("Unhandled electrolytic type for capacitor check on %_" % [c])
+
+    "mica" :
+      #CHECK(vpk[0] <= (DERATE-CAPACITOR-MICA-VPK * property(c.rated-voltage)))
+      #CHECK(vpk[1] <= (DERATE-CAPACITOR-MICA-VPK * property(c.rated-voltage)))
+      #CHECK(temp <= min(DERATE-CAPACITOR-MICA-TEMP, property(c.rated-temperature)[1]))
+
+    else : println("Unhandled type for capacitor check on %_" % [c])
+
+  #CHECK(temp >= property(c.rated-temperature)[0])
+
+; Checks the frequency of an oscillator (o) against an interface on an IC (intf)
+public pcb-check oscillator-check-frequency (o:JITXObject, intf:CrystalOscillator) :
+  ; Check critical gain point to ensure oscillation
+  #CHECK(has-property?(o.crystal-resonator))
+  ; #CHECK(has-property?(intf.crystal-oscillator))
+  #CHECK(frequency(property(o.crystal-resonator)) == frequency(intf))
+
+; Checks the critical gain of an oscillator (o) against an interface on an IC (intf)
+public pcb-check oscillator-check-gain (o:JITXObject, intf:CrystalOscillator, load-cap:JITXObject) :
+  ; Check critical gain point to ensure oscillation
+  #CHECK(has-property?(o.crystal-resonator))
+  ; #CHECK(has-property?(intf.crystal-oscillator))
+  val op = property(o.crystal-resonator)
+  val gain = 4.0 * ESR(op) * pow(2.0 * PI * frequency(op), 2.0) * pow(shunt-capacitance(op) + load-capacitance(op), 2.0)
+  #CHECK(gain < max-critical-gain(intf))
+
+; Checks the drive level of an oscillator (o) against an interface on an IC (intf)
+public pcb-check oscillator-check-drive (o:JITXObject, intf:CrystalOscillator, load-cap:JITXObject) :
+  ; Check drive level against crystal maximum
+  #CHECK(has-property?(o.crystal-resonator))
+  ; #CHECK(has-property?(intf.crystal-oscillator))
+  #CHECK(drive-level(intf) <= max-drive-level(property(o.crystal-resonator)))
+
+; Check pullability of crystal to ensure accuracy
+public pcb-check oscillator-check-pullability (o:JITXObject, intf:CrystalOscillator, load-cap:JITXObject) :
+  #CHECK(has-property?(o.crystal-resonator))
+  val op = property(o.crystal-resonator)
+  val pullability = motional-capacitance(op) / (2.0 * pow(shunt-capacitance(op) + load-capacitance(op), 2.0))
+  #CHECK(has-property?(load-cap.tolerance))
+  #CHECK(has-property?(load-cap.capacitance))
+  val dC = (property(load-cap.capacitance) as Double) * (property(load-cap.tolerance)[1] as Double)
+  val freq-error = (pullability as Double) * (dC as Double) * frequency(op)
+  #CHECK(frequency-tolerance(op) + freq-error < frequency-tolerance(intf))
+
+public defn check-oscillator (o:JITXObject, intf:CrystalOscillator, load-cap:JITXObject) :
+  inside pcb-module:
+    check oscillator-check-frequency(o, intf)
+    check oscillator-check-gain(o, intf, load-cap)
+    check oscillator-check-drive(o, intf, load-cap)
+    check oscillator-check-pullability(o, intf, load-cap)
+
+; Extract the copper layer on a given side of a landpattern
+; - note: geoms unsupported
+defn copper (lp:LandPattern, side:Side) -> Seqable<Shape> :
+  for pad in pads(lp) seq?: 
+    if /side(pad) == side or pad-type(/pad(pad)) == TH:
+      One(pose(pad) * pad-shape(/pad(pad)))
+    else:
+      None()
+
+; Get the locations of all the pads in a land pattern
+defn pad-locs (lp:LandPattern) -> Seqable<Pose> :
+  seq(pose, pads(lp))
+
+; Get the minimum pitch of all the pads in a land pattern
+defn min-pitch (lp:LandPattern) -> Double :
+  min-space(seq(center, pad-locs(lp)))
+
+; Checks that the copper layers on both sides of a landpattern are within the 
+; min-copper-copper-space rule.
+public pcb-check check-min-copper-copper-space (landpattern:LandPattern, side:Side) :
+  val copper = to-seq(copper(landpattern, side))
+  if not empty?(copper) :
+    val min-copper-copper-space = clearance(current-rules(), MinCopperCopperSpace)
+    #CHECK(min-space(copper) >= min-copper-copper-space)
+
+; Checks that the copper layers on both sides of a ladnpattern dont' violate 
+; the minimum copper width rule
+public pcb-check check-min-copper-width (landpattern:LandPattern, side:Side) :
+  val copper = to-seq(copper(landpattern, side))
+  if not empty?(copper) :
+    val min-copper-width = clearance(current-rules(), MinCopperCopperSpace)
+    #CHECK(min-width(copper) >= min-copper-width)
+
+; Checks that a BGA landpattern does not violate the min-pitch-bga design rule
+public pcb-check check-bga-pitch (lp:LandPattern) :
+  val min-pitch-bga = clearance(current-rules(), MinPitchBGA)
+  #CHECK(min-pitch(lp) >= min-pitch-bga)
+
+; Checks that a leaded component does not violate the min-leaded-pitc  design rule
+public pcb-check check-leaded-pitch (lp:LandPattern) :
+  val min-pitch-leaded = clearance(current-rules(), MinPitchLeaded)
+  #CHECK(min-pitch(lp) >= min-pitch-leaded)
+
+; Checks that the solder mask layers of a land pattern do not violate the minimum
+; solder mask sliver
+public pcb-check check-min-solder-mask-sliver (shapes:Seqable<Shape>) :
+  val s = to-seq(shapes)
+  if not empty?(s):
+    #CHECK(min-space(s) >= clearance(current-rules(), MinSolderMaskBridge))
+
+; Runs all the land pattern checks on either an instance or definition. 
+public defn check-landpattern (component:JITXObject|JITXDef) :
+  ; extract the land pattern
+  val lp = 
+    match(component) :
+      (landpattern:LandPattern) :
+        landpattern
+      (d:JITXDef) :
+        landpattern(d)
+      (i:JITXObject) : 
+        landpattern(instance-definition(i))
+
+  ; perform the checks
+  inside pcb-module :
+    for side in [Top, Bottom] do :
+      check check-min-copper-copper-space(lp, side)
+      check check-min-copper-width(lp, side)
+      check check-min-solder-mask-sliver(layer(lp, SolderMask(side)))
+
+    if has-property?(component.bga) and property(component.bga):
+      check check-bga-pitch(lp)
+
+    if has-property?(component.leaded) and property(component.leaded):
+      check check-leaded-pitch(lp)
+
+; Runs landpattern checks recursively on all the lands in a module
+public defn check-all-landpatterns (module:JITXObject) : 
+  inside pcb-module :
+    val components = to-tuple(component-instances(module))
+    val modules    = filter({not contains?(components, _)}, instances(module))
+    for component in components do :
+      check-landpattern(component)
+    for module in modules do :
+      check-all-landpatterns(module)
+    
+; Runs landpattern checks recursively starting from self.
+public defn check-all-landpatterns () : 
+  inside pcb-module: 
+    check-all-landpatterns(self)

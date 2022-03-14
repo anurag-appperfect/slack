@@ -1,0 +1,129 @@
+#use-added-syntax(jitx)
+defpackage goldfish :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/symbols
+  import ocdb/symbol-utils
+  import ocdb/generic-components
+  import ocdb/box-symbol
+
+  import goldfish/pins2
+  import goldfish/crystal_smd_seikoepson_fa238-4pin_32x25mm
+  import goldfish/d_powerdi-123
+  import goldfish/atmega32u4-ep
+  import goldfish/fish-cu
+  import goldfish/pins5
+  import goldfish/pins12
+  import goldfish/r_0402_1005metric
+  import goldfish/cx70m-24p1
+  import goldfish/c_0402_1005metric
+
+pcb-module goldfish :
+  inst C1 : c_0402_1005metric
+  inst C10 : c_0402_1005metric
+  inst C2 : c_0402_1005metric
+  inst C3 : c_0402_1005metric
+  inst C4 : c_0402_1005metric
+  inst C5 : c_0402_1005metric
+  inst C6 : c_0402_1005metric
+  inst C7 : c_0402_1005metric
+  inst C8 : c_0402_1005metric
+  inst C9 : c_0402_1005metric
+  inst D1 : d_powerdi-123
+  inst G*** : fish-cu
+  inst J1 : cx70m-24p1
+  inst J2 : pins2
+  inst J3 : pins12
+  inst J4 : pins12
+  inst J5 : pins5
+  inst R1 : r_0402_1005metric
+  inst R2 : r_0402_1005metric
+  inst R3 : r_0402_1005metric
+  inst R4 : r_0402_1005metric
+  inst R5 : r_0402_1005metric
+  inst R6 : r_0402_1005metric
+  inst U1 : atmega32u4-ep
+  inst X1 : crystal_smd_seikoepson_fa238-4pin_32x25mm
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(C1) at loc(25.3, -47.0, 180.0) on Top
+  place(C10) at loc(33.45, -38.55, 90.0) on Top
+  place(C2) at loc(32.55, -50.55, 270.0) on Top
+  place(C3) at loc(35.2, -42.1, 270.0) on Top
+  place(C4) at loc(32.25, -38.75, 90.0) on Top
+  place(C5) at loc(31.05, -37.9, 90.0) on Top
+  place(C6) at loc(27.4, -40.3, 90.0) on Top
+  place(C7) at loc(28.3, -52.0, 90.0) on Top
+  place(C8) at loc(25.3, -48.2, 0.0) on Top
+  place(C9) at loc(27.45, -38.1, 90.0) on Top
+  place(D1) at loc(25.5, -38.75, 90.0) on Top
+  place(G***) at loc(30.0, -43.81, 180.0) on Top
+  place(J1) at loc(30.0, -23.49, 90.0) on Top
+  place(J2) at loc(27.46, -34.92, 90.0) on Top
+  place(J3) at loc(37.62, -27.3, 0.0) on Top
+  place(J4) at loc(22.38, -55.24, 180.0) on Top
+  place(J5) at loc(35.08, -55.24, 270.0) on Top
+  place(R1) at loc(25.15, -34.3, 0.0) on Top
+  place(R2) at loc(25.15, -33.1, 0.0) on Top
+  place(R3) at loc(35.1, -37.6, 0.0) on Top
+  place(R4) at loc(28.65, -37.85, 90.0) on Top
+  place(R5) at loc(29.85, -38.5, 90.0) on Top
+  place(R6) at loc(25.15, -35.5, 0.0) on Top
+  place(U1) at loc(30.7, -45.0, 315.0) on Top
+  place(X1) at loc(25.9, -51.0, 90.0) on Top
+
+  net PB5 (J4.p[1], U1.ADC12OC1A~OC4B~PCINT12PB5)
+  net Net-C7-Pad1 (C7.p[1], U1.XTAL1, X1.p[1])
+  net VCC (C1.p[1], C2.p[1], C3.p[1], C4.p[1], D1.p[1], J3.p[4], R3.p[2], U1.AVCC[0], U1.AVCC[1], U1.VCC[0], U1.VCC[1])
+  net PB4 (J4.p[2], U1.ADC11PCINT4PB4)
+  net Net-R4-Pad1 (R4.p[1], U1.D+)
+  net GND (C1.p[2], C10.p[2], C2.p[2], C3.p[2], C4.p[2], C5.p[2], C6.p[2], C7.p[2], C8.p[2], C9.p[2], J1.A1, J1.A12, J1.B1, J1.B12, J1.S1, J3.p[2], J4.p[10], J4.p[9], R1.p[1], R2.p[1], R6.p[1], U1.GND[0], U1.GND[1], U1.GND[2], U1.GND[3], U1.PAD, U1.UGND, U1.p~HWB~PE2, X1.p[2], X1.p[4])
+  net PE6 (J4.p[3], U1.INT6AIN0PE6)
+  net Net-R5-Pad1 (R5.p[1], U1.D-)
+  net Net-C8-Pad1 (C8.p[1], U1.XTAL2, X1.p[3])
+  net PD7 (J4.p[4], U1.T0OC4DADC10PD7)
+  net Net-C10-Pad1 (C10.p[1], U1.AREF)
+  net Net-C9-Pad1 (C9.p[1], U1.UCAP)
+  net PC6 (J4.p[5], U1.OC3A~OC4A~PC6)
+  net VBUS (C5.p[1], C6.p[1], D1.p[2], J1.A4, J1.A9, J1.B4, J1.B9, J3.p[1], R6.p[2], U1.UVCC, U1.VBUS)
+  net Net-J1-PadA5 (J1.A5, R1.p[2])
+  net PD4 (J4.p[6], U1.ICP2ADC8PD4)
+  net Net-J1-PadB5 (J1.B5, R2.p[2])
+  net PD0 (J4.p[7], U1.OC0BSCLINT0PD0)
+  net RESET (J3.p[3], R3.p[1], U1.nRESET~)
+  net PD1 (J4.p[8], U1.SDAINT1PD1)
+  net PF4 (J3.p[5], U1.ADC4TCKPF4)
+  net PD2 (J4.p[11], U1.RXDINT2PD2)
+  net PF5 (J3.p[6], U1.ADC5TMSPF5)
+  net PD3 (J4.p[12], U1.TXDINT3PD3)
+  net PF6 (J3.p[7], U1.ADC6TDOPF6)
+  net PF1 (J5.p[2], U1.ADC1PF1)
+  net PF7 (J3.p[8], U1.ADC7TDIPF7)
+  net PF0 (J5.p[1], U1.ADC0PF0)
+  net PB1 (J3.p[9], U1.SCLKPCINT1PB1)
+  net PC7 (J5.p[3], U1.ICP3CLK0OC4APC7)
+  net PB3 (J3.p[10], U1.PDOMISOPCINT3PB3)
+  net PB7 (J5.p[5], U1.OC0AOC1C~RTS~PCINT7PB7)
+  net PB2 (J3.p[11], U1.PDIMOSIPCINT2PB2)
+  net D- (J1.A7, J1.B7, J2.p[2], R5.p[2])
+  net PB6 (J3.p[12], U1.ADC13OC1BOC4BPCINT13PB6)
+  net D+ (J1.A6, J1.B6, J2.p[1], R4.p[2])
+  net PD5 (J5.p[4], U1.XCK1~CTS~PD5)
+
+  symbol(GND) = ground-sym
+  symbol(VCC) = supply-sym
+
+make-default-board(goldfish, 4, Rectangle(10.0, 10.0))
+
+view-board()
+view-schematic()
+export-cad()
+save-to-svg("board.svg")save-schematic-to-svg("schematic.svg")

@@ -1,0 +1,92 @@
+#use-added-syntax(jitx)
+defpackage output/unknown/SFECF10M7EA00-R0 :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern SFECF10M7 :
+  pad p[1] : smd-pad(0.8, 1.05) at loc(-1.225, 1.4, 90.0) on Top
+  pad p[2] : smd-pad(0.8, 1.05) at loc(-1.225, 0.0, 90.0) on Top
+  pad p[3] : smd-pad(0.8, 1.05) at loc(-1.225, -1.4, 90.0) on Top
+  pad p[4] : smd-pad(0.8, 1.05) at loc(1.225, -1.4, 90.0) on Top
+  pad p[5] : smd-pad(0.8, 1.05) at loc(1.225, 0.0, 90.0) on Top
+  pad p[6] : smd-pad(0.8, 1.05) at loc(1.225, 1.4, 90.0) on Top
+
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.1778, [
+    Point(-1.905, 1.905), 
+    Point(-1.91466729937107, 1.95360079591037), 
+    Point(-1.94219743878931, 1.99480256121069), 
+    Point(-1.98339920408963, 2.02233270062893), 
+    Point(-2.032, 2.032), 
+    Point(-2.08060079591037, 2.02233270062893), 
+    Point(-2.12180256121069, 1.99480256121069), 
+    Point(-2.14933270062893, 1.95360079591037), 
+    Point(-2.159, 1.905), 
+    Point(-2.14933270062893, 1.85639920408963), 
+    Point(-2.12180256121069, 1.81519743878931), 
+    Point(-2.08060079591037, 1.78766729937107), 
+    Point(-2.032, 1.778), 
+    Point(-1.98339920408963, 1.78766729937107), 
+    Point(-1.94219743878931, 1.81519743878931), 
+    Point(-1.91466729937107, 1.85639920408963), 
+    Point(-1.905, 1.905)])
+  ref-label()
+
+pcb-symbol CMP-001-1430-02-symbol :
+  pin GND[0] at Point(7.62, -5.08) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin GND[1] at Point(22.86, -5.08) with :
+    direction = Right
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin IN at Point(7.62, 0.0) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin NC[0] at Point(7.62, -2.54) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin NC[1] at Point(22.86, -2.54) with :
+    direction = Right
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin OUT at Point(22.86, 0.0) with :
+    direction = Right
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(15.24, 10.16, loc(15.24, -2.54))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(7.62, 2.84))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(7.62, 3.902))
+
+public pcb-component component :
+  name = "CMP-001-1430-02"
+  description = "SFECF10M7EA00-R0"
+  mpn = "SFECF10M7EA00-R0"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [GND[0] | 2 | Left]
+    [GND[1] | 5 | Right]
+    [IN | 1 | Left]
+    [NC[0] | 3 | Left]
+    [NC[1] | 4 | Right]
+    [OUT | 6 | Right]
+
+  assign-landpattern(SFECF10M7)
+  val sym = CMP-001-1430-02-symbol
+  symbol = sym(self.GND[0] => sym.GND[0], self.GND[1] => sym.GND[1], self.IN => sym.IN, self.NC[0] => sym.NC[0], self.NC[1] => sym.NC[1], self.OUT => sym.OUT)
+

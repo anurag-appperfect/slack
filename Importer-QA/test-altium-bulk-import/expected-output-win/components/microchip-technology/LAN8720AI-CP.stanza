@@ -1,0 +1,234 @@
+#use-added-syntax(jitx)
+defpackage output/microchip-technology/LAN8720AI-CP :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern _24-S4QFN-4X4B-05P :
+  pad p[1] : oval-smd-pad(0.28, 0.69) at loc(-1.9, 1.24999, 90.0) on Top
+  pad p[2] : oval-smd-pad(0.28, 0.69) at loc(-1.9, 0.74999, 90.0) on Top
+  pad p[3] : oval-smd-pad(0.28, 0.69) at loc(-1.9, 0.24999, 90.0) on Top
+  pad p[4] : oval-smd-pad(0.28, 0.69) at loc(-1.9, -0.25, 90.0) on Top
+  pad p[5] : oval-smd-pad(0.28, 0.69) at loc(-1.9, -0.75, 90.0) on Top
+  pad p[6] : oval-smd-pad(0.28, 0.69) at loc(-1.9, -1.25001, 90.0) on Top
+  pad p[7] : oval-smd-pad(0.28, 0.69) at loc(-1.25, -1.9) on Top
+  pad p[8] : oval-smd-pad(0.28, 0.69) at loc(-0.75, -1.9) on Top
+  pad p[9] : oval-smd-pad(0.28, 0.69) at loc(-0.25, -1.9) on Top
+  pad p[10] : oval-smd-pad(0.28, 0.69) at loc(0.25, -1.90001) on Top
+  pad p[11] : oval-smd-pad(0.28, 0.69) at loc(0.75, -1.90001) on Top
+  pad p[12] : oval-smd-pad(0.28, 0.69) at loc(1.25, -1.90001) on Top
+  pad p[13] : oval-smd-pad(0.28, 0.69) at loc(1.9, -1.25001, 90.0) on Top
+  pad p[14] : oval-smd-pad(0.28, 0.69) at loc(1.9, -0.75001, 90.0) on Top
+  pad p[15] : oval-smd-pad(0.28, 0.69) at loc(1.9, -0.25001, 90.0) on Top
+  pad p[16] : oval-smd-pad(0.28, 0.69) at loc(1.9, 0.25, 90.0) on Top
+  pad p[17] : oval-smd-pad(0.28, 0.69) at loc(1.9, 0.75, 90.0) on Top
+  pad p[18] : oval-smd-pad(0.28, 0.69) at loc(1.9, 1.24999, 90.0) on Top
+  pad p[19] : oval-smd-pad(0.28, 0.69) at loc(1.25, 1.9) on Top
+  pad p[20] : oval-smd-pad(0.28, 0.69) at loc(0.75, 1.9) on Top
+  pad p[21] : oval-smd-pad(0.28, 0.69) at loc(0.25, 1.9) on Top
+  pad p[22] : oval-smd-pad(0.28, 0.69) at loc(-0.25, 1.9) on Top
+  pad p[23] : oval-smd-pad(0.28, 0.69) at loc(-0.75, 1.9) on Top
+  pad p[24] : oval-smd-pad(0.28, 0.69) at loc(-1.25, 1.9) on Top
+  pad p[25] : smd-pad(2.5, 2.5) at loc(0.0, 0.0) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.25, [    
+    Point(-2.63701, 1.29742), 
+    Point(-2.64652505843609, 1.34525542904564), 
+    Point(-2.67362165235168, 1.38580834764832), 
+    Point(-2.71417457095436, 1.41290494156391), 
+    Point(-2.76201, 1.42242), 
+    Point(-2.80984542904564, 1.41290494156391), 
+    Point(-2.85039834764832, 1.38580834764832), 
+    Point(-2.87749494156391, 1.34525542904564), 
+    Point(-2.88701, 1.29742), 
+    Point(-2.87749494156391, 1.24958457095436), 
+    Point(-2.85039834764832, 1.20903165235168), 
+    Point(-2.80984542904564, 1.18193505843609), 
+    Point(-2.76201, 1.17242), 
+    Point(-2.71417457095436, 1.18193505843609), 
+    Point(-2.67362165235168, 1.20903165235168), 
+    Point(-2.64652505843609, 1.24958457095436), 
+    Point(-2.63701, 1.29742)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-2.2, 1.817), Point(-2.2, 2.2)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-2.2, 2.2), Point(-1.817, 2.2)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(1.817, 2.2), Point(2.2, 2.2)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(2.2, 1.817), Point(2.2, 2.2)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(2.2, -2.2), Point(2.2, -1.817)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(1.817, -2.2), Point(2.2, -2.2)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-2.2, -2.2), Point(-2.2, -1.817)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-2.2, -2.2), Point(-1.817, -2.2)])
+  ref-label()
+
+pcb-symbol LAN8720AI-CP-symbol :
+  pin CRS_DVMODE2 at Point(5.08, -22.86) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GND at Point(5.08, -50.8) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin LED1REGOFF at Point(38.1, -43.18) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin LED2nINTSEL at Point(38.1, -45.72) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin MDC at Point(5.08, -27.94) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin MDIO at Point(5.08, -25.4) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin RBIAS at Point(38.1, -52.07) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin RXD0MODE0 at Point(5.08, -12.7) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin RXD1MODE1 at Point(5.08, -15.24) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin RXERPHYAD0 at Point(5.08, -17.78) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin RXN at Point(38.1, -36.83) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin RXP at Point(38.1, -34.29) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin TXD0 at Point(5.08, -5.08) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin TXD1 at Point(5.08, -7.62) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin TXEN at Point(5.08, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin TXN at Point(38.1, -31.75) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin TXP at Point(38.1, -29.21) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VDD1A at Point(38.1, -8.89) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VDD2A at Point(38.1, -11.43) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VDDCR at Point(38.1, -3.81) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VDDIO at Point(38.1, -1.27) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin XTAL1CKIN at Point(5.08, -43.18) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin XTAL2 at Point(5.08, -45.72) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nINTREFCLK0 at Point(5.08, -33.02) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nRST at Point(5.08, -35.56) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(33.02, 58.42, loc(21.59, -26.67))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(5.08, 2.84))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(5.08, 3.902))
+
+public pcb-component component :
+  name = "LAN8720AI-CP"
+  description = "LAN8720AI-CP"
+  manufacturer = "Microchip Technology"
+  mpn = "LAN8720AI-CP"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [CRS_DVMODE2 | 11 | Left]
+    [GND | 25 | Left]
+    [LED1REGOFF | 3 | Right]
+    [LED2nINTSEL | 2 | Right]
+    [MDC | 13 | Left]
+    [MDIO | 12 | Left]
+    [RBIAS | 24 | Right]
+    [RXD0MODE0 | 8 | Left]
+    [RXD1MODE1 | 7 | Left]
+    [RXERPHYAD0 | 10 | Left]
+    [RXN | 22 | Right]
+    [RXP | 23 | Right]
+    [TXD0 | 17 | Left]
+    [TXD1 | 18 | Left]
+    [TXEN | 16 | Left]
+    [TXN | 20 | Right]
+    [TXP | 21 | Right]
+    [VDD1A | 19 | Right]
+    [VDD2A | 1 | Right]
+    [VDDCR | 6 | Right]
+    [VDDIO | 9 | Right]
+    [XTAL1CKIN | 5 | Left]
+    [XTAL2 | 4 | Left]
+    [nINTREFCLK0 | 14 | Left]
+    [nRST | 15 | Left]
+  
+  assign-landpattern(_24-S4QFN-4X4B-05P)
+  val sym = LAN8720AI-CP-symbol
+  symbol = sym(self.CRS_DVMODE2 => sym.CRS_DVMODE2, self.GND => sym.GND, self.LED1REGOFF => sym.LED1REGOFF, self.LED2nINTSEL => sym.LED2nINTSEL, self.MDC => sym.MDC, self.MDIO => sym.MDIO, self.RBIAS => sym.RBIAS, self.RXD0MODE0 => sym.RXD0MODE0, self.RXD1MODE1 => sym.RXD1MODE1, self.RXERPHYAD0 => sym.RXERPHYAD0, self.RXN => sym.RXN, self.RXP => sym.RXP, self.TXD0 => sym.TXD0, self.TXD1 => sym.TXD1, self.TXEN => sym.TXEN, self.TXN => sym.TXN, self.TXP => sym.TXP, self.VDD1A => sym.VDD1A, self.VDD2A => sym.VDD2A, self.VDDCR => sym.VDDCR, self.VDDIO => sym.VDDIO, self.XTAL1CKIN => sym.XTAL1CKIN, self.XTAL2 => sym.XTAL2, self.nINTREFCLK0 => sym.nINTREFCLK0, self.nRST => sym.nRST)
+

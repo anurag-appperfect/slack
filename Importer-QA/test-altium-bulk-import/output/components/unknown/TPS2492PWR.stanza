@@ -1,0 +1,150 @@
+#use-added-syntax(jitx)
+defpackage output/unknown/TPS2492PWR :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern TPS2492PWR :
+  pad p[1] : smd-pad(0.35, 1.6) at loc(-2.8, 1.95001, 90.0) on Top
+  pad p[2] : smd-pad(0.35, 1.6) at loc(-2.8, 1.3, 90.0) on Top
+  pad p[3] : smd-pad(0.35, 1.6) at loc(-2.8, 0.65, 90.0) on Top
+  pad p[4] : smd-pad(0.35, 1.6) at loc(-2.8, 0.0, 90.0) on Top
+  pad p[5] : smd-pad(0.35, 1.6) at loc(-2.8, -0.65, 90.0) on Top
+  pad p[6] : smd-pad(0.35, 1.6) at loc(-2.8, -1.3, 90.0) on Top
+  pad p[7] : smd-pad(0.35, 1.6) at loc(-2.8, -1.95, 90.0) on Top
+  pad p[8] : smd-pad(0.35, 1.6) at loc(2.8, -1.95, 90.0) on Top
+  pad p[9] : smd-pad(0.35, 1.6) at loc(2.8, -1.3, 90.0) on Top
+  pad p[10] : smd-pad(0.35, 1.6) at loc(2.8, -0.65, 90.0) on Top
+  pad p[11] : smd-pad(0.35, 1.6) at loc(2.8, 0.0, 90.0) on Top
+  pad p[12] : smd-pad(0.35, 1.6) at loc(2.8, 0.65, 90.0) on Top
+  pad p[13] : smd-pad(0.35, 1.6) at loc(2.8, 1.3, 90.0) on Top
+  pad p[14] : smd-pad(0.35, 1.6) at loc(2.8, 1.95, 90.0) on Top
+
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.25, [
+    Point(-2.825, 2.72499), 
+    Point(-2.83451505843609, 2.77282542904564), 
+    Point(-2.86161165235168, 2.81337834764832), 
+    Point(-2.90216457095436, 2.84047494156391), 
+    Point(-2.95, 2.84999), 
+    Point(-2.99783542904564, 2.84047494156391), 
+    Point(-3.03838834764832, 2.81337834764832), 
+    Point(-3.06548494156391, 2.77282542904564), 
+    Point(-3.075, 2.72499), 
+    Point(-3.06548494156391, 2.67715457095436), 
+    Point(-3.03838834764832, 2.63660165235168), 
+    Point(-2.99783542904564, 2.60950505843609), 
+    Point(-2.95, 2.59999), 
+    Point(-2.90216457095436, 2.60950505843609), 
+    Point(-2.86161165235168, 2.63660165235168), 
+    Point(-2.83451505843609, 2.67715457095436), 
+    Point(-2.825, 2.72499)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-1.85, -2.54999), Point(1.85, -2.55)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2, [Point(-1.85, 2.55), Point(1.85, 2.55)])
+  ref-label()
+
+pcb-symbol CMP-001-1422-01-symbol :
+  pin GATE at Point(25.4, 10.16) with :
+    direction = Up
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin GND at Point(20.32, -17.78) with :
+    direction = Down
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin IMON at Point(38.1, -12.7) with :
+    direction = Right
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin NC at Point(38.1, -15.24) with :
+    direction = Right
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin OUT at Point(38.1, 7.62) with :
+    direction = Right
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin OV at Point(7.62, -5.08) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin PROG at Point(10.16, -17.78) with :
+    direction = Down
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin SENSE at Point(17.78, 10.16) with :
+    direction = Up
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin TIMER at Point(25.4, -17.78) with :
+    direction = Down
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin UVEN at Point(7.62, 0.0) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin VCC at Point(10.16, 10.16) with :
+    direction = Up
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin VREF at Point(15.24, -17.78) with :
+    direction = Down
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin nFLT at Point(38.1, 0.0) with :
+    direction = Right
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin nPG at Point(38.1, -5.08) with :
+    direction = Right
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(30.48, 27.94, loc(22.86, -3.81))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(7.62, 10.46))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(7.62, 11.522))
+
+public pcb-component component :
+  name = "CMP-001-1422-01"
+  description = "TPS2492PWR"
+  mpn = "TPS2492PWR"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [GATE | 12 | Up]
+    [GND | 7 | Down]
+    [IMON | 6 | Right]
+    [NC | 10 | Right]
+    [OUT | 11 | Right]
+    [OV | 5 | Left]
+    [PROG | 3 | Down]
+    [SENSE | 13 | Up]
+    [TIMER | 4 | Down]
+    [UVEN | 1 | Left]
+    [VCC | 14 | Up]
+    [VREF | 2 | Down]
+    [nFLT | 9 | Right]
+    [nPG | 8 | Right]
+
+  assign-landpattern(TPS2492PWR)
+  val sym = CMP-001-1422-01-symbol
+  symbol = sym(self.GATE => sym.GATE, self.GND => sym.GND, self.IMON => sym.IMON, self.NC => sym.NC, self.OUT => sym.OUT, self.OV => sym.OV, self.PROG => sym.PROG, self.SENSE => sym.SENSE, self.TIMER => sym.TIMER, self.UVEN => sym.UVEN, self.VCC => sym.VCC, self.VREF => sym.VREF, self.nFLT => sym.nFLT, self.nPG => sym.nPG)
+

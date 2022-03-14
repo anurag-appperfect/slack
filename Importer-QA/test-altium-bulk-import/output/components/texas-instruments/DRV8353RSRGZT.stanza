@@ -1,0 +1,440 @@
+#use-added-syntax(jitx)
+defpackage output/texas-instruments/DRV8353RSRGZT :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern TIVQFN-48 :
+  pad PAD : smd-pad(4.975, 4.6) at loc(0.188, 0.0) on Top
+  pad p[1] : smd-pad(0.24, 0.6) at loc(-3.4, 2.75, 90.0) on Top
+  pad p[2] : smd-pad(0.24, 0.6) at loc(-3.4, 2.25, 90.0) on Top
+  pad p[3] : smd-pad(0.24, 0.6) at loc(-3.4, 1.75, 90.0) on Top
+  pad p[4] : smd-pad(0.24, 0.6) at loc(-3.4, 1.25, 90.0) on Top
+  pad p[5] : smd-pad(0.24, 0.6) at loc(-3.4, 0.75, 90.0) on Top
+  pad p[6] : smd-pad(0.24, 0.6) at loc(-3.4, 0.25, 90.0) on Top
+  pad p[7] : smd-pad(0.24, 0.6) at loc(-3.4, -0.25, 90.0) on Top
+  pad p[8] : smd-pad(0.24, 0.6) at loc(-3.4, -0.75, 90.0) on Top
+  pad p[9] : smd-pad(0.24, 0.6) at loc(-3.4, -1.25, 90.0) on Top
+  pad p[10] : smd-pad(0.24, 0.6) at loc(-3.4, -1.75, 90.0) on Top
+  pad p[11] : smd-pad(0.24, 0.6) at loc(-3.4, -2.25, 90.0) on Top
+  pad p[12] : smd-pad(0.24, 0.6) at loc(-3.4, -2.75, 90.0) on Top
+  pad p[13] : smd-pad(0.24, 0.6) at loc(-2.75, -3.4) on Top
+  pad p[14] : smd-pad(0.24, 0.6) at loc(-2.25, -3.4) on Top
+  pad p[15] : smd-pad(0.24, 0.6) at loc(-1.75, -3.4) on Top
+  pad p[16] : smd-pad(0.24, 0.6) at loc(-1.24999, -3.4) on Top
+  pad p[17] : smd-pad(0.24, 0.6) at loc(-0.75, -3.4) on Top
+  pad p[18] : smd-pad(0.24, 0.6) at loc(-0.25, -3.4) on Top
+  pad p[19] : smd-pad(0.24, 0.6) at loc(0.25, -3.4) on Top
+  pad p[20] : smd-pad(0.24, 0.6) at loc(0.75, -3.4) on Top
+  pad p[21] : smd-pad(0.24, 0.6) at loc(1.25, -3.4) on Top
+  pad p[22] : smd-pad(0.24, 0.6) at loc(1.75, -3.4) on Top
+  pad p[23] : smd-pad(0.24, 0.6) at loc(2.25, -3.4) on Top
+  pad p[24] : smd-pad(0.24, 0.6) at loc(2.75, -3.4) on Top
+  pad p[25] : smd-pad(0.24, 0.6) at loc(3.4, -2.75, 90.0) on Top
+  pad p[26] : smd-pad(0.24, 0.6) at loc(3.4, -2.25, 90.0) on Top
+  pad p[27] : smd-pad(0.24, 0.6) at loc(3.4, -1.75, 90.0) on Top
+  pad p[28] : smd-pad(0.24, 0.6) at loc(3.4, -1.25, 90.0) on Top
+  pad p[29] : smd-pad(0.24, 0.6) at loc(3.4, -0.75, 90.0) on Top
+  pad p[30] : smd-pad(0.24, 0.6) at loc(3.4, -0.25, 90.0) on Top
+  pad p[31] : smd-pad(0.24, 0.6) at loc(3.4, 0.25, 90.0) on Top
+  pad p[32] : smd-pad(0.24, 0.6) at loc(3.4, 0.75, 90.0) on Top
+  pad p[33] : smd-pad(0.24, 0.6) at loc(3.4, 1.25, 90.0) on Top
+  pad p[34] : smd-pad(0.24, 0.6) at loc(3.4, 1.75, 90.0) on Top
+  pad p[35] : smd-pad(0.24, 0.6) at loc(3.4, 2.25, 90.0) on Top
+  pad p[36] : smd-pad(0.24, 0.6) at loc(3.4, 2.75, 90.0) on Top
+  pad p[37] : smd-pad(0.24, 0.6) at loc(2.75, 3.4) on Top
+  pad p[38] : smd-pad(0.24, 0.6) at loc(2.25, 3.4) on Top
+  pad p[39] : smd-pad(0.24, 0.6) at loc(1.75, 3.4) on Top
+  pad p[40] : smd-pad(0.24, 0.6) at loc(1.25001, 3.4) on Top
+  pad p[41] : smd-pad(0.24, 0.6) at loc(0.75, 3.4) on Top
+  pad p[42] : smd-pad(0.24, 0.6) at loc(0.25, 3.4) on Top
+  pad p[43] : smd-pad(0.24, 0.6) at loc(-0.25, 3.4) on Top
+  pad p[44] : smd-pad(0.24, 0.6) at loc(-0.75, 3.4) on Top
+  pad p[45] : smd-pad(0.24, 0.6) at loc(-1.25, 3.4) on Top
+  pad p[46] : smd-pad(0.24, 0.6) at loc(-1.75, 3.4) on Top
+  pad p[47] : smd-pad(0.24, 0.6) at loc(-2.25, 3.4) on Top
+  pad p[48] : smd-pad(0.24, 0.6) at loc(-2.74999, 3.4) on Top
+
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.25, [
+    Point(-4.1077, 3.97336), 
+    Point(-4.11721505843609, 4.02119542904564), 
+    Point(-4.14431165235168, 4.06174834764832), 
+    Point(-4.18486457095436, 4.08884494156391), 
+    Point(-4.2327, 4.09836), 
+    Point(-4.28053542904564, 4.08884494156391), 
+    Point(-4.32108834764832, 4.06174834764832), 
+    Point(-4.34818494156391, 4.02119542904564), 
+    Point(-4.3577, 3.97336), 
+    Point(-4.34818494156391, 3.92552457095436), 
+    Point(-4.32108834764832, 3.88497165235168), 
+    Point(-4.28053542904564, 3.85787505843609), 
+    Point(-4.2327, 3.84836), 
+    Point(-4.18486457095436, 3.85787505843609), 
+    Point(-4.14431165235168, 3.88497165235168), 
+    Point(-4.11721505843609, 3.92552457095436), 
+    Point(-4.1077, 3.97336)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-3.7, -3.7), Point(-3.297, -3.7)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-3.7, -3.7), Point(-3.7, -3.297)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(3.297, -3.7), Point(3.7, -3.7)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(3.7, -3.7), Point(3.7, -3.297)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(3.7, 3.297), Point(3.7, 3.7)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(3.297, 3.7), Point(3.7, 3.7)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-3.7, 3.7), Point(-3.297, 3.7)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-3.7, 3.297), Point(-3.7, 3.7)])
+  layer(Paste(Top)) = Rectangle(1.37, 1.28, loc(0.188, 0.0))
+  layer(Paste(Top)) = Rectangle(1.37, 1.28, loc(1.758, 0.0, 180.0))
+  layer(Paste(Top)) = Rectangle(1.37, 1.28, loc(-1.382, -1.000000000001e-05))
+  layer(Paste(Top)) = Rectangle(1.37, 1.28, loc(-1.38199, 1.48001))
+  layer(Paste(Top)) = Rectangle(1.37, 1.28, loc(0.18801, 1.48001))
+  layer(Paste(Top)) = Rectangle(1.37, 1.27999, loc(1.758, 1.479995, 180.0))
+  layer(Paste(Top)) = Rectangle(1.37, 1.27999, loc(1.75801, -1.479995, 180.0))
+  layer(Paste(Top)) = Rectangle(1.37, 1.27999, loc(0.18801, -1.479995, 180.0))
+  layer(Paste(Top)) = Rectangle(1.37, 1.28, loc(-1.38199, -1.47999))
+  ref-label()
+
+pcb-symbol DRV8353RS-symbol0 :
+  pin ENABLE at Point(0.0, -12.7) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GHA at Point(22.86, -2.54) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GHB at Point(22.86, -15.24) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GHC at Point(22.86, -27.94) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GLA at Point(22.86, -7.62) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GLB at Point(22.86, -20.32) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GLC at Point(22.86, -33.02) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin INHA at Point(0.0, -15.24) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin INHB at Point(0.0, -20.32) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin INHC at Point(0.0, -25.4) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin INLA at Point(0.0, -17.78) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin INLB at Point(0.0, -22.86) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin INLC at Point(0.0, -27.94) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SHA at Point(22.86, -5.08) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SHB at Point(22.86, -17.78) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SHC at Point(22.86, -30.48) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nFAULT at Point(0.0, -10.16) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(22.86, 38.1, loc(11.43, -19.05))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+pcb-symbol DRV8353RS-symbol1 :
+  pin BST at Point(20.32, -2.54) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin FB at Point(20.32, -25.4) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin RCL at Point(20.32, -15.24) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin RTSD at Point(0.0, -12.7) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SW at Point(20.32, -10.16) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VCC at Point(0.0, -15.24) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VIN at Point(0.0, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(20.32, 27.94, loc(10.16, -13.97))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+pcb-symbol DRV8353RS-symbol2 :
+  pin SCLK at Point(0.0, -7.62) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SDI at Point(0.0, -5.08) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SDO at Point(15.24, -5.08) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin nSCS at Point(0.0, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(15.24, 10.16, loc(7.62, -5.08))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+pcb-symbol DRV8353RS-symbol3 :
+  pin AGND at Point(22.86, -17.78) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin CPH at Point(0.0, -10.16) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin CPL at Point(0.0, -17.78) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin DGND at Point(22.86, -20.32) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin DVDD at Point(0.0, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GND at Point(22.86, -22.86) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin PAD at Point(22.86, -25.4) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VCP at Point(0.0, -25.4) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VDRAIN at Point(0.0, -20.32) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VGLS at Point(0.0, -5.08) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VM at Point(0.0, -22.86) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin VREF at Point(22.86, -2.54) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(22.86, 27.94, loc(11.43, -13.97))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+pcb-symbol DRV8353RS-symbol4 :
+  pin SNA at Point(17.78, -5.08) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SNB at Point(17.78, -10.16) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SNC at Point(17.78, -15.24) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SOA at Point(0.0, -5.08) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SOB at Point(0.0, -7.62) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SOC at Point(0.0, -10.16) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SPA at Point(17.78, -2.54) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SPB at Point(17.78, -7.62) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SPC at Point(17.78, -12.7) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(17.78, 17.78, loc(8.89, -8.89))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+public pcb-component component :
+  name = "DRV8353RS"
+  description = "DRV8353RS"
+  manufacturer = "Texas Instruments"
+  mpn = "DRV8353RSRGZT"
+  pin-properties :
+    [pin:Ref | pads:Ref ... | side:Dir]
+    [ENABLE | p[33] | Left]
+    [GHA | p[8] | Right]
+    [GHB | p[17] | Right]
+    [GHC | p[18] | Right]
+    [GLA | p[10] | Right]
+    [GLB | p[15] | Right]
+    [GLC | p[20] | Right]
+    [INHA | p[34] | Left]
+    [INHB | p[36] | Left]
+    [INHC | p[38] | Left]
+    [INLA | p[35] | Left]
+    [INLB | p[37] | Left]
+    [INLC | p[39] | Left]
+    [SHA | p[9] | Right]
+    [SHB | p[16] | Right]
+    [SHC | p[19] | Right]
+    [nFAULT | p[28] | Left]
+    [BST | p[45] | Right]
+    [FB | p[48] | Right]
+    [RCL | p[46] | Right]
+    [RTSD | p[47] | Left]
+    [SW | p[42] | Right]
+    [VCC | p[44] | Left]
+    [VIN | p[43] | Left]
+    [SCLK | p[31] | Left]
+    [SDI | p[30] | Left]
+    [SDO | p[29] | Right]
+    [nSCS | p[32] | Left]
+    [AGND | p[27] | Right]
+    [CPH | p[4] | Left]
+    [CPL | p[3] | Left]
+    [DGND | p[41] | Right]
+    [DVDD | p[40] | Left]
+    [GND | p[1] | Right]
+    [PAD | PAD | Right]
+    [VCP | p[7] | Left]
+    [VDRAIN | p[6] | Left]
+    [VGLS | p[2] | Left]
+    [VM | p[5] | Left]
+    [VREF | p[26] | Right]
+    [SNA | p[12] | Right]
+    [SNB | p[13] | Right]
+    [SNC | p[22] | Right]
+    [SOA | p[25] | Left]
+    [SOB | p[24] | Left]
+    [SOC | p[23] | Left]
+    [SPA | p[11] | Right]
+    [SPB | p[14] | Right]
+    [SPC | p[21] | Right]
+
+  assign-landpattern(TIVQFN-48)
+  symbol :
+    val sym0 = DRV8353RS-symbol0
+    unit(0) = sym0(self.ENABLE => sym0.ENABLE, self.GHA => sym0.GHA, self.GHB => sym0.GHB, self.GHC => sym0.GHC, self.GLA => sym0.GLA, self.GLB => sym0.GLB, self.GLC => sym0.GLC, self.INHA => sym0.INHA, self.INHB => sym0.INHB, self.INHC => sym0.INHC, self.INLA => sym0.INLA, self.INLB => sym0.INLB, self.INLC => sym0.INLC, self.SHA => sym0.SHA, self.SHB => sym0.SHB, self.SHC => sym0.SHC, self.nFAULT => sym0.nFAULT)
+    val sym1 = DRV8353RS-symbol1
+    unit(1) = sym1(self.BST => sym1.BST, self.FB => sym1.FB, self.RCL => sym1.RCL, self.RTSD => sym1.RTSD, self.SW => sym1.SW, self.VCC => sym1.VCC, self.VIN => sym1.VIN)
+    val sym2 = DRV8353RS-symbol2
+    unit(2) = sym2(self.SCLK => sym2.SCLK, self.SDI => sym2.SDI, self.SDO => sym2.SDO, self.nSCS => sym2.nSCS)
+    val sym3 = DRV8353RS-symbol3
+    unit(3) = sym3(self.AGND => sym3.AGND, self.CPH => sym3.CPH, self.CPL => sym3.CPL, self.DGND => sym3.DGND, self.DVDD => sym3.DVDD, self.GND => sym3.GND, self.PAD => sym3.PAD, self.VCP => sym3.VCP, self.VDRAIN => sym3.VDRAIN, self.VGLS => sym3.VGLS, self.VM => sym3.VM, self.VREF => sym3.VREF)
+    val sym4 = DRV8353RS-symbol4
+    unit(4) = sym4(self.SNA => sym4.SNA, self.SNB => sym4.SNB, self.SNC => sym4.SNC, self.SOA => sym4.SOA, self.SOB => sym4.SOB, self.SOC => sym4.SOC, self.SPA => sym4.SPA, self.SPB => sym4.SPB, self.SPC => sym4.SPC)
+

@@ -1,0 +1,42 @@
+#use-added-syntax(jitx)
+defpackage goldfish/crystal_smd_seikoepson_fa238-4pin_32x25mm :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/symbols
+  import ocdb/symbol-utils
+  import ocdb/generic-components
+  import ocdb/box-symbol
+
+pcb-landpattern crystal_smd_seikoepson_fa238-4pin_32x25mm-lp :
+  pad p[1] : smd-pad(Rectangle(1.4, 1.2)) at loc(-1.1, -0.8, 0.0)
+  pad p[2] : smd-pad(Rectangle(1.4, 1.2)) at loc(1.1, -0.8, 0.0)
+  pad p[3] : smd-pad(Rectangle(1.4, 1.2)) at loc(1.1, 0.8, 0.0)
+  pad p[4] : smd-pad(Rectangle(1.4, 1.2)) at loc(-1.1, 0.8, 0.0)
+
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(-2.0, -1.6), Point(2.0, -1.6) ])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(-2.0, 1.6), Point(-2.0, -1.6) ])
+  model3d = Model3D("Crystal_SMD_SeikoEpson_FA238-4Pin_3.2x2.5mm.wrl",
+    Vec3D(0.0, 0.0, 0.0),
+    Vec3D(1.0, 1.0, 1.0),
+    Vec3D(0.0, 0.0, 0.0))
+  ref-label()
+
+public pcb-component crystal_smd_seikoepson_fa238-4pin_32x25mm :
+  pin-properties :
+    [pin:Ref | pads:Int ...]
+    [p[1] | 1]
+    [p[2] | 2]
+    [p[3] | 3]
+    [p[4] | 4]
+  
+  make-box-symbol()
+  assign-landpattern(crystal_smd_seikoepson_fa238-4pin_32x25mm-lp)
+
+  name = "Crystal:Crystal_SMD_SeikoEpson_FA238-4Pin_3.2x2.5mm"
+  description = "crystal Epson Toyocom FA-238 series http://www.mouser.com/ds/2/137/1721499-465440.pdf, 3.2x2.5mm^2 package"

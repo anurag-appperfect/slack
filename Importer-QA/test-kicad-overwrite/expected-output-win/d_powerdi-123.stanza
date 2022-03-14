@@ -1,0 +1,39 @@
+#use-added-syntax(jitx)
+defpackage goldfish/d_powerdi-123 :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/symbols
+  import ocdb/symbol-utils
+  import ocdb/generic-components
+  import ocdb/box-symbol
+
+pcb-landpattern d_powerdi-123-lp :
+  pad p[1] : smd-pad(Rectangle(2.4, 1.5)) at loc(-0.85, 0.0, 180.0)
+  pad p[2] : smd-pad(Rectangle(1.05, 1.5)) at loc(1.525, 0.0, 180.0)
+
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(1.0, 1.0), Point(-2.2, 1.0) ])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(-2.2, -1.0), Point(1.0, -1.0) ])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(-2.2, -1.0), Point(-2.2, 1.0) ])
+  model3d = Model3D("D_PowerDI-123.wrl",
+    Vec3D(0.0, 0.0, 0.0),
+    Vec3D(1.0, 1.0, 1.0),
+    Vec3D(0.0, 0.0, 0.0))
+  ref-label()
+
+public pcb-component d_powerdi-123 :
+  pin-properties :
+    [pin:Ref | pads:Int ...]
+    [p[1] | 1]
+    [p[2] | 2]
+  
+  make-box-symbol()
+  assign-landpattern(d_powerdi-123-lp)
+
+  name = "Diode_SMD:D_PowerDI-123"
+  description = "http://www.diodes.com/_files/datasheets/ds30497.pdf"

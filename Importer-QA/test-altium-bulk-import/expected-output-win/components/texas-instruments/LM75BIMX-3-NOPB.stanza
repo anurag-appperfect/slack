@@ -1,0 +1,115 @@
+#use-added-syntax(jitx)
+defpackage output/texas-instruments/LM75BIMX-3-NOPB :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern SOIC8 :
+  pad p[1] : smd-pad(2.54, 0.762) at loc(0.0, 0.0) on Top
+  pad p[2] : smd-pad(2.54, 0.762) at loc(0.0, -1.27) on Top
+  pad p[3] : smd-pad(2.54, 0.762) at loc(0.0, -2.54) on Top
+  pad p[4] : smd-pad(2.54, 0.762) at loc(0.0, -3.81) on Top
+  pad p[5] : smd-pad(2.54, 0.762) at loc(5.461, -3.81) on Top
+  pad p[6] : smd-pad(2.54, 0.762) at loc(5.461, -2.54) on Top
+  pad p[7] : smd-pad(2.54, 0.762) at loc(5.461, -1.27) on Top
+  pad p[8] : smd-pad(2.54, 0.762) at loc(5.461, 0.0) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.5, [    
+    Point(-0.3826, 1.1684), 
+    Point(-0.390212046748871, 1.20666834323651), 
+    Point(-0.411889321881345, 1.23911067811865), 
+    Point(-0.444331656763491, 1.26078795325113), 
+    Point(-0.4826, 1.2684), 
+    Point(-0.520868343236509, 1.26078795325113), 
+    Point(-0.553310678118655, 1.23911067811865), 
+    Point(-0.574987953251129, 1.20666834323651), 
+    Point(-0.5826, 1.1684), 
+    Point(-0.574987953251129, 1.13013165676349), 
+    Point(-0.553310678118655, 1.09768932188135), 
+    Point(-0.520868343236509, 1.07601204674887), 
+    Point(-0.4826, 1.0684), 
+    Point(-0.444331656763491, 1.07601204674887), 
+    Point(-0.411889321881345, 1.09768932188135), 
+    Point(-0.390212046748871, 1.13013165676349), 
+    Point(-0.3826, 1.1684)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(0.4826, 0.635), Point(0.4826, 0.9652)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(0.4826, 0.9652), Point(2.0574, 0.9652)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(3.429, 0.9398), Point(4.953, 0.9398)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(4.953, 0.6858), Point(4.953, 0.9398)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(4.953, -5.1), Point(4.953, -4.445)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(3.3528, -5.1), Point(4.953, -5.1)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(0.4572, -5.1), Point(2.1082, -5.1)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.2032, [Point(0.4572, -5.1), Point(0.4572, -4.445)])
+  ref-label()
+
+pcb-symbol CMP-010-0051-02-symbol :
+  pin A0 at Point(17.78, -5.08) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin A1 at Point(17.78, -7.62) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin A2 at Point(17.78, -10.16) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin GND at Point(0.0, -10.16) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin OS at Point(0.0, -7.62) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SCL at Point(0.0, -5.08) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin SDA at Point(0.0, -2.54) with :
+    direction = Left
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  pin p+VS at Point(17.78, -2.54) with :
+    direction = Right
+    length = 5.08
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(17.78, 12.7, loc(8.89, -6.35))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(0.0, 0.3))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(0.0, 1.362))
+
+public pcb-component component :
+  name = "CMP-010-0051-02"
+  description = "LM75"
+  manufacturer = "Texas Instruments"
+  mpn = "LM75BIMX-3/NOPB"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [A0 | 7 | Right]
+    [A1 | 6 | Right]
+    [A2 | 5 | Right]
+    [GND | 4 | Left]
+    [OS | 3 | Left]
+    [SCL | 2 | Left]
+    [SDA | 1 | Left]
+    [p+VS | 8 | Right]
+  
+  assign-landpattern(SOIC8)
+  val sym = CMP-010-0051-02-symbol
+  symbol = sym(self.A0 => sym.A0, self.A1 => sym.A1, self.A2 => sym.A2, self.GND => sym.GND, self.OS => sym.OS, self.SCL => sym.SCL, self.SDA => sym.SDA, self.p+VS => sym.p+VS)
+

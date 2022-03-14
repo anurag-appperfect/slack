@@ -1,0 +1,97 @@
+#use-added-syntax(jitx)
+defpackage output/microchip/MIC5247-1-8YM5-TR :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern SOT-23-5_M5_MCH :
+  pad p[1] : smd-pad(0.9779, 0.508) at loc(-1.36525, 0.95) on Top
+  pad p[2] : smd-pad(0.9779, 0.508) at loc(-1.36525, 0.0) on Top
+  pad p[3] : smd-pad(0.9779, 0.508) at loc(-1.36525, -0.95) on Top
+  pad p[4] : smd-pad(0.9779, 0.508) at loc(1.36525, -0.95) on Top
+  pad p[5] : smd-pad(0.9779, 0.508) at loc(1.36525, 0.95) on Top
+
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [
+    Point(-1.47139, 1.778), 
+    Point(-1.48506199716565, 1.84673377128709), 
+    Point(-1.52399655103108, 1.90500344896892), 
+    Point(-1.58226622871291, 1.94393800283435), 
+    Point(-1.651, 1.95761), 
+    Point(-1.71973377128709, 1.94393800283435), 
+    Point(-1.77800344896892, 1.90500344896892), 
+    Point(-1.81693800283435, 1.84673377128709), 
+    Point(-1.83061, 1.778), 
+    Point(-1.81693800283435, 1.70926622871291), 
+    Point(-1.77800344896892, 1.65099655103108), 
+    Point(-1.71973377128709, 1.61206199716565), 
+    Point(-1.651, 1.59839), 
+    Point(-1.58226622871291, 1.61206199716565), 
+    Point(-1.52399655103108, 1.65099655103108), 
+    Point(-1.48506199716565, 1.70926622871291), 
+    Point(-1.47139, 1.778)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.1524, [Point(-1.0033, 1.6383), Point(1.0033, 1.6383)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.1524, [Point(1.0033, -0.36326), Point(1.0033, 0.36326)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.1524, [Point(-1.0033, -1.6383), Point(1.0033, -1.6383)])
+  ref-label()
+
+pcb-symbol MIC5247-18YM5-TR-symbol :
+  pin BYP at Point(17.78, 2.54) with :
+    direction = Right
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin EN at Point(0.0, 2.54) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin GND at Point(0.0, 5.08) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin IN at Point(0.0, 7.62) with :
+    direction = Left
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  pin OUT at Point(17.78, 5.08) with :
+    direction = Right
+    length = 7.62
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(17.78, 10.16, loc(8.89, 5.08))
+  layer("foreground") = Line(1.0, [Point(-0.5207, 7.62), Point(-1.5621, 8.1407)])
+  layer("foreground") = Line(1.0, [Point(-0.5207, 7.62), Point(-1.5621, 7.0993)])
+  layer("foreground") = Line(1.0, [Point(-0.5207, 2.54), Point(-1.5621, 3.0607)])
+  layer("foreground") = Line(1.0, [Point(-0.5207, 2.54), Point(-1.5621, 2.0193)])
+  layer("foreground") = Line(1.0, [Point(18.3007, 3.0607), Point(19.3421, 2.54)])
+  layer("foreground") = Line(1.0, [Point(18.3007, 2.0193), Point(19.3421, 2.54)])
+  layer("foreground") = Line(1.0, [Point(18.3007, 5.6007), Point(19.3421, 5.08)])
+  layer("foreground") = Line(1.0, [Point(18.3007, 4.5593), Point(19.3421, 5.08)])
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(-2.0621, 10.46))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(-2.0621, 11.522))
+
+public pcb-component component :
+  name = "MIC5247-1.8YM5-TR"
+  description = "MIC5247-1.8YM5-TR"
+  manufacturer = "Microchip"
+  mpn = "MIC5247-1.8YM5-TR"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [BYP | 4 | Right]
+    [EN | 3 | Left]
+    [GND | 2 | Left]
+    [IN | 1 | Left]
+    [OUT | 5 | Right]
+
+  assign-landpattern(SOT-23-5_M5_MCH)
+  val sym = MIC5247-18YM5-TR-symbol
+  symbol = sym(self.BYP => sym.BYP, self.EN => sym.EN, self.GND => sym.GND, self.IN => sym.IN, self.OUT => sym.OUT)
+

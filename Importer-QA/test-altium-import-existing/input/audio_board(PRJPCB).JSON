@@ -1,0 +1,2477 @@
+{
+  "User": "sgole",
+  "Machine": "LAPTOP-N38DD62T",
+  "DateTime": "210825-1556",
+  "Version": "0.1.1.1",
+  "FileType": "PRJPCB",
+  "FileName": "audio_board.PrjPcb",
+  "UnitsOfMeasure": "MM",
+  "ProjectDocuments": [
+    "C:\\Users\\sgole\\Documents\\GitHub\\test-projects\\Cobalt-audio\\audio_board_mic.SchDoc",
+    "C:\\Users\\sgole\\Documents\\GitHub\\test-projects\\Cobalt-audio\\audio_board_power.SchDoc",
+    "C:\\Users\\sgole\\Documents\\GitHub\\test-projects\\Cobalt-audio\\audio_board_cpu_1.SchDoc",
+    "C:\\Users\\sgole\\Documents\\GitHub\\test-projects\\Cobalt-audio\\audio_board_cpu_2.SchDoc",
+    "C:\\Users\\sgole\\Documents\\GitHub\\test-projects\\Cobalt-audio\\audio_board_cpu_3.SchDoc",
+    "C:\\Users\\sgole\\Documents\\GitHub\\test-projects\\Cobalt-audio\\audio_board_cpu_4.SchDoc",
+    "C:\\Users\\sgole\\Documents\\GitHub\\test-projects\\Cobalt-audio\\audio_board_amp.SchDoc",
+    "C:\\Users\\sgole\\Documents\\GitHub\\test-projects\\Cobalt-audio\\audio_board.OutJob",
+    "C:\\Users\\sgole\\Documents\\GitHub\\test-projects\\Cobalt-audio\\audio_board_6layer.PcbDoc",
+    "C:\\Users\\sgole\\Documents\\GitHub\\test-projects\\Cobalt-audio\\audio_board.Cam",
+    "C:\\Users\\sgole\\Documents\\GitHub\\test-projects\\Cobalt-audio\\audio_board_drill.Cam",
+    "C:\\Users\\sgole\\Documents\\GitHub\\test-projects\\Cobalt-audio\\audio_board_6layer.PCBDwf",
+    "C:\\Users\\sgole\\Documents\\GitHub\\test-projects\\Cobalt-audio\\audio_board_6layer_Assembly.PCBDwf",
+    "C:\\Users\\sgole\\Documents\\GitHub\\test-projects\\Cobalt-audio\\bottom_gerber_out_mirrored.Cam",
+    "C:\\Users\\sgole\\Documents\\GitHub\\test-projects\\Cobalt-audio\\audio_board_6layer.PcbLib",
+    "C:\\Users\\sgole\\Documents\\GitHub\\test-projects\\Cobalt-audio\\audio_board.SCHLIB"
+  ],
+  "Parameters": [
+    {
+      "Name": "CompanyName",
+      "Text": "Cobalt Robotics"
+    },
+    {
+      "Name": "DocumentNumber",
+      "Text": "20-4914"
+    },
+    {
+      "Name": "Revision",
+      "Text": "1"
+    },
+    {
+      "Name": "Title",
+      "Text": "Audio Board PCBA"
+    }
+  ],
+  "NetList": [
+    {
+      "NetName": "Net12V_TP",
+      "Component": "12V",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "GND",
+      "Component": "12V_gnd",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C7",
+      "Pin": "1"
+    },
+    {
+      "NetName": "+12",
+      "Component": "C7",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C8",
+      "Pin": "1"
+    },
+    {
+      "NetName": "+12",
+      "Component": "C8",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C11",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C11",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C29",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC29_2",
+      "Component": "C29",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetC30_1",
+      "Component": "C30",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC30_2",
+      "Component": "C30",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetC30_1",
+      "Component": "C31",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC31_2",
+      "Component": "C31",
+      "Pin": "2"
+    },
+    {
+      "NetName": "+12",
+      "Component": "C32",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C32",
+      "Pin": "2"
+    },
+    {
+      "NetName": "+12",
+      "Component": "C33",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C33",
+      "Pin": "2"
+    },
+    {
+      "NetName": "+12",
+      "Component": "C34",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C34",
+      "Pin": "2"
+    },
+    {
+      "NetName": "+12",
+      "Component": "C35",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C35",
+      "Pin": "2"
+    },
+    {
+      "NetName": "+12",
+      "Component": "C36",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C36",
+      "Pin": "2"
+    },
+    {
+      "NetName": "spker_p",
+      "Component": "C37",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC37_2",
+      "Component": "C37",
+      "Pin": "2"
+    },
+    {
+      "NetName": "spker_n",
+      "Component": "C38",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC38_2",
+      "Component": "C38",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C64",
+      "Pin": "1"
+    },
+    {
+      "NetName": "spker_p_filtered",
+      "Component": "C64",
+      "Pin": "2"
+    },
+    {
+      "NetName": "spker_n_filtered",
+      "Component": "C65",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C65",
+      "Pin": "2"
+    },
+    {
+      "NetName": "+12",
+      "Component": "C72",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C72",
+      "Pin": "2"
+    },
+    {
+      "NetName": "spker_p_filtered",
+      "Component": "CN2",
+      "Pin": "1"
+    },
+    {
+      "NetName": "spker_n_filtered",
+      "Component": "CN2",
+      "Pin": "2"
+    },
+    {
+      "NetName": "Net12V_TP",
+      "Component": "CN3",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "CN3",
+      "Pin": "2"
+    },
+    {
+      "NetName": "spker_p",
+      "Component": "L2",
+      "Pin": "1"
+    },
+    {
+      "NetName": "spker_p_filtered",
+      "Component": "L2",
+      "Pin": "2"
+    },
+    {
+      "NetName": "spker_n",
+      "Component": "L3",
+      "Pin": "1"
+    },
+    {
+      "NetName": "spker_n_filtered",
+      "Component": "L3",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "Q1",
+      "Pin": "1"
+    },
+    {
+      "NetName": "+12",
+      "Component": "Q1",
+      "Pin": "2"
+    },
+    {
+      "NetName": "Net12V_TP",
+      "Component": "Q1",
+      "Pin": "3"
+    },
+    {
+      "NetName": "NetR9_1",
+      "Component": "R9",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "R9",
+      "Pin": "2"
+    },
+    {
+      "NetName": "en_audio_pa",
+      "Component": "R22",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "R22",
+      "Pin": "2"
+    },
+    {
+      "NetName": "spker_n_filtered",
+      "Component": "speaker_n",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "spker_p_filtered",
+      "Component": "speaker_p",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "NetC30_1",
+      "Component": "U13",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetR9_1",
+      "Component": "U13",
+      "Pin": "2"
+    },
+    {
+      "NetName": "en_audio_pa",
+      "Component": "U13",
+      "Pin": "3"
+    },
+    {
+      "NetName": "sai1_tx_sync",
+      "Component": "U13",
+      "Pin": "4"
+    },
+    {
+      "NetName": "sai1_mclk",
+      "Component": "U13",
+      "Pin": "5"
+    },
+    {
+      "NetName": "sai1_tx_bclk",
+      "Component": "U13",
+      "Pin": "6"
+    },
+    {
+      "NetName": "sai1_txd0",
+      "Component": "U13",
+      "Pin": "7"
+    },
+    {
+      "NetName": "i2c_clk",
+      "Component": "U13",
+      "Pin": "8"
+    },
+    {
+      "NetName": "i2c_sda",
+      "Component": "U13",
+      "Pin": "9"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U13",
+      "Pin": "10"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U13",
+      "Pin": "11"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U13",
+      "Pin": "12"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U13",
+      "Pin": "13"
+    },
+    {
+      "NetName": "+12",
+      "Component": "U13",
+      "Pin": "14"
+    },
+    {
+      "NetName": "+12",
+      "Component": "U13",
+      "Pin": "15"
+    },
+    {
+      "NetName": "spker_n",
+      "Component": "U13",
+      "Pin": "16"
+    },
+    {
+      "NetName": "spker_n",
+      "Component": "U13",
+      "Pin": "17"
+    },
+    {
+      "NetName": "NetC38_2",
+      "Component": "U13",
+      "Pin": "18"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U13",
+      "Pin": "19"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U13",
+      "Pin": "20"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U13",
+      "Pin": "21"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U13",
+      "Pin": "22"
+    },
+    {
+      "NetName": "NetC37_2",
+      "Component": "U13",
+      "Pin": "23"
+    },
+    {
+      "NetName": "spker_p",
+      "Component": "U13",
+      "Pin": "24"
+    },
+    {
+      "NetName": "spker_p",
+      "Component": "U13",
+      "Pin": "25"
+    },
+    {
+      "NetName": "+12",
+      "Component": "U13",
+      "Pin": "26"
+    },
+    {
+      "NetName": "+12",
+      "Component": "U13",
+      "Pin": "27"
+    },
+    {
+      "NetName": "+12",
+      "Component": "U13",
+      "Pin": "28"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U13",
+      "Pin": "29"
+    },
+    {
+      "NetName": "NetC29_2",
+      "Component": "U13",
+      "Pin": "30"
+    },
+    {
+      "NetName": "NetC31_2",
+      "Component": "U13",
+      "Pin": "31"
+    },
+    {
+      "NetName": "NetC30_2",
+      "Component": "U13",
+      "Pin": "32"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U13",
+      "Pin": "33"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C13",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C13",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C15",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C15",
+      "Pin": "2"
+    },
+    {
+      "NetName": "por_button",
+      "Component": "C63",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C63",
+      "Pin": "2"
+    },
+    {
+      "NetName": "manual_reset",
+      "Component": "C66",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C66",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C68",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC68_2",
+      "Component": "C68",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C69",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC69_2",
+      "Component": "C69",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetC73_1",
+      "Component": "C73",
+      "Pin": "1"
+    },
+    {
+      "NetName": "watchdog_1",
+      "Component": "C73",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetC74_1",
+      "Component": "C74",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C74",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetC75_1",
+      "Component": "C75",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C75",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "CN1",
+      "Pin": "1"
+    },
+    {
+      "NetName": "jtag_tms_swdio",
+      "Component": "CN1",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "CN1",
+      "Pin": "3"
+    },
+    {
+      "NetName": "jtag_tck_swdclk",
+      "Component": "CN1",
+      "Pin": "4"
+    },
+    {
+      "NetName": "GND",
+      "Component": "CN1",
+      "Pin": "5"
+    },
+    {
+      "NetName": "jtag_tdo_swo",
+      "Component": "CN1",
+      "Pin": "6"
+    },
+    {
+      "NetName": "NetCN1_7",
+      "Component": "CN1",
+      "Pin": "7"
+    },
+    {
+      "NetName": "jtag_tdi_nc",
+      "Component": "CN1",
+      "Pin": "8"
+    },
+    {
+      "NetName": "NetCN1_9",
+      "Component": "CN1",
+      "Pin": "9"
+    },
+    {
+      "NetName": "jtag_trstb",
+      "Component": "CN1",
+      "Pin": "10"
+    },
+    {
+      "NetName": "i2c_clk",
+      "Component": "i2c_clk",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "GND",
+      "Component": "i2c_gnd",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "i2c_sda",
+      "Component": "i2c_sda",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "jtag_tdi_nc",
+      "Component": "jtag_tdi",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "jtag_trstb",
+      "Component": "jtag_trstb",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "sai1_mclk",
+      "Component": "mclk",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "manual_reset",
+      "Component": "R2",
+      "Pin": "1"
+    },
+    {
+      "NetName": "por_button",
+      "Component": "R2",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "R3",
+      "Pin": "1"
+    },
+    {
+      "NetName": "watchdog_1",
+      "Component": "R3",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "R4",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC69_2",
+      "Component": "R4",
+      "Pin": "2"
+    },
+    {
+      "NetName": "i2c_clk",
+      "Component": "R5",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "R5",
+      "Pin": "2"
+    },
+    {
+      "NetName": "i2c_sda",
+      "Component": "R18",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "R18",
+      "Pin": "2"
+    },
+    {
+      "NetName": "manual_reset",
+      "Component": "R23",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC73_1",
+      "Component": "R23",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetC74_1",
+      "Component": "R24",
+      "Pin": "1"
+    },
+    {
+      "NetName": "nreset",
+      "Component": "R24",
+      "Pin": "2"
+    },
+    {
+      "NetName": "jtag_trstb",
+      "Component": "R25",
+      "Pin": "1"
+    },
+    {
+      "NetName": "manual_reset",
+      "Component": "R25",
+      "Pin": "2"
+    },
+    {
+      "NetName": "manual_reset",
+      "Component": "R27",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "R27",
+      "Pin": "2"
+    },
+    {
+      "NetName": "watchdog_2",
+      "Component": "R28",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC75_1",
+      "Component": "R28",
+      "Pin": "2"
+    },
+    {
+      "NetName": "sai1_rx_bclk",
+      "Component": "rx_bclk",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "sai1_rxd0",
+      "Component": "rx_d0",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "sai1_rx_sync",
+      "Component": "rx_sync",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "GND",
+      "Component": "SW2",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "SW2",
+      "Pin": "2"
+    },
+    {
+      "NetName": "por_button",
+      "Component": "SW2",
+      "Pin": "3"
+    },
+    {
+      "NetName": "por_button",
+      "Component": "SW2",
+      "Pin": "4"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "swd_3v3",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "GND",
+      "Component": "swd_gnd",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "jtag_tck_swdclk",
+      "Component": "swdclk",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "jtag_tms_swdio",
+      "Component": "swdio",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "jtag_tdo_swo",
+      "Component": "swo",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "NetTP2_TP",
+      "Component": "TP2",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "sai1_tx_bclk",
+      "Component": "tx_bclk",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "sai1_txd0",
+      "Component": "tx_d0",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "sai1_tx_sync",
+      "Component": "tx_sync",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "i2c_sda",
+      "Component": "U2",
+      "Pin": "1"
+    },
+    {
+      "NetName": "sai1_mclk",
+      "Component": "U2",
+      "Pin": "4"
+    },
+    {
+      "NetName": "sai1_tx_sync",
+      "Component": "U2",
+      "Pin": "5"
+    },
+    {
+      "NetName": "sai1_tx_bclk",
+      "Component": "U2",
+      "Pin": "6"
+    },
+    {
+      "NetName": "sai1_txd1",
+      "Component": "U2",
+      "Pin": "8"
+    },
+    {
+      "NetName": "sai1_txd0",
+      "Component": "U2",
+      "Pin": "9"
+    },
+    {
+      "NetName": "sai1_rxd0",
+      "Component": "U2",
+      "Pin": "10"
+    },
+    {
+      "NetName": "sai1_rx_sync",
+      "Component": "U2",
+      "Pin": "11"
+    },
+    {
+      "NetName": "sai1_rx_bclk",
+      "Component": "U2",
+      "Pin": "12"
+    },
+    {
+      "NetName": "NetU2_21",
+      "Component": "U2",
+      "Pin": "21"
+    },
+    {
+      "NetName": "NetC74_1",
+      "Component": "U2",
+      "Pin": "22"
+    },
+    {
+      "NetName": "NetU2_24",
+      "Component": "U2",
+      "Pin": "24"
+    },
+    {
+      "NetName": "usb_diff_n",
+      "Component": "U2",
+      "Pin": "32"
+    },
+    {
+      "NetName": "usb_diff_p",
+      "Component": "U2",
+      "Pin": "33"
+    },
+    {
+      "NetName": "NetTP2_TP",
+      "Component": "U2",
+      "Pin": "36"
+    },
+    {
+      "NetName": "NetC69_2",
+      "Component": "U2",
+      "Pin": "37"
+    },
+    {
+      "NetName": "NetC68_2",
+      "Component": "U2",
+      "Pin": "38"
+    },
+    {
+      "NetName": "jtag_tms_swdio",
+      "Component": "U2",
+      "Pin": "44"
+    },
+    {
+      "NetName": "jtag_tck_swdclk",
+      "Component": "U2",
+      "Pin": "45"
+    },
+    {
+      "NetName": "watchdog_1",
+      "Component": "U2",
+      "Pin": "46"
+    },
+    {
+      "NetName": "jtag_tdi_nc",
+      "Component": "U2",
+      "Pin": "47"
+    },
+    {
+      "NetName": "jtag_tdo_swo",
+      "Component": "U2",
+      "Pin": "48"
+    },
+    {
+      "NetName": "jtag_trstb",
+      "Component": "U2",
+      "Pin": "49"
+    },
+    {
+      "NetName": "i2c_clk",
+      "Component": "U2",
+      "Pin": "80"
+    },
+    {
+      "NetName": "nreset",
+      "Component": "U4",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U4",
+      "Pin": "2"
+    },
+    {
+      "NetName": "manual_reset",
+      "Component": "U4",
+      "Pin": "3"
+    },
+    {
+      "NetName": "NetC75_1",
+      "Component": "U4",
+      "Pin": "4"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U4",
+      "Pin": "5"
+    },
+    {
+      "NetName": "NetC68_2",
+      "Component": "Y1",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "Y1",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetC69_2",
+      "Component": "Y1",
+      "Pin": "3"
+    },
+    {
+      "NetName": "GND",
+      "Component": "Y1",
+      "Pin": "4"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C2",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C2",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C3",
+      "Pin": "1"
+    },
+    {
+      "NetName": "dcdc_out",
+      "Component": "C3",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C5",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C5",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C6",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C6",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C10",
+      "Pin": "1"
+    },
+    {
+      "NetName": "dcdc_out",
+      "Component": "C10",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C14",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C14",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C16",
+      "Pin": "1"
+    },
+    {
+      "NetName": "dcdc_out",
+      "Component": "C16",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C17",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C17",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C18",
+      "Pin": "1"
+    },
+    {
+      "NetName": "dcdc_out",
+      "Component": "C18",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C19",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C19",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C20",
+      "Pin": "1"
+    },
+    {
+      "NetName": "vdd_high_cap",
+      "Component": "C20",
+      "Pin": "2"
+    },
+    {
+      "NetName": "vdd_high_cap",
+      "Component": "C24",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C24",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetC41_1",
+      "Component": "C41",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C41",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetC42_1",
+      "Component": "C42",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C42",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetC43_1",
+      "Component": "C43",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C43",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C45",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC41_1",
+      "Component": "C45",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C47",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC43_1",
+      "Component": "C47",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C48",
+      "Pin": "1"
+    },
+    {
+      "NetName": "5V_500mA_sys",
+      "Component": "C48",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C51",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C51",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C52",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C52",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C53",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C53",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C54",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C54",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C55",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC42_1",
+      "Component": "C55",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C67",
+      "Pin": "1"
+    },
+    {
+      "NetName": "dcdc_out",
+      "Component": "C67",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C70",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C70",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C71",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C71",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U2",
+      "Pin": "7"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U2",
+      "Pin": "16"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U2",
+      "Pin": "25"
+    },
+    {
+      "NetName": "NetC42_1",
+      "Component": "U2",
+      "Pin": "26"
+    },
+    {
+      "NetName": "5V_500mA_sys",
+      "Component": "U2",
+      "Pin": "29"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U2",
+      "Pin": "30"
+    },
+    {
+      "NetName": "NetC41_1",
+      "Component": "U2",
+      "Pin": "31"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U2",
+      "Pin": "34"
+    },
+    {
+      "NetName": "vdd_high_cap",
+      "Component": "U2",
+      "Pin": "35"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U2",
+      "Pin": "39"
+    },
+    {
+      "NetName": "NetC43_1",
+      "Component": "U2",
+      "Pin": "40"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U2",
+      "Pin": "41"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U2",
+      "Pin": "42"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U2",
+      "Pin": "50"
+    },
+    {
+      "NetName": "dcdc_out",
+      "Component": "U2",
+      "Pin": "53"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U2",
+      "Pin": "54"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U2",
+      "Pin": "63"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U2",
+      "Pin": "71"
+    },
+    {
+      "NetName": "dcdc_out",
+      "Component": "U2",
+      "Pin": "77"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U2",
+      "Pin": "78"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C49",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC49_2",
+      "Component": "C49",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C50",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC49_2",
+      "Component": "C50",
+      "Pin": "2"
+    },
+    {
+      "NetName": "en_audio_pa",
+      "Component": "en_pa",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "en_pdm_tdm",
+      "Component": "en_tdm",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "flexspi_ss0",
+      "Component": "MEM1",
+      "Pin": "1"
+    },
+    {
+      "NetName": "flexspi_d1_a",
+      "Component": "MEM1",
+      "Pin": "2"
+    },
+    {
+      "NetName": "flexspi_d2_a",
+      "Component": "MEM1",
+      "Pin": "3"
+    },
+    {
+      "NetName": "NetC49_2",
+      "Component": "MEM1",
+      "Pin": "4"
+    },
+    {
+      "NetName": "flexspi_d0_a",
+      "Component": "MEM1",
+      "Pin": "5"
+    },
+    {
+      "NetName": "flexspi_clk_a",
+      "Component": "MEM1",
+      "Pin": "6"
+    },
+    {
+      "NetName": "flexspi_d3_a",
+      "Component": "MEM1",
+      "Pin": "7"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "MEM1",
+      "Pin": "8"
+    },
+    {
+      "NetName": "flexspi_ss0",
+      "Component": "R26",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "R26",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetU2_2",
+      "Component": "U2",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetU2_3",
+      "Component": "U2",
+      "Pin": "3"
+    },
+    {
+      "NetName": "NetU2_13",
+      "Component": "U2",
+      "Pin": "13"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U2",
+      "Pin": "23"
+    },
+    {
+      "NetName": "NetU2_27",
+      "Component": "U2",
+      "Pin": "27"
+    },
+    {
+      "NetName": "NetU2_28",
+      "Component": "U2",
+      "Pin": "28"
+    },
+    {
+      "NetName": "NetU2_43",
+      "Component": "U2",
+      "Pin": "43"
+    },
+    {
+      "NetName": "en_pdm_tdm",
+      "Component": "U2",
+      "Pin": "51"
+    },
+    {
+      "NetName": "en_audio_pa",
+      "Component": "U2",
+      "Pin": "52"
+    },
+    {
+      "NetName": "NetU2_55",
+      "Component": "U2",
+      "Pin": "55"
+    },
+    {
+      "NetName": "NetU2_56",
+      "Component": "U2",
+      "Pin": "56"
+    },
+    {
+      "NetName": "NetU2_57",
+      "Component": "U2",
+      "Pin": "57"
+    },
+    {
+      "NetName": "NetU2_58",
+      "Component": "U2",
+      "Pin": "58"
+    },
+    {
+      "NetName": "NetU2_59",
+      "Component": "U2",
+      "Pin": "59"
+    },
+    {
+      "NetName": "watchdog_2",
+      "Component": "U2",
+      "Pin": "60"
+    },
+    {
+      "NetName": "NetU2_62",
+      "Component": "U2",
+      "Pin": "62"
+    },
+    {
+      "NetName": "flexspi_d3_a",
+      "Component": "U2",
+      "Pin": "64"
+    },
+    {
+      "NetName": "flexspi_clk_a",
+      "Component": "U2",
+      "Pin": "65"
+    },
+    {
+      "NetName": "flexspi_d0_a",
+      "Component": "U2",
+      "Pin": "66"
+    },
+    {
+      "NetName": "flexspi_d2_a",
+      "Component": "U2",
+      "Pin": "67"
+    },
+    {
+      "NetName": "flexspi_d1_a",
+      "Component": "U2",
+      "Pin": "68"
+    },
+    {
+      "NetName": "flexspi_ss0",
+      "Component": "U2",
+      "Pin": "69"
+    },
+    {
+      "NetName": "NetU2_70",
+      "Component": "U2",
+      "Pin": "70"
+    },
+    {
+      "NetName": "NetU2_79",
+      "Component": "U2",
+      "Pin": "79"
+    },
+    {
+      "NetName": "watchdog_2",
+      "Component": "wtch_dwg_2",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "bt_cfg_0",
+      "Component": "R6",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "R6",
+      "Pin": "2"
+    },
+    {
+      "NetName": "bt_cfg_1",
+      "Component": "R7",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "R7",
+      "Pin": "2"
+    },
+    {
+      "NetName": "bt_cfg_2",
+      "Component": "R8",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "R8",
+      "Pin": "2"
+    },
+    {
+      "NetName": "bt_cfg_3",
+      "Component": "R17",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "R17",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetR19_1",
+      "Component": "R19",
+      "Pin": "1"
+    },
+    {
+      "NetName": "bootmode_1",
+      "Component": "R19",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "R20",
+      "Pin": "1"
+    },
+    {
+      "NetName": "bootmode_1",
+      "Component": "R20",
+      "Pin": "2"
+    },
+    {
+      "NetName": "bootmode_0",
+      "Component": "R29",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetR29_2",
+      "Component": "R29",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetR19_1",
+      "Component": "SW1",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetR19_1",
+      "Component": "SW1",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "SW1",
+      "Pin": "3"
+    },
+    {
+      "NetName": "GND",
+      "Component": "SW1",
+      "Pin": "4"
+    },
+    {
+      "NetName": "bt_cfg_3",
+      "Component": "U2",
+      "Pin": "61"
+    },
+    {
+      "NetName": "NetR29_2",
+      "Component": "U2",
+      "Pin": "72"
+    },
+    {
+      "NetName": "bootmode_1",
+      "Component": "U2",
+      "Pin": "73"
+    },
+    {
+      "NetName": "bt_cfg_0",
+      "Component": "U2",
+      "Pin": "74"
+    },
+    {
+      "NetName": "bt_cfg_1",
+      "Component": "U2",
+      "Pin": "75"
+    },
+    {
+      "NetName": "bt_cfg_2",
+      "Component": "U2",
+      "Pin": "76"
+    },
+    {
+      "NetName": "bootmode_1",
+      "Component": "U7",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U7",
+      "Pin": "3"
+    },
+    {
+      "NetName": "bootmode_0",
+      "Component": "U7",
+      "Pin": "4"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U7",
+      "Pin": "5"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C1",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C1",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C4",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C4",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C12",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C12",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C23",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C23",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C25",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C25",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C39",
+      "Pin": "1"
+    },
+    {
+      "NetName": "1v8_ldo",
+      "Component": "C39",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C40",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C40",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C56",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C56",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C57",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C57",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetM1_1",
+      "Component": "M1",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "M1",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "M1",
+      "Pin": "3"
+    },
+    {
+      "NetName": "mic_clk_0",
+      "Component": "M1",
+      "Pin": "4"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "M1",
+      "Pin": "5"
+    },
+    {
+      "NetName": "NetM2_1",
+      "Component": "M2",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "M2",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "M2",
+      "Pin": "3"
+    },
+    {
+      "NetName": "mic_clk_1",
+      "Component": "M2",
+      "Pin": "4"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "M2",
+      "Pin": "5"
+    },
+    {
+      "NetName": "NetM3_1",
+      "Component": "M3",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "M3",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "M3",
+      "Pin": "3"
+    },
+    {
+      "NetName": "mic_clk_1",
+      "Component": "M3",
+      "Pin": "4"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "M3",
+      "Pin": "5"
+    },
+    {
+      "NetName": "NetM4_1",
+      "Component": "M4",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "M4",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "M4",
+      "Pin": "3"
+    },
+    {
+      "NetName": "mic_clk_0",
+      "Component": "M4",
+      "Pin": "4"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "M4",
+      "Pin": "5"
+    },
+    {
+      "NetName": "NetM5_1",
+      "Component": "M5",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "M5",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "M5",
+      "Pin": "3"
+    },
+    {
+      "NetName": "mic_clk_1",
+      "Component": "M5",
+      "Pin": "4"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "M5",
+      "Pin": "5"
+    },
+    {
+      "NetName": "NetM6_1",
+      "Component": "M6",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "M6",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "M6",
+      "Pin": "3"
+    },
+    {
+      "NetName": "mic_clk_1",
+      "Component": "M6",
+      "Pin": "4"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "M6",
+      "Pin": "5"
+    },
+    {
+      "NetName": "NetM7_1",
+      "Component": "M7",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "M7",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "M7",
+      "Pin": "3"
+    },
+    {
+      "NetName": "mic_clk_0",
+      "Component": "M7",
+      "Pin": "4"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "M7",
+      "Pin": "5"
+    },
+    {
+      "NetName": "mic_clk_1",
+      "Component": "mic_clk_1",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "NetM1_1",
+      "Component": "R11",
+      "Pin": "1"
+    },
+    {
+      "NetName": "mic_data_pdm_0",
+      "Component": "R11",
+      "Pin": "2"
+    },
+    {
+      "NetName": "mic_data_pdm_2",
+      "Component": "R12",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetM2_1",
+      "Component": "R12",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetM3_1",
+      "Component": "R13",
+      "Pin": "1"
+    },
+    {
+      "NetName": "mic_data_pdm_2",
+      "Component": "R13",
+      "Pin": "2"
+    },
+    {
+      "NetName": "mic_data_pdm_1",
+      "Component": "R14",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetM4_1",
+      "Component": "R14",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetM5_1",
+      "Component": "R15",
+      "Pin": "1"
+    },
+    {
+      "NetName": "mic_data_pdm_3",
+      "Component": "R15",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetM7_1",
+      "Component": "R16",
+      "Pin": "1"
+    },
+    {
+      "NetName": "mic_data_pdm_0",
+      "Component": "R16",
+      "Pin": "2"
+    },
+    {
+      "NetName": "mic_data_pdm_3",
+      "Component": "R21",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetM6_1",
+      "Component": "R21",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "ST1",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "ST2",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "ST3",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "ST4",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "ST5",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "ST6",
+      "Pin": "1"
+    },
+    {
+      "NetName": "mic_clk_0",
+      "Component": "U5",
+      "Pin": "1"
+    },
+    {
+      "NetName": "mic_data_pdm_0",
+      "Component": "U5",
+      "Pin": "2"
+    },
+    {
+      "NetName": "mic_data_pdm_1",
+      "Component": "U5",
+      "Pin": "3"
+    },
+    {
+      "NetName": "mic_clk_1",
+      "Component": "U5",
+      "Pin": "4"
+    },
+    {
+      "NetName": "mic_data_pdm_2",
+      "Component": "U5",
+      "Pin": "5"
+    },
+    {
+      "NetName": "mic_data_pdm_3",
+      "Component": "U5",
+      "Pin": "6"
+    },
+    {
+      "NetName": "i2c_clk",
+      "Component": "U5",
+      "Pin": "7"
+    },
+    {
+      "NetName": "i2c_sda",
+      "Component": "U5",
+      "Pin": "8"
+    },
+    {
+      "NetName": "sai1_rx_sync",
+      "Component": "U5",
+      "Pin": "9"
+    },
+    {
+      "NetName": "sai1_rx_bclk",
+      "Component": "U5",
+      "Pin": "10"
+    },
+    {
+      "NetName": "sai1_rxd0",
+      "Component": "U5",
+      "Pin": "11"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U5",
+      "Pin": "12"
+    },
+    {
+      "NetName": "en_pdm_tdm",
+      "Component": "U5",
+      "Pin": "13"
+    },
+    {
+      "NetName": "1v8_ldo",
+      "Component": "U5",
+      "Pin": "14"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U5",
+      "Pin": "15"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U5",
+      "Pin": "16"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U5",
+      "Pin": "17"
+    },
+    {
+      "NetName": "5V_500mA_sys",
+      "Component": "5V_reg",
+      "Pin": "TP"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C9",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C9",
+      "Pin": "2"
+    },
+    {
+      "NetName": "1v8_ldo",
+      "Component": "C21",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C21",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetC22_1",
+      "Component": "C22",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C22",
+      "Pin": "2"
+    },
+    {
+      "NetName": "5V_500mA_sys",
+      "Component": "C26",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C26",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetC27_1",
+      "Component": "C27",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C27",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C28",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C28",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetC44_1",
+      "Component": "C44",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C44",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetC46_1",
+      "Component": "C46",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C46",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetC58_1",
+      "Component": "C58",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C58",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C59",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C59",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C60",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C60",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C61",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "C61",
+      "Pin": "2"
+    },
+    {
+      "NetName": "dcdc_out",
+      "Component": "C62",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "C62",
+      "Pin": "2"
+    },
+    {
+      "NetName": "+5_usb",
+      "Component": "CN4",
+      "Pin": "01"
+    },
+    {
+      "NetName": "usb_diff_n",
+      "Component": "CN4",
+      "Pin": "02"
+    },
+    {
+      "NetName": "usb_diff_p",
+      "Component": "CN4",
+      "Pin": "03"
+    },
+    {
+      "NetName": "GND",
+      "Component": "CN4",
+      "Pin": "04"
+    },
+    {
+      "NetName": "NetC44_1",
+      "Component": "CN4",
+      "Pin": "S1"
+    },
+    {
+      "NetName": "NetC44_1",
+      "Component": "CN4",
+      "Pin": "S2"
+    },
+    {
+      "NetName": "+5_usb",
+      "Component": "F1",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC22_1",
+      "Component": "F1",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetL1_1",
+      "Component": "L1",
+      "Pin": "1"
+    },
+    {
+      "NetName": "dcdc_out",
+      "Component": "L1",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "R1",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC58_1",
+      "Component": "R1",
+      "Pin": "2"
+    },
+    {
+      "NetName": "GND",
+      "Component": "R10",
+      "Pin": "1"
+    },
+    {
+      "NetName": "NetC44_1",
+      "Component": "R10",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U1",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U1",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U1",
+      "Pin": "3"
+    },
+    {
+      "NetName": "NetC46_1",
+      "Component": "U1",
+      "Pin": "4"
+    },
+    {
+      "NetName": "1v8_ldo",
+      "Component": "U1",
+      "Pin": "5"
+    },
+    {
+      "NetName": "dcdc_out",
+      "Component": "U2",
+      "Pin": "14"
+    },
+    {
+      "NetName": "NetC58_1",
+      "Component": "U2",
+      "Pin": "15"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U2",
+      "Pin": "17"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U2",
+      "Pin": "18"
+    },
+    {
+      "NetName": "NetL1_1",
+      "Component": "U2",
+      "Pin": "19"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U2",
+      "Pin": "20"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U11",
+      "Pin": "1"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U11",
+      "Pin": "2"
+    },
+    {
+      "NetName": "3v3_ldo_1A",
+      "Component": "U11",
+      "Pin": "3"
+    },
+    {
+      "NetName": "NetC27_1",
+      "Component": "U11",
+      "Pin": "4"
+    },
+    {
+      "NetName": "5V_500mA_sys",
+      "Component": "U11",
+      "Pin": "5"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U11",
+      "Pin": "6"
+    },
+    {
+      "NetName": "5V_500mA_sys",
+      "Component": "U11",
+      "Pin": "7"
+    },
+    {
+      "NetName": "5V_500mA_sys",
+      "Component": "U11",
+      "Pin": "8"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U11",
+      "Pin": "9"
+    },
+    {
+      "NetName": "NetC22_1",
+      "Component": "U12",
+      "Pin": "1"
+    },
+    {
+      "NetName": "GND",
+      "Component": "U12",
+      "Pin": "2"
+    },
+    {
+      "NetName": "NetC22_1",
+      "Component": "U12",
+      "Pin": "3"
+    },
+    {
+      "NetName": "5V_500mA_sys",
+      "Component": "U12",
+      "Pin": "4"
+    },
+    {
+      "NetName": "usb_diff_p",
+      "Component": "U12",
+      "Pin": "5"
+    },
+    {
+      "NetName": "usb_diff_n",
+      "Component": "U12",
+      "Pin": "6"
+    }
+  ]
+}

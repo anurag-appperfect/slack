@@ -1,0 +1,5 @@
+#use-added-syntax(jitx)
+defpackage test-altium-import:
+    import jitx/commands
+
+import-altium("input","output")    

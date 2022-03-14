@@ -1,0 +1,128 @@
+#use-added-syntax(jitx)
+defpackage output/ixys-integrated-circuits-division/CPC1016NTR :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern IxysSOP-4 :
+  pad p[1] : oval-smd-pad(0.55, 1.45) at loc(-2.75, 1.27, 90.0) on Top
+  pad p[2] : oval-smd-pad(0.55, 1.45) at loc(-2.75, -1.27, 90.0) on Top
+  pad p[3] : oval-smd-pad(0.55, 1.45) at loc(2.75, -1.27, 90.0) on Top
+  pad p[4] : oval-smd-pad(0.55, 1.45) at loc(2.75, 1.27, 90.0) on Top
+  
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.25, [    
+    Point(-2.625, 2.095), 
+    Point(-2.63451505843609, 2.14283542904564), 
+    Point(-2.66161165235168, 2.18338834764832), 
+    Point(-2.70216457095436, 2.21048494156391), 
+    Point(-2.75, 2.22), 
+    Point(-2.79783542904564, 2.21048494156391), 
+    Point(-2.83838834764832, 2.18338834764832), 
+    Point(-2.86548494156391, 2.14283542904564), 
+    Point(-2.875, 2.095), 
+    Point(-2.86548494156391, 2.04716457095436), 
+    Point(-2.83838834764832, 2.00661165235168), 
+    Point(-2.79783542904564, 1.97951505843609), 
+    Point(-2.75, 1.97), 
+    Point(-2.70216457095436, 1.97951505843609), 
+    Point(-2.66161165235168, 2.00661165235168), 
+    Point(-2.63451505843609, 2.04716457095436), 
+    Point(-2.625, 2.095)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.6, [    
+    Point(-0.223, 1.023), 
+    Point(-0.245836140246614, 1.13780502970953), 
+    Point(-0.310867965644036, 1.23513203435596), 
+    Point(-0.408194970290473, 1.30016385975339), 
+    Point(-0.523, 1.323), 
+    Point(-0.637805029709527, 1.30016385975339), 
+    Point(-0.735132034355964, 1.23513203435596), 
+    Point(-0.800163859753386, 1.13780502970953), 
+    Point(-0.823, 1.023), 
+    Point(-0.800163859753386, 0.908194970290473), 
+    Point(-0.735132034355964, 0.810867965644036), 
+    Point(-0.637805029709527, 0.745836140246614), 
+    Point(-0.523, 0.723), 
+    Point(-0.408194970290473, 0.745836140246614), 
+    Point(-0.310867965644036, 0.810867965644036), 
+    Point(-0.245836140246614, 0.908194970290473), 
+    Point(-0.223, 1.023)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-1.55, -2.05), Point(-1.55, 2.05)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(1.55, -2.05), Point(1.55, 2.05)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-1.55, 2.05), Point(1.55, 2.05)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-1.55, -2.05), Point(1.55, -2.05)])
+  ref-label()
+
+pcb-symbol OPTO-COUPLER_100V-symbol :
+  pin A at Point(-16.51, -7.62) with :
+    direction = Left
+    length = 5.08
+  pin K at Point(-16.51, -15.24) with :
+    direction = Left
+    length = 5.08
+  pin L1 at Point(0.0, -15.24) with :
+    direction = Right
+    length = 5.08
+  pin L2 at Point(0.0, -7.62) with :
+    direction = Right
+    length = 5.08
+  layer("foreground") = Rectangle(16.51, 12.7, loc(-8.255, -11.43))
+  layer("foreground") = Polygon([Point(-10.287, -12.446), Point(-10.795, -11.43), Point(-11.303, -11.938)])
+  layer("foreground") = Polygon([Point(-9.271, -11.43), Point(-9.779, -10.414), Point(-10.287, -10.922)])
+  layer("foreground") = Polygon([Point(-12.827, -9.525), Point(-13.97, -11.43), Point(-14.986, -9.525)])
+  layer("foreground") = Polygon([Point(-5.969, -8.89), Point(-5.08, -8.636), Point(-5.08, -9.144)])
+  layer("foreground") = Polygon([Point(-5.969, -13.97), Point(-5.08, -13.716), Point(-5.08, -14.224)])
+  layer("foreground") = Line(1.0, [Point(-12.065, -10.668), Point(-10.287, -12.446)])
+  layer("foreground") = Line(1.0, [Point(-11.049, -9.652), Point(-9.271, -11.43)])
+  layer("foreground") = Line(1.0, [Point(-15.494, -11.43), Point(-12.573, -11.43)])
+  layer("foreground") = Line(1.0, [Point(-13.97, -15.24), Point(-13.97, -7.62)])
+  layer("foreground") = Line(1.0, [    
+    Point(-5.842, -13.97), 
+    Point(-1.778, -13.97), 
+    Point(-1.778, -8.89), 
+    Point(-5.842, -8.89)])
+  layer("foreground") = Line(1.0, [Point(-5.842, -10.16), Point(-1.8542, -10.16)])
+  layer("foreground") = Line(1.0, [Point(-5.9182, -12.7), Point(-1.8542, -12.7)])
+  layer("foreground") = Line(1.0, [Point(-13.97, -7.62), Point(-16.51, -7.62)])
+  layer("foreground") = Line(1.0, [Point(-16.51, -15.24), Point(-13.97, -15.24)])
+  layer("foreground") = Line(1.0, [Point(-5.842, -7.62), Point(0.0, -7.62)])
+  layer("foreground") = Line(1.0, [Point(-5.842, -15.24), Point(0.0, -15.24)])
+  layer("foreground") = Line(1.0, [    
+    Point(-6.858, -8.89), 
+    Point(-7.62, -8.89), 
+    Point(-7.62, -13.97), 
+    Point(-6.858, -13.97)])
+  layer("foreground") = Line(1.0, [Point(-6.858, -7.62), Point(-6.858, -10.16)])
+  layer("foreground") = Line(1.0, [Point(-6.858, -12.7), Point(-6.858, -15.24)])
+  layer("foreground") = Line(1.0, [Point(-5.969, -7.366), Point(-5.969, -7.874)])
+  layer("foreground") = Line(1.0, [Point(-5.969, -8.509), Point(-5.969, -9.271)])
+  layer("foreground") = Line(1.0, [Point(-5.969, -9.779), Point(-5.969, -10.541)])
+  layer("foreground") = Line(1.0, [Point(-5.969, -7.493), Point(-5.969, -7.239)])
+  layer("foreground") = Line(1.0, [Point(-5.969, -7.747), Point(-5.969, -8.001)])
+  layer("foreground") = Line(1.0, [Point(-5.969, -12.319), Point(-5.969, -13.081)])
+  layer("foreground") = Line(1.0, [Point(-5.969, -13.589), Point(-5.969, -14.351)])
+  layer("foreground") = Line(1.0, [Point(-5.969, -14.859), Point(-5.969, -15.621)])
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(-17.01, -4.78))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(-17.01, -3.718))
+
+public pcb-component component :
+  name = "OPTO-COUPLER_100V"
+  description = "OPTO-COUPLER_100V"
+  manufacturer = "IXYS Integrated Circuits Division"
+  mpn = "CPC1016NTR"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [A | 1 | Left]
+    [K | 2 | Left]
+    [L1 | 3 | Right]
+    [L2 | 4 | Right]
+  
+  assign-landpattern(IxysSOP-4)
+  val sym = OPTO-COUPLER_100V-symbol
+  symbol = sym(self.A => sym.A, self.K => sym.K, self.L1 => sym.L1, self.L2 => sym.L2)
+

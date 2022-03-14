@@ -1,0 +1,993 @@
+#use-added-syntax(jitx)
+defpackage caster_mcb_rev_2 :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-module caster_mcb_6_solinoid-submodule :
+  public inst C62 : output/unknown/CMP-001-0625-12/component
+  public inst C63 : output/unknown/CMP-007-0105-09/component
+  public inst CN10 : output/sullins-connector-solutions/CMP-001-1359-01/component
+  public inst D17 : output/unknown/B1100-13-F/component
+  public inst Q5 : output/unknown/CMP-00225-02/component
+  public inst R77 : output/unknown/CMP-007-0358-14/component
+  public inst R78 : output/unknown/CMP-007-0296-14/component
+  public inst R79 : output/bourns/CRS2512AFX-1R00ELF/component
+  public inst R80 : output/unknown/CMP-007-0358-14/component
+  public inst R81 : output/unknown/CMP-007-0296-14/component
+  public inst R82 : output/unknown/CMP-001-0884-01/component
+  public inst R83 : output/unknown/CMP-001-1357-01/component
+  public inst R84 : output/unknown/CMP-007-0429-12/component
+  public inst U4 : output/unknown/CMP-0003-01/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(C62) at loc(52.832, 17.145) on Bottom
+  place(C63) at loc(57.3024, 22.91334, 180.0) on Bottom
+  place(CN10) at loc(32.6136, 21.94568, 90.0) on Top
+  place(D17) at loc(35.7886, 24.1808, 90.0) on Bottom
+  place(Q5) at loc(41.6814, 22.0726) on Bottom
+  place(R77) at loc(50.0126, 24.384, 180.0) on Bottom
+  place(R78) at loc(47.4472, 21.971, 270.0) on Bottom
+  place(R79) at loc(48.0822, 13.6906) on Bottom
+  place(R80) at loc(51.943, 24.4094) on Bottom
+  place(R81) at loc(57.531, 19.75358, 180.0) on Bottom
+  place(R82) at loc(57.3278, 20.88642, 180.0) on Bottom
+  place(R83) at loc(57.3024, 21.7297, 180.0) on Bottom
+  place(R84) at loc(55.9308, 16.3068, 270.0) on Bottom
+  place(U4) at loc(52.116, 23.0978) on Bottom
+
+  pin gnd
+  pin netc62_1
+  pin netc63_1
+  pin netcn10_2
+  pin netq5_1
+  pin netq5_3
+  pin netr77_2
+  pin netr78_1
+  pin netr80_2
+  pin netr81_1
+  pin netr82_1
+  pin netr83_1
+  pin p3_3v
+  pin p60v
+
+  net GND (gnd, C62.p[2], C63.p[2], R77.p[1], R79.p[1], R81.p[2], R82.p[2], R83.p[2], U4.GND)
+  net NetC62_1 (netc62_1, C62.p[1], R84.p[2], U4.VIN)
+  net NetC63_1 (netc63_1, C63.p[1], U4.KEEP)
+  net NetCN10_2 (netcn10_2, CN10.p[2], D17.A, Q5.D)
+  net NetQ5_1 (netq5_1, Q5.G, R78.p[2])
+  net NetQ5_3 (netq5_3, Q5.S, R79.p[2], U4.SENSE)
+  net NetR77_2 (netr77_2, R77.p[2], U4.EN)
+  net NetR78_1 (netr78_1, R78.p[1], U4.OUT)
+  net NetR80_2 (netr80_2, R80.p[2], U4.STATUS)
+  net NetR81_1 (netr81_1, R81.p[1], U4.OSC)
+  net NetR82_1 (netr82_1, R82.p[1], U4.HOLD)
+  net NetR83_1 (netr83_1, R83.p[1], U4.PEAK)
+  net p3_3V (p3_3v, R80.p[1])
+  net p60V (p60v, CN10.p[1], D17.K, R84.p[1])
+
+
+
+
+pcb-module caster_mcb_1_power-submodule :
+  public inst C1 : output/samsung-electro-mechanics/CL05B103KB5NNNC/component
+  public inst C10 : output/tdk-corporation/C1608X7R1A225K080AC/component
+  public inst C11 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  public inst C2 : output/kemet/C0402C200J5GACTU/component
+  public inst C3 : output/avx-corporation/12061C105KAT2A/component
+  public inst C4 : output/yageo/CC0603KRX7R0BB104/component
+  public inst C5 : output/kemet/C0402C200J5GACTU/component
+  public inst C6 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  public inst C7 : output/samsung-electro-mechanics/CL05B103KB5NNNC/component
+  public inst C8 : output/samsung-electro-mechanics/CL21B106KOQNNNE/component
+  public inst C9 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  public inst D1 : output/nexperia/PMEG10010ELRX/component
+  public inst D14 : output/lite-on-inc-/LTST-C191TBKT/component
+  public inst D18 : output/unknown/CMP-001-0958-01/component
+  public inst FB1 : output/samsung-electro-mechanics/CIM05U601NC/component
+  public inst FID1 : output/unknown/FIDUCIAL_1MM/component
+  public inst FID2 : output/unknown/FIDUCIAL_1MM/component
+  public inst FID3 : output/unknown/FIDUCIAL_1MM/component
+  public inst FID4 : output/unknown/FIDUCIAL_1MM/component
+  public inst FID5 : output/unknown/FIDUCIAL_1MM/component
+  public inst FID6 : output/unknown/FIDUCIAL_1MM/component
+  public inst L1 : output/bourns-inc-/SRU1048-331Y/component
+  public inst R1 : output/yageo/RC0402FR-070RL/component
+  public inst R13 : output/yageo/RC0402FR-07220RL/component
+  public inst R2 : output/yageo/RC0402FR-07205KL/component
+  public inst R3 : output/yageo/RC0402FR-0710KL/component
+  public inst R4 : output/te-connectivity-passive-product/RLP73K1JR75FTDF/component
+  public inst R5 : output/yageo/RC0402FR-0710KL/component
+  public inst R6 : output/yageo/RC0402FR-07133KL/component
+  public inst R7 : output/yageo/RC0402FR-0780K6L/component
+  public inst R8 : output/yageo/RC0402FR-074K22L/component
+  public inst TP2 : output/unknown/Testpoint_SMT_2mm/component
+  public inst TP3 : output/unknown/CMP-001-0557-04/component
+  public inst U2 : output/texas-instruments/TPS79933DDCR/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(C1) at loc(54.61, 84.9122, 225.0) on Bottom
+  place(C10) at loc(18.07972, 9.85012) on Bottom
+  place(C11) at loc(57.4802, 66.2178) on Bottom
+  place(C2) at loc(54.07675, 80.30641, 90.0) on Top
+  place(C3) at loc(49.57572, 91.00312, 270.0) on Top
+  place(C4) at loc(52.29875, 86.85961, 135.0) on Bottom
+  place(C5) at loc(54.102, 83.4136, 90.0) on Top
+  place(C6) at loc(53.85447, 85.59594, 225.0) on Bottom
+  place(C7) at loc(19.0754, 15.2654) on Bottom
+  place(C8) at loc(55.13175, 76.75041, 180.0) on Top
+  place(C9) at loc(14.859, 13.4366, 90.0) on Bottom
+  place(D1) at loc(40.29795, 81.03671, 90.0) on Top
+  place(D14) at loc(38.9128, 59.34456, 270.0) on Top
+  place(D18) at loc(55.912, 62.7786, 270.0) on Bottom
+  place(FB1) at loc(14.3764, 15.2146, 180.0) on Bottom
+  place(FID1) at loc(49.75092, 2.29666) on Top
+  place(FID2) at loc(49.9005, 97.67654) on Top
+  place(FID3) at loc(2.6354, 89.4763) on Top
+  place(FID4) at loc(49.8116, 97.65876) on Bottom
+  place(FID5) at loc(49.70012, 2.3119) on Bottom
+  place(FID6) at loc(2.58206, 89.45598) on Bottom
+  place(L1) at loc(47.38455, 81.10721) on Top
+  place(R1) at loc(54.04895, 85.57761, 270.0) on Top
+  place(R13) at loc(40.0812, 61.2394, 90.0) on Top
+  place(R2) at loc(55.58195, 82.42801, 180.0) on Bottom
+  place(R3) at loc(55.09275, 80.30641, 270.0) on Top
+  place(R4) at loc(55.20675, 78.52841, 180.0) on Top
+  place(R5) at loc(55.09275, 82.59241, 270.0) on Top
+  place(R6) at loc(55.58195, 83.36781) on Bottom
+  place(R7) at loc(57.912, 68.9356, 270.0) on Bottom
+  place(R8) at loc(57.5056, 67.3354, 180.0) on Bottom
+  place(TP2) at loc(18.2372, 7.20344, 270.0) on Bottom
+  place(TP3) at loc(37.44468, 39.40048, 90.0) on Bottom
+  place(U2) at loc(18.0848, 12.9794, 180.0) on Bottom
+
+  pin gnd
+  pin netc11_1
+  pin netc1_1
+  pin netc1_2
+  pin netc2_1
+  pin netc2_2
+  pin netc6_1
+  pin netc7_1
+  pin netc9_1
+  pin netd14_a
+  pin netd1_1
+  pin netr2_1
+  pin netr6_2
+  pin p3_3v
+  pin p5v
+  pin p60v
+
+  net GND (gnd, C3.p[2], C4.p[2], C5.p[2], C6.p[2], C7.p[2], C8.p[2], C9.p[2], C10.p[2], C11.p[2], D1.A, D14.K, D18.A, R5.p[1], R6.p[1], R8.p[1], U2.GND)
+  net NetC11_1 (netc11_1, C11.p[1], D18.K, R7.p[1], R8.p[2])
+  net NetC1_1 (netc1_1, C1.p[1])
+  net NetC1_2 (netc1_2, C1.p[2], R1.p[2])
+  net NetC2_1 (netc2_1, C2.p[1], L1.p[2], R3.p[2], R4.p[2])
+  net NetC2_2 (netc2_2, C2.p[2], C5.p[1], R3.p[1], R5.p[2])
+  net NetC6_1 (netc6_1, C6.p[1])
+  net NetC7_1 (netc7_1, C7.p[1], U2.NR)
+  net NetC9_1 (netc9_1, C9.p[1], FB1.p[2], U2.IN, U2.EN)
+  net NetD14_A (netd14_a, D14.A, R13.p[1])
+  net NetD1_1 (netd1_1, D1.K, L1.p[1], R1.p[1])
+  net NetR2_1 (netr2_1, R2.p[1])
+  net NetR6_2 (netr6_2, R6.p[2])
+  net p3_3V (p3_3v, C10.p[1], TP2.TP, U2.OUT)
+  net p5V (p5v, C8.p[1], FB1.p[1], R4.p[1], R13.p[2], TP3.p[1])
+  net p60V (p60v, C3.p[1], C4.p[1], R2.p[2], R7.p[2])
+
+
+
+
+pcb-module caster_mcb_2_cpu-submodule :
+  public inst C12 : output/kemet/C0402C200J5GACTU/component
+  public inst C13 : output/kemet/C0402C200J5GACTU/component
+  public inst C14 : output/unknown/CMP-001-0596-08/component
+  public inst C15 : output/unknown/CMP-001-0596-08/component
+  public inst C16 : output/unknown/CMP-001-0596-08/component
+  public inst C17 : output/unknown/CMP-001-0596-08/component
+  public inst C18 : output/unknown/CMP-001-0596-08/component
+  public inst C19 : output/samsung-electro-mechanics/CL05B103KB5NNNC/component
+  public inst C20 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  public inst C21 : output/unknown/CMP-001-0596-08/component
+  public inst C51 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  public inst C52 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  public inst C56 : output/unknown/CMP-001-0602-10/component
+  public inst C57 : output/unknown/CMP-001-0602-10/component
+  public inst C58 : output/unknown/CMP-001-0602-10/component
+  public inst C59 : output/unknown/CMP-001-0602-10/component
+  public inst C60 : output/unknown/CMP-001-0602-10/component
+  public inst CN1 : output/samtec-inc-/FTSH-105-01-F-DV/component
+  public inst D15 : output/lite-on-inc-/LTST-C191KGKT/component
+  public inst D16 : output/lite-on-inc-/LTST-C191KRKT/component
+  public inst FB2 : output/samsung-electro-mechanics/CIM05U601NC/component
+  public inst FB3 : output/samsung-electro-mechanics/CIM05U601NC/component
+  public inst R10 : output/yageo/RC0402FR-0710KL/component
+  public inst R11 : output/yageo/RC0402FR-0710KL/component
+  public inst R12 : output/yageo/RC0402FR-0710KL/component
+  public inst R15 : output/yageo/RC0402FR-070RL/component
+  public inst R69 : output/yageo/RC0402FR-071KL/component
+  public inst R70 : output/yageo/RC0402FR-07220RL/component
+  public inst R71 : output/yageo/RC0402FR-07220RL/component
+  public inst R9 : output/yageo/RC0402FR-07220RL/component
+  public inst TP1 : output/unknown/CMP-001-0557-04/component
+  public inst TP4 : output/unknown/CMP-001-0557-04/component
+  public inst TP5 : output/unknown/CMP-001-0557-04/component
+  public inst TP6 : output/unknown/CMP-001-0557-04/component
+  public inst TP7 : output/unknown/CMP-001-0557-04/component
+  public inst TP8 : output/unknown/CMP-001-0557-04/component
+  public inst U3 : output/unknown/CMP-00233-02/component
+  public inst U7 : output/microchip-technology/MCP9701T-E-TT/component
+  public inst X1 : output/abracon-llc/ABM3B-8-000MHZ-B2-T/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(C12) at loc(44.577, 39.6748, 180.0) on Top
+  place(C13) at loc(46.7868, 39.6494) on Top
+  place(C14) at loc(48.2092, 41.275, 270.0) on Top
+  place(C15) at loc(41.65854, 44.1706, 270.0) on Top
+  place(C16) at loc(56.007, 46.7106, 270.0) on Top
+  place(C17) at loc(55.245, 54.52364, 90.0) on Top
+  place(C18) at loc(42.9768, 56.2864, 180.0) on Top
+  place(C19) at loc(48.387, 38.5826, 90.0) on Bottom
+  place(C20) at loc(47.2186, 38.5826, 90.0) on Bottom
+  place(C21) at loc(42.63136, 44.1706, 270.0) on Top
+  place(C51) at loc(13.3096, 63.4238) on Bottom
+  place(C52) at loc(13.49756, 57.44718, 180.0) on Bottom
+  place(C56) at loc(40.72128, 44.1706, 270.0) on Top
+  place(C57) at loc(56.9214, 46.7106, 270.0) on Top
+  place(C58) at loc(56.261, 54.483, 90.0) on Top
+  place(C59) at loc(54.356, 54.9656, 90.0) on Top
+  place(C60) at loc(42.9768, 57.3786, 180.0) on Top
+  place(CN1) at loc(54.61, 37.6428, 180.0) on Top
+  place(D15) at loc(40.0558, 41.8338, 180.0) on Top
+  place(D16) at loc(40.1066, 40.5384, 180.0) on Top
+  place(FB2) at loc(46.1518, 38.5826, 270.0) on Bottom
+  place(FB3) at loc(15.67688, 63.64478, 180.0) on Bottom
+  place(R10) at loc(50.1904, 39.4208) on Top
+  place(R11) at loc(49.276, 41.148, 270.0) on Top
+  place(R12) at loc(54.991, 43.3832, 180.0) on Top
+  place(R15) at loc(39.0026, 47.1424, 180.0) on Top
+  place(R69) at loc(13.44756, 58.51398) on Bottom
+  place(R70) at loc(42.2656, 41.8084) on Top
+  place(R71) at loc(42.3164, 40.6908) on Top
+  place(R9) at loc(47.0408, 41.2496, 270.0) on Top
+  place(TP1) at loc(57.5818, 41.8338, 270.0) on Bottom
+  place(TP4) at loc(52.9844, 37.9984, 270.0) on Bottom
+  place(TP5) at loc(42.4942, 53.1114, 270.0) on Bottom
+  place(TP6) at loc(56.9722, 37.973, 270.0) on Bottom
+  place(TP7) at loc(46.3296, 43.2054, 270.0) on Bottom
+  place(TP8) at loc(50.3174, 43.2308, 270.0) on Bottom
+  place(U3) at loc(48.2854, 49.8856, 90.0) on Top
+  place(U7) at loc(14.4878, 61.07744) on Bottom
+  place(X1) at loc(45.7962, 37.1348) on Top
+
+  pin boot0
+  pin brd_tmp
+  pin debug_out
+  pin drv_en
+  pin drv_inha
+  pin drv_inhb
+  pin drv_inhc
+  pin drv_inla
+  pin drv_inlb
+  pin drv_inlc
+  pin gnd
+  pin nrst
+  pin rs_485_rx
+  pin rs_485_tx
+  pin netc11_1
+  pin netc12_1
+  pin netc13_1
+  pin netc19_1
+  pin netc22_1
+  pin netc39_1
+  pin netc40_1
+  pin netc41_1
+  pin netc49_1
+  pin netc51_1
+  pin netc61_1
+  pin netcn2_3
+  pin netcn2_4
+  pin netcn2_5
+  pin netcn2_6
+  pin netcn3_4
+  pin netcn3_5
+  pin netcn3_6
+  pin netcn3_7
+  pin netd15_a
+  pin netd16_a
+  pin netr18_2
+  pin netr25_1
+  pin netr69_1
+  pin netr70_2
+  pin netr71_2
+  pin netr77_2
+  pin netr80_2
+  pin netr9_1
+  pin netu1_32
+  pin netu3_37
+  pin netu3_38
+  pin netu3_39
+  pin netu3_61
+  pin spi1_mosi
+  pin spi1_sck
+  pin swclk
+  pin swdio
+  pin p3_3v
+
+  net BOOT0 (boot0, R15.p[1], U3.BOOT0)
+  net BRD_TMP (brd_tmp, C52.p[1], R69.p[2], U3.PA2)
+  net DEBUG_OUT (debug_out, TP1.p[1], U3.PA3)
+  net DRV_EN (drv_en, U3.PB12)
+  net DRV_INHA (drv_inha, U3.PA8)
+  net DRV_INHB (drv_inhb, U3.PA9)
+  net DRV_INHC (drv_inhc, U3.PA10)
+  net DRV_INLA (drv_inla, U3.PA11)
+  net DRV_INLB (drv_inlb, U3.PA12)
+  net DRV_INLC (drv_inlc, U3.PB1)
+  net GND (gnd, C12.p[2], C13.p[2], C14.p[2], C15.p[2], C16.p[2], C17.p[2], C18.p[2], C19.p[2], C20.p[2], C21.p[2], C51.p[2], C52.p[2], C56.p[2], C57.p[2], C58.p[2], C59.p[2], C60.p[2], CN1.p[3], CN1.p[5], CN1.p[7], CN1.p[9], D15.K, D16.K, R12.p[1], R15.p[2], TP6.p[1], U3.PC1, U3.PC2, U3.PC3, U3.VSSAVREF-, U3.VSS[1], U3.VSS[0], U3.VSS[2], U7.GND, X1.GND[0], X1.GND[1])
+  net NRST (nrst, C14.p[1], CN1.p[10], R11.p[1], TP7.p[1], U3.NRST)
+  net Net0-rs_485_rx (rs_485_rx, U3.PC5)
+  net Net0-rs_485_tx (rs_485_tx, U3.PC4)
+  net NetC11_1 (netc11_1, U3.PA7)
+  net NetC12_1 (netc12_1, C12.p[1], U3.PF0OSC_IN, X1.OSC1)
+  net NetC13_1 (netc13_1, C13.p[1], R9.p[2], X1.OSC2)
+  net NetC19_1 (netc19_1, C19.p[1], C20.p[1], FB2.p[2], TP8.p[1], U3.VDDAVREF+)
+  net NetC22_1 (netc22_1, U3.PA15)
+  net NetC39_1 (netc39_1, U3.PA0)
+  net NetC40_1 (netc40_1, U3.PA1)
+  net NetC41_1 (netc41_1, U3.PA4)
+  net NetC49_1 (netc49_1, U3.PA6)
+  net NetC51_1 (netc51_1, C51.p[1], FB3.p[1], U7.VDD)
+  net NetC61_1 (netc61_1, U3.PB3)
+  net NetCN2_3 (netcn2_3, U3.PC11)
+  net NetCN2_4 (netcn2_4, U3.PC10)
+  net NetCN2_5 (netcn2_5, U3.PC12)
+  net NetCN2_6 (netcn2_6, U3.PD2)
+  net NetCN3_4 (netcn3_4, U3.PB4)
+  net NetCN3_5 (netcn3_5, U3.PA5)
+  net NetCN3_6 (netcn3_6, U3.PB5)
+  net NetCN3_7 (netcn3_7, U3.PB2)
+  net NetD15_A (netd15_a, D15.A, R70.p[1])
+  net NetD16_A (netd16_a, D16.A, R71.p[1])
+  net NetR18_2 (netr18_2, U3.PB14)
+  net NetR25_1 (netr25_1, U3.PB0)
+  net NetR69_1 (netr69_1, R69.p[1], U7.VOUT)
+  net NetR70_2 (netr70_2, R70.p[2], U3.PC14OSC32_IN)
+  net NetR71_2 (netr71_2, R71.p[2], U3.PC15OSC32_OUT)
+  net NetR77_2 (netr77_2, U3.PB6)
+  net NetR80_2 (netr80_2, U3.PB7)
+  net NetR9_1 (netr9_1, R9.p[1], U3.PF1OSC_OUT)
+  net NetU1_32 (netu1_32, U3.PB11)
+  net NetU3_37 (netu3_37, U3.PC6)
+  net NetU3_38 (netu3_38, U3.PC7)
+  net NetU3_39 (netu3_39, U3.PC8)
+  net NetU3_61 (netu3_61, U3.PB8)
+  net SPI1_MOSI (spi1_mosi, U3.PB15)
+  net SPI1_SCK (spi1_sck, U3.PB13)
+  net SWCLK (swclk, CN1.p[4], R12.p[2], TP5.p[1], U3.PA14)
+  net SWDIO (swdio, CN1.p[2], R10.p[2], TP4.p[1], U3.PA13)
+  net p3_3V (p3_3v, C15.p[1], C16.p[1], C17.p[1], C18.p[1], C21.p[1], C56.p[1], C57.p[1], C58.p[1], C59.p[1], C60.p[1], CN1.p[1], FB2.p[1], FB3.p[2], R10.p[1], R11.p[2], U3.VBAT, U3.PC0, U3.VDD[1], U3.VDD[0], U3.VDD[2], U3.VDD[3])
+
+
+
+
+pcb-module caster_mcb_3_comms-submodule :
+  public inst C22 : output/unknown/CMP-007-0070-08/component
+  public inst C23 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  public inst C61 : output/unknown/CMP-007-0070-08/component
+  public inst C64 : output/samsung-electro-mechanics/CL10B105KA8NNNC/component
+  public inst C65 : output/samsung-electro-mechanics/CL10B105KA8NNNC/component
+  public inst C66 : output/samsung-electro-mechanics/CL10B105KA8NNNC/component
+  public inst CN2 : output/sullins-connector-solutions/B06B-PASK-1-LF--SN-/component
+  public inst CN3 : output/sullins-connector-solutions/B07B-PASK-1-LF--SN-/component
+  public inst CN4 : output/sullins-connector-solutions/B6P-VH-FB-B-LF--SN-/component
+  public inst CN5 : output/sullins-connector-solutions/B6P-VH-FB-B-LF--SN-/component
+  public inst CN9 : output/sullins-connector-solutions/B04B-PASK-1-LF--SN-/component
+  public inst R16 : output/unknown/CMP-007-0358-14/component
+  public inst R17 : output/unknown/CMP-00015-15/component
+  public inst R18 : output/unknown/CMP-007-0358-14/component
+  public inst R19 : output/unknown/CMP-00015-15/component
+  public inst R20 : output/yageo/RC0402FR-071KL/component
+  public inst R21 : output/yageo/RC0402FR-071KL/component
+  public inst R22 : output/yageo/RC0402FR-07120RL/component
+  public inst R23 : output/yageo/RC0402FR-071KL/component
+  public inst R68 : output/yageo/RC0402FR-0710KL/component
+  public inst R75 : output/unknown/CMP-007-0358-14/component
+  public inst R76 : output/unknown/CMP-007-0358-14/component
+  public inst SW2 : output/cts-electrocomponents/219-3MST/component
+  public inst U5 : output/unknown/CMP-001-1388-02/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(C22) at loc(38.84168, 37.2237, 180.0) on Top
+  place(C23) at loc(40.28186, 30.48) on Bottom
+  place(C61) at loc(38.82644, 33.74136, 180.0) on Top
+  place(C64) at loc(18.72996, 17.69872, 90.0) on Top
+  place(C65) at loc(35.07486, 35.93846, 90.0) on Bottom
+  place(C66) at loc(35.0266, 54.10454, 90.0) on Bottom
+  place(CN2) at loc(31.7382, 50.55007, 90.0) on Top
+  place(CN3) at loc(23.28, 10.24308, 90.0) on Top
+  place(CN4) at loc(6.0706, 23.5458, 270.0) on Top
+  place(CN5) at loc(6.0706, 52.3494, 270.0) on Top
+  place(CN9) at loc(32.7406, 34.17247, 90.0) on Top
+  place(R16) at loc(20.7772, 9.9314, 270.0) on Top
+  place(R17) at loc(38.6588, 35.433) on Top
+  place(R18) at loc(50.41493, 61.8744) on Top
+  place(R19) at loc(38.5318, 32.1056) on Top
+  place(R20) at loc(30.861, 52.451, 270.0) on Bottom
+  place(R21) at loc(39.8018, 26.289, 270.0) on Top
+  place(R22) at loc(39.8018, 28.3464, 270.0) on Top
+  place(R23) at loc(52.832, 27.3558, 270.0) on Top
+  place(R68) at loc(46.1899, 32.21482, 270.0) on Bottom
+  place(R75) at loc(29.083, 31.1658) on Top
+  place(R76) at loc(29.0576, 33.2232) on Top
+  place(SW2) at loc(46.36491, 26.162, 180.0) on Top
+  place(U5) at loc(44.94426, 28.60294, 90.0) on Bottom
+
+  pin gnd
+  pin rs_485_rx
+  pin rs_485_tx
+  pin netc22_1
+  pin netc61_1
+  pin netcn2_3
+  pin netcn2_4
+  pin netcn2_5
+  pin netcn2_6
+  pin netcn3_4
+  pin netcn3_5
+  pin netcn3_6
+  pin netcn3_7
+  pin netcn9_3
+  pin netcn9_4
+  pin netr18_2
+  pin netr21_2
+  pin netr22_1
+  pin netr23_2
+  pin netu3_61
+  pin rs485_n
+  pin rs485_p
+  pin p3_3v
+  pin p5v
+  pin p60v
+
+  net GND (gnd, C22.p[2], C23.p[2], C61.p[2], C64.p[2], C65.p[2], C66.p[2], CN2.p[2], CN3.p[2], CN4.p[3], CN4.p[4], CN5.p[3], CN5.p[4], CN9.p[2], SW2.p[5], U5.GND)
+  net Net0-rs_485_rx (rs_485_rx, R68.p[1], U5.RO)
+  net Net0-rs_485_tx (rs_485_tx, U5.DI)
+  net NetC22_1 (netc22_1, C22.p[1], R17.p[2])
+  net NetC61_1 (netc61_1, C61.p[1], R19.p[2])
+  net NetCN2_3 (netcn2_3, CN2.p[3], R20.p[1])
+  net NetCN2_4 (netcn2_4, CN2.p[4])
+  net NetCN2_5 (netcn2_5, CN2.p[5])
+  net NetCN2_6 (netcn2_6, CN2.p[6])
+  net NetCN3_4 (netcn3_4, CN3.p[4], R16.p[2])
+  net NetCN3_5 (netcn3_5, CN3.p[5])
+  net NetCN3_6 (netcn3_6, CN3.p[6])
+  net NetCN3_7 (netcn3_7, CN3.p[7])
+  net NetCN9_3 (netcn9_3, CN9.p[3], R17.p[1], R76.p[2])
+  net NetCN9_4 (netcn9_4, CN9.p[4], R19.p[1], R75.p[2])
+  net NetR18_2 (netr18_2, R18.p[2])
+  net NetR21_2 (netr21_2, R21.p[2], SW2.p[6])
+  net NetR22_1 (netr22_1, R22.p[1], SW2.p[4])
+  net NetR23_2 (netr23_2, R23.p[2], SW2.p[2])
+  net NetU3_61 (netu3_61, U5.nRE, U5.DE)
+  net RS485_N (rs485_n, CN4.p[6], CN5.p[6], R23.p[1], SW2.p[3], U5.B-)
+  net RS485_P (rs485_p, CN4.p[5], CN5.p[5], R21.p[1], R22.p[2], U5.A+)
+  net p3_3V (p3_3v, C23.p[1], CN3.p[3], R18.p[1], R68.p[2], SW2.p[1], U5.VCC)
+  net p5V (p5v, C64.p[1], C65.p[1], C66.p[1], CN2.p[1], CN3.p[1], CN9.p[1], R16.p[1], R20.p[2], R75.p[1], R76.p[1])
+  net p60V (p60v, CN4.p[1], CN4.p[2], CN5.p[1], CN5.p[2])
+
+
+
+
+pcb-module caster_mcb_4_motor1-submodule :
+  public inst C24 : output/avx-corporation/12061C105KAT2A/component
+  public inst C25 : output/wurth-electronics-inc-/870055975004/component
+  public inst C26 : output/wurth-electronics-inc-/870055975004/component
+  public inst C27 : output/wurth-electronics-inc-/870055975004/component
+  public inst C28 : output/kemet/C0402C200J5GACTU/component
+  public inst C29 : output/samsung-electro-mechanics/CL21B102KCANNNC/component
+  public inst C30 : output/kemet/C0402C200J5GACTU/component
+  public inst C31 : output/avx-corporation/12061C105KAT2A/component
+  public inst C32 : output/kemet/C0402C200J5GACTU/component
+  public inst C33 : output/samsung-electro-mechanics/CL21B102KCANNNC/component
+  public inst C34 : output/kemet/C0402C200J5GACTU/component
+  public inst C35 : output/avx-corporation/12061C105KAT2A/component
+  public inst C36 : output/kemet/C0402C200J5GACTU/component
+  public inst C37 : output/samsung-electro-mechanics/CL21B102KCANNNC/component
+  public inst C38 : output/kemet/C0402C200J5GACTU/component
+  public inst C39 : output/samsung-electro-mechanics/CL05B103KB5NNNC/component
+  public inst C40 : output/samsung-electro-mechanics/CL05B103KB5NNNC/component
+  public inst C41 : output/samsung-electro-mechanics/CL05B103KB5NNNC/component
+  public inst CN6 : output/on-shore-technology-inc-/EDZ250-3/component
+  public inst D10 : output/nexperia/PMEG10010ELRX/component
+  public inst D11 : output/on-semiconductor/FSV15100V/component
+  public inst D12 : output/nexperia/PMEG10010ELRX/component
+  public inst D13 : output/on-semiconductor/FSV15100V/component
+  public inst D2 : output/nexperia/PMEG10010ELRX/component
+  public inst D3 : output/on-semiconductor/FSV15100V/component
+  public inst D4 : output/nexperia/PMEG10010ELRX/component
+  public inst D5 : output/on-semiconductor/FSV15100V/component
+  public inst D6 : output/nexperia/PMEG10010ELRX/component
+  public inst D7 : output/on-semiconductor/FSV15100V/component
+  public inst D8 : output/nexperia/PMEG10010ELRX/component
+  public inst D9 : output/on-semiconductor/FSV15100V/component
+  public inst NT1 : output/unknown/CMP-001-1156-02/component
+  public inst NT2 : output/unknown/CMP-001-1156-02/component
+  public inst NT3 : output/unknown/CMP-001-1156-02/component
+  public inst NT4 : output/unknown/CMP-001-1156-02/component
+  public inst NT5 : output/unknown/CMP-001-1156-02/component
+  public inst NT6 : output/unknown/CMP-001-1156-02/component
+  public inst Q1 : output/infineon-technologies/IPG20N10S4L22AATMA1/component
+  public inst Q2 : output/infineon-technologies/IPG20N10S4L22AATMA1/component
+  public inst Q3 : output/infineon-technologies/IPG20N10S4L22AATMA1/component
+  public inst Q4 : output/infineon-technologies/IPG20N10S4L22AATMA1/component
+  public inst R24 : output/yageo/RC0603FR-0710RL/component
+  public inst R25 : output/yageo/RC0402FR-071KL/component
+  public inst R26 : output/yageo/RC0603FR-0710RL/component
+  public inst R27 : output/te-connectivity-passive-product/352110RFT/component
+  public inst R28 : output/yageo/RC0603FR-0710RL/component
+  public inst R29 : output/yageo/RC0603FR-0710RL/component
+  public inst R30 : output/yageo/RC0603FR-0710RL/component
+  public inst R31 : output/yageo/RC0603FR-0710RL/component
+  public inst R32 : output/te-connectivity-passive-product/352110RFT/component
+  public inst R33 : output/yageo/RC0402FR-0710KL/component
+  public inst R34 : output/yageo/RC0402FR-0710KL/component
+  public inst R35 : output/yageo/RC0402FR-0710KL/component
+  public inst R36 : output/yageo/RC0603FR-0710RL/component
+  public inst R37 : output/yageo/RC0603FR-0710RL/component
+  public inst R38 : output/yageo/RC0402FR-0710KL/component
+  public inst R39 : output/yageo/RC0402FR-0710KL/component
+  public inst R40 : output/yageo/RC0402FR-0710KL/component
+  public inst R41 : output/yageo/RC0603FR-0710RL/component
+  public inst R42 : output/yageo/RC0603FR-0710RL/component
+  public inst R43 : output/yageo/RC0402FR-0710KL/component
+  public inst R44 : output/yageo/RC0402FR-0710KL/component
+  public inst R45 : output/yageo/RC0402FR-0710KL/component
+  public inst R46 : output/yageo/RC0402FR-0710KL/component
+  public inst R47 : output/te-connectivity-passive-product/352110RFT/component
+  public inst R48 : output/yageo/RC0402FR-0710KL/component
+  public inst R49 : output/yageo/RC0402FR-0710KL/component
+  public inst R50 : output/yageo/RC0402FR-0710KL/component
+  public inst R51 : output/yageo/RC0402FR-0710KL/component
+  public inst R52 : output/yageo/RC0603FR-0710RL/component
+  public inst R53 : output/yageo/RC0603FR-0710RL/component
+  public inst R54 : output/yageo/RC0402FR-07120RL/component
+  public inst R55 : output/unknown/CMP-001-0687-06/component
+  public inst R56 : output/unknown/CMP-001-0687-06/component
+  public inst R57 : output/unknown/CMP-001-0687-06/component
+  public inst R58 : output/yageo/RC0402FR-07120RL/component
+  public inst R59 : output/yageo/RC0402FR-07120RL/component
+  public inst TP10 : output/unknown/CMP-001-0557-04/component
+  public inst TP11 : output/unknown/CMP-001-0557-04/component
+  public inst TP12 : output/unknown/CMP-001-0557-04/component
+  public inst TP13 : output/unknown/CMP-001-0557-04/component
+  public inst TP14 : output/unknown/CMP-001-0557-04/component
+  public inst TP15 : output/unknown/CMP-001-0557-04/component
+  public inst TP16 : output/unknown/CMP-001-0557-04/component
+  public inst TP9 : output/unknown/CMP-001-0557-04/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(C24) at loc(19.9898, 86.2711, 90.0) on Top
+  place(C25) at loc(21.0, 51.0, 180.0) on Top
+  place(C26) at loc(21.0, 38.0, 180.0) on Top
+  place(C27) at loc(6.56154, 79.80548) on Top
+  place(C28) at loc(28.888, 76.4874, 180.0) on Bottom
+  place(C29) at loc(41.1734, 94.50832, 180.0) on Bottom
+  place(C30) at loc(28.10314, 67.82056, 180.0) on Bottom
+  place(C31) at loc(28.84932, 86.3092, 90.0) on Top
+  place(C32) at loc(25.527, 76.4874, 180.0) on Bottom
+  place(C33) at loc(35.19424, 87.87892, 270.0) on Top
+  place(C34) at loc(25.02662, 67.85864, 180.0) on Bottom
+  place(C35) at loc(13.94714, 86.26348, 90.0) on Top
+  place(C36) at loc(19.685, 76.5302, 180.0) on Bottom
+  place(C37) at loc(9.28878, 90.46374, 90.0) on Bottom
+  place(C38) at loc(19.49176, 67.85467, 180.0) on Bottom
+  place(C39) at loc(38.98392, 56.71312, 90.0) on Top
+  place(C40) at loc(37.80028, 81.1784, 90.0) on Top
+  place(C41) at loc(40.767, 56.7436, 90.0) on Top
+  place(CN6) at loc(23.65119, 95.10087) on Top
+  place(D10) at loc(42.8117, 73.47458, 90.0) on Bottom
+  place(D11) at loc(18.4936, 80.1878, 90.0) on Top
+  place(D12) at loc(37.65804, 73.41616, 90.0) on Bottom
+  place(D13) at loc(18.4936, 71.6948, 90.0) on Top
+  place(D2) at loc(57.37098, 73.48982, 90.0) on Bottom
+  place(D3) at loc(29.6752, 80.1878, 90.0) on Top
+  place(D4) at loc(52.16652, 73.41362, 90.0) on Bottom
+  place(D5) at loc(29.6752, 71.6948, 90.0) on Top
+  place(D6) at loc(44.98848, 73.406, 90.0) on Bottom
+  place(D7) at loc(24.0872, 80.1878, 90.0) on Top
+  place(D8) at loc(49.97704, 73.38822, 90.0) on Bottom
+  place(D9) at loc(24.0872, 71.6948, 90.0) on Top
+  place(NT1) at loc(28.2702, 62.2046, 270.0) on Bottom
+  place(NT2) at loc(23.6982, 62.2046, 270.0) on Bottom
+  place(NT3) at loc(19.3294, 62.2046, 270.0) on Bottom
+  place(NT4) at loc(28.2956, 60.071, 90.0) on Bottom
+  place(NT5) at loc(23.6982, 60.071, 90.0) on Bottom
+  place(NT6) at loc(19.3294, 60.071, 90.0) on Bottom
+  place(Q1) at loc(26.8812, 72.105, 270.0) on Bottom
+  place(Q2) at loc(26.8812, 80.7974, 270.0) on Bottom
+  place(Q3) at loc(20.955, 80.7974, 270.0) on Bottom
+  place(Q4) at loc(20.9884, 72.105, 270.0) on Bottom
+  place(R24) at loc(56.11085, 70.36113) on Bottom
+  place(R25) at loc(56.8706, 74.0664, 180.0) on Top
+  place(R26) at loc(55.35405, 72.53253, 90.0) on Bottom
+  place(R27) at loc(35.0012, 94.4626) on Bottom
+  place(R28) at loc(53.17685, 70.36113, 180.0) on Bottom
+  place(R29) at loc(53.95185, 72.53253, 90.0) on Bottom
+  place(R30) at loc(45.98865, 70.36113, 180.0) on Bottom
+  place(R31) at loc(46.73825, 72.52013, 90.0) on Bottom
+  place(R32) at loc(35.0774, 93.8657, 90.0) on Top
+  place(R33) at loc(52.8066, 58.0136) on Top
+  place(R34) at loc(48.9712, 60.1726) on Top
+  place(R35) at loc(44.56938, 60.4647) on Bottom
+  place(R36) at loc(48.91025, 70.36113) on Bottom
+  place(R37) at loc(48.13525, 72.52013, 90.0) on Bottom
+  place(R38) at loc(52.7812, 57.0738, 180.0) on Top
+  place(R39) at loc(48.9712, 59.3598, 180.0) on Top
+  place(R40) at loc(45.9418, 59.2328, 180.0) on Bottom
+  place(R41) at loc(41.67125, 70.36113) on Bottom
+  place(R42) at loc(40.94226, 72.44588, 90.0) on Bottom
+  place(R43) at loc(46.5904, 57.2008) on Bottom
+  place(R44) at loc(45.5168, 60.071, 180.0) on Top
+  place(R45) at loc(47.9806, 61.6712) on Top
+  place(R46) at loc(58.3946, 50.546, 90.0) on Bottom
+  place(R47) at loc(12.21486, 94.60738, 180.0) on Bottom
+  place(R48) at loc(46.5582, 58.293, 180.0) on Bottom
+  place(R49) at loc(45.5168, 59.2328) on Top
+  place(R50) at loc(47.9806, 62.484, 180.0) on Top
+  place(R51) at loc(48.006, 91.4908, 90.0) on Bottom
+  place(R52) at loc(38.77505, 70.36113, 180.0) on Bottom
+  place(R53) at loc(39.52465, 72.52013, 90.0) on Bottom
+  place(R54) at loc(40.34215, 82.41461) on Bottom
+  place(R55) at loc(28.3464, 61.341, 90.0) on Bottom
+  place(R56) at loc(23.8506, 61.341, 90.0) on Bottom
+  place(R57) at loc(19.4056, 61.341, 90.0) on Bottom
+  place(R58) at loc(40.34217, 81.50021) on Bottom
+  place(R59) at loc(40.33535, 80.59801) on Bottom
+  place(TP10) at loc(51.4858, 61.7982, 270.0) on Bottom
+  place(TP11) at loc(47.3456, 61.6458, 270.0) on Bottom
+  place(TP12) at loc(26.4414, 43.2562, 270.0) on Bottom
+  place(TP13) at loc(47.625, 53.0606, 270.0) on Bottom
+  place(TP14) at loc(41.1988, 59.7408, 270.0) on Bottom
+  place(TP15) at loc(47.4472, 65.5066, 270.0) on Bottom
+  place(TP16) at loc(45.54728, 94.39402, 270.0) on Bottom
+  place(TP9) at loc(56.2356, 59.4106, 270.0) on Bottom
+
+  pin drv_en
+  pin drv_inha
+  pin drv_inhb
+  pin drv_inhc
+  pin drv_inla
+  pin drv_inlb
+  pin drv_inlc
+  pin gnd
+  pin netc28_1
+  pin netc29_1
+  pin netc30_1
+  pin netc30_2
+  pin netc32_1
+  pin netc33_1
+  pin netc34_1
+  pin netc34_2
+  pin netc36_1
+  pin netc37_1
+  pin netc38_1
+  pin netc38_2
+  pin netc39_1
+  pin netc40_1
+  pin netc41_1
+  pin netd10_1
+  pin netd10_2
+  pin netd12_1
+  pin netd12_2
+  pin netd2_1
+  pin netd2_2
+  pin netd4_1
+  pin netd4_2
+  pin netd6_1
+  pin netd6_2
+  pin netd8_1
+  pin netd8_2
+  pin netr25_1
+  pin netr54_1
+  pin netr58_1
+  pin netr59_1
+  pin pha
+  pin phb
+  pin phc
+  pin sa_n
+  pin sa_p
+  pin sb_n
+  pin sb_p
+  pin sc_n
+  pin sc_p
+  pin p3_3v
+  pin p5v
+  pin p60v
+
+  net DRV_EN (drv_en, R33.p[1], R38.p[2], TP9.p[1])
+  net DRV_INHA (drv_inha, R34.p[1], R39.p[2], TP10.p[1])
+  net DRV_INHB (drv_inhb, R43.p[1], R48.p[2], TP13.p[1])
+  net DRV_INHC (drv_inhc, R45.p[1], R50.p[2], TP15.p[1])
+  net DRV_INLA (drv_inla, R35.p[1], R40.p[2], TP11.p[1])
+  net DRV_INLB (drv_inlb, R44.p[1], R49.p[2], TP14.p[1])
+  net DRV_INLC (drv_inlc, R46.p[1], R51.p[2], TP16.p[1])
+  net GND (gnd, C24.p[2], C25.p[2], C26.p[2], C27.p[2], C29.p[2], C31.p[2], C33.p[2], C35.p[2], C37.p[2], C39.p[2], C40.p[2], C41.p[2], NT4.p[2], NT5.p[2], NT6.p[2], R38.p[1], R39.p[1], R40.p[1], R48.p[1], R49.p[1], R50.p[1], R51.p[1], R55.p[2], R56.p[2], R57.p[2], TP12.p[1])
+  net NetC28_1 (netc28_1, C28.p[1], Q2.G[0], R24.p[2], R26.p[2])
+  net NetC29_1 (netc29_1, C29.p[1], R27.p[1])
+  net NetC30_1 (netc30_1, C30.p[1], Q1.G[0], R28.p[2], R29.p[2])
+  net NetC30_2 (netc30_2, C30.p[2], D5.A, NT1.p[2], Q1.S[0], R55.p[1])
+  net NetC32_1 (netc32_1, C32.p[1], Q2.G[1], R30.p[2], R31.p[2])
+  net NetC33_1 (netc33_1, C33.p[1], R32.p[1])
+  net NetC34_1 (netc34_1, C34.p[1], Q1.G[1], R36.p[2], R37.p[2])
+  net NetC34_2 (netc34_2, C34.p[2], D9.A, NT2.p[2], Q1.S[1], R56.p[1])
+  net NetC36_1 (netc36_1, C36.p[1], Q3.G[1], R41.p[2], R42.p[2])
+  net NetC37_1 (netc37_1, C37.p[1], R47.p[1])
+  net NetC38_1 (netc38_1, C38.p[1], Q4.G[1], R52.p[2], R53.p[2])
+  net NetC38_2 (netc38_2, C38.p[2], D13.A, NT3.p[2], Q4.S[1], R57.p[1])
+  net NetC39_1 (netc39_1, C39.p[1], R54.p[2])
+  net NetC40_1 (netc40_1, C40.p[1], R58.p[2])
+  net NetC41_1 (netc41_1, C41.p[1], R59.p[2])
+  net NetD10_1 (netd10_1, D10.K, R42.p[1])
+  net NetD10_2 (netd10_2, D10.A, R41.p[1])
+  net NetD12_1 (netd12_1, D12.K, R53.p[1])
+  net NetD12_2 (netd12_2, D12.A, R52.p[1])
+  net NetD2_1 (netd2_1, D2.K, R26.p[1])
+  net NetD2_2 (netd2_2, D2.A, R24.p[1])
+  net NetD4_1 (netd4_1, D4.K, R29.p[1])
+  net NetD4_2 (netd4_2, D4.A, R28.p[1])
+  net NetD6_1 (netd6_1, D6.K, R31.p[1])
+  net NetD6_2 (netd6_2, D6.A, R30.p[1])
+  net NetD8_1 (netd8_1, D8.K, R37.p[1])
+  net NetD8_2 (netd8_2, D8.A, R36.p[1])
+  net NetR25_1 (netr25_1, R25.p[1])
+  net NetR54_1 (netr54_1, R54.p[1])
+  net NetR58_1 (netr58_1, R58.p[1])
+  net NetR59_1 (netr59_1, R59.p[1])
+  net PHA (pha, C28.p[2], CN6.p[3], D3.A, D5.K, Q1.D[0], Q2.S[0], R27.p[2])
+  net PHB (phb, C32.p[2], CN6.p[2], D7.A, D9.K, Q1.D[1], Q2.S[1], Q3.S[0], Q3.G[0], Q3.D[0], Q4.S[0], Q4.G[0], Q4.D[0], R32.p[2])
+  net PHC (phc, C36.p[2], CN6.p[1], D11.A, D13.K, Q3.S[1], Q4.D[1], R47.p[2])
+  net SA_N (sa_n, NT4.p[1])
+  net SA_P (sa_p, NT1.p[1])
+  net SB_N (sb_n, NT5.p[1])
+  net SB_P (sb_p, NT2.p[1])
+  net SC_N (sc_n, NT6.p[1])
+  net SC_P (sc_p, NT3.p[1])
+  net p3_3V (p3_3v, R33.p[2], R34.p[2], R35.p[2], R43.p[2], R44.p[2], R45.p[2], R46.p[2])
+  net p5V (p5v, R25.p[2])
+  net p60V (p60v, C24.p[1], C25.p[1], C26.p[1], C27.p[1], C31.p[1], C35.p[1], D3.K, D7.K, D11.K, Q2.D[1], Q2.D[0], Q3.D[1])
+
+
+
+
+pcb-module caster_mcb_5_motor2-submodule :
+  public inst C42 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  public inst C43 : output/samsung-electro-mechanics/CL21B105KBFNNNE/component
+  public inst C44 : output/tdk-corporation/CGA2B3X7R1H473K050BB/component
+  public inst C45 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  public inst C46 : output/yageo/CC0603KRX7R0BB104/component
+  public inst C47 : output/samsung-electro-mechanics/CL21B105KBFNNNE/component
+  public inst C48 : output/samsung-electro-mechanics/CL05A105KO5NNNC/component
+  public inst C49 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  public inst C50 : output/taiyo-yuden/TMK105BJ104KV-F/component
+  public inst C53 : output/kemet/C0402C102K5GACTU/component
+  public inst C54 : output/kemet/C0402C102K5GACTU/component
+  public inst C55 : output/kemet/C0402C102K5GACTU/component
+  public inst CN7 : output/jst-sales-america-inc-/MTR-HALL/component
+  public inst CN8 : output/jst-sales-america-inc-/TEMP/component
+  public inst R60 : output/yageo/RC0402FR-070RL/component
+  public inst R62 : output/yageo/RC0402FR-070RL/component
+  public inst R64 : output/yageo/RC0402FR-071KL/component
+  public inst R65 : output/yageo/RC0402FR-071KL/component
+  public inst R66 : output/yageo/RC0402FR-071KL/component
+  public inst R67 : output/yageo/RC0402FR-073K01L/component
+  public inst R72 : output/yageo/RC0402FR-07100RL/component
+  public inst R73 : output/yageo/RC0402FR-07100RL/component
+  public inst R74 : output/yageo/RC0402FR-07100RL/component
+  public inst TP17 : output/unknown/CMP-001-0557-04/component
+  public inst TP18 : output/unknown/CMP-001-0557-04/component
+  public inst U6 : output/texas-instruments/SN74LVC3G17DCUR/component
+
+  for inst in instances(self) do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(C42) at loc(41.10905, 84.62266, 225.0) on Bottom
+  place(C43) at loc(57.531, 80.90916, 180.0) on Bottom
+  place(C44) at loc(52.84879, 79.46605, 225.0) on Bottom
+  place(C45) at loc(50.98427, 88.44074, 225.0) on Bottom
+  place(C46) at loc(57.1754, 80.8736) on Top
+  place(C47) at loc(56.48955, 77.04321, 180.0) on Bottom
+  place(C48) at loc(42.672, 6.731, 180.0) on Top
+  place(C49) at loc(35.1028, 62.5348, 90.0) on Bottom
+  place(C50) at loc(42.0116, 9.0932, 180.0) on Bottom
+  place(C53) at loc(38.481, 3.2258, 90.0) on Bottom
+  place(C54) at loc(41.5036, 4.3688, 90.0) on Bottom
+  place(C55) at loc(37.4904, 9.2456, 270.0) on Bottom
+  place(CN7) at loc(31.8906, 9.4114, 90.0) on Top
+  place(CN8) at loc(31.738, 64.0, 90.0) on Top
+  place(R60) at loc(39.65763, 86.12393) on Bottom
+  place(R62) at loc(29.0322, 13.97, 90.0) on Top
+  place(R64) at loc(39.7296, 8.8432) on Top
+  place(R65) at loc(39.8058, 7.9542) on Top
+  place(R66) at loc(39.7442, 5.9436) on Top
+  place(R67) at loc(56.9468, 48.514, 270.0) on Top
+  place(R72) at loc(36.4744, 7.3152, 90.0) on Bottom
+  place(R73) at loc(39.7764, 6.985) on Top
+  place(R74) at loc(37.5412, 7.2644, 270.0) on Bottom
+  place(TP17) at loc(53.76357, 90.80561, 270.0) on Bottom
+  place(TP18) at loc(57.6453, 87.18042, 270.0) on Bottom
+  place(U6) at loc(39.5518, 7.4462, 270.0) on Bottom
+
+  pin gnd
+  pin netc42_1
+  pin netc43_1
+  pin netc44_1
+  pin netc44_2
+  pin netc45_1
+  pin netc47_1
+  pin netc48_2
+  pin netc49_1
+  pin netc53_1
+  pin netc54_1
+  pin netc55_1
+  pin netcn7_3
+  pin netcn7_4
+  pin netcn7_5
+  pin netu3_37
+  pin netu3_38
+  pin netu3_39
+  pin p3_3v
+  pin p5v
+  pin p60v
+
+  net GND (gnd, C42.p[2], C43.p[2], C45.p[2], C46.p[2], C48.p[1], C49.p[2], C50.p[2], C53.p[2], C54.p[2], C55.p[2], CN7.p[2], CN8.p[2], U6.GND)
+  net NetC42_1 (netc42_1, C42.p[1], R60.p[1])
+  net NetC43_1 (netc43_1, C43.p[1], TP18.p[1])
+  net NetC44_1 (netc44_1, C44.p[1])
+  net NetC44_2 (netc44_2, C44.p[2])
+  net NetC45_1 (netc45_1, C45.p[1], TP17.p[1])
+  net NetC47_1 (netc47_1, C47.p[1])
+  net NetC48_2 (netc48_2, C48.p[2], CN7.p[1], R62.p[1], R64.p[2], R65.p[2], R66.p[2])
+  net NetC49_1 (netc49_1, C49.p[1], CN8.p[1], R67.p[1])
+  net NetC53_1 (netc53_1, C53.p[1], R72.p[2], U6.p2A)
+  net NetC54_1 (netc54_1, C54.p[1], R73.p[2], U6.p1A)
+  net NetC55_1 (netc55_1, C55.p[1], R74.p[2], U6.p3A)
+  net NetCN7_3 (netcn7_3, CN7.p[3], R64.p[1], R72.p[1])
+  net NetCN7_4 (netcn7_4, CN7.p[4], R65.p[1], R73.p[1])
+  net NetCN7_5 (netcn7_5, CN7.p[5], R66.p[1], R74.p[1])
+  net NetU3_37 (netu3_37, U6.p2Y)
+  net NetU3_38 (netu3_38, U6.p1Y)
+  net NetU3_39 (netu3_39, U6.p3Y)
+  net p3_3V (p3_3v, C50.p[1], R60.p[2], R67.p[2], U6.VCC)
+  net p5V (p5v, R62.p[2])
+  net p60V (p60v, C46.p[1], C47.p[2])
+
+
+
+
+pcb-module main :
+  inst caster_mcb_1_power-submodule : caster_mcb_1_power-submodule
+  inst caster_mcb_2_cpu-submodule : caster_mcb_2_cpu-submodule
+  inst caster_mcb_3_comms-submodule : caster_mcb_3_comms-submodule
+  inst caster_mcb_4_motor1-submodule : caster_mcb_4_motor1-submodule
+  inst caster_mcb_5_motor2-submodule : caster_mcb_5_motor2-submodule
+  inst caster_mcb_6_solinoid-submodule : caster_mcb_6_solinoid-submodule
+
+  place(caster_mcb_1_power-submodule) at loc(0.0, 0.0) on Top
+  place(caster_mcb_2_cpu-submodule) at loc(0.0, 0.0) on Top
+  place(caster_mcb_3_comms-submodule) at loc(0.0, 0.0) on Top
+  place(caster_mcb_4_motor1-submodule) at loc(0.0, 0.0) on Top
+  place(caster_mcb_5_motor2-submodule) at loc(0.0, 0.0) on Top
+  place(caster_mcb_6_solinoid-submodule) at loc(0.0, 0.0) on Top
+
+  schematic-group(caster_mcb_1_power-submodule) = caster_mcb_1_power-submodule
+  schematic-group(caster_mcb_2_cpu-submodule) = caster_mcb_2_cpu-submodule
+  schematic-group(caster_mcb_3_comms-submodule) = caster_mcb_3_comms-submodule
+  schematic-group(caster_mcb_4_motor1-submodule) = caster_mcb_4_motor1-submodule
+  schematic-group(caster_mcb_5_motor2-submodule) = caster_mcb_5_motor2-submodule
+  schematic-group(caster_mcb_6_solinoid-submodule) = caster_mcb_6_solinoid-submodule
+
+  inst U1 : output/texas-instruments/DRV8353RSRGZT/component
+
+  for inst in [U1] do :
+    reference-designator(inst) = to-string(ref(inst))
+
+  place(U1) at loc(47.55699, 81.8868, 315.0) on Bottom
+
+  net DRV_EN (caster_mcb_2_cpu-submodule.drv_en, caster_mcb_4_motor1-submodule.drv_en, U1.ENABLE)
+  net DRV_INHA (caster_mcb_2_cpu-submodule.drv_inha, caster_mcb_4_motor1-submodule.drv_inha, U1.INHA)
+  net DRV_INHB (caster_mcb_2_cpu-submodule.drv_inhb, caster_mcb_4_motor1-submodule.drv_inhb, U1.INHB)
+  net DRV_INHC (caster_mcb_2_cpu-submodule.drv_inhc, caster_mcb_4_motor1-submodule.drv_inhc, U1.INHC)
+  net DRV_INLA (caster_mcb_2_cpu-submodule.drv_inla, caster_mcb_4_motor1-submodule.drv_inla, U1.INLA)
+  net DRV_INLB (caster_mcb_2_cpu-submodule.drv_inlb, caster_mcb_4_motor1-submodule.drv_inlb, U1.INLB)
+  net DRV_INLC (caster_mcb_2_cpu-submodule.drv_inlc, caster_mcb_4_motor1-submodule.drv_inlc, U1.INLC)
+  net GND (caster_mcb_1_power-submodule.gnd, caster_mcb_2_cpu-submodule.gnd, caster_mcb_3_comms-submodule.gnd, caster_mcb_4_motor1-submodule.gnd, caster_mcb_5_motor2-submodule.gnd, caster_mcb_6_solinoid-submodule.gnd, U1.GND, U1.AGND, U1.DGND, U1.PAD)
+  net Net0-rs_485_rx (caster_mcb_2_cpu-submodule.rs_485_rx, caster_mcb_3_comms-submodule.rs_485_rx)
+  net Net0-rs_485_tx (caster_mcb_2_cpu-submodule.rs_485_tx, caster_mcb_3_comms-submodule.rs_485_tx)
+  net NetC11_1 (caster_mcb_1_power-submodule.netc11_1, caster_mcb_2_cpu-submodule.netc11_1)
+  net NetC1_1 (caster_mcb_1_power-submodule.netc1_1, U1.BST)
+  net NetC22_1 (caster_mcb_2_cpu-submodule.netc22_1, caster_mcb_3_comms-submodule.netc22_1)
+  net NetC2_2 (caster_mcb_1_power-submodule.netc2_2, U1.FB)
+  net NetC39_1 (caster_mcb_2_cpu-submodule.netc39_1, caster_mcb_4_motor1-submodule.netc39_1)
+  net NetC40_1 (caster_mcb_2_cpu-submodule.netc40_1, caster_mcb_4_motor1-submodule.netc40_1)
+  net NetC41_1 (caster_mcb_2_cpu-submodule.netc41_1, caster_mcb_4_motor1-submodule.netc41_1)
+  net NetC42_1 (caster_mcb_5_motor2-submodule.netc42_1, U1.VREF)
+  net NetC43_1 (caster_mcb_5_motor2-submodule.netc43_1, U1.VGLS)
+  net NetC44_1 (caster_mcb_5_motor2-submodule.netc44_1, U1.CPH)
+  net NetC44_2 (caster_mcb_5_motor2-submodule.netc44_2, U1.CPL)
+  net NetC45_1 (caster_mcb_5_motor2-submodule.netc45_1, U1.DVDD)
+  net NetC47_1 (caster_mcb_5_motor2-submodule.netc47_1, U1.VCP)
+  net NetC49_1 (caster_mcb_2_cpu-submodule.netc49_1, caster_mcb_5_motor2-submodule.netc49_1)
+  net NetC61_1 (caster_mcb_2_cpu-submodule.netc61_1, caster_mcb_3_comms-submodule.netc61_1)
+  net NetC6_1 (caster_mcb_1_power-submodule.netc6_1, U1.VCC)
+  net NetCN2_3 (caster_mcb_2_cpu-submodule.netcn2_3, caster_mcb_3_comms-submodule.netcn2_3)
+  net NetCN2_4 (caster_mcb_2_cpu-submodule.netcn2_4, caster_mcb_3_comms-submodule.netcn2_4)
+  net NetCN2_5 (caster_mcb_2_cpu-submodule.netcn2_5, caster_mcb_3_comms-submodule.netcn2_5)
+  net NetCN2_6 (caster_mcb_2_cpu-submodule.netcn2_6, caster_mcb_3_comms-submodule.netcn2_6)
+  net NetCN3_4 (caster_mcb_2_cpu-submodule.netcn3_4, caster_mcb_3_comms-submodule.netcn3_4)
+  net NetCN3_5 (caster_mcb_2_cpu-submodule.netcn3_5, caster_mcb_3_comms-submodule.netcn3_5)
+  net NetCN3_6 (caster_mcb_2_cpu-submodule.netcn3_6, caster_mcb_3_comms-submodule.netcn3_6)
+  net NetCN3_7 (caster_mcb_2_cpu-submodule.netcn3_7, caster_mcb_3_comms-submodule.netcn3_7)
+  net NetD10_1 (caster_mcb_4_motor1-submodule.netd10_1, U1.GHC)
+  net NetD12_1 (caster_mcb_4_motor1-submodule.netd12_1, U1.GLC)
+  net NetD1_1 (caster_mcb_1_power-submodule.netd1_1, U1.SW)
+  net NetD2_1 (caster_mcb_4_motor1-submodule.netd2_1, U1.GHA)
+  net NetD4_1 (caster_mcb_4_motor1-submodule.netd4_1, U1.GLA)
+  net NetD6_1 (caster_mcb_4_motor1-submodule.netd6_1, U1.GHB)
+  net NetD8_1 (caster_mcb_4_motor1-submodule.netd8_1, U1.GLB)
+  net NetR18_2 (caster_mcb_2_cpu-submodule.netr18_2, caster_mcb_3_comms-submodule.netr18_2, U1.SDO)
+  net NetR25_1 (caster_mcb_2_cpu-submodule.netr25_1, caster_mcb_4_motor1-submodule.netr25_1, U1.nFAULT)
+  net NetR2_1 (caster_mcb_1_power-submodule.netr2_1, U1.RTSD)
+  net NetR54_1 (caster_mcb_4_motor1-submodule.netr54_1, U1.SOA)
+  net NetR58_1 (caster_mcb_4_motor1-submodule.netr58_1, U1.SOB)
+  net NetR59_1 (caster_mcb_4_motor1-submodule.netr59_1, U1.SOC)
+  net NetR6_2 (caster_mcb_1_power-submodule.netr6_2, U1.RCL)
+  net NetR77_2 (caster_mcb_2_cpu-submodule.netr77_2, caster_mcb_6_solinoid-submodule.netr77_2)
+  net NetR80_2 (caster_mcb_2_cpu-submodule.netr80_2, caster_mcb_6_solinoid-submodule.netr80_2)
+  net NetU1_32 (caster_mcb_2_cpu-submodule.netu1_32, U1.nSCS)
+  net NetU3_37 (caster_mcb_2_cpu-submodule.netu3_37, caster_mcb_5_motor2-submodule.netu3_37)
+  net NetU3_38 (caster_mcb_2_cpu-submodule.netu3_38, caster_mcb_5_motor2-submodule.netu3_38)
+  net NetU3_39 (caster_mcb_2_cpu-submodule.netu3_39, caster_mcb_5_motor2-submodule.netu3_39)
+  net NetU3_61 (caster_mcb_2_cpu-submodule.netu3_61, caster_mcb_3_comms-submodule.netu3_61)
+  net PHA (caster_mcb_4_motor1-submodule.pha, U1.SHA)
+  net PHB (caster_mcb_4_motor1-submodule.phb, U1.SHB)
+  net PHC (caster_mcb_4_motor1-submodule.phc, U1.SHC)
+  net SA_N (caster_mcb_4_motor1-submodule.sa_n, U1.SNA)
+  net SA_P (caster_mcb_4_motor1-submodule.sa_p, U1.SPA)
+  net SB_N (caster_mcb_4_motor1-submodule.sb_n, U1.SNB)
+  net SB_P (caster_mcb_4_motor1-submodule.sb_p, U1.SPB)
+  net SC_N (caster_mcb_4_motor1-submodule.sc_n, U1.SNC)
+  net SC_P (caster_mcb_4_motor1-submodule.sc_p, U1.SPC)
+  net SPI1_MOSI (caster_mcb_2_cpu-submodule.spi1_mosi, U1.SDI)
+  net SPI1_SCK (caster_mcb_2_cpu-submodule.spi1_sck, U1.SCLK)
+  net p3_3V (caster_mcb_1_power-submodule.p3_3v, caster_mcb_2_cpu-submodule.p3_3v, caster_mcb_3_comms-submodule.p3_3v, caster_mcb_4_motor1-submodule.p3_3v, caster_mcb_5_motor2-submodule.p3_3v, caster_mcb_6_solinoid-submodule.p3_3v)
+  net p5V (caster_mcb_1_power-submodule.p5v, caster_mcb_3_comms-submodule.p5v, caster_mcb_4_motor1-submodule.p5v, caster_mcb_5_motor2-submodule.p5v)
+  net p60V (caster_mcb_1_power-submodule.p60v, caster_mcb_3_comms-submodule.p60v, caster_mcb_4_motor1-submodule.p60v, caster_mcb_5_motor2-submodule.p60v, caster_mcb_6_solinoid-submodule.p60v, U1.VIN, U1.VM, U1.VDRAIN)
+
+
+  symbol(GND) = altium-power-gnd-power-sym
+  symbol(p3_3V) = altium-power-bar-sym
+  symbol(p5V) = altium-power-bar-sym
+  symbol(p60V) = altium-power-bar-sym
+
+
+val main-design = make-default-board(main, 4, Rectangle(10.0, 10.0))
+set-export-backend(`altium)
+view-board()
+view-schematic()
+export-cad()

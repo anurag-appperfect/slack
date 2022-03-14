@@ -1,0 +1,101 @@
+#use-added-syntax(jitx)
+defpackage output/molex/CMP-001-1390-01 :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/defaults
+  import ocdb/land-patterns
+  import ocdb/generic-components
+  import ocdb/symbols
+
+pcb-landpattern _0460150609 :
+  pad p[0][1] : oval-pth-pad(1.5, 2.0, 2.0) at loc(8.9, 2.29) on Top
+  pad p[0][2] : oval-pth-pad(1.5, 2.0, 2.0) at loc(-8.9, 2.29) on Top
+  pad p[1] : rect-pth-pad(0.75, 2.3, 2.3) at loc(4.2, -2.75) on Top
+  pad p[2] : oval-pth-pad(0.75, 2.3, 2.3) at loc(0.0, -2.75) on Top
+  pad p[3] : oval-pth-pad(0.75, 2.3, 2.3) at loc(-4.2, -2.75) on Top
+  pad p[4] : oval-pth-pad(0.75, 2.3, 2.3) at loc(4.2, 2.75) on Top
+  pad p[5] : oval-pth-pad(0.75, 2.3, 2.3) at loc(0.0, 2.75) on Top
+  pad p[6] : oval-pth-pad(0.75, 2.3, 2.3) at loc(-4.2, 2.75) on Top
+
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.5, [
+    Point(11.1088, -4.9784), 
+    Point(11.0991327006289, -4.92979920408963), 
+    Point(11.0716025612107, -4.88859743878931), 
+    Point(11.0304007959104, -4.86106729937107), 
+    Point(10.9818, -4.8514), 
+    Point(10.9331992040896, -4.86106729937107), 
+    Point(10.8919974387893, -4.88859743878931), 
+    Point(10.8644672993711, -4.92979920408963), 
+    Point(10.8548, -4.9784), 
+    Point(10.8644672993711, -5.02700079591037), 
+    Point(10.8919974387893, -5.06820256121069), 
+    Point(10.9331992040896, -5.09573270062893), 
+    Point(10.9818, -5.1054), 
+    Point(11.0304007959104, -5.09573270062893), 
+    Point(11.0716025612107, -5.06820256121069), 
+    Point(11.0991327006289, -5.02700079591037), 
+    Point(11.1088, -4.9784)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-10.0, -5.5), Point(10.0, -5.5)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-10.0, 6.5), Point(10.0, 6.5)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-10.0, -5.5), Point(-10.0, 0.0)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(10.0, -5.5), Point(10.0, 0.0)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(1.524, -0.889), Point(2.794, -0.889)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-10.0, 4.5), Point(-10.0, 6.5)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(10.0, 4.5), Point(10.0, 6.5)])
+  ref-label()
+
+pcb-symbol CMP-001-1390-01-symbol :
+  pin p[1] at Point(7.62, -5.08) with :
+    direction = Left
+    length = 2.54
+    number-size = 1.523
+    name-size = 1.523
+  pin p[2] at Point(7.62, -2.54) with :
+    direction = Left
+    length = 2.54
+    number-size = 1.523
+    name-size = 1.523
+  pin p[3] at Point(7.62, 0.0) with :
+    direction = Left
+    length = 2.54
+    number-size = 1.523
+    name-size = 1.523
+  pin p[4] at Point(15.24, -5.08) with :
+    direction = Right
+    length = 2.54
+    number-size = 1.523
+    name-size = 1.523
+  pin p[5] at Point(15.24, -2.54) with :
+    direction = Right
+    length = 2.54
+    number-size = 1.523
+    name-size = 1.523
+  pin p[6] at Point(15.24, 0.0) with :
+    direction = Right
+    length = 2.54
+    number-size = 1.523
+    name-size = 1.523
+  layer("foreground") = Rectangle(7.62, 10.16, loc(11.43, -2.54))
+  layer("foreground") = Text(">VALUE", 0.762, SW, loc(7.62, 2.84))
+  layer("foreground") = Text(">REF", 0.762, SW, loc(7.62, 3.902))
+
+public pcb-component component :
+  name = "CMP-001-1390-01"
+  description = "Molex 3X2 Mini-Fit Plus HCS 46015"
+  manufacturer = "Molex"
+  pin-properties :
+    [pin:Ref | pads:Int ... | side:Dir]
+    [p[1] | 1 | Left]
+    [p[2] | 2 | Left]
+    [p[3] | 3 | Left]
+    [p[4] | 4 | Right]
+    [p[5] | 5 | Right]
+    [p[6] | 6 | Right]
+
+  assign-landpattern(_0460150609)
+  val sym = CMP-001-1390-01-symbol
+  symbol = sym(self.p[1] => sym.p[1], self.p[2] => sym.p[2], self.p[3] => sym.p[3], self.p[4] => sym.p[4], self.p[5] => sym.p[5], self.p[6] => sym.p[6])
+
