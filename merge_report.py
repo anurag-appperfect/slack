@@ -7,7 +7,7 @@ files = [f for f in os.listdir('.') if "QA" in f]
 for f in files:
   # Extract css from file
     
-  with open(os.path.join(os.path.abspath(f), "assets\\style.css"), 'r') as f_name :
+  with open(os.path.join(os.path.abspath(f), "assets/style.css"), 'r') as f_name :
     old_file_content = f_name.read()
   #f_name = open('Exporter_QA\\assets\style.css', 'r')
   #old_file_content = f_name.read()
