@@ -20,7 +20,7 @@ pipeline {
                              docker exec --workdir /myvol3 test-jitx ./jitx.sh ./ Exporter-QA
                              docker exec --workdir /myvol3 test-jitx python merge_report.py
                         '''
-                        slackUploadFile filePath: "\Exporter-QA\*.html", initialComment:  "HEY HEY"
+                        slackUploadFile filePath: "Exporter-QA\*.html", initialComment:  "HEY HEY"
                     }
                 }
             }
